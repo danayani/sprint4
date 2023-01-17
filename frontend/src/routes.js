@@ -1,6 +1,6 @@
 import { HomePage } from './pages/home-page.jsx'
 import { AboutUs } from './pages/about-us.jsx'
-import { CarIndex } from './pages/car-index.jsx'
+import { CarIndex } from './pages/library.jsx'
 import { ReviewIndex } from './pages/review-index.jsx'
 import { AdminApp } from './pages/admin-app.jsx'
 

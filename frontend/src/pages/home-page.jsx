@@ -8,7 +8,7 @@ export function HomePage() {
     const count = useSelector(storeState => storeState.userModule.count)
 
     function changeCount(diff) {
-        console.log('Changing count by:', diff);
+        console.log('Changing count by:', diff)
         dispatch({ type: CHANGE_COUNT, diff })
     }
 
@@ -16,5 +16,6 @@ export function HomePage() {
         <section>
             <h2>Home-page</h2>
         </section >
+
     )
 }
