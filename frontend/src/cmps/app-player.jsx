@@ -1,3 +1,4 @@
+// Music player
 
 import { useState } from 'react'
 import { useSelector } from 'react-redux'
@@ -6,7 +7,7 @@ import { showErrorMsg, showSuccessMsg } from '../services/event-bus.service'
 import { removeFromCart, checkout } from '../store/car.actions'
 import { UserMsg } from './user-msg.jsx'
 
-export function AppFooter() {
+export function AppPlayer() {
     const [isCartShown, setIsCartShown] = useState(false)
     const cart = useSelector(storeState => storeState.carModule.cart)
     const count = useSelector(storeState => storeState.userModule.count)

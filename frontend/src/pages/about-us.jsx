@@ -1,3 +1,5 @@
+// Short introduction of the team, and maybe statistics
+
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 

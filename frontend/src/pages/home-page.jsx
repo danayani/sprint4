@@ -1,3 +1,5 @@
+// Display of all playlists
+
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import logo from '../assets/img/logo.png'

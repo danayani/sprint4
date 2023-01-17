@@ -1,3 +1,5 @@
+// navigate arrows + user options
+
 import { Link, NavLink } from 'react-router-dom'
 import {useSelector} from 'react-redux'
 import routes from '../routes'

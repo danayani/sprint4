@@ -1,14 +1,24 @@
 // Setup
+// TODO: add more colores / Breakpoints
 @import "setup/variables";
+// Size comparison
 @import "setup/functions";
+// Responsive defenitions
 @import "setup/mixins";
+// TODO: add font
 @import "setup/typography";
 
+
 // Basics
+// Flex helpers TODO: add grid helpers
 @import "basics/helpers";
+// Grid defenitions
 @import "basics/layout";
+// General app setings
 @import "basics/base";
+// TODO: add link design
 @import "basics/links";
+// Button + input defenitions
 @import "basics/forms";
 
 
@@ -21,9 +31,10 @@
 
 // Components
 @import "cmps/app-header";
-@import "cmps/app-footer";
+@import "cmps/app-navbar";
+@import "cmps/app-player";
+@import "cmps/app-playlist";
 @import "cmps/user-msg";
-@import "cmps/shopping-cart";
 
 
 
