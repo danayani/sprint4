@@ -3,13 +3,13 @@
     display: flex;
     flex-wrap: wrap;
     li {
-        background-color: $bgc1;
-        color: $txt2;
+        background-color: $bgcnav;
+        color: $txtselected;
         padding: 5px;
         margin: 5px;
     }
     a {
-        color: $txt1;
+        color: $txtfill;
         padding: 10px;
     }    
     h3 {

@@ -3,14 +3,14 @@
 }
 
 ::selection {
-    background-color: $bgc1;
-    color: $txt1;
+    background-color: $bgcnav;
+    color: $txtfill;
 }
 
 html {
     font-family: $txtf;
     line-height: 1.6;
-    color: $txt2;
+    color: $txtselected;
 }
 
 body {

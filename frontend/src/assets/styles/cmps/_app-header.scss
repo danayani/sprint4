@@ -1,5 +1,5 @@
 .app-header {
-    background-color: $bgc5;
+    background-color: $bgcplaylistdown;
     padding: 10px;
 
 
@@ -7,11 +7,11 @@
         // background-color: $clr2;
         // padding: 2px 8px;
         padding-left: 100px;
-        color: $txt1;
+        color: $txtfill;
 
         .score {
-            background-color: $bgc4;
-            color: $txt2;
+            background-color: $bgcplaylistup;
+            color: $txtselected;
             padding: 8px;
             margin: 10px;
             border-radius: 50%;
@@ -26,12 +26,12 @@
     }
 
     .user-info .btn-link {
-        color: $txt1;
+        color: $txtfill;
     }
 
     nav {
         font-size: .8em;
-        background-color: $bgc3;
+        background-color: $bgcplay;
         padding: 5px;
 
     }
@@ -41,13 +41,13 @@
     }
 
     nav a:not(:first-child) {
-        border-top: 1px solid $bgc4;
+        border-top: 1px solid $bgcplaylistup;
         padding: 0 5px;
         margin: 10px;
     }
 
     nav .active {
-        color: $bgc5;
+        color: $bgcplaylistdown;
     }
 
 }

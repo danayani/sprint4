@@ -1,6 +1,6 @@
 export function AboutUs(){
     return(
-        <section className="about">
+        <section className="about full">
             <h1>About Us</h1>
             <div className="shelly">
                 <h3>Shelly Paxton Eliyahu</h3>
