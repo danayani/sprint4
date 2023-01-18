@@ -7,6 +7,9 @@ import { loadStations, addStation, updateStation, removeStation } from '../store
 import { showSuccessMsg, showErrorMsg } from '../services/event-bus.service.js'
 import { stationService } from '../services/station.service.local.js'
 
+
+//with grid
+//playlist (station) card
 export function StationIndex() {
 
     const stations = useSelector(storeState => storeState.stationModule.stations)

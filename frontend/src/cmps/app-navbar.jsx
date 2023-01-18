@@ -1,6 +1,9 @@
 // Navigation to different pages 
 import logo from '../assets/img/spotify-logo.png'
 
+//230px
+//can be showen as grid with 1 clu
+
 return (
     <section className="nav-bar">
         {logo}
