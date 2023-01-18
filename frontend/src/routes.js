@@ -1,6 +1,6 @@
 import { HomePage } from './pages/home-page.jsx'
 import { AboutUs } from './pages/about-us.jsx'
-import { StationIndex } from './pages/library.jsx'
+import { LibraryIndex } from './pages/library.jsx'
 import { ReviewIndex } from './pages/review-index.jsx'
 // import { AdminApp } from './pages/admin-app.jsx'
 
@@ -12,9 +12,9 @@ const routes = [
         label: 'Home 🏠',
     },
     {
-        path: 'station',
-        component: <StationIndex />,
-        label: 'Stations'
+        path: 'library',
+        component: <LibraryIndex />,
+        label: 'library'
     },
     {
         path: 'review',

@@ -7,6 +7,7 @@ import { AppHeader } from './cmps/app-header'
 // import { UserDetails } from './pages/user-details'
 import { HomePage } from './pages/home-page'
 import { AboutUs } from './pages/about-us'
+import { LibraryIndex } from './pages/library'
 
 export function RootCmp() {
     return (
@@ -19,7 +20,7 @@ export function RootCmp() {
 
                     <Route path="/" element={<HomePage />} />
                     <Route path="/about" element={<AboutUs />} />
-                    {/* <Route path='/library' element={<Library />} /> */}
+                    <Route path='/library' element={<LibraryIndex />} />
                     {/* <Route path="/search" element={<SearchPage />} /> */}
                 </Routes>
             </main>
