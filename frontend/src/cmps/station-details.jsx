@@ -1,4 +1,4 @@
-import {AppPreview} from './app-preview';
+import {AppPreview} from './station.preview';
 //render the songs inside the station
 export function SongsList({songs,removeSong,addSong}){
 
