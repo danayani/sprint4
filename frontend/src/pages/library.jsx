@@ -5,6 +5,10 @@ import { loadCars, addCar, updateCar, removeCar, addToCart } from '../store/car.
 import { showSuccessMsg, showErrorMsg } from '../services/event-bus.service.js'
 import { carService } from '../services/car.service.js'
 
+
+//with grid
+//playlist (station) card
+
 export function CarIndex() {
 
     const cars = useSelector(storeState => storeState.carModule.cars)
