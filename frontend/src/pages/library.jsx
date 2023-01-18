@@ -5,15 +5,11 @@ import { loadStations, addStation, updateStation, removeStation } from '../store
 import { showSuccessMsg, showErrorMsg } from '../services/event-bus.service.js'
 import { stationService } from '../services/station.service.local.js'
 
-<<<<<<< HEAD
 
 //with grid
 //playlist (station) card
 
-export function CarIndex() {
-=======
 export function StationIndex() {
->>>>>>> 8748367af306babb8474476c5cbeeadf44827012
 
     const stations = useSelector(storeState => storeState.stationModule.stations)
 
