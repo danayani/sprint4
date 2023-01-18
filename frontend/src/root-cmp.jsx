@@ -8,11 +8,13 @@ import { AppHeader } from './cmps/app-header'
 import { HomePage } from './pages/home'
 import { AboutUs } from './pages/about'
 import { LibraryIndex } from './pages/library'
+import { AppNavBar } from './cmps/app-navbar'
 
 export function RootCmp() {
     return (
         <div>
             <AppHeader />
+            <AppNavBar />
             <main>
                 <Routes>
                     <Route path="/" element={<HomePage />} />

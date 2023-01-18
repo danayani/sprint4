@@ -3,6 +3,20 @@ import logo from '../assets/img/spotify-logo.png'
 
 //230px
 //can be showen as grid with 1 clu
+export function AppNavBar(){
+
+
+
+
+
+
+
+    
+}
+
+
+
+
 
 return (
     <section className="nav-bar">
