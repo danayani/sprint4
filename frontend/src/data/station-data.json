@@ -70,7 +70,7 @@
         "songs": [
             {
                 "id": "ng84hedgt76",
-                "title": "Move your body - Sia",
+                "title": "Sia - Move your body",
                 "url": "https://www.youtube.com/watch?v=jSSGgj8mxSc&ab_channel=MindHarmony",
                 "imgUrl": "https://i.ytimg.com/vi/4_iC0MyIykM/mqdefault.jpg",
                 "addedBy": "{minimal-user}",
@@ -78,7 +78,7 @@
             },
             {
                 "id": "mUkfi4n7sxs",
-                "title": "Pancake - Jaded",
+                "title": "Jaded - Pancake",
                 "url": "youtube/song.mp4",
                 "imgUrl": "https://www.youtube.com/watch?v=AoySz9cx_3c&ab_channel=PrepixDanceStudio",
                 "addedBy": "{minimal-user}",
@@ -86,7 +86,7 @@
             },
             {
                 "id": "mUzan94o76s",
-                "title": "Levitating - Dua lipa",
+                "title": "Dua lipa - Levitating",
                 "url": "https://www.youtube.com/watch?v=hldMjKHGpag&ab_channel=RachelGardner",
                 "imgUrl": "rh.png",
                 "addedBy": "{minimal-user}",
@@ -100,6 +100,55 @@
                 "txt": "Manish?"
             }
         ]
+    },
+    {
+        "_id": "5cksxjas89xjsa8xjsa8jxs09",
+        "name": "Rockin' Rollers",
+        "tags": [
+            "Rock",
+            "Roll"
+        ],
+        "createdBy": {
+            "_id": "u102",
+            "fullname": "John Smith",
+            "imgUrl": "http://some-photo/"
+        },
+        "likedByUsers": [
+            "{minimal-user}",
+            "{minimal-user}"
+        ],
+        "songs": [
+            {
+                "id": "s1002",
+                "title": "Led Zeppelin - Stairway to Heaven",
+                "url": "https://www.youtube.com/watch?v=qnpZCB9BUIw&ab_channel=GootieMusic",
+                "imgUrl": "https://i.ytimg.com/vi/4_iC0MyIykM/mqdefault.jpg",
+                "addedBy": "{minimal-user}",
+                "addedAt": 162521765262
+            },
+            {
+                "id": "mUkfiLjooxs",
+                "title": "The Rolling Stones - Paint It Black",
+                "url": "https://www.youtube.com/watch?v=J0D1ty9Qbl4&ab_channel=SexyEmotion",
+                "imgUrl": "https://i.ytimg.com/vi/mUkfiLjooxs/mqdefault.jpg",
+                "addedBy": "{minimal-user}",
+                "addedAt": 162521755712
+            },
+            {
+                "id": "mUzeiLjo76s",
+                "title": "AC/DC - Highway to Hell",
+                "url": "https://www.youtube.com/watch?v=ssQPYVGaJ04&ab_channel=Spanhok",
+                "imgUrl": "rh.png",
+                "addedBy": "{minimal-user}",
+                "addedAt": 162521743262
+            }
+        ],
+        "msgs": [
+            {
+                "id": "m102",
+                "from": "{mini-user}",
+                "txt": "This playlist rocks!"
+            }
+        ]
     }
-    
 ]
