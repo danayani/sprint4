@@ -1,3 +1,5 @@
+// List of user stations
+
 import { useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import { loadStations, addStation, updateStation, removeStation } from '../store/station.actions.js'
