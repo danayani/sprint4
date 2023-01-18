@@ -2,16 +2,16 @@
 
 import { NavLink } from 'react-router-dom';
 import { SongsList } from './station-details';
+import station  from '../data/station-data.json'
 
 
-
-export function StationList({station}){
+export function StationList(){
     console.log('station list :>> ', station);
     return(
         
         <ul className='station-list'>
             {station.map(station => 
-            <NavLink to={`/${station._id}`}></NavLink>)}
+            <NavLink key={station._id} to={`/${station._id}`}></NavLink>)}
 
         </ul>
 
