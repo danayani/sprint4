@@ -3,7 +3,7 @@ import React from 'react'
 import { StationList } from '../cmps/station-list'
 import { stations } from '../data/station-data.json'
 
-export function HomePage() {
+export function Home() {
     // data retrival
     // const stations = useSelector((storeState) => storeState.stationModule.stations)
 
