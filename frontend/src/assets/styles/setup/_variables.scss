@@ -1,25 +1,26 @@
 // Colors
 
 // Nav-bar 
-$bgc1: #000000;
-$bgc2: #121212;
+$bgcnav: #000000;
+$bgcmain: #121212;
 
 // Text
-$txt1: #b3b3b3; //main fill
-$txt2: #ffffff; //selected page in navbar
+$txtfill: #b3b3b3; //main fill
+$txtselected: #ffffff; //selected page in navbar
+
 
 //player
-$bgc3: #1ed760;
+$bgcplay: #1ed760;
 
 //playlist-goodmorning
 // $bgc4: #000000, opacity 70.0%
-$bgc4: #00000070;
+$bgcplaylistup: #00000070;
 
 //playlist-grid
-$bgc5: #282828;
+$bgcplaylistdown: #282828;
 
 //footer-player
-$bgc6: #181818;
+$bgcplayer: #181818;
 
 //font
 $txtf: 'Montserrat', sans-serif;
