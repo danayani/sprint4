@@ -1,18 +1,18 @@
 // Navigation to different pages 
-import logo from '../assets/img/spotify-logo.png'
+
+import { NavLink } from 'react-router-dom'
+// import logo from '../assets/img/spotify-logo.png'
 
 //230px
 //can be showen as grid with 1 clu
-
-return (
-    <section className="nav-bar">
-        {logo}
-        {/* {routes.map(route => <NavLink key={route.path} to={route.path}>{route.label}</NavLink>)} */}
-        Home
-        Search
-        Your library
-        Create Playlist
-        Liked songs
-        play lists
-    </section>
-)
+export function AppNavBar() {
+    return (
+        <aside className='side-navbar'>
+            <nav>
+                <NavLink to={"/"}>Home</NavLink>
+                <NavLink to={"/search"}>Search</NavLink>
+                <NavLink to={"/library"}>Your Library</NavLink>
+            </nav>
+        </aside>
+    )
+}
