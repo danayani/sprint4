@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 import { loadStations, addStation, updateStation, removeStation } from '../store/station.actions.js'
 
 import { showSuccessMsg, showErrorMsg } from '../services/event-bus.service.js'
-import { stationService } from '../services/station.service.js'
+import { stationService } from '../services/station.service.local.js'
 
 export function StationIndex() {
 
