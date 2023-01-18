@@ -61,7 +61,6 @@ export function AppHeader() {
                     </section>
                 }
             </nav>
-            <h1>My App</h1>
         </header>
     )
 }
