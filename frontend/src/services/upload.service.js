@@ -1,6 +1,7 @@
 export const uploadService = {
   uploadImg
 }
+
 function uploadImg(ev) {
   const CLOUD_NAME = "dcwibf9o5"
   const UPLOAD_PRESET = "vt0iqgff"
