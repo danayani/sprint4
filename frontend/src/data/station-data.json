@@ -51,15 +51,17 @@
     },
     {
         "_id": "5cks4j5s89xjsa8abca8jxs09",
-        "name": "",
+        "name": "workout",
         "tags": [
             "Funk",
-            "Happy"
+            "Happy",
+            "House",
+            "Electronic"
         ],
         "createdBy": {
-            "_id": "u101",
-            "fullname": "Puki Ben David",
-            "imgUrl": "http://some-photo/"
+            "_id": "u102",
+            "username": "",
+            "imgUrl": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.nytimes.com%2Fguides%2Fwell%2Fstrength-training-plyometrics&psig=AOvVaw2S2sf0Da0dD3ieqyCv4eTm&ust=1674122642416000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCPir1P3u0PwCFQAAAAAdAAAAABAE"
         },
         "likedByUsers": [
             "{minimal-user}",
@@ -67,25 +69,25 @@
         ],
         "songs": [
             {
-                "id": "s1001",
-                "title": "The Meters - Cissy Strut",
-                "url": "youtube/song.mp4",
+                "id": "ng84hedgt76",
+                "title": "Move your body - Sia",
+                "url": "https://www.youtube.com/watch?v=jSSGgj8mxSc&ab_channel=MindHarmony",
                 "imgUrl": "https://i.ytimg.com/vi/4_iC0MyIykM/mqdefault.jpg",
                 "addedBy": "{minimal-user}",
-                "addedAt": 162521765262
+                "addedAt": 162521543763
             },
             {
-                "id": "mUkfiLjooxs",
-                "title": "The JB's - Pass The Peas",
+                "id": "mUkfi4n7sxs",
+                "title": "Pancake - Jaded",
                 "url": "youtube/song.mp4",
-                "imgUrl": "https://i.ytimg.com/vi/mUkfiLjooxs/mqdefault.jpg",
+                "imgUrl": "https://www.youtube.com/watch?v=AoySz9cx_3c&ab_channel=PrepixDanceStudio",
                 "addedBy": "{minimal-user}",
-                "addedAt": 162521755262
+                "addedAt": 162521425262
             },
             {
-                "id": "mUzeiLjo76s",
-                "title": "RH - crazy race",
-                "url": "https://www.youtube.com/watch?v=v201PxvQ4qM&ab_channel=TheRHFactor-Topic",
+                "id": "mUzan94o76s",
+                "title": "Levitating - Dua lipa",
+                "url": "https://www.youtube.com/watch?v=hldMjKHGpag&ab_channel=RachelGardner",
                 "imgUrl": "rh.png",
                 "addedBy": "{minimal-user}",
                 "addedAt": 162521755262
