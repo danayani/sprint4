@@ -1,5 +1,5 @@
 import data from '../data/station-data.json';
-import { SongsList } from './song-list';
+import { SongsList } from './station-details';
 
 
 
