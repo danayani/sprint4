@@ -3,25 +3,26 @@
 }
 
 ::selection {
-    background-color: $clr1;
-    color: $clr6;
+    background-color: $bgcnav;
+    color: $txtfill;
 }
 
 html {
-    font-family: montserrat;
+    font-family: $txtf;
     line-height: 1.6;
-    color: $clr2;
+    color: $txtselected;
 }
 
 body {
     font-size: rem(14px);
+    font-family: $txtf;
     margin: 0;
     max-width: 1024px;
     margin: auto;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: caveat;
+    // font-family: caveat;
     margin: 0 0 0.6em;
     line-height: 1;
 }

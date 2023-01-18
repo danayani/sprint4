@@ -1,22 +1,40 @@
 // Colors
 
 // Nav-bar 
-$bgc1: #000000;
-$bgc2: #121212;
+$bgcnav: #000000;
+$bgcmain: #121212;
 
 // Text
-$txt1: #b3b3b3;
-$txt2: #ffffff;
+$txtfill: #b3b3b3; //main fill
+$txtselected: #ffffff; //selected page in navbar
 
-$clr1: #ce2e6c;
-$clr2: #4f3a65;
-$clr3: #574f7d;
-$clr4: #95adbe;
-$clr5: #dff0ea;
-$clr6: #fff;
-$clr7: #222;
-$clr9: #aaaaaa;
-$clr8: #574f7e;
+
+//player
+$bgcplay: #1ed760;
+
+//playlist-goodmorning
+// $bgc4: #000000, opacity 70.0%
+$bgcplaylistup: #00000070;
+
+//playlist-grid
+$bgcplaylistdown: #282828;
+
+//footer-player
+$bgcplayer: #181818;
+
+//font
+$txtf: 'Montserrat', sans-serif;
+
+
+// $clr1: #ce2e6c;
+// $clr2: #4f3a65;
+// $clr3: #574f7d;
+// $clr4: #95adbe;
+// $clr5: #dff0ea;
+// $clr6: #fff;
+// $clr7: #222;
+// $clr9: #aaaaaa;
+// $clr8: #574f7e;
 
 
 // Breakpoints
