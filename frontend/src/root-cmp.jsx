@@ -5,7 +5,7 @@ import { Routes, Route } from 'react-router'
 
 import { AppHeader } from './cmps/app-header'
 import { StationList } from './cmps/station-list'
-import { HomePage } from './pages/home'
+import { Home } from './pages/home'
 import { AboutUs } from './pages/about'
 import { Library } from './pages/library'
 import { AppNavBar } from './cmps/app-navbar'
@@ -17,7 +17,7 @@ export function RootCmp() {
             <AppNavBar />
             <main>
                 <Routes>
-                    <Route path="/" element={<HomePage />} />
+                    <Route path="/" element={<Home />} />
                     <Route path="/:stationId" element={<StationList />} />
 
                     <Route path="/about" element={<AboutUs />} />
