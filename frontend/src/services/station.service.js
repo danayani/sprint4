@@ -1,7 +1,7 @@
 
 // import { storageService } from './async-storage.service.js'
 import { httpService } from './http.service.js'
-import { utilService } from './util.service.js'
+// import { utilService } from './util.service.js'
 import { userService } from './user.service.js'
 
 
@@ -18,7 +18,7 @@ export const stationService = {
 window.cs = stationService
 
 
-async function query(filterBy = { txt: '', price: 0 }) {
+async function query(filterBy = { txt: ''}) {
     return httpService.get(STORAGE_KEY, filterBy)
 }
 
@@ -51,11 +51,9 @@ async function addStationMsg(stationId, txt) {
     return savedMsg
 }
 
-
 function getEmptyStation() {
     return {
-        vendor: 'Susita-' + (Date.now() % 1000),
-        price: utilService.getRandomIntInclusive(1000, 9000),
+        name: '' + (Date.now() % 1000),
     }
 }
 

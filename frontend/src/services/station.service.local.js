@@ -16,15 +16,15 @@ export const stationService = {
 window.cs = stationService
 
 
-async function query(filterBy = { txt: '', price: 0 }) {
+async function query(filterBy = { txt: ''}) {
     var stations = await storageService.query(STORAGE_KEY)
     if (filterBy.txt) {
         const regex = new RegExp(filterBy.txt, 'i')
         stations = stations.filter(station => regex.test(station.vendor) || regex.test(station.description))
     }
-    if (filterBy.price) {
-        stations = stations.filter(station => station.price <= filterBy.price)
-    }
+    // if (filterBy.price) {
+    //     stations = stations.filter(station => station.price <= filterBy.price)
+    // }
     return stations
 }
 
