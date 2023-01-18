@@ -1,5 +1,10 @@
 // navigate arrows + user options
 
+//TODO : link to user page, with drop down box
+//TODO : add link to about page
+//TODO : navigate arrows
+//acording to the url (page) the headder change
+
 import { Link, NavLink } from 'react-router-dom'
 import {useSelector} from 'react-redux'
 import routes from '../routes'

@@ -1,6 +1,9 @@
 // Navigation to different pages 
 
 
+//230px
+//can be showen as grid with 1 clu
+
 return (
     <section className="nav-bar">
         Home
