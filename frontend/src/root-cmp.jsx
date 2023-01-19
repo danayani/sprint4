@@ -1,7 +1,7 @@
-import React from 'react'
-import { Routes, Route } from 'react-router'
+import { Provider } from 'react-redux'
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'
 
-// import routes from './routes'
+import { store } from './store/store.js';
 
 import { AppHeader } from './cmps/app-header'
 import { StationList } from './cmps/station-list'
@@ -12,20 +12,24 @@ import { AppNavBar } from './cmps/app-navbar'
 
 export function RootCmp() {
     return (
-        <div>
-            <AppHeader />
-            <main className='main-layout main-container'>
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/:stationId" element={<StationList />} />
+        <Provider store={store}>
+            <Router>
+                <section className='main-layout'>
+                    <AppHeader />
+                    <AppNavBar />
+                    <main className='main-container'>
+                        <Routes>
+                            <Route path="/" element={<Home />} />
+                            <Route path="/:stationId" element={<StationList />} />
 
-                    <Route path="/about" element={<AboutUs />} />
-                    <Route path='/library' element={<Library />} />
-                    {/* <Route path="/search" element={<SearchPage />} /> */}
-                </Routes>
-            </main>
-            <AppNavBar />
-        </div>
+                            <Route path="/about" element={<AboutUs />} />
+                            <Route path='/library' element={<Library />} />
+                            {/* <Route path="/search" element={<SearchPage />} /> */}
+                        </Routes>
+                    </main>
+                </section>
+            </Router>
+        </Provider>
     )
 }
 
