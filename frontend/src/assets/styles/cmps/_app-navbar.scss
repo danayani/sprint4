@@ -1,0 +1,14 @@
+.side-navbar{
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    background-color: $bgcnav;
+    width: 230px;
+}
+
+.nav-link{
+    color: $txtfill;
+    text-transform: none;
+    display: block;
+    gap:5px;
+}
