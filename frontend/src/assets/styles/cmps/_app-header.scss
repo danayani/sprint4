@@ -1,5 +1,5 @@
 .top-bar-container{
-    height: 64px;
+    // height: 64px;
     min-width: 0;
     pointer-events: none;
     border: 0;
@@ -9,8 +9,20 @@
     background-color: $bgcmain;
 }
 
+.btn-icon{
+    height: 16px;
+    width: 16px;background-color: $bgcmain;
+    display: inline;
 
+}
 
 .app-header {
-
+    display: flex;
+    gap: 16px;
+    height: 64px;
+    padding: 16px;
+    padding-inline-end: 16px;
+    position: relative;
+    width: 100%;
+    z-index: 10;
 }
