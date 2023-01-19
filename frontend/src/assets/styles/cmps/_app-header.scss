@@ -1,53 +1,28 @@
+.top-bar-container{
+    // height: 64px;
+    min-width: 0;
+    pointer-events: none;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    vertical-align: baseline;
+    background-color: $bgcmain;
+}
+
+.btn-icon{
+    height: 16px;
+    width: 16px;background-color: $bgcmain;
+    display: inline;
+
+}
+
 .app-header {
-    background-color: $bgcplaylistdown;
-    padding: 10px;
-
-
-    .user-info {
-        // background-color: $clr2;
-        // padding: 2px 8px;
-        padding-left: 100px;
-        color: $txtfill;
-
-        .score {
-            background-color: $bgcplaylistup;
-            color: $txtselected;
-            padding: 8px;
-            margin: 10px;
-            border-radius: 50%;
-        }
-
-        img {
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-    }
-
-    .user-info .btn-link {
-        color: $txtfill;
-    }
-
-    nav {
-        font-size: .8em;
-        background-color: $bgcplay;
-        padding: 5px;
-
-    }
-
-    nav a:first-child {
-        margin-right: 30px;
-    }
-
-    nav a:not(:first-child) {
-        border-top: 1px solid $bgcplaylistup;
-        padding: 0 5px;
-        margin: 10px;
-    }
-
-    nav .active {
-        color: $bgcplaylistdown;
-    }
-
+    display: flex;
+    gap: 16px;
+    height: 64px;
+    padding: 16px;
+    padding-inline-end: 16px;
+    position: relative;
+    width: 100%;
+    z-index: 10;
 }

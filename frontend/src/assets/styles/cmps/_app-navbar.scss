@@ -1,23 +1,42 @@
-.side-navbar{
-    display: flex;
-    flex-direction: column;
-    height: 90vh;
+.side-navbar {
+    // display: flex;
+    // flex-direction: column;
+    height: 100%;
     background-color: $bgcnav;
     width: 230px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
 }
 
-.nav-link{
+.nav-link {
+    display: flex;
     text-transform: none;
     display: block;
-    gap:5px;
+    height: 40px;
+    padding: o 16px;
+    cursor: pointer;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+
+    // &.active{
+    //     color: $txtselected;
+    // }
 }
 
-span{
+span {
     color: $txtfill;
+
+    &:hover{
+        transition: 0.7s;
+        color: $txtselected;
+    }
 }
 
-.icon{
+.icon {
     width: 16px;
     height: 16px;
-    margin-right: 3px;
+    margin-right: 7px;
 }
