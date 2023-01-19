@@ -17,7 +17,7 @@ body {
     font-size: rem(14px);
     font-family: $txtf;
     margin: 0;
-    max-width: 1024px;
+    // max-width: 1024px;
     margin: auto;
     background-color: $bgcmain;
 }
@@ -44,7 +44,7 @@ p {
 a {
     text-decoration: none;
 }
-a:hover {
-    text-decoration: underline;
-}
+// a:hover {
+//     text-decoration: underline;
+// }
 

@@ -7,8 +7,17 @@
 }
 
 .nav-link{
-    color: $txtfill;
     text-transform: none;
     display: block;
     gap:5px;
+}
+
+span{
+    color: $txtfill;
+}
+
+.icon{
+    width: 16px;
+    height: 16px;
+    margin-right: 3px;
 }
