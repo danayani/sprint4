@@ -10,6 +10,7 @@ export function AppHeader() {
     function onGo(diff) {
         navigate(diff)
     }
+
     return (
         <div className="top-bar-container">
             <header className="app-header">
@@ -20,7 +21,6 @@ export function AppHeader() {
                     <img className='btn-icon' src={right} />
                 </button>
             </header>
-
         </div>
     )
 }
