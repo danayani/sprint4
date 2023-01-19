@@ -1,31 +1,27 @@
 .top-bar-container{
-    // height: 64px;
-    min-width: 0;
-    pointer-events: none;
+    height: 64px;
     border: 0;
     padding: 0;
     margin: 0;
-    vertical-align: baseline;
+    pointer-events: none;
     background-color: $bgcmain;
     grid-area: "app-header";
-}
-
-
-.btn-icon{
-    height: 16px;
-    width: 16px;
-    display: inline;
-    background-color: $bgcmain;
-
+    grid-column: 2 / -1;
 }
 
 .app-header {
     display: flex;
+    position: fixed;
     gap: 16px;
     height: 64px;
-    padding: 16px;
     padding-inline-end: 16px;
-    position: fixed;
     width: 100%;
-    z-index: 10;
+}
+
+.btn-icon{
+    height: 32px;
+    width: 32px;
+    // display: inline;
+    background-color: $bgcmain;
+
 }
