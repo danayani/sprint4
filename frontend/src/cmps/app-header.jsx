@@ -7,8 +7,11 @@
 
 export function AppHeader() {
     return (
-        <header className="app-header">
-            <h2>header cmp</h2>
-        </header>
+        <div className="top-bar-container">
+            <header className="app-header">
+                <h2>header cmp</h2>
+            </header>
+
+        </div>
     )
 }
