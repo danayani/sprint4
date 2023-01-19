@@ -4,7 +4,6 @@ import { SET_STATIONS, SET_CURR_STATION} from "./station.reducer.js";
 
 // Action Creators:
 
-<<<<<<< HEAD
 // export async function loadStations() {
 //     try {
 //         const stations = await stationService.query()
@@ -20,22 +19,6 @@ import { SET_STATIONS, SET_CURR_STATION} from "./station.reducer.js";
 //     }
 
 // }
-=======
-export async function loadStations() {
-    try {
-        const stations = await stationService.query()
-        console.log('Stations from DB:', stations)
-        store.dispatch({
-            type: SET_STATIONS,
-            stations
-        })
-        
-    } catch (err) {
-        console.log('Cannot load stations', err)
-        throw err
-    }
-}
->>>>>>> f97e1601dff2401ac4e68d3ba66cf912e9de3425
 
 export async function loadStationById (stationId) {
     try {
