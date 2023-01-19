@@ -33,6 +33,17 @@ async function getServerSideProps() {
     return gYouTube
 }
 
+
+
+
+
+
+
+
+
+
+
+
 function getServerSidePropsSync() {
     const check = fetchMoviesHandler()
     // console.log('WTF', check);
