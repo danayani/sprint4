@@ -74,8 +74,8 @@ export function Library() {
             <h3>Music </h3>
 
             <iframe id="player" type="text/html" width="640" height="390"
-                src="http://www.youtube.com/embed/M7lc1UVf-VE?enablejsapi=1&origin=http://example.com"
-                frameborder="0"></iframe>
+                src="http://www.youtube.com/embed/BPNTC7uZYrI"
+                frameBorder="0"></iframe>
 
             <main>
                 <button onClick={onAddStation}>Add Station</button>
