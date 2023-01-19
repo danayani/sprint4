@@ -8,8 +8,18 @@ var gYouTube = utilService.loadFromStorage(STORAGE_KEY)
 
 export const youtubeService = {
     getServerSideProps,
+    getListItemYouTube,
     getServerSideProps2,
     getServerSidePropsSync
+}
+
+function getListItemYouTube(){
+    const itemList = []
+    getServerSideProps().then(res => {
+        res.data.items.map((item) => {
+            itemList.push(item)
+        })
+    })
 }
 
 async function getServerSideProps() {

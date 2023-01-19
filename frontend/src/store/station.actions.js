@@ -23,21 +23,21 @@ export function getActionUpdateStation(station) {
     }
 }
 
-export async function loadStations() {
-    try {
-        const stations = await stationService.query()
-        console.log('Stations from DB:', stations)
-        store.dispatch({
-            type: SET_STATIONS,
-            stations
-        })
+// export async function loadStations() {
+//     try {
+//         const stations = await stationService.query()
+//         console.log('Stations from DB:', stations)
+//         store.dispatch({
+//             type: SET_STATIONS,
+//             stations
+//         })
 
-    } catch (err) {
-        console.log('Cannot load stations', err)
-        throw err
-    }
+//     } catch (err) {
+//         console.log('Cannot load stations', err)
+//         throw err
+//     }
 
-}
+// }
 
 export async function removeStation(stationId) {
     try {

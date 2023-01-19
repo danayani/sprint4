@@ -1,9 +1,9 @@
 // List of user stations
 
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
-import { loadStations, addStation, updateStation, removeStation } from '../store/station.actions.js'
-
+import { addStation, updateStation, removeStation } from '../store/station.actions.js'
+// loadStations
 import { showSuccessMsg, showErrorMsg } from '../services/event-bus.service.js'
 import { stationService } from '../services/station.service.js'
 // import { stationService } from '../services/station.service.local.js'
@@ -15,20 +15,17 @@ import { youtubeService } from '../services/youtube.service.js'
 export function Library() {
     const stations = useSelector(storeState => storeState.stationModule.stations)
 
-    // const dataY = youtubeService.getServerSideProps().then(result => result.PromiseResult)
-    // const data = youtubeService.getServerSideProps()
-    // console.log(data)
+    const [itemList2, setListItem] = useState([])
+    // console.log('right from service', listItem)
+    // const itemList2 = []
 
-    const itemList = []
-    youtubeService.getServerSideProps().then(res => {
-        res.data.items.map((item) => {
-            itemList.push(item)
-        })
-        return res
-    })
+
 
     useEffect(() => {
-        loadStations()
+        youtubeService.getServerSideProps().then(res => {
+            const songs = res.data.items
+            setListItem(songs)
+        })
     }, [])
 
     async function onRemoveStation(stationId) {
@@ -66,17 +63,23 @@ export function Library() {
         console.log(`TODO Adding msg to station`)
     }
 
+    if (!itemList2 || !itemList2.length) {
+        console.log('in')
+        return <h1>loading...</h1>
+    }
+
     return (
         <div>
             <h3>Stations App</h3>
             <h3>Music </h3>
-            {console.log('lib', itemList)}
-           
-            {/* {itemList}.map((item) => {console.log(item.id)}) */}
 
-            <iframe id="player" type="text/html" width="640" height="390"
-                src="http://www.youtube.com/embed/BPNTC7uZYrI"
-                frameBorder="0"></iframe>
+            {itemList2.map((item) => {
+                return <iframe key={item.id} id="player" type="text/html" width="640" height="390"
+                    src={`http://www.youtube.com/embed/${item.id}`}
+                    frameBorder="0"></iframe>
+            })}
+
+
 
         </div>
     )
