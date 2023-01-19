@@ -19,7 +19,7 @@ export function Library() {
     // const data = youtubeService.getServerSideProps()
     // console.log(data)
 
-    var itemList = []
+    const itemList = []
     youtubeService.getServerSideProps().then(res => {
         res.data.items.map((item) => {
             itemList.push(item)
@@ -78,25 +78,6 @@ export function Library() {
                 src="http://www.youtube.com/embed/BPNTC7uZYrI"
                 frameBorder="0"></iframe>
 
-            <main>
-                <button onClick={onAddStation}>Add Station</button>
-                <ul className="station-list">
-                    {stations.map(station =>
-                        <li className="station-preview" key={station._id}>
-                            <h4>{station.vendor}</h4>
-                            <h1>⛐</h1>
-                            {/* <p>Price: <span>${station.price.toLocaleString()}</span></p> */}
-                            {/* <p>Owner: <span>{station.owner && station.owner.fullname}</span></p> */}
-                            <div>
-                                <button onClick={() => { onRemoveStation(station._id) }}>x</button>
-                                <button onClick={() => { onUpdateStation(station) }}>Edit</button>
-                            </div>
-
-                            <button onClick={() => { onAddStationMsg(station) }}>Add station msg</button>
-                        </li>)
-                    }
-                </ul>
-            </main>
         </div>
     )
 }
