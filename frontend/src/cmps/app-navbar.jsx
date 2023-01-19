@@ -4,7 +4,7 @@ import libraryIcon from '../assets/icons/library.png'
 
 export function AppNavBar() {
     return (
-        <aside className='side-navbar'>
+        <aside className='side-navbar main-container'>
             <ul className='nav-bar'>
                 <li className='nav-link'>
                     <a href='/'>
