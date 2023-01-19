@@ -6,12 +6,13 @@ import { loadStations, addStation, updateStation, removeStation } from '../store
 
 import { showSuccessMsg, showErrorMsg } from '../services/event-bus.service.js'
 import { stationService } from '../services/station.service.local.js'
+import { youtubeService } from '../services/youtube.service.js'
 
 
 //with grid
 //playlist (station) card
 export function Library() {
-export function LibraryIndex() {
+
 
     const stations = useSelector(storeState => storeState.stationModule.stations)
     const dataYT = youtubeService.getServerSideProps()
@@ -79,3 +80,4 @@ export function LibraryIndex() {
         </div>
     )
 }
+

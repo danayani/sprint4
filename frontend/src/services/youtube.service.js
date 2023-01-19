@@ -8,11 +8,15 @@ export const youtubeService = {
 
 async function getServerSideProps(){
     const res = await fetch(`${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLujQBQSxjHDeycqzFuiGfozofN-PB4XYW&key=${YOUTUBE_API_KEY}`)
-    console.log(res)
+    console.log('res', res)
     const data = await res.json()
 
     return{
-            data 
+        prop:{
+            data,
+            res
+        }
+             
     }
 
 }
