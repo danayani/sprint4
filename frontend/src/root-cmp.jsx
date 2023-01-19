@@ -4,23 +4,24 @@ import { Routes, Route } from 'react-router'
 // import routes from './routes'
 
 import { AppHeader } from './cmps/app-header'
-// import { UserDetails } from './pages/user-details'
-import { HomePage } from './pages/home-page'
-import { AboutUs } from './pages/about-us'
-import { LibraryIndex } from './pages/library'
+import { StationList } from './cmps/station-list'
+import { Home } from './pages/home'
+import { AboutUs } from './pages/about'
+import { Library } from './pages/library'
+import { AppNavBar } from './cmps/app-navbar'
 
 export function RootCmp() {
     return (
         <div>
             <AppHeader />
+            <AppNavBar />
             <main>
                 <Routes>
-                    {/* {routes.map(route => <Route key={route.path} exact={true} element={route.component} path={route.path} />)}
-                    <Route path="user/:id" element={<UserDetails />} /> */}
+                    <Route path="/" element={<Home />} />
+                    <Route path="/:stationId" element={<StationList />} />
 
-                    <Route path="/" element={<HomePage />} />
                     <Route path="/about" element={<AboutUs />} />
-                    <Route path='/library' element={<LibraryIndex />} />
+                    <Route path='/library' element={<Library />} />
                     {/* <Route path="/search" element={<SearchPage />} /> */}
                 </Routes>
             </main>
