@@ -6,14 +6,14 @@ import { loadStations, addStation, updateStation, removeStation } from '../store
 
 import { showSuccessMsg, showErrorMsg } from '../services/event-bus.service.js'
 import { stationService } from '../services/station.service.local.js'
-
+import { youtubeService } from '../services/youtube.service.js'
 
 //with grid
 //playlist (station) card
 export function LibraryIndex() {
 
     const stations = useSelector(storeState => storeState.stationModule.stations)
-
+    const dataYT = youtubeService.getServerSideProps()
     useEffect(() => {
         loadStations()
     }, [])
@@ -21,7 +21,7 @@ export function LibraryIndex() {
     async function onRemoveStation(stationId) {
         try {
             await removeStation(stationId)
-            showSuccessMsg('Station removed')            
+            showSuccessMsg('Station removed')
         } catch (err) {
             showErrorMsg('Cannot remove station')
         }
@@ -35,7 +35,7 @@ export function LibraryIndex() {
             showSuccessMsg(`Station added (id: ${savedStation._id})`)
         } catch (err) {
             showErrorMsg('Cannot add station')
-        }        
+        }
     }
 
     async function onUpdateStation(station) {
@@ -46,7 +46,7 @@ export function LibraryIndex() {
             showSuccessMsg(`Station updated, new price: ${savedStation.price}`)
         } catch (err) {
             showErrorMsg('Cannot update station')
-        }        
+        }
     }
 
     function onAddStationMsg(station) {
@@ -56,6 +56,8 @@ export function LibraryIndex() {
     return (
         <div>
             <h3>Stations App</h3>
+            <h3>Music</h3>
+            {console.log('data', dataYT)}
             <main>
                 <button onClick={onAddStation}>Add Station</button>
                 <ul className="station-list">
