@@ -1,4 +1,4 @@
-
+import Axios from 'axios'
 import { utilService } from './util.service.js'
 
 const STORAGE_KEY = 'youTubeDB'
@@ -8,28 +8,33 @@ var gYouTube = utilService.loadFromStorage(STORAGE_KEY)
 
 export const youtubeService = {
     getServerSideProps
+    // getYouTubeDataList
 }
 
-async function getServerSideProps(){
+// function getYouTubeDataList(){
+//     getServerSideProps()
+//     return gYouTube
+// }
 
-    console.log('gYouTube', gYouTube)
-    if(gYouTube){
+async function getServerSideProps() {
+
+    console.log('gYouTube', gYouTube.data.items)
+    if (gYouTube) {
         console.log('FROM CACHE')
-        return
     }
+    else {
+        console.log('send req to YT api')
+        const res = await fetch(`${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLujQBQSxjHDeycqzFuiGfozofN-PB4XYW&key=${YOUTUBE_API_KEY}`)
+        console.log('res', res)
+        const data = await res.json()
 
-    console.log('send req to YT api')
-    const res = await fetch(`${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLujQBQSxjHDeycqzFuiGfozofN-PB4XYW&key=${YOUTUBE_API_KEY}`)
-    console.log('res', res)
-    const data = await res.json()
-
-        gYouTube ={
+        gYouTube = {
             data,
             res
         }
         utilService.saveToStorage(STORAGE_KEY, gYouTube)
         console.log('youTube save to storage')
-
-        return gYouTube
+    }
+    return gYouTube
 
 }
