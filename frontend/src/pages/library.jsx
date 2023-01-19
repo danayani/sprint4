@@ -14,18 +14,16 @@ import { youtubeService } from '../services/youtube.service.js'
 //playlist (station) card
 export function Library() {
     const stations = useSelector(storeState => storeState.stationModule.stations)
-
+    
     // const dataY = youtubeService.getServerSideProps().then(result => result.PromiseResult)
     // const data = youtubeService.getServerSideProps()
     // console.log(data)
 
     var itemList = []
     youtubeService.getServerSideProps().then(res => {
-        console.log('from library', res)
         res.data.items.map((item) => {
             itemList.push(item)
         })
-        console.log('itemList', itemList)
         return res
     })
 
@@ -72,6 +70,9 @@ export function Library() {
         <div>
             <h3>Stations App</h3>
             <h3>Music </h3>
+            {console.log('lib', itemList)}
+           
+            {itemList}.map((item) => {console.log(item.id)})
 
             <iframe id="player" type="text/html" width="640" height="390"
                 src="http://www.youtube.com/embed/BPNTC7uZYrI"
