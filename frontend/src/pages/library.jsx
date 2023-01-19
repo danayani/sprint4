@@ -13,11 +13,21 @@ import { youtubeService } from '../services/youtube.service.js'
 //with grid
 //playlist (station) card
 export function Library() {
-
-
     const stations = useSelector(storeState => storeState.stationModule.stations)
-    const dataYT = youtubeService.getServerSideProps().then(res => res.data)
 
+    // const dataY = youtubeService.getServerSideProps().then(result => result.PromiseResult)
+    // const data = youtubeService.getServerSideProps()
+    // console.log(data)
+
+    var itemList = []
+    youtubeService.getServerSideProps().then(res => {
+        console.log('from library', res)
+        res.data.items.map((item) => {
+            itemList.push(item)
+        })
+        console.log('itemList', itemList)
+        return res
+    })
 
     useEffect(() => {
         loadStations()
@@ -62,9 +72,6 @@ export function Library() {
         <div>
             <h3>Stations App</h3>
             <h3>Music </h3>
-            {console.log('data yt', dataYT)}
-
-
             <main>
                 <button onClick={onAddStation}>Add Station</button>
                 <ul className="station-list">
