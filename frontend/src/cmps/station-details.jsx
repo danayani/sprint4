@@ -1,15 +1,16 @@
 //render the songs inside the station
 
 
-import {AppPreview} from './station.preview';
-export function SongsList({songs,removeSong,addSong}){
+import { StationPreview } from './station.preview';
+
+export function StationDetails({station,removeSong,addSong}){
 
     return (
-       <ul className='app-list'>
-        {songs.map(song =>{
+       <ul className='songs-list'>
+        {station.songs.map(song => {
         {console.log('hello from song list',song)}
-        <li className='app-preview' key={song._id}>
-            <AppPreview song={song} />
+        <li className='song-preview' key={song.id}>
+            <StationPreview song={song} />
 
         </li>})
         }

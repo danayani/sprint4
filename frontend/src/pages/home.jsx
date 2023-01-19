@@ -1,6 +1,7 @@
 // Display of all playlists
 import React from 'react'
 import { StationList } from '../cmps/station-list'
+import stations from '../data/station-data.json'
 
 export function Home() {
     // data retrival
@@ -10,9 +11,7 @@ export function Home() {
         <section className='home'>
             <h2>good morning</h2>
             <h2>playlists</h2>
-            <StationList
-            // stations={stations}
-            />
+            <StationList stations={stations} />
         </section >
 
     )
