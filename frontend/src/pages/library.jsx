@@ -16,7 +16,9 @@ export function Library() {
 
 
     const stations = useSelector(storeState => storeState.stationModule.stations)
-    const dataYT = youtubeService.getServerSideProps()
+    const dataYT = youtubeService.getServerSideProps().then(res => res.data)
+
+
     useEffect(() => {
         loadStations()
     }, [])
@@ -60,7 +62,9 @@ export function Library() {
         <div>
             <h3>Stations App</h3>
             <h3>Music </h3>
-            {console.log('data', dataYT)}
+            {console.log('data yt', dataYT)}
+
+
             <main>
                 <button onClick={onAddStation}>Add Station</button>
                 <ul className="station-list">
