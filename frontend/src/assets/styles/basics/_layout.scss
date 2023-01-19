@@ -1,8 +1,12 @@
-.main-container {
+.main-layout {
     display: grid;
-    grid-template-columns: 230px 1fr;
-    // grid-template-columns: 20px 1fr 20px;
-
+    grid-template-areas:
+    "navbar app-header"
+    "navbar main"
+    "player player";
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr auto;
+    
     > * {
         grid-column: 2;
 
