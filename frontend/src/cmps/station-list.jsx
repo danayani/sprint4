@@ -1,20 +1,21 @@
-// renders the stations list
+// gets the stations from Home and renders the stations list
 
-import { NavLink } from 'react-router-dom';
-import { SongsList } from './station-details';
-import station  from '../data/station-data.json'
+// import { NavLink } from 'react-router-dom';
+import { StationDetails } from './station-details';
 
-
-export function StationList(){
-    console.log('station list :>> ', station);
+export function StationList({stations}){
+    console.log('stations list :>> ', stations);
     return(
         
         <ul className='station-list'>
-            {station.map(station => 
-            <NavLink key={station._id} to={`/${station._id}`}></NavLink>)}
+            {stations.map(station => 
+            <li className='station-preview' key={station._id}>
+                <h3>{station.name}</h3>
+                <StationDetails station={station}/>
+                <button className='play'>Play</button>
+            </li>)}
 
         </ul>
-
 )}
 
 

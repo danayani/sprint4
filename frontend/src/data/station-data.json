@@ -18,7 +18,8 @@
         "songs": [
             {
                 "id": "s1001",
-                "title": "The Meters - Cissy Strut",
+                "title": "Cissy Strut",
+                "createdBy": "The Meters",
                 "url": "youtube/song.mp4",
                 "imgUrl": "https://i.ytimg.com/vi/4_iC0MyIykM/mqdefault.jpg",
                 "addedBy": "{minimal-user}",
@@ -27,6 +28,7 @@
             {
                 "id": "mUkfiLjooxs",
                 "title": "The JB's - Pass The Peas",
+                "createdBy": "The JB's", 
                 "url": "youtube/song.mp4",
                 "imgUrl": "https://i.ytimg.com/vi/mUkfiLjooxs/mqdefault.jpg",
                 "addedBy": "{minimal-user}",
@@ -34,7 +36,8 @@
             },
             {
                 "id": "mUzeiLjo76s",
-                "title": "RH - crazy race",
+                "title": "Crazy race",
+                "createdBy": "RH",
                 "url": "https://www.youtube.com/watch?v=v201PxvQ4qM&ab_channel=TheRHFactor-Topic",
                 "imgUrl": "rh.png",
                 "addedBy": "{minimal-user}",
@@ -70,7 +73,8 @@
         "songs": [
             {
                 "id": "ng84hedgt76",
-                "title": "Sia - Move your body",
+                "title": "Love your body",
+                "createdBy": "Sia",
                 "url": "https://www.youtube.com/watch?v=jSSGgj8mxSc&ab_channel=MindHarmony",
                 "imgUrl": "https://i.ytimg.com/vi/4_iC0MyIykM/mqdefault.jpg",
                 "addedBy": "{minimal-user}",
@@ -78,7 +82,8 @@
             },
             {
                 "id": "mUkfi4n7sxs",
-                "title": "Jaded - Pancake",
+                "title": "Pancake",
+                "createdBy": "Jaded",
                 "url": "youtube/song.mp4",
                 "imgUrl": "https://www.youtube.com/watch?v=AoySz9cx_3c&ab_channel=PrepixDanceStudio",
                 "addedBy": "{minimal-user}",
@@ -86,7 +91,8 @@
             },
             {
                 "id": "mUzan94o76s",
-                "title": "Dua lipa - Levitating",
+                "title": "Levitating",
+                "createdBy": "Dua lipa",
                 "url": "https://www.youtube.com/watch?v=hldMjKHGpag&ab_channel=RachelGardner",
                 "imgUrl": "rh.png",
                 "addedBy": "{minimal-user}",
@@ -120,7 +126,8 @@
         "songs": [
             {
                 "id": "s1002",
-                "title": "Led Zeppelin - Stairway to Heaven",
+                "title": "Stairway to Heaven",
+                "createdBy": "Led Zeppelin",
                 "url": "https://www.youtube.com/watch?v=qnpZCB9BUIw&ab_channel=GootieMusic",
                 "imgUrl": "https://i.ytimg.com/vi/4_iC0MyIykM/mqdefault.jpg",
                 "addedBy": "{minimal-user}",
@@ -129,6 +136,7 @@
             {
                 "id": "mUkfiLjooxs",
                 "title": "The Rolling Stones - Paint It Black",
+                "createdBy": "The Rolling Stones",
                 "url": "https://www.youtube.com/watch?v=J0D1ty9Qbl4&ab_channel=SexyEmotion",
                 "imgUrl": "https://i.ytimg.com/vi/mUkfiLjooxs/mqdefault.jpg",
                 "addedBy": "{minimal-user}",
@@ -136,7 +144,8 @@
             },
             {
                 "id": "mUzeiLjo76s",
-                "title": "AC/DC - Highway to Hell",
+                "title": "Highway to Hell",
+                "createdBy": "AC/DC",
                 "url": "https://www.youtube.com/watch?v=ssQPYVGaJ04&ab_channel=Spanhok",
                 "imgUrl": "rh.png",
                 "addedBy": "{minimal-user}",

@@ -59,6 +59,8 @@ export function Library() {
     return (
         <div>
             <h3>Stations App</h3>
+            <h3>Music </h3>
+            {console.log('data', dataYT)}
             <main>
                 <button onClick={onAddStation}>Add Station</button>
                 <ul className="station-list">

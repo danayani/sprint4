@@ -1,12 +1,12 @@
 // 
 
-export function AppPreview({song}) {
+export function StationPreview({song}) {
      
     return (
         <article>
-            <h2>{song.name}</h2>
-            <h5>{song.createdBy}</h5>
-            <img src=""/>
+            <img src={song.imgUrl} alt="play list img"/>
+            <div className="song-title">{song.title}</div>
+            <div className="song-creator">{song.createdBy}</div>
         </article>
     )
 }
