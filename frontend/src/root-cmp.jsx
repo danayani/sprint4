@@ -14,8 +14,7 @@ export function RootCmp() {
     return (
         <div>
             <AppHeader />
-            <AppNavBar />
-            <main>
+            <main className='main-layout main-container'>
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/:stationId" element={<StationList />} />
@@ -25,6 +24,7 @@ export function RootCmp() {
                     {/* <Route path="/search" element={<SearchPage />} /> */}
                 </Routes>
             </main>
+            <AppNavBar />
         </div>
     )
 }
