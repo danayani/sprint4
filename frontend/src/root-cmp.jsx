@@ -11,6 +11,7 @@ import { Library } from './pages/library'
 import { AppNavBar } from './cmps/app-navbar'
 import { StationPreview } from './cmps/station.preview.jsx'
 import { AppPlayer } from './cmps/app-player.jsx';
+import { LoginSignup } from './cmps/login-singup.jsx'
 
 export function RootCmp() {
     return (
@@ -26,6 +27,7 @@ export function RootCmp() {
                             <Route path="/about" element={<AboutUs />} />
                             <Route path="/library" element={<Library />} />
                             {/* <Route path="/search" element={<SearchPage />} /> */}
+                            <Route path='/login-signug' element={<LoginSignup />} />
                         </Routes>
                     </main>
                     <AppPlayer />
