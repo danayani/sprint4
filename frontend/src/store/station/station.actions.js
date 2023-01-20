@@ -7,21 +7,19 @@ import { SET_STATIONS, SET_CURR_STATION} from "./station.reducer.js";
 
 // Action Creators:
 
-// export async function loadStations() {
-//     try {
-//         const stations = await stationService.query()
-//         console.log('Stations from DB:', stations)
-//         store.dispatch({
-//             type: SET_STATIONS,
-//             stations
-//         })
-
-//     } catch (err) {
-//         console.log('Cannot load stations', err)
-//         throw err
-//     }
-
-// }
+export async function loadStations(filterBy) {
+    try {
+        const stations = await stationService.query(filterBy)
+        console.log('Stations from DB:', stations)
+        store.dispatch({
+            type: SET_STATIONS,
+            stations
+        })
+    } catch (err) {
+        console.log('Cannot load stations', err)
+        throw err
+    }
+}
 
 export async function loadStationById (stationId) {
     try {
