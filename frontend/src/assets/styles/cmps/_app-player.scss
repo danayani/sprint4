@@ -1,8 +1,31 @@
-
-
-.app-playerS{
+.app-playerS {
     grid-area: "player";
     background-color: red;
     height: 100px;
     bottom: 0;
+}
+
+
+.song-details {
+    background-color: pink;
+    justify-content: flex-start;
+}
+
+.song-img {
+    height: 60px;
+    width: 60px;
+}
+
+
+.actions{
+    background-color: green;
+}
+
+.volume-controller{
+    background-color: blue;
+}
+
+.video-player{
+    opacity: 0;
+    // width: 1px;
 }
