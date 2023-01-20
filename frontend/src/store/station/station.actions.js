@@ -1,5 +1,5 @@
-import { stationService } from "../services/station.service.js";
-import { store } from './store.js'
+import { stationService } from "../../services/station.service.js";
+import { store } from '../store.js'
 import { SET_STATIONS, SET_CURR_STATION} from "./station.reducer.js";
 
 // Action Creators:
