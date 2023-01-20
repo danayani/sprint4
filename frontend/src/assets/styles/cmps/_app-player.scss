@@ -1,8 +1,42 @@
-
-
-.app-playerS{
+.app-playerS {
     grid-area: "player";
     background-color: red;
     height: 100px;
     bottom: 0;
+    justify-content: space-between;
+}
+
+.icon-player{
+    fill: white;
+}
+
+
+.fa.facebook::before {
+    content: "\f39e";
+}
+
+
+.song-details {
+    background-color: pink;
+    justify-content: flex-start;
+}
+
+.song-img {
+    height: 60px;
+    width: 60px;
+}
+
+
+.actions{
+    background-color: green;
+}
+
+.volume-controller{
+    background-color: blue;
+    min-width: 150px;
+}
+
+.video-player{
+    // opacity: 0;
+    // width: 1px;
 }
