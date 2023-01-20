@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 import { stationService } from "../../services/station.service.js";
 import { store } from '../store.js'
+=======
+// import { stationService } from "../services/station.service.js";
+import { stationService } from '../../services/station.service';
+import { store } from '../store'
+>>>>>>> cf2f6f841c517f5d6f88014e69801fde1ec5a55f
 import { SET_STATIONS, SET_CURR_STATION} from "./station.reducer.js";
 
 // Action Creators:
