@@ -23,7 +23,7 @@ export function RootCmp() {
                             <Route path="/:stationId" element={<StationList />} />
 
                             <Route path="/about" element={<AboutUs />} />
-                            <Route path='/library' element={<Library />} />
+                            <Route path="/library" element={<Library />} />
                             {/* <Route path="/search" element={<SearchPage />} /> */}
                         </Routes>
                     </main>

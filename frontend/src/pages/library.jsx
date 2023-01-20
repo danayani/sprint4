@@ -80,28 +80,23 @@
 //     )
 // }
 
-// List of user stations
 
 import { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { addStation, updateStation, removeStation } from '../store/station.actions.js'
-// loadStations
 import { showSuccessMsg, showErrorMsg } from '../services/event-bus.service.js'
 import { stationService } from '../services/station.service.js'
 // import { stationService } from '../services/station.service.local.js'
 import { youtubeService } from '../services/youtube.service.js'
 
-
+// loadStations
 //with grid
 //playlist (station) card
+
 export function Library() {
     const stations = useSelector(storeState => storeState.stationModule.stations)
 
     const [itemList2, setListItem] = useState([])
-    // console.log('right from service', listItem)
-    // const itemList2 = []
-
-
 
     useEffect(() => {
         youtubeService.getServerSideProps().then(res => {
@@ -109,46 +104,6 @@ export function Library() {
             setListItem(songs)
         })
     }, [])
-
-    // async function onRemoveStation(stationId) {
-    //     try {
-    //         await removeStation(stationId)
-    //         showSuccessMsg('Station removed')
-    //     } catch (err) {
-    //         showErrorMsg('Cannot remove station')
-    //     }
-    // }
-
-    // async function onAddStation() {
-    //     const station = stationService.getEmptyStation()
-    //     station.vendor = prompt('Vendor?')
-    //     try {
-    //         const savedStation = await addStation(station)
-    //         showSuccessMsg(`Station added (id: ${savedStation._id})`)
-    //     } catch (err) {
-    //         showErrorMsg('Cannot add station')
-    //     }
-    // }
-
-    // async function onUpdateStation(station) {
-    //     const price = +prompt('New price?')
-    //     const stationToSave = { ...station, price }
-    //     try {
-    //         const savedStation = await updateStation(stationToSave)
-    //         showSuccessMsg(`Station updated, new price: ${savedStation.price}`)
-    //     } catch (err) {
-    //         showErrorMsg('Cannot update station')
-    //     }
-    // }
-
-    // function onAddStationMsg(station) {
-    //     console.log(`TODO Adding msg to station`)
-    // }
-
-    // if (!itemList2 || !itemList2.length) {
-    //     console.log('in')
-    //     return <h1>loading...</h1>
-    // }
 
     return (
         <div>
@@ -160,9 +115,6 @@ export function Library() {
                     src={`http://www.youtube.com/embed/${item.id}`}
                     frameBorder="0"></iframe>
             })}
-
-
-
         </div>
     )
 }
