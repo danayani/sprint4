@@ -1,5 +1,5 @@
-import { store } from './store.js'
-import { SET_PLAYER ,SET_SONG_ID } from '../store/player.reducer.js'
+import { store } from '../store.js'
+import { SET_PLAYER ,SET_SONG_ID } from '../store/player/player.reducer.js'
 
 export async function loadPlayer(player) {
     try {
