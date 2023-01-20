@@ -11,7 +11,7 @@ console.log('stationsData from station service', stationsData)
 _createStations()
 
 export const stationService = {
-    query,
+    // query,
     getById,
     save,
     remove,
