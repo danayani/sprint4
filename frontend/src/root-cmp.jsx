@@ -9,6 +9,7 @@ import { Home } from './pages/home'
 import { AboutUs } from './pages/about'
 import { Library } from './pages/library'
 import { AppNavBar } from './cmps/app-navbar'
+import { AppPlayer } from './cmps/app-player.jsx';
 
 export function RootCmp() {
     return (
@@ -27,6 +28,7 @@ export function RootCmp() {
                             {/* <Route path="/search" element={<SearchPage />} /> */}
                         </Routes>
                     </main>
+                    <AppPlayer />
                 </section>
             </Router>
         </Provider>
