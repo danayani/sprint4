@@ -4,7 +4,7 @@ import { useEffect } from "react"
 import { useSelector } from "react-redux"
 import { useParams } from "react-router-dom"
 
-import { loadStationById } from "../store/station.actions.js"
+import { loadStationById } from "../store/station/station.actions.js"
 import { StationPreview } from "./station.preview.jsx"
 
 

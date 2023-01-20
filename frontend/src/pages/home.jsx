@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 import { useSelector } from "react-redux"
 
 import { StationList } from '../cmps/station-list'
-import { loadStations } from '../store/station.actions'
+import { loadStations } from '../store/station/station.actions.js'
 
 export function Home() {
     // data retrival
