@@ -1,21 +1,21 @@
 // gets the stations from Home and renders the stations list
 
-// import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { StationDetails } from './station-details';
 
-export function StationList({stations}){
+export function StationList({ stations }){
     console.log('stations list :>> ', stations);
+    
+    //  TODO: add the station-preview cmp
     return(
-        
-        <ul className='station-list'>
+        <section className='station-lists'>
             {stations.map(station => 
-            <li className='station-preview' key={station._id}>
+            <Link to={`/station/${station._id}`}>
                 <h3>{station.name}</h3>
-                <StationDetails station={station}/>
                 <button className='play'>Play</button>
-            </li>)}
-
-        </ul>
+            </Link>
+            )}
+        </section>
 )}
 
 

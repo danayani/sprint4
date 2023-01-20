@@ -1,11 +1,14 @@
 
 import { storageService } from './async-storage.service.js'
-// import { httpService } from './http.service.js'
-// import { utilService } from './util.service.js'
-// import { userService } from './user.service.js'
+import { utilService } from './util.service.js'
+import data from '../data/station-data.json'
+// console.log('data', data)
 
+const STATION_KEY = 'stationDB'
+const stationsData = data
+console.log('stationsData from station service', stationsData)
 
-const STORAGE_KEY = 'station'
+_createStations()
 
 export const stationService = {
     query,
@@ -14,33 +17,32 @@ export const stationService = {
     remove,
     getEmptyStation,
 }
-window.cs = stationService
+// window.cs = stationService
 
 
-async function query(filterBy = { txt: ''}) {
-    return storageService.get(STORAGE_KEY, filterBy)
+async function query(filterBy = null) {
+    return storageService.query(STATION_KEY)
     // return httpService.get(STORAGE_KEY, filterBy)
 }
 
 function getById(stationId) {
-    return storageService.get(STORAGE_KEY, stationId)
+    return storageService.get(STATION_KEY, stationId)
     // return httpService.get(`station/${stationId}`)
 }
 
 async function remove(stationId) {
-    await storageService.remove(STORAGE_KEY, stationId)
+    await storageService.remove(STATION_KEY, stationId)
     // return httpService.delete(`station/${stationId}`)
 }
 async function save(station) {
     var savedStation
     if (station._id) {
-        savedStation = await storageService.put(STORAGE_KEY, station)
+        savedStation = await storageService.put(STATION_KEY, station)
         // savedStation = await httpService.put(`station/${station._id}`, station)
-
     } else {
         // Later, owner is set by the backend
         // station.owner = userService.getLoggedinUser()
-        savedStation = await storageService.post(STORAGE_KEY, station)
+        savedStation = await storageService.post(STATION_KEY, station)
         // savedStation = await httpService.post('station', station)
     }
     return savedStation
@@ -53,12 +55,28 @@ async function save(station) {
 
 function getEmptyStation() {
     return {
-        name: '',
-        tags: '',
+        "_id": "",
+        "name": "",
+        "tags": [],
+        "createdBy": { //loggedinUser
+            "_id": "",
+            "fullname": "",
+            "imgUrl": ""
+        },
+        "likedByUsers": [],
+        "songs": [],
+        "msgs": []
     }
 }
 
-
+function _createStations() {
+    let stations = utilService.loadFromStorage(STATION_KEY)
+    if (!stations || !stations.length) {
+        stations = stationsData
+        utilService.saveToStorage(STATION_KEY, stations)
+    }
+    return stations
+}
 
 
 
