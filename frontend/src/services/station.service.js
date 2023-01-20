@@ -8,7 +8,7 @@ import { storageService } from './async-storage.service.js'
 const STORAGE_KEY = 'station'
 
 export const stationService = {
-    query,
+    // query,
     getById,
     save,
     remove,
@@ -17,10 +17,10 @@ export const stationService = {
 window.cs = stationService
 
 
-async function query(filterBy = { txt: ''}) {
-    return storageService.get(STORAGE_KEY, filterBy)
-    // return httpService.get(STORAGE_KEY, filterBy)
-}
+// async function query(filterBy = { txt: ''}) {
+//     return storageService.get(STORAGE_KEY, filterBy)
+//     // return httpService.get(STORAGE_KEY, filterBy)
+// }
 
 function getById(stationId) {
     return storageService.get(STORAGE_KEY, stationId)
