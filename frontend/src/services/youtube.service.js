@@ -3,23 +3,24 @@ import { utilService } from './util.service.js'
 
 const STORAGE_KEY = 'youTubeDB'
 const YOUTUBE_PLAYLIST_ITEMS_API = 'https://www.googleapis.com/youtube/v3/playlistItems'
+const YOUTUBE_LIST_SEARCH_API = 'https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest'
 const YOUTUBE_API_KEY = 'AIzaSyChgR_8uhRdBdWcZnrNpR0_xqYk_nwZu60'
 var gYouTube = utilService.loadFromStorage(STORAGE_KEY)
 
 export const youtubeService = {
     getServerSideProps,
     getListItemYouTube,
-    getServerSideProps2,
-    getServerSidePropsSync
+    getServerSideSearch
 }
 
-function getListItemYouTube(){
+function getListItemYouTube() {
     const itemList = []
     getServerSideProps().then(res => {
         res.data.items.map((item) => {
             itemList.push(item)
         })
     })
+
 }
 
 async function getServerSideProps() {
@@ -43,78 +44,42 @@ async function getServerSideProps() {
     return gYouTube
 }
 
+async function getServerSideSearch() {
+    console.log('getServerSideSearch')
+    // if (gYouTube) {
+    //     console.log('FROM CACHE')
+    // }
+    // else {
+        console.log('send search req to YT api')
+        const res = await fetch(`https://developers.google.com/apis-explorer/#p/youtube/v3/youtube.search.list?
+                            part = snippet
+                            & order=viewCount
+                            & q=skateboarding + dog
+                            & type=video
+                            & videoDefinition=high`)
 
-
-
-
-
-
-
-
-
-
-
-function getServerSidePropsSync() {
-    const check = fetchMoviesHandler()
-    // console.log('WTF', check);
-    return check
-}
-
-
-function fetchMoviesHandler() {
-    const res = async () => {
-        try {
-            const response = await fetch(`${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLujQBQSxjHDeycqzFuiGfozofN-PB4XYW&key=${YOUTUBE_API_KEY}`);
-            if (!response.ok) {
-                throw new Error('Something went wrong!');
-            }
-            const data = await response.json();
-            console.log('WTF3',await data);
-        }
-        catch (error) {
-            console.log(error.message);
-        }
-    }
-    // =  fetch(`${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLujQBQSxjHDeycqzFuiGfozofN-PB4XYW&key=${YOUTUBE_API_KEY}`)
-    //   .then((response) => {
-    //     return response.json();
-    //   })
-    //   .then((data) => data.results);
-    console.log('WTF2', res);
-    return res
-}
-
-
-function getServerSideProps2() {
-    const xhr = new XMLHttpRequest()
-    xhr.onreadystatechange = () => {
-        if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-            const res = JSON.parse(xhr.responseText)
-            console.log(res)
-        }
-    }
-    xhr.open('GET', `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLujQBQSxjHDeycqzFuiGfozofN-PB4XYW&key=${YOUTUBE_API_KEY}`)
-    xhr.send()
+        console.log('res search', res)
+        const data = await res.json()
+        console.log('data search', data)
+        // gYouTube = {
+        //     data,
+        //     res
+        // }
+    //     utilService.saveToStorage(STORAGE_KEY, gYouTube)
+    //     console.log('youTube save to storage')
+    // }
+    return data
 }
 
 
 
-// function getServerSideProps() {
-//     fetch(`${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLujQBQSxjHDeycqzFuiGfozofN-PB4XYW&key=${YOUTUBE_API_KEY}`)
-//         .then((response) => {
-//             return response.json();
-//         })
-//         .then((data) => {
-//             return data.results
 
-//             // const transformedMovies = data.results.map((movieData) => {
-//             //   return {
-//             //     id: movieData.episode_id,
-//             //     title: movieData.title,
-//             //     openingText: movieData.opening_crawl,
-//             //     releaseDate: movieData.release_date,
-//             //   };
-//             // });
-//             // setMovies(transformedMovies);
-//         });
-// }
+
+
+
+
+
+
+
+
+
