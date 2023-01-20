@@ -111,7 +111,7 @@ export function Library() {
             <h3>Music </h3>
 
             {itemList2.map((item) => {
-                console.log('item video', item.)
+                // console.log('item video', item.)
                 return <iframe key={item.id} id="player" type="text/html" width="640" height="390"
                     src={`http://www.youtube.com/embed/YykjpeuMNEk`}
                     frameBorder="0"></iframe>
