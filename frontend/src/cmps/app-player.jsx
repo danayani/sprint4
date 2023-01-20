@@ -4,6 +4,10 @@ import { useState } from 'react'
 import { useSelector } from 'react-redux'
 import { showErrorMsg, showSuccessMsg } from '../services/event-bus.service'
 
+
+//icons
+import volumeIcon from '../assets/icons/player/speaker/volume-high-solid.svg'
+
 // import { UserMsg } from './user-msg.jsx'
 
 //TODO : get (props) song-item
@@ -24,10 +28,12 @@ export function AppPlayer() {
 
             <div className="actions flex justify-center">
                 on/off
+                <a href="#" class="fa facebook"></a>
             </div>
 
             <div className="volume-controller flex">
                 volume
+                <img className='volume icon-player' src={volumeIcon} />
             </div>
 
 
