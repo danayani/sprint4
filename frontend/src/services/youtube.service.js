@@ -51,12 +51,21 @@ async function getServerSideSearch() {
     // }
     // else {
         console.log('send search req to YT api')
+        // const res = await fetch(`https://youtube.googleapis.com/youtube/v3/search?
+        // part=snippet
+        // &eventType=completed
+        // &maxResults=10
+        // &order=relevance
+        // &q=lady
+        // &type=video
+        // &key=${YOUTUBE_API_KEY}`)
+
         const res = await fetch(`https://www.googleapis.com/youtube/v3/search?
                             part=snippet
                             & order=viewCount
-                            & q=miley+cyrus
+                            & maxResults=6
                             & type=video
-                            & videoDefinition=high
+                            & videoDefinition=low
                             &key=${YOUTUBE_API_KEY}
         `)
         // const res = await fetch(`https://developers.google.com/apis-explorer/#p/youtube/v3/youtube.search.list?
