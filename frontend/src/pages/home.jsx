@@ -8,7 +8,7 @@ import { loadStations } from '../store/station/station.actions.js'
 export function Home() {
     // data retrival
     const stations = useSelector((storeState) => storeState.stationModule.stations)
-console.log('stations from home', stations)
+    console.log('stations from home', stations)
     useEffect(() => {
         loadStations()
     }, [])
@@ -17,15 +17,17 @@ console.log('stations from home', stations)
         const currHour = new Date().getHours()
         if (currHour >= 6 && currHour <= 12) return 'Good morning'
         else if (currHour > 12 && currHour <= 17) return 'Good afternoon'
-        else if (currHour > 17 && currHour <= 22) return 'Good evning'
+        else if (currHour > 17 && currHour <= 22) return 'Good evening'
         else if (currHour > 22 || currHour < 6) return 'Good night'
     }
 
 
     return (
-        <section className='home'>
-            <h2>{setGreeting()}</h2>
-            <StationList stations={stations} />
+        <section className='stations-container'>
+            <div className="greeting">
+                <h2>{setGreeting()}</h2>
+            </div>
+            <StationList stations={stations.slice(0, 6)} />
         </section >
 
     )

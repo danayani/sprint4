@@ -6,28 +6,20 @@ import { StationDetails } from './station-details';
 export function StationList({ stations }){
     console.log('stations list :>> ', stations);
     
+    // const firstSixStation = stations.splice(0,5)
+    
     //  TODO: add the station-preview cmp
     return(
-        <section className='station-lists'>
+        // Should we splice the stations array to display the first 6?
+        <section className='stations-cards'>
             {stations.map(station => 
             <Link to={`/station/${station._id}`}>
+                <div className="station-card">
+                    {/* <StationDetails /> */}
                 <h3>{station.name}</h3>
                 <button className='play'>Play</button>
+                </div>
             </Link>
             )}
         </section>
 )}
-
-
-// <ul className='station-list'>
-//     <h1>i am a station list</h1>
-//     {data.map(station =>{
-//         {console.log('hello from station list',station)}
-//         <li className='station-card' key={station._id}>
-//             <h3>1</h3>
-            
-//             <SongsList station={station}/>
-//         </li>
-//     })
-//     }
-// </ul>
