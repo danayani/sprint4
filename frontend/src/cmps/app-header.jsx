@@ -5,7 +5,8 @@ import { useSelector } from 'react-redux';
 import left from '../assets/icons/left.png';
 import { NavLink, useNavigate, useLocation } from "react-router-dom";
 import { logout } from '../store/user/user.actions.js'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
+import { utilService } from '../services/util.service';
 
 export function AppHeader() {
     const user = useSelector((storeState => storeState.userModule.user))
@@ -15,7 +16,14 @@ export function AppHeader() {
     const navigate = useNavigate()
     const [txtSearchPlaceHolder, setTxtSearchPlaceHolder] = useState('What do you want to listen to ?')
     const [txtSearchKey, setTxtSearchKey] = useState('')
-
+    // const search = useRef(utilService.debounce(getSongsFromSearch,500))
+    
+    // async function getSongsFromSearch(value) {
+    //     if(!value.length) {
+    //         setTxtSearchPlaceHolder([])
+    //         return
+    //     }
+    // }
     function onLogoutUser() {
         navigate('/')
         logout()
@@ -31,6 +39,7 @@ export function AppHeader() {
         console.log('setTxtSearchKey', value)
         setTxtSearchKey(value)
         // setTxtSearchKey(prevTxt => ({ ...prevTxt, [field]: value }))
+        // search.current(value)
     }
 
     function onSearch() {
