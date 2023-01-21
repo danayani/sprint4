@@ -9,15 +9,12 @@ import { useEffect, useState } from 'react'
 
 export function AppHeader() {
     const user = useSelector((storeState => storeState.userModule.user))
-    const [currPage, setCurrPage] = useState(window.location.href)
     const location = useLocation()
     console.log('location', location.pathname)
 
     const navigate = useNavigate()
-
-    // useEffect(() => {
-    //     setCurrPage = window.location.href
-    // },[window.location.href])
+    const [txtSearchPlaceHolder, setTxtSearchPlaceHolder] = useState('What do you want to listen to ?')
+    const [txtSearchKey, setTxtSearchKey] = useState('')
 
     function onLogoutUser() {
         navigate('/')
@@ -26,6 +23,16 @@ export function AppHeader() {
 
     function onGo(diff) {
         navigate(diff)
+    }
+
+    function handleChange({ target }) {
+        let { value } = target
+        console.log('setTxtSearchKey', value)
+        setTxtSearchKey(value)
+    }
+
+    function onSearch(){
+        console.log('onSearch')
     }
 
     return (
@@ -37,10 +44,19 @@ export function AppHeader() {
                         <img className='btn-icon' src={left} />
                     </button>
                 </div>
+
                 {location.pathname == '/search' &&
-                    <form>
-                        <input placeholder=' What do you want to listen to ?'></input>
-                    </form>}
+                <div className='searchInput-container'>
+                    <form  onSubmit={onSearch}>
+                        <input type="text"
+                            name="searchKey"
+                            value={txtSearchKey}
+                            placeholder={txtSearchPlaceHolder}
+                            onChange={handleChange} />
+                        <button>🔍</button>
+                    </form>
+                </div>}
+                    
 
                 {(user) ?
                     <div onClick={onLogoutUser}>
