@@ -1,6 +1,6 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { useDispatch } from "react-redux"
-import { useNavigate } from 'react-router-dom'
+import { NavLink, useNavigate, useParams } from 'react-router-dom'
 
 import { userService } from '../services/user.service'
 import { login, signup, logout } from '../store/user/user.actions'
@@ -8,16 +8,22 @@ import { SET_USER } from "../store/user/user.reducer"
 
 const defaultCredentials = {
     username: '',
-    email:'',
+    email: '',
     password: '',
     fullname: ''
 }
 
-export const LoginSignup = () => {
+export function LoginSignup() {
     const [credentials, setCredentials] = useState(defaultCredentials)
     const [isSignup, setIsSignup] = useState(false)
     const navigate = useNavigate()
-    const dispatch = useDispatch
+    const dispatch = useDispatch()
+    const { signupUser } = useParams()
+
+    useEffect(() => {
+        if (signupUser === 'login') setIsSignup(false)
+        else setIsSignup(true)
+    }, [signupUser])
 
     function setUser(user) {
         dispatch({ type: SET_USER, user })
@@ -27,7 +33,6 @@ export const LoginSignup = () => {
         const field = ev.target.name
         const value = ev.target.value
         setCredentials((prevCred) => ({ ...prevCred, [field]: value }))
-
     }
 
     function onSubmit(ev) {
@@ -86,7 +91,8 @@ export const LoginSignup = () => {
                         <input type="text" name="fullname" value={credentials.fullname} placeholder="Enter your full name here..." onChange={handleChange} required />
                     </label>
                 }
-                <button className="btn-login-signup">{isSignup ? 'Sign up' :'Sign in'}</button>
+                <button className="btn-login-signup">{isSignup ? 'Sign up' : 'Sign in'}</button>
+                {/* <NavLink to='' */}
                 <a href="#" onClick={onToggleSignupUser}>
                     {isSignup ? 'Are you a member? Sign in' : 'New in town? Sign up'}
                 </a>

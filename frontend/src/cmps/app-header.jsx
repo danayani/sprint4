@@ -20,19 +20,19 @@ export function AppHeader() {
     // },[window.location.href])
 
     function onLogoutUser() {
-        logout().then(() => {
-            user = null
-        })
+        navigate('/')
+        logout()
     }
 
-    function onGo() {
-        navigate(-1)
+    function onGo(diff) {
+        navigate(diff)
     }
 
     return (
         <div className="top-bar-container">
             <header className="app-header">
                 <div>
+
                     <button className="go-btn" onClick={() => onGo(-1)}>
                         <img className='btn-icon' src={left} />
                     </button>
@@ -50,8 +50,8 @@ export function AppHeader() {
                     </div>
                     :
                     <div>
-                        {!user && <NavLink to="/login-signup">Sign In</NavLink>}
-                        {!user && <NavLink to="/login-signup">Sign Up</NavLink>}
+                        {!user && <NavLink to="/login-signup/login">Sign In</NavLink>}
+                        {!user && <NavLink to="/login-signup/signup">Sign Up</NavLink>}
                     </div>
                 }
             </header>
