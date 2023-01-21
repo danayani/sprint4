@@ -37,12 +37,10 @@ export function AppHeader() {
                         <img className='btn-icon' src={left} />
                     </button>
                 </div>
-                {location.pathname == '/search' && <input placeholder=' What do you want to listen to ?'></input>
-                    // <input> </input>
-                    
-                }
-
-
+                {location.pathname == '/search' &&
+                    <form>
+                        <input placeholder=' What do you want to listen to ?'></input>
+                    </form>}
 
                 {(user) ?
                     <div onClick={onLogoutUser}>
