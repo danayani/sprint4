@@ -27,11 +27,13 @@ export function AppHeader() {
 
     function handleChange({ target }) {
         let { value } = target
+        // let { name: field, value } = target
         console.log('setTxtSearchKey', value)
         setTxtSearchKey(value)
+        // setTxtSearchKey(prevTxt => ({ ...prevTxt, [field]: value }))
     }
 
-    function onSearch(){
+    function onSearch() {
         console.log('onSearch')
     }
 
@@ -46,17 +48,17 @@ export function AppHeader() {
                 </div>
 
                 {location.pathname == '/search' &&
-                <div className='searchInput-container'>
-                    <form  onSubmit={onSearch}>
-                        <input type="text"
-                            name="searchKey"
-                            value={txtSearchKey}
-                            placeholder={txtSearchPlaceHolder}
-                            onChange={handleChange} />
-                        <button>🔍</button>
-                    </form>
-                </div>}
-                    
+                    <div className='searchInput-container'>
+                        <form onSubmit={onSearch}>
+                            <input type="text"
+                                name="searchKey"
+                                value={txtSearchKey}
+                                placeholder={txtSearchPlaceHolder}
+                                onChange={handleChange} />
+                            <button>🔍</button>
+                        </form>
+                    </div>}
+
 
                 {(user) ?
                     <div onClick={onLogoutUser}>
