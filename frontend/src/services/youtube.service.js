@@ -10,7 +10,8 @@ var gYouTube = utilService.loadFromStorage(STORAGE_KEY)
 export const youtubeService = {
     getServerSideProps,
     getListItemYouTube,
-    getServerSideSearch
+    getServerSideSearch,
+    getPlaylistInfo
 }
 
 function getListItemYouTube() {
@@ -67,6 +68,19 @@ async function getServerSideSearch(searchKey) {
     return data
 }
 
+
+async function getPlaylistInfo() {
+    //https://stackoverflow.com/questions/15596753/how-do-i-get-video-durations-with-youtube-api-version-3
+    //https://developers.google.com/youtube/v3/docs/videos/list
+    //You'll want to set part=contentDetails, because the duration is there.
+    console.log('getPlaylistInfo ')
+    const res = await fetch(`https://www.googleapis.com/youtube/v3/videos?id=9bZkp7q19f0&part=contentDetails&key=${YOUTUBE_API_KEY}`)
+ 
+    const data = await res.json()
+    console.log('data info', data)
+    return data
+
+}
 
 
 

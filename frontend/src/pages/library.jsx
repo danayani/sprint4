@@ -15,6 +15,7 @@ export function Library() {
 
     const [itemList2, setListItem] = useState([])
     const [itemListSearch, setListItemSearch] = useState([])
+    const [itemInfo, setItemInfo] = useState([])
 
     useEffect(() => {
         youtubeService.getServerSideProps().then(res => {
@@ -28,6 +29,10 @@ export function Library() {
         //     console.log('song from lib', songs)
         //     setListItemSearch(songs)
         // })
+        youtubeService.getPlaylistInfo().then(res =>{
+            setItemInfo(res)
+        })
+
     }, [])
 
     return (
@@ -36,6 +41,7 @@ export function Library() {
             <h3>Music </h3>
 
             {console.log('search list', itemListSearch)}
+            {console.log('itemInfo', itemInfo)}
             {itemList2.map((item) => {
                 return <iframe key={item.id} id="player" type="text/html" width="640" height="390"
                     src={`http://www.youtube.com/embed/${item.snippet.resourceId.videoId}`}
