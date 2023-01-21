@@ -3,7 +3,6 @@
 //acording to the url (page) the headder change
 import { useSelector } from 'react-redux';
 import left from '../assets/icons/left.png';
-import right from '../assets/icons/right.png';
 import { NavLink, useNavigate } from "react-router-dom";
 import { logout } from '../store/user/user.actions.js'
 
@@ -13,25 +12,20 @@ export function AppHeader() {
 
 
     function onLogoutUser() {
-        logout().then(() => {
-            user = null
-        })
+        navigate('/')
+        logout()
     }
 
-    function onGo(diff) {
-        navigate(diff)
-    }
+    // function onGo() {
+    //     navigate(-1)
+    // }
 
     return (
         <div className="top-bar-container">
             <header className="app-header">
                 <div>
-
-                    <button className="go-btn" onClick={() => onGo(-1)}>
+                    <button className="go-btn" onClick={() => navigate(-1)}>
                         <img className='btn-icon' src={left} />
-                    </button>
-                    <button className="go-btn" onClick={() => onGo(1)}>
-                        <img className='btn-icon' src={right} />
                     </button>
                 </div>
                 {(user) ?
@@ -40,8 +34,8 @@ export function AppHeader() {
                     </div>
                     :
                     <div>
-                        {!user && <NavLink to="/login-signup">Sign In</NavLink>}
-                        {!user && <NavLink to="/login-signup">Sign Up</NavLink>}
+                        {!user && <NavLink to="/login-signup/login">Sign In</NavLink>}
+                        {!user && <NavLink to="/login-signup/signup">Sign Up</NavLink>}
                     </div>
                 }
             </header>
