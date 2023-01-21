@@ -23,11 +23,11 @@ export function Library() {
         })
 
 
-        youtubeService.getServerSideSearch().then(res => {
-            const songs = res
-            console.log('song from lib', songs)
-            setListItemSearch(songs)
-        })
+        // youtubeService.getServerSideSearch().then(res => {
+        //     const songs = res
+        //     console.log('song from lib', songs)
+        //     setListItemSearch(songs)
+        // })
     }, [])
 
     return (
