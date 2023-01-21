@@ -28,7 +28,8 @@ export function RootCmp() {
                             <Route path="/about" element={<AboutUs />} />
                             <Route path="/library" element={<Library />} />
                             <Route path="/search" element={<Search />} />
-                            <Route path='/login-signug' element={<LoginSignup />} />
+                            <Route path='/login-signug/:login' element={<LoginSignup />} />
+                            <Route path='/login-signug/:signup' element={<LoginSignup />} />
                         </Routes>
                     </main>
                     <AppPlayer />

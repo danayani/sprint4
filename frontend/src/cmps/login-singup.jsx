@@ -91,11 +91,17 @@ export function LoginSignup() {
                         <input type="text" name="fullname" value={credentials.fullname} placeholder="Enter your full name here..." onChange={handleChange} required />
                     </label>
                 }
-                <button className="btn-login-signup">{isSignup ? 'Sign up' : 'Sign in'}</button>
+
+                {/* <div>
+                    {(isSignup) ? 'Are you a member? Sign in' : 'New in town? Sign up'}
+                    <button onClick={onToggleSignupUser}>{(isSignup) ? 'Sign in' : 'Sign up'}</button>
+                </div> */}
+
+                {/* <button className="btn-login-signup">{isSignup ? 'Sign up' : 'Sign in'}</button> */}
                 {/* <NavLink to='' */}
-                <a href="#" onClick={onToggleSignupUser}>
+                {/* <a href="#" onClick={onToggleSignupUser}>
                     {isSignup ? 'Are you a member? Sign in' : 'New in town? Sign up'}
-                </a>
+                </a> */}
             </form>
         </section>
     )
