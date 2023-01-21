@@ -9,11 +9,12 @@ import { useEffect, useState } from 'react'
 
 export function AppHeader() {
     const user = useSelector((storeState => storeState.userModule.user))
-    const [currPage, setCurrPage] = useState(window.location.href)
     const location = useLocation()
     console.log('location', location.pathname)
 
     const navigate = useNavigate()
+    const [txtSearchPlaceHolder, setTxtSearchPlaceHolder] = useState('What do you want to listen to ?')
+    const [newTxtNote, setTxtNewNote] = useState('')
 
     // useEffect(() => {
     //     setCurrPage = window.location.href
@@ -28,6 +29,13 @@ export function AppHeader() {
         navigate(diff)
     }
 
+
+
+    function handleChange({ target }) {
+        let { value } = target
+        setTxtNewNote(value)
+    }
+
     return (
         <div className="top-bar-container">
             <header className="app-header">
@@ -40,6 +48,7 @@ export function AppHeader() {
                 {location.pathname == '/search' &&
                     <form>
                         <input placeholder=' What do you want to listen to ?'></input>
+                        <button>🔍</button>
                     </form>}
 
                 {(user) ?
