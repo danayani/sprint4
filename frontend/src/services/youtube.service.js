@@ -45,39 +45,21 @@ async function getServerSideProps() {
 }
 
 async function getServerSideSearch() {
-    console.log('getServerSideSearch')
+    // console.log('getServerSideSearch')
     // if (gYouTube) {
     //     console.log('FROM CACHE')
     // }
     // else {
-        console.log('send search req to YT api')
-        // const res = await fetch(`https://youtube.googleapis.com/youtube/v3/search?
-        // part=snippet
-        // &eventType=completed
-        // &maxResults=10
-        // &order=relevance
-        // &q=lady
-        // &type=video
-        // &key=${YOUTUBE_API_KEY}`)
+    console.log('search coldplay')
+    const res = await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&order=viewCount&maxResults=6&type=video&q=coldplay&key=${YOUTUBE_API_KEY}`)
 
-        const res = await fetch(`https://www.googleapis.com/youtube/v3/search?
-                            part=snippet
-                            & order=viewCount
-                            & maxResults=6
-                            & type=video
-                            & videoDefinition=low
-                            &key=${YOUTUBE_API_KEY}
-        `)
-        // const res = await fetch(`https://developers.google.com/apis-explorer/#p/youtube/v3/youtube.search.list?
-        //                     `)
-
-        console.log('res search', res)
-        const data = await res.json()
-        console.log('data search', data)
-        // gYouTube = {
-        //     data,
-        //     res
-        // }
+    console.log('res search', res)
+    const data = await res.json()
+    console.log('data search', data)
+    // gYouTube = {
+    //     data,
+    //     res
+    // }
     //     utilService.saveToStorage(STORAGE_KEY, gYouTube)
     //     console.log('youTube save to storage')
     // }
