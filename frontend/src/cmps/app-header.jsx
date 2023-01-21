@@ -3,19 +3,25 @@
 //acording to the url (page) the headder change
 import { useSelector } from 'react-redux';
 import left from '../assets/icons/left.png';
-import right from '../assets/icons/right.png';
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate, useLocation } from "react-router-dom";
 import { logout } from '../store/user/user.actions.js'
+import { useEffect, useState } from 'react'
 
 export function AppHeader() {
     const user = useSelector((storeState => storeState.userModule.user))
+    const [currPage, setCurrPage] = useState(window.location.href)
+    const location = useLocation()
+    console.log('location', location.pathname)
+
     const navigate = useNavigate()
 
+    // useEffect(() => {
+    //     setCurrPage = window.location.href
+    // },[window.location.href])
 
     function onLogoutUser() {
-        logout().then(() => {
-            user = null
-        })
+        navigate('/')
+        logout()
     }
 
     function onGo(diff) {
@@ -30,18 +36,22 @@ export function AppHeader() {
                     <button className="go-btn" onClick={() => onGo(-1)}>
                         <img className='btn-icon' src={left} />
                     </button>
-                    <button className="go-btn" onClick={() => onGo(1)}>
-                        <img className='btn-icon' src={right} />
-                    </button>
                 </div>
+                {location.pathname == '/search' && <input placeholder=' What do you want to listen to ?'></input>
+                    // <input> </input>
+                    
+                }
+
+
+
                 {(user) ?
                     <div onClick={onLogoutUser}>
                         {user.fullname}
                     </div>
                     :
                     <div>
-                        {!user && <NavLink to="/login-signup">Sign In</NavLink>}
-                        {!user && <NavLink to="/login-signup">Sign Up</NavLink>}
+                        {!user && <NavLink to="/login-signup/login">Sign In</NavLink>}
+                        {!user && <NavLink to="/login-signup/signup">Sign Up</NavLink>}
                     </div>
                 }
             </header>

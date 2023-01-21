@@ -16,10 +16,10 @@ export function AppNavBar() {
                     </a>
                 </li>
                 <li className='nav-link'>
-                    <a href='/search'>
+                    <NavLink to='/search'>
                         <img className='icon' src={searchIcon} />
                         <span>Search</span>
-                    </a>
+                    </NavLink>
                 </li>
                 <li className='nav-link'>
                     <NavLink to="/library">
