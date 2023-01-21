@@ -3,7 +3,7 @@ import { utilService } from './util.service.js'
 
 const STORAGE_KEY = 'youTubeDB'
 const YOUTUBE_PLAYLIST_ITEMS_API = 'https://www.googleapis.com/youtube/v3/playlistItems'
-const YOUTUBE_LIST_SEARCH_API = 'https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest'
+const YOUTUBE_LIST_SEARCH_API = 'https://www.googleapis.com/youtube/v3/search'
 const YOUTUBE_API_KEY = 'AIzaSyChgR_8uhRdBdWcZnrNpR0_xqYk_nwZu60'
 var gYouTube = utilService.loadFromStorage(STORAGE_KEY)
 
@@ -44,14 +44,15 @@ async function getServerSideProps() {
     return gYouTube
 }
 
-async function getServerSideSearch() {
+//TODO: need wait mathod
+async function getServerSideSearch(searchKey) {
     // console.log('getServerSideSearch')
     // if (gYouTube) {
     //     console.log('FROM CACHE')
     // }
     // else {
-    console.log('search coldplay')
-    const res = await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&order=viewCount&maxResults=6&type=video&q=coldplay&key=${YOUTUBE_API_KEY}`)
+    console.log('search ', searchKey)
+    const res = await fetch(`${YOUTUBE_LIST_SEARCH_API}?part=snippet&order=viewCount&maxResults=6&type=video&q=${searchKey}}&key=${YOUTUBE_API_KEY}`)
 
     console.log('res search', res)
     const data = await res.json()
