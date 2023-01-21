@@ -3,31 +3,47 @@
 //acording to the url (page) the headder change
 import { useSelector } from 'react-redux';
 import left from '../assets/icons/left.png';
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate, useLocation } from "react-router-dom";
 import { logout } from '../store/user/user.actions.js'
+import { useEffect, useState } from 'react'
 
 export function AppHeader() {
     const user = useSelector((storeState => storeState.userModule.user))
+    const [currPage, setCurrPage] = useState(window.location.href)
+    const location = useLocation()
+    console.log('location', location.pathname)
+
     const navigate = useNavigate()
 
+    // useEffect(() => {
+    //     setCurrPage = window.location.href
+    // },[window.location.href])
 
     function onLogoutUser() {
         navigate('/')
         logout()
     }
 
-    // function onGo() {
-    //     navigate(-1)
-    // }
+    function onGo(diff) {
+        navigate(diff)
+    }
 
     return (
         <div className="top-bar-container">
             <header className="app-header">
                 <div>
-                    <button className="go-btn" onClick={() => navigate(-1)}>
+
+                    <button className="go-btn" onClick={() => onGo(-1)}>
                         <img className='btn-icon' src={left} />
                     </button>
                 </div>
+                {location.pathname == '/search' && <input placeholder=' What do you want to listen to ?'></input>
+                    // <input> </input>
+                    
+                }
+
+
+
                 {(user) ?
                     <div onClick={onLogoutUser}>
                         {user.fullname}

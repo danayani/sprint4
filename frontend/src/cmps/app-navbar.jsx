@@ -7,7 +7,7 @@ import addIcon from '../assets/icons/add.png'
 
 export function AppNavBar() {
     return (
-        <aside className='side-navbar main-container'>
+        <aside className='side-navbar'>
             <ul className='nav-bar'>
                 <li className='nav-link'>
                     <a href='/'>
