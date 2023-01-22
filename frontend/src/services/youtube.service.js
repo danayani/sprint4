@@ -47,24 +47,12 @@ async function getServerSideProps() {
 
 //TODO: need wait mathod
 async function getServerSideSearch(searchKey) {
-    // console.log('getServerSideSearch')
-    // if (gYouTube) {
-    //     console.log('FROM CACHE')
-    // }
-    // else {
     console.log('search ', searchKey)
     const res = await fetch(`${YOUTUBE_LIST_SEARCH_API}?part=snippet&order=viewCount&maxResults=6&type=video&q=${searchKey}}&key=${YOUTUBE_API_KEY}`)
 
     console.log('res search', res)
     const data = await res.json()
     console.log('data search', data)
-    // gYouTube = {
-    //     data,
-    //     res
-    // }
-    //     utilService.saveToStorage(STORAGE_KEY, gYouTube)
-    //     console.log('youTube save to storage')
-    // }
     return data
 }
 
@@ -79,7 +67,6 @@ async function getPlaylistInfo() {
     const data = await res.json()
     console.log('data info', data)
     return data
-
 }
 
 

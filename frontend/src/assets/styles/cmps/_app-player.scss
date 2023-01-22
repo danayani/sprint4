@@ -1,14 +1,20 @@
 .app-playerS {
     grid-area: "player";
-    background-color: red;
-    height: 100px;
+    background-color: $bgcmain;
+    height: 90px;
     bottom: 0;
     justify-content: space-between;
     position: fixed;
     width: 100%;
 }
 
-.icon-player{
+
+.player-video {
+    width: 100px;
+}
+
+
+.icon-player {
     fill: white;
 }
 
@@ -19,8 +25,9 @@
 
 
 .song-details {
-    background-color: pink;
-    justify-content: flex-start;
+    // background-color: rgb(164, 53, 72);
+    // justify-content: flex-start;
+    align-items: center;
 }
 
 .song-img {
@@ -29,16 +36,37 @@
 }
 
 
-.actions{
-    background-color: green;
+.player-actions-container {
+    // background-color: rgb(172, 37, 59);
+    align-items: center;
 }
 
-.volume-controller{
-    background-color: blue;
+.player-actions{
+    gap:3px;
+}
+.player-btn-play-pause{
+    background-color: transparent;
+}
+.btn-next{
+    transform: scale(-1, 1);
+}
+
+.volume-controller {
+    // background-color: rgb(233, 106, 127);
     min-width: 150px;
+    // justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+.volume-icon{
+    font-size: 13.333px;
+}
+.volume-range {
+    width: 93px;
 }
 
-.video-player{
+.video-player {
     // opacity: 0;
     // width: 1px;
 }

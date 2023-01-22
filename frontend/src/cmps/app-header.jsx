@@ -66,8 +66,6 @@ export function AppHeader() {
                             <button>🔍</button>
                         </form>
                     }
-
-
                 {(user) ?
                     <div onClick={onLogoutUser}>
                         {user.fullname}
