@@ -6,46 +6,49 @@
     grid-row: 1 / -1;
 }
 
-ul{
+ul {
     list-style-type: none;
+
+    &.nav-bar {
+        padding: 25px;
+    }
 }
 
-span{
+span {
     font-size: 15px;
 }
-.fa-solid{
+
+.fa-solid {
     // background-color: $txtselected;
     color: $txtselected;
-    margin-right: 7px;
-    font-size: 20px;
+    margin-right: 20px;
+    font-size: 25px;
+    cursor: pointer;
 }
-
-
 
 .nav-link {
     text-transform: none;
     display: block;
     height: 40px;
-    // padding: 0 16px;
     cursor: pointer;
-    // gap: 16px;
     justify-content: center;
     align-items: center;
 
-    &-logo{
+    &-logo {
         padding-bottom: 20px;
-        
     }
 
-    // &.active{
-    //     color: $txtselected;
-    // }
+    .logo-img {
+        padding: 15px;
+        height: 57px;
+        object-fit: cover;
+    }
+
 }
 
 span {
     color: $txtfill;
-
-    &:hover{
+    &:hover {
         transition: 0.7s;
         color: $txtselected;
     }

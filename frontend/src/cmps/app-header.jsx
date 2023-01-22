@@ -52,14 +52,14 @@ export function AppHeader() {
                 <div>
 
                     <button className="go-btn" onClick={() => onGo(-1)}>
-                        <i class="fa-solid fa-circle-chevron-left"></i>
+                        <i className="fa-solid fa-circle-chevron-left"></i>
                     </button>
                 </div>
 
                 {location.pathname == '/search' &&
                     <div className='searchInput-container flex'>
                         <button className="search-key-btn">
-                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <i className="fa-solid fa-magnifying-glass"></i>
                         </button>
                         <form onSubmit={onSearch}>
                             <input className='search-key-input' type="text"
@@ -70,7 +70,7 @@ export function AppHeader() {
                         </form>
                     </div>}
 
-                {(user) ?
+                {/* {(user) ?
                     <div onClick={onLogoutUser}>
                         {user.fullname}
                     </div>
@@ -79,7 +79,7 @@ export function AppHeader() {
                         {!user && <NavLink to="/login-signup/login">Sign In</NavLink>}
                         {!user && <NavLink to="/login-signup/signup">Sign Up</NavLink>}
                     </div>
-                }
+                } */}
             </header>
         </div>
     )
