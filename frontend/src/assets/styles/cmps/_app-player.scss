@@ -36,17 +36,28 @@
     align-items: center;
 }
 
-.player-actions{
-    gap:3px;
+.player-actions {
+    gap: 3px;
     align-items: center;
     justify-content: center;
 }
-.player-btn-play-pause{
+
+.player-btn-play-pause {
     background-color: transparent;
 }
-.btn-next{
+
+.btn-next {
     transform: scale(-1, 1);
 }
+
+.action-btn {
+    font-size: 1rem;
+}
+
+.player-range-action {
+    width: 505px;
+}
+
 
 .volume-controller {
     // background-color: rgb(233, 106, 127);
@@ -56,9 +67,11 @@
     align-items: center;
     gap: 5px;
 }
-.volume-icon{
+
+.volume-icon {
     font-size: 13.333px;
 }
+
 .volume-range {
     width: 93px;
 }
