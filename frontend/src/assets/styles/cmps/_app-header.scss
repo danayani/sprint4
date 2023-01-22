@@ -18,25 +18,24 @@
     
 }
 
-// .fa-solid{
-//     background-color: $txtselected;
-//     color: $bgcnav;
-// }
-svg{
-    height: 20px;
-    width: 20px;
-    margin-top: 10px;
+.go-btn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
-// .fa-circle-chevron-left{
-//     height: 30px;
-//     width: 30px;
-//     // margin-top: 10px;
-//     // color: black;
-//     // background-color: white;
-//     border-radius: 55%;
-//     font-size: 30px;
-// }
+button svg{
+    margin-top: 10px;
+    height: 20px;
+    width: 20px;
+    fill: white;
+}
+
+svg.search-key{
+    fill: black;
+    margin-top: 0;
+}
 
 .searchInput-container{
     width: 364px;
