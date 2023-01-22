@@ -17,7 +17,9 @@ export function StationDetails() {
         })
     }, [])
 
-    return (
+    console.log('station', station)
+    if (!station) return (<h1> loading...</h1>)
+    else return (
         <section className="station-details">
             <div className="img-container">
                 img
@@ -25,10 +27,10 @@ export function StationDetails() {
             </div>
             <div className="info-container">
                 <p className="title">PLAYLIST</p>
-                {/* <h1>{station.name}</h1> */}
+                <h1>{station.name}</h1>
                 <p>
-                    {/* <span>{station.createdBy.fullname} ◽ </span>
-                    {station.songs.length} <span>songs, </span> */}
+                    {/* <span>{station.createdBy} ◽ </span> */}
+                    {/* {station.songs.length} <span>songs, </span> */}
                     <span>24 min 25 sec </span>
                 </p>
             </div>
