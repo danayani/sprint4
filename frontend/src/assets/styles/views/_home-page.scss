@@ -1,8 +1,29 @@
-// includes all the stations elements
-
-.main-container{
+// includes all the stations elements in home page
+.main-app-container{
     height: 100%;
-    // display: flex;
     background-color: $bgcplayer;
     color: $txtfill;
+}
+
+.main-home-container{
+
+
+    .home-stations-container{
+        
+        .first-station-cards{
+            padding: 5px;
+            margin: auto;
+            width: 100%;
+        
+            display: grid;
+            grid-template-columns: repeat(3, minmax(242px, 1fr));
+            grid-gap: 10px;
+            
+        }
+
+        .second-station-cards{
+            // img, title, 
+        }
+        
+    }
 }

@@ -3,7 +3,7 @@
 import { stationService } from '../../services/station.service';
 import { store } from '../store'
 
-import { SET_STATIONS, SET_CURR_STATION} from "./station.reducer.js";
+import { SET_STATIONS, SET_CURR_STATION, ADD_STATION,REMOVE_STATION} from "./station.reducer.js";
 
 // Action Creators:
 
@@ -34,15 +34,25 @@ export async function loadStationById (stationId) {
     }
 }
 
-// export async function removeStation(stationId) {
-//     try {
-//         await stationService.remove(stationId)
-//         store.dispatch(getActionRemoveStation(stationId))
-//     } catch (err) {
-//         console.log('Cannot remove station', err)
-//         throw err
-//     }
-// }
+export async function saveStation(station) {
+    try{
+        const currStation =await stationService.save(station)
+        store.dispatch({type:ADD_STATION,station:currStation})
+    } catch(err) {
+        console.log('error saving station')
+        throw err
+    }
+}
+
+export async function removeStation(stationId) {
+    try {
+        await stationService.remove(stationId)
+        store.dispatch({type:REMOVE_STATION,stationId})
+    } catch (err) {
+        console.log('Cannot remove station', err)
+        throw err
+    }
+}
 
 // export async function addStation(station) {
 //     try {

@@ -17,7 +17,7 @@ export function AppHeader() {
     const [txtSearchPlaceHolder, setTxtSearchPlaceHolder] = useState('What do you want to listen to ?')
     const [txtSearchKey, setTxtSearchKey] = useState('')
     // const search = useRef(utilService.debounce(getSongsFromSearch,500))
-
+    
     // async function getSongsFromSearch(value) {
     //     if(!value.length) {
     //         setTxtSearchPlaceHolder([])
@@ -52,25 +52,20 @@ export function AppHeader() {
                 <div>
 
                     <button className="go-btn" onClick={() => onGo(-1)}>
-                        {/* <img className='btn-icon' src={left} /> */}
-                        <i class="fa-solid fa-circle-chevron-left" ></i>                    </button>
+                        <img className='btn-icon' src={left} />
+                    </button>
                 </div>
 
                 {location.pathname == '/search' &&
-                    <div className='searchInput-container flex'>
-                        <button className="search-key-btn">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </button>
-                        <form onSubmit={onSearch}>
-                            <input className='search-key-input' type="text"
+                        <form className='searchInput-container' onSubmit={onSearch}>
+                            <input type="text"
                                 name="searchKey"
                                 value={txtSearchKey}
                                 placeholder={txtSearchPlaceHolder}
                                 onChange={handleChange} />
+                            <button>🔍</button>
                         </form>
-                    </div>}
-
-
+                    }
                 {(user) ?
                     <div onClick={onLogoutUser}>
                         {user.fullname}
