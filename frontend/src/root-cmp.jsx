@@ -4,7 +4,7 @@ import { HashRouter as Router, Routes, Route } from 'react-router-dom'
 import { store } from './store/store.js'
 
 import { AppHeader } from './cmps/app-header'
-import { StationList } from './cmps/station-list'
+import { StationList } from './cmps/first-stations-list'
 import { Home } from './pages/home'
 import { AboutUs } from './pages/about'
 import { Library } from './pages/library'
@@ -21,10 +21,10 @@ export function RootCmp() {
                 <section className='main-layout'>
                     <AppHeader />
                     <AppNavBar />
-                    <main className='main-container'>
+                    <main className='main-app-container'>
                         <Routes>
                             <Route path="/" element={<Home />} />
-                            <Route path="/:stationId" element={<StationList />} />
+                            {/* <Route path="/:stationId" element={<StationList />} /> */}
                             <Route path="/about" element={<AboutUs />} />
                             <Route path="/library" element={<Library />} />
                             <Route path="/search" element={<Search />} />
