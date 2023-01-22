@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
 import { SongList } from '../cmps/song-list'
+import {StationDetails} from '../cmps/station-details'
 import {stationService} from '../services/station.service'
 import { removeStation } from "../store/station/station.actions"
 
