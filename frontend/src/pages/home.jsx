@@ -29,7 +29,7 @@ export function Home() {
                 <h1>{setGreeting()}</h1>
                 <FirstStationList stations={stations.slice(0, 6)} />
                 {/* better name is needed */}
-                <SecondStationList stations={stations.slice(6, Infinity)}/>
+                <SecondStationList stations={stations.slice(6, 20)}/>
             </div>
         </main >
 
