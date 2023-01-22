@@ -22,15 +22,21 @@
 //     background-color: $txtselected;
 //     color: $bgcnav;
 // }
-
-.fa-circle-chevron-left{
-    height: 30px;
-    width: 30px;
-    color: black;
-    background-color: white;
-    border-radius: 55%;
-    font-size: 30px;
+svg{
+    height: 20px;
+    width: 20px;
+    margin-top: 10px;
 }
+
+// .fa-circle-chevron-left{
+//     height: 30px;
+//     width: 30px;
+//     // margin-top: 10px;
+//     // color: black;
+//     // background-color: white;
+//     border-radius: 55%;
+//     font-size: 30px;
+// }
 
 .searchInput-container{
     width: 364px;
