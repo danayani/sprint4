@@ -2,6 +2,7 @@
 
 //TODO: main-search, card show with grid
 
+
 export function Search() {
     return(
         <section>
