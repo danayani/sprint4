@@ -21,8 +21,8 @@ export function AppPlayer() {
         
     }, [])
 
-    if(!songs) return 
-    else return (
+    if( songs === []) return (<h1> loading</h1>)
+    else if (songs !== []) return (
         <div className="app-playerS flex">
             {console.log('songs in player',songs )}
             <ReactPlayer className="player-video" url='https://www.youtube.com/watch?v=oUFJJNQGwhk'
@@ -37,7 +37,7 @@ export function AppPlayer() {
 
 
                 <img className="song-img" src='../assets/img/rh.jpg' />
-                <p className="song-title">song title</p>
+                {/* <p className="song-title">{songs[0].title}</p> */}
             </div>
 
             <div className="player-actions-container grid justify-center">

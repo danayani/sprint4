@@ -17,7 +17,7 @@ export function SongList() {
     }, [])
 
     function onPlay(songId){
-        
+
     }
 
     if (!stationSongs) return (<h1> loading...</h1>)
@@ -31,7 +31,7 @@ export function SongList() {
             </header>
             <ul>
                 {console.log('stationSongs', stationSongs)}
-                <h1>{stationSongs[0].createdBy}</h1>
+                {/* <h1>{stationSongs[0].createdBy}</h1> */}
                 {stationSongs.map(song => {
                     <article role="button">
                         <li className="song-list-li grid">
