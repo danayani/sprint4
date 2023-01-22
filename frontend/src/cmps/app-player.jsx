@@ -34,19 +34,22 @@ export function AppPlayer() {
                 <p className="song-title">song title</p>
             </div>
 
-            <div className="player-actions-container flex justify-center">
+            <div className="player-actions-container grid justify-center">
                 <div className="player-actions flex">
-                    <i className="fa-solid fa-shuffle"></i>
-                    <i className="fa-solid fa-backward-step"></i>
+                    <i className="action-btn fa-solid fa-shuffle"></i>
+                    <i className="action-btn fa-solid fa-backward-step"></i>
                     <button className="player-btn-play-pause">
-                        <i className="fa-solid fa-circle-play"></i>
+                        <i className="action-btn fa-solid fa-circle-play"></i>
                     </button>
-                    <i className="fa-solid fa-backward-step btn-next"></i>
-                    <i className="fa-solid fa-repeat"></i>
+                    <i className="action-btn fa-solid fa-backward-step btn-next"></i>
+                    <i className="action-btn fa-solid fa-repeat"></i>
                 </div>
-                <div className="player-range flex">
-                    <input type="range" />
+                <div className="player-range-container">
+                   <div className="player-range flex">
+                    <input className="player-range-action" type="range" />
+                </div> 
                 </div>
+                
             </div>
 
             <div className="volume-controller flex">
