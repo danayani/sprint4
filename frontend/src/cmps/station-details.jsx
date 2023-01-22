@@ -5,7 +5,6 @@ import { useSelector } from "react-redux"
 import { useParams } from "react-router-dom"
 
 import { loadStationById } from "../store/station/station.actions.js"
-import { StationPreview } from "./station.preview.jsx"
 
 
 
@@ -26,7 +25,6 @@ export function StationDetails() {
             {station.songs.map(song => {
                 // TODO: should we give each li a unique id?
                 <li className='song-preview' key={song.id}>
-                    <StationPreview songs={station.songs} />
 
                 </li>
             })

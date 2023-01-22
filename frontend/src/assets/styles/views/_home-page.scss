@@ -1,4 +1,9 @@
 // includes all the stations elements in home page
+.main-app-container{
+    height: 100%;
+    background-color: $bgcplayer;
+    color: $txtfill;
+}
 
 .main-home-container{
 
@@ -17,7 +22,7 @@
         }
 
         .second-station-cards{
-            
+            // img, title, 
         }
         
     }

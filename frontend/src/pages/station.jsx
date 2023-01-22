@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
-import { StationList } from "../cmps/station-list";
+import { useEffect, useState } from "react"
+import { useNavigate, useParams } from "react-router-dom"
 
+import { SongList } from '../cmps/song-list'
 import {stationService} from '../services/station.service'
-import { removeStation } from "../store/station/station.actions";
+import { removeStation } from "../store/station/station.actions"
 
 export function Station({saveStation}){
     const [station,setStation] = useState([])
@@ -34,6 +34,8 @@ export function Station({saveStation}){
 
     return (
         <section className="station">
+            <StationDetails />
+            <SongList />
             {/* <StationList station={station} /> */}
         </section>
     )

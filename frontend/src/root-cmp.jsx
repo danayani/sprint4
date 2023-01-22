@@ -4,12 +4,10 @@ import { HashRouter as Router, Routes, Route } from 'react-router-dom'
 import { store } from './store/store.js'
 
 import { AppHeader } from './cmps/app-header'
-import { StationList } from './cmps/first-stations-list'
 import { Home } from './pages/home'
 import { AboutUs } from './pages/about'
 import { Library } from './pages/library'
 import { AppNavBar } from './cmps/app-navbar'
-import { StationPreview } from './cmps/station.preview.jsx'
 import { AppPlayer } from './cmps/app-player.jsx';
 import { LoginSignup } from './cmps/login-singup.jsx'
 import { Search } from './pages/search.jsx'
@@ -25,7 +23,7 @@ export function RootCmp() {
                     <main className='main-app-container'>
                         <Routes>
                             <Route path="/" element={<Home />} />
-                            {/* <Route path="/:stationId" element={<StationList />} /> */}
+                            <Route path="/:stationId" element={<Station />} />
                             <Route path="/about" element={<AboutUs />} />
                             <Route path="/library" element={<Library />} />
                             <Route path="/search" element={<Search />} />
