@@ -2,7 +2,8 @@
 import { useEffect } from 'react'
 import { useSelector } from "react-redux"
 
-import { StationList } from '../cmps/station-list'
+import { FirstStationList } from '../cmps/first-stations-list'
+import { SecondStationList } from '../cmps/second-stations-list'
 import { loadStations } from '../store/station/station.actions.js'
 
 export function Home() {
@@ -21,14 +22,17 @@ export function Home() {
         else if (currHour > 22 || currHour < 6) return 'Good night'
     }
 
-
+    // home-container stations-container
     return (
-        <section className='stations-container'>
-            <div className="greeting">
-                <h2>{setGreeting()}</h2>
+        <main className='main-home-container'>
+            <div className="home-stations-container">
+                <h1>{setGreeting()}</h1>
+                <FirstStationList stations={stations.slice(0, 6)} />
+                <h3>Made For Shachak</h3>
+                {/* better name is needed */}
+                <SecondStationList stations={stations.slice(6, Infinity)}/>
             </div>
-            <StationList stations={stations.slice(0, 6)} />
-        </section >
+        </main >
 
     )
 }
