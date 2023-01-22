@@ -14,15 +14,17 @@ export function Station({ saveStation }){
     const [station, setStation] = useState(null)
     const { stationId } = useParams()
     const navigate = useNavigate()
-    console.log('station from station', station)
+
+    console.log('station from station', stationId)
 
     useEffect(()=>{
         if(!stationId) setStation(stationService.getEmptyStation())
         else loadStation()
-    },[stationId])
+    }, [stationId])
 
     async function loadStation(){
         const currStation = await stationService.getById(stationId)
+        console.log('currStation :>> ', currStation);
         setStation(currStation)
     }
 
