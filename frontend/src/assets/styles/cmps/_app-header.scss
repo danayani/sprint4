@@ -16,12 +16,33 @@
     height: 64px;
     padding-inline-end: 16px;
     width: 100%;
+    
 }
 
 .searchInput-container{
     width: 364px;
     height: 40px;
     background-color: white;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    border-radius: 20px;
+    margin-top: 9px;
+}
+
+.search-key-btn{
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    // transform: scale(-1, 1);
+}
+
+.search-key-input{
+    font-size: 14px;
+    width: 250px;
+    background-color: transparent;
+    border: 0px solid;
+    // font-family: ; need new one
 }
 
 .btn-icon{

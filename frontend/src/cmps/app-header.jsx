@@ -17,7 +17,7 @@ export function AppHeader() {
     const [txtSearchPlaceHolder, setTxtSearchPlaceHolder] = useState('What do you want to listen to ?')
     const [txtSearchKey, setTxtSearchKey] = useState('')
     // const search = useRef(utilService.debounce(getSongsFromSearch,500))
-    
+
     // async function getSongsFromSearch(value) {
     //     if(!value.length) {
     //         setTxtSearchPlaceHolder([])
@@ -57,15 +57,18 @@ export function AppHeader() {
                 </div>
 
                 {location.pathname == '/search' &&
-                    <div className='searchInput-container'>
+                    <div className='searchInput-container flex'>
+                        <button className="search-key-btn">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
                         <form onSubmit={onSearch}>
-                            <input type="text"
+                            <input className='search-key-input' type="text"
                                 name="searchKey"
                                 value={txtSearchKey}
                                 placeholder={txtSearchPlaceHolder}
                                 onChange={handleChange} />
-                            <button>🔍</button>
                         </form>
+
                     </div>}
 
 
