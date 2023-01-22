@@ -1,0 +1,12 @@
+.station-details{
+    display: flex;
+    padding: 30px;
+
+    .img-container{
+        object-fit: cover;
+        // aspect-ratio: 1 / 1 ;
+
+        width: 190px;
+        height: 190px;
+    }
+}

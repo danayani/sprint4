@@ -66,7 +66,7 @@ export async function removeStation(stationId) {
 //     }
 // }
 
-// export function updateStation(station) {
+// export async function updateStation(station) {
 //     return stationService.save(station)
 //     .then(savedStation => {
 //         console.log('Updated Station:', savedStation)

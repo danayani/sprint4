@@ -1,21 +1,17 @@
-//render the songs inside the station
+//render the stations details
 
-import { useEffect } from "react"
-import { useSelector } from "react-redux"
+// import { useEffect } from "react"
+// import { useSelector } from "react-redux"
+import { useState } from "react";
 import { useParams } from "react-router-dom"
-
+import { stationService } from "../services/station.service.js"
 import { loadStationById } from "../store/station/station.actions.js"
 
 
 
 export function StationDetails({ station }) {
-    console.log('station from STATION-DETAILS :>> ', station);
+    console.log('station from station details', station)
 
-    const stationDuration = station.songs.reduce((totalDuration, idx, songDuration) => {
-        songDuration = station.songs[idx].duration
-        return totalDuration + songDuration
-    })
-    // add loader 
     return (
         <section className="station-details">
             <div className="img-container">
@@ -25,11 +21,15 @@ export function StationDetails({ station }) {
                 <p className="title">PLAYLIST</p>
                 <h1>{station.name}</h1>
                 <p>
-                    {station.createdBy.fullname} ◽ 
-                    {station.songs.length} <span>songs,</span>
+                    <span>{station.createdBy.fullname} ◽ </span>
+                    {station.songs.length} <span>songs, </span>
+                    <span>24 min 25 sec </span>
 
                 </p>
             </div>
+            <span className="options">
+                play | like | options
+            </span>
 
         </section>
 
