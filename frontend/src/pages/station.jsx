@@ -9,30 +9,27 @@ import { updateStation, removeStation } from "../store/station/station.actions"
 
 
 
-export function Station({ saveStation }){
+export function Station({ saveStation }) {
 
     const [station, setStation] = useState(null)
     const { stationId } = useParams()
     const navigate = useNavigate()
 
-    console.log('station from station', stationId)
+    // useEffect(() => {
+    //     if (!stationId) setStation(stationService.getEmptyStation())
+    //     else loadStation()
+    // }, [stationId])
 
-    useEffect(()=>{
-        if(!stationId) setStation(stationService.getEmptyStation())
-        else loadStation()
-    }, [stationId])
+    // async function loadStation() {
+    //     const currStation = await stationService.getById(stationId)
+    //     setStation(currStation)
+    // }
 
-    async function loadStation(){
-        const currStation = await stationService.getById(stationId)
-        console.log('currStation :>> ', currStation);
-        setStation(currStation)
-    }
-
-    function onSaveStation(){
+    function onSaveStation() {
         saveStation(station)
     }
 
-    async function onRemoveStation(stationId){
+    async function onRemoveStation(stationId) {
         await removeStation(station)
         navigate('/')
     }
@@ -41,7 +38,7 @@ export function Station({ saveStation }){
 
     return (
         <section className="station">
-            <StationDetails station={station}/>
+            <StationDetails />
             <SongList />
         </section>
     )

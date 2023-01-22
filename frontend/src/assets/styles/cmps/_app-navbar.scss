@@ -10,7 +10,7 @@ ul {
     list-style-type: none;
 
     &.nav-bar {
-        padding: 25px;
+        padding-left: 25px;
     }
 }
 
@@ -18,10 +18,12 @@ span {
     font-size: 15px;
 }
 
+svg {
+    fill: white;
+}
+
 .fa-solid {
-    // background-color: $txtselected;
     color: $txtselected;
-    margin-right: 20px;
     font-size: 25px;
     cursor: pointer;
 }
@@ -35,19 +37,29 @@ span {
     align-items: center;
 
     &-logo {
-        padding-bottom: 20px;
-    }
+        margin-top: 20px;
+        span {
+            display: inline-block;
+            font-size: 30px;
+            margin-bottom: 15px;
+            color: $txtselected;
+        }
 
-    .logo-img {
-        padding: 15px;
-        height: 57px;
-        object-fit: cover;
+        .logo-img {
+            display: inline-block;
+            height: 35px;
+            width: 35px;
+            border-radius: 50%;
+            object-fit: cover;
+            aspect-ratio: 1/1;
+        }
     }
-
 }
 
 span {
     color: $txtfill;
+    margin-left: 10px;
+
     &:hover {
         transition: 0.7s;
         color: $txtselected;

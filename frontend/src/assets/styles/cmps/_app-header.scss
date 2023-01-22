@@ -18,14 +18,25 @@
     
 }
 
-.fa-circle-chevron-left{
-    height: 47px;
-    width: 47px;
-    color: rgb(0, 0, 0);
-    background-color: white;
-    border-radius: 55%;
-    font-size: 47px;
+// .fa-solid{
+//     background-color: $txtselected;
+//     color: $bgcnav;
+// }
+svg{
+    height: 20px;
+    width: 20px;
+    margin-top: 10px;
 }
+
+// .fa-circle-chevron-left{
+//     height: 30px;
+//     width: 30px;
+//     // margin-top: 10px;
+//     // color: black;
+//     // background-color: white;
+//     border-radius: 55%;
+//     font-size: 30px;
+// }
 
 .searchInput-container{
     width: 364px;
@@ -37,7 +48,9 @@
     border-radius: 20px;
     margin-top: 9px;
 }
-
+.search-key-icon{
+    color: black !important;
+}
 .search-key-btn{
     background-color: transparent;
     color: black;

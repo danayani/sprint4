@@ -1,30 +1,37 @@
-//render the stations details
-
-// import { useEffect } from "react"
-// import { useSelector } from "react-redux"
-// import { useState } from "react";
-// import { useParams } from "react-router-dom"
-// import { stationService } from "../services/station.service.js"
-// import { loadStationById } from "../store/station/station.actions.js"
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom"
+import { stationService } from "../services/station.service.js"
+import { loadStationById } from "../store/station/station.actions.js"
 
 
 
-export function StationDetails({ station }) {
-    console.log('station from station details', station)
+export function StationDetails() {
+    const { stationId } = useParams()
+    const [station, setStation] = useState([])
 
-    return (
+    useEffect(() => {
+        stationService.getById(stationId).then(res => {
+            console.log('res ', res)
+            setStation(res)
+
+        })
+    }, [stationId])
+
+    console.log('station', station)
+    if (!station) return (<h1> loading...</h1>)
+    else return (
         <section className="station-details">
             <div className="img-container">
-                <img src={station.songs[0].imgUrl} alt="play list image" />
+                img
+                {/* <img src={station.songs[0].imgUrl} alt="play list image" /> */}
             </div>
             <div className="info-container">
                 <p className="title">PLAYLIST</p>
                 <h1>{station.name}</h1>
                 <p>
-                    <span>{station.createdBy.fullname} ◽ </span>
-                    {station.songs.length} <span>songs, </span>
+                    {/* <span>{station.createdBy} ◽ </span> */}
+                    {/* {station.songs.length} <span>songs, </span> */}
                     <span>24 min 25 sec </span>
-
                 </p>
             </div>
             <span className="options">
