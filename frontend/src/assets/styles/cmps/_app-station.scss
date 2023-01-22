@@ -5,9 +5,8 @@
         margin: auto;
         width: 100%;
         display: grid;
-        grid-template-columns: repeat(2, minmax(242px, 1fr));
+        grid-template-columns: repeat(2, minmax(240px, 1fr));
         grid-gap: 10px;
-
     }
 
     .first-station-card {
@@ -28,6 +27,8 @@
         width: 64px;
         height: 64px;
         border-radius: 5px;
+        object-fit: cover;
+        aspect-ratio: 1/1;
     }
 
     h3 {
@@ -36,7 +37,7 @@
         line-height: 10px;
     }
 
-    .second-station-container{
+    .second-station-container {
         margin-top: 40px;
     }
 
@@ -52,7 +53,7 @@
         justify-content: space-between;
         flex-direction: row;
     }
-    
+
     .second-station-card {
         margin-bottom: 20px;
         background-color: $bgcplaylistdown;
@@ -60,14 +61,16 @@
         height: 270px;
         width: 180px;
 
-        .song-img{
+        .song-img {
             padding: 10px;
             border-radius: 5px;
             height: 180px;
             width: 180px;
+            // object-fit: cover;
+            // aspect-ratio: 1/1;
         }
 
-        h3{
+        h3 {
             padding: 10px;
         }
     }
