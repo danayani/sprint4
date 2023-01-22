@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { StationList } from "../cmps/station-list";
 
 import {stationService} from '../services/station.service'
 import { removeStation } from "../store/station/station.actions";
@@ -34,7 +33,6 @@ export function Station({saveStation}){
 
     return (
         <section className="station">
-            {/* <StationList station={station} /> */}
         </section>
     )
 }
