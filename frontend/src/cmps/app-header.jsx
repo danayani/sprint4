@@ -68,7 +68,6 @@ export function AppHeader() {
                                 placeholder={txtSearchPlaceHolder}
                                 onChange={handleChange} />
                         </form>
-
                     </div>}
 
 

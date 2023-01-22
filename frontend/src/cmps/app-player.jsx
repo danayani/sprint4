@@ -21,14 +21,10 @@ export function AppPlayer() {
         <div className="app-playerS flex">
             <ReactPlayer className="player-video" url='https://www.youtube.com/watch?v=oUFJJNQGwhk'
                 loop={true}
-                width='300px'
-                height='300px'
+                width='100px'
+                height='100px' />
 
-            />
-            <progress max="1" value="1"></progress>
             <div className="song-details flex">
-                <h1><i class="fa-brands fa-github-square">12</i></h1>
-
                 {/* <iframe className='video-player' id="player" type="text/html" width="100" height="70"
                 src={`http://www.youtube.com/embed/QtXby3twMmI`}
                 frameBorder="0"></iframe> */}
@@ -37,20 +33,24 @@ export function AppPlayer() {
                 <img className="song-img" src='../assets/img/rh.jpg' />
                 <p className="song-name">song name</p>
                 <p className="song-artist">song artist</p>
-
-
-                <div className="actions flex justify-center">
-                    on/off
-                    <input type="range" />
-                </div>
-
-                <div className="volume-controller flex">
-                    volume
-                    <input type="range" />
-                </div>
-
-
             </div>
+
+            <div className="actions flex justify-center">
+                <div>
+                    <i class="fa-solid fa-shuffle"></i>
+                </div>
+                <div>
+                    <input type="range" />
+                </div>
+            </div>
+
+            <div className="volume-controller flex">
+                <i class="fa-solid fa-volume-high"></i>
+                <input type="range" />
+            </div>
+
+
+
         </div>
     )
 }
