@@ -5,20 +5,25 @@ import { useSelector } from 'react-redux';
 import left from '../assets/icons/left.png';
 import { NavLink, useNavigate, useLocation } from "react-router-dom";
 import { logout } from '../store/user/user.actions.js'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
+import { utilService } from '../services/util.service';
 
 export function AppHeader() {
     const user = useSelector((storeState => storeState.userModule.user))
-    const [currPage, setCurrPage] = useState(window.location.href)
     const location = useLocation()
     console.log('location', location.pathname)
 
     const navigate = useNavigate()
+    const [txtSearchPlaceHolder, setTxtSearchPlaceHolder] = useState('What do you want to listen to ?')
+    const [txtSearchKey, setTxtSearchKey] = useState('')
+    // const search = useRef(utilService.debounce(getSongsFromSearch,500))
 
-    // useEffect(() => {
-    //     setCurrPage = window.location.href
-    // },[window.location.href])
-
+    // async function getSongsFromSearch(value) {
+    //     if(!value.length) {
+    //         setTxtSearchPlaceHolder([])
+    //         return
+    //     }
+    // }
     function onLogoutUser() {
         navigate('/')
         logout()
@@ -28,20 +33,42 @@ export function AppHeader() {
         navigate(diff)
     }
 
+    function handleChange({ target }) {
+        let { value } = target
+        // let { name: field, value } = target
+        console.log('setTxtSearchKey', value)
+        setTxtSearchKey(value)
+        // setTxtSearchKey(prevTxt => ({ ...prevTxt, [field]: value }))
+        // search.current(value)
+    }
+
+    function onSearch() {
+        console.log('onSearch')
+    }
+
     return (
         <div className="top-bar-container">
             <header className="app-header">
                 <div>
 
                     <button className="go-btn" onClick={() => onGo(-1)}>
-                        <img className='btn-icon' src={left} />
-                    </button>
+                        {/* <img className='btn-icon' src={left} /> */}
+                        <i class="fa-solid fa-circle-chevron-left" ></i>                    </button>
                 </div>
-                {location.pathname == '/search' && <input placeholder=' What do you want to listen to ?'></input>
-                    // <input> </input>
-                    
-                }
 
+                {location.pathname == '/search' &&
+                    <div className='searchInput-container flex'>
+                        <button className="search-key-btn">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                        <form onSubmit={onSearch}>
+                            <input className='search-key-input' type="text"
+                                name="searchKey"
+                                value={txtSearchKey}
+                                placeholder={txtSearchPlaceHolder}
+                                onChange={handleChange} />
+                        </form>
+                    </div>}
 
 
                 {(user) ?

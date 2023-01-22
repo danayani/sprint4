@@ -6,6 +6,7 @@ const STORAGE_KEY_LOGGEDIN_USER = 'loggedinUser'
 const STORAGE_KEY_USERS = 'users'
 
 var users
+_createUsers()
 
 
 export const userService = {

@@ -4,11 +4,18 @@ import searchIcon from '../assets/icons/search.png'
 import libraryIcon from '../assets/icons/library.png'
 import heartIcon from '../assets/icons/heart.png'
 import addIcon from '../assets/icons/add.png'
+import logo from '../assets/icons/logo.jpg'
 
 export function AppNavBar() {
+    
     return (
         <aside className='side-navbar'>
             <ul className='nav-bar'>
+                <li className='nav-link-logo'>
+                    <a href='/'>
+                    <img className='logo' src={logo} />
+                    </a>
+                </li>
                 <li className='nav-link'>
                     <a href='/'>
                         <img className='icon' src={homeIcon} />
