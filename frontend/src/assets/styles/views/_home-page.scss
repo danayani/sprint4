@@ -1,29 +1,51 @@
 // includes all the stations elements in home page
-.main-app-container{
+.main-app-container {
     height: 100%;
     background-color: $bgcplayer;
     color: $txtfill;
 }
 
-.main-home-container{
+.main-home-container {
+    padding: 24px 32px 0 32px;
 
+    .home-stations-container {
 
-    .home-stations-container{
-        
-        .first-station-cards{
+        .first-station-cards {
             padding: 5px;
             margin: auto;
             width: 100%;
-        
             display: grid;
-            grid-template-columns: repeat(3, minmax(242px, 1fr));
+            grid-template-columns: repeat(2, minmax(242px, 1fr));
             grid-gap: 10px;
-            
+
         }
 
-        .second-station-cards{
+        .first-station-card {
+            height: 64px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin: 0;
+            border-radius: 5px;
+            border:0;
+            background-color: $bgcplaylistup;
+            
+        }
+        .song-img{
+           margin-right: 15px;
+           width: 64px;
+           height: 64px;
+           border-radius: 5px;
+        }
+        h3{
+            display: inline-block;
+            line-height: 10px;
+        }
+
+        .second-station-cards {
             // img, title, 
         }
-        
+
     }
 }
