@@ -6,6 +6,7 @@ import { store } from './store/store.js'
 import { AppHeader } from './cmps/app-header'
 import { Home } from './pages/home'
 import { AboutUs } from './pages/about'
+import { Station } from './pages/station'
 import { Library } from './pages/library'
 import { AppNavBar } from './cmps/app-navbar'
 import { AppPlayer } from './cmps/app-player.jsx';
