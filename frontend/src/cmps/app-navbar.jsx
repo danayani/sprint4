@@ -7,24 +7,24 @@ import addIcon from '../assets/icons/add.png'
 import logo from '../assets/icons/logo.jpg'
 
 export function AppNavBar() {
-    
+
     return (
         <aside className='side-navbar'>
             <ul className='nav-bar'>
                 <li className='nav-link-logo'>
                     <a href='/'>
-                    <img className='logo' src={logo} />
+                        <img className='logo' src={logo} />
                     </a>
                 </li>
                 <li className='nav-link'>
                     <a href='/'>
-                        <img className='icon' src={homeIcon} />
+                        <i class="fa-solid fa-house"></i>
                         <span>Home</span>
                     </a>
                 </li>
                 <li className='nav-link'>
                     <NavLink to='/search'>
-                        <img className='icon' src={searchIcon} />
+                        <i class="fa-solid fa-magnifying-glass"></i>
                         <span>Search</span>
                     </NavLink>
                 </li>
@@ -44,7 +44,7 @@ export function AppNavBar() {
                 </li>
                 <li className='nav-link'>
                     <NavLink to="/liked">
-                        <img className='icon' src={heartIcon} />
+                        <i class="fa-solid fa-heart"></i>
                         <span>Liked Songs</span>
                     </NavLink>
 
