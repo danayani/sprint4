@@ -14,13 +14,13 @@ export function AppNavBar() {
                 </li>
                 <li className='nav-link'>
                     <a href='/'>
-                        <i class="fa-solid fa-house"></i>
+                        <i className="fa-solid fa-house"></i>
                         <span>Home</span>
                     </a>
                 </li>
                 <li className='nav-link'>
                     <NavLink to='/search'>
-                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i className="fa-solid fa-magnifying-glass"></i>
                         <span>Search</span>
                     </NavLink>
                 </li>
@@ -33,14 +33,14 @@ export function AppNavBar() {
                 </li>
                 <li className='nav-link'>
                     <NavLink to="/create">
-                    <i class="fa-solid fa-square-plus"></i>
+                    <i className="fa-solid fa-square-plus"></i>
                         <span>Create Playlist</span>
                     </NavLink>
 
                 </li>
                 <li className='nav-link'>
                     <NavLink to="/liked">
-                        <i class="fa-solid fa-heart"></i>
+                        <i className="fa-solid fa-heart"></i>
                         <span>Liked Songs</span>
                     </NavLink>
 

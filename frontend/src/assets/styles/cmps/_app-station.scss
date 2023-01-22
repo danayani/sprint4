@@ -20,6 +20,10 @@
         border: 0;
         background-color: $bgcplaylistup;
 
+        &:hover{
+            background-color: ligthen($bgcplaylistup,20%);
+        }
+
     }
 
     .song-img {

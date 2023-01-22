@@ -52,7 +52,7 @@ export function AppHeader() {
                 <div>
 
                     <button className="go-btn" onClick={() => onGo(-1)}>
-                        <i class="fa-solid fa-circle-chevron-left"></i>
+                        <i className="fa-solid fa-circle-chevron-left"></i>
                     </button>
                 </div>
 
