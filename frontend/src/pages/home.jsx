@@ -28,7 +28,6 @@ export function Home() {
             <div className="home-stations-container">
                 <h1>{setGreeting()}</h1>
                 <FirstStationList stations={stations.slice(0, 6)} />
-                <h3>Made For Shachak</h3>
                 {/* better name is needed */}
                 <SecondStationList stations={stations.slice(6, Infinity)}/>
             </div>

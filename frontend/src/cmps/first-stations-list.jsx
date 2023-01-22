@@ -19,7 +19,7 @@ export function FirstStationList({ stations }) {
                         
                         <img className="song-img" src={station.songs[0].imgUrl} alt="song img" />
                         <h3>{station.name}</h3>
-                        <button className='play'>Play</button>
+                        {/* <button className='play'>Play</button> */}
                     </div>
                 </Link>
             )}
