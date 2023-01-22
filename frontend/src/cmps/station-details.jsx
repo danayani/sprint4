@@ -10,26 +10,17 @@ import { loadStationById } from "../store/station/station.actions.js"
 
 export function StationDetails() {
 
-    const station = useSelector(storeState => storeState.stationModule.currStation)
+    // const station = useSelector(storeState => storeState.stationModule.currStation)
     const { stationId } = useParams()
 
-    useEffect(() => {
-        loadStationById(stationId)
-    }, [])
+    // useEffect(() => {
+    //     loadStationById(stationId)
+    // }, [])
 
     // add loader 
     return (
-        <ul className='songs-list'>
-            {console.log('hello from song list', station)}
-            
-            {station.songs.map(song => {
-                // TODO: should we give each li a unique id?
-                <li className='song-preview' key={song.id}>
-
-                </li>
-            })
-            }
-        </ul>
-
+        <div className="station-details-container">
+            <h1>StationDetails : {stationId}</h1>
+        </div>
     )
 }

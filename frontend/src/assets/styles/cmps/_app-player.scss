@@ -18,7 +18,6 @@
     fill: white;
 }
 
-
 .song-details {
     // background-color: rgb(164, 53, 72);
     // justify-content: flex-start;
@@ -37,7 +36,7 @@
 }
 
 .player-actions {
-    gap: 3px;
+    gap: 15px;
     align-items: center;
     justify-content: center;
 }
@@ -48,6 +47,10 @@
 
 .btn-next {
     transform: scale(-1, 1);
+}
+
+.play-pause-btn {
+    font-size: 32px;
 }
 
 .action-btn {
@@ -76,7 +79,8 @@
     width: 93px;
 }
 
-.video-player {
-    // opacity: 0;
-    // width: 1px;
+.player-video {
+    opacity: 0;
+    width: 1px;
+    width: 0px;
 }
