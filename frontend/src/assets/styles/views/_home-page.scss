@@ -7,6 +7,11 @@
 
 .main-home-container {
     padding: 24px 32px 0 32px;
+    h1{
+        color: $txtselected;
+        font-size: 32px;
+        font-weight: 600;
+    }
 
     .home-stations-container {
 
@@ -39,12 +44,16 @@
            border-radius: 5px;
         }
         h3{
+           
             display: inline-block;
             line-height: 10px;
         }
 
         .second-station-cards {
-            // img, title, 
+            margin-top: 40px;
+        }
+        h2{
+            color: $txtselected;
         }
 
     }

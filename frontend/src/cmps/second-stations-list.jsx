@@ -2,7 +2,8 @@ import { Link } from "react-router-dom";
 
 export function SecondStationList ({ stations }){
     return (
-        <section>
+        <section className="second-station-cards">
+            <h2>Made For Shachak</h2>
             {stations.map(station =>
                 <Link to={`/station/${station._id}`}>
                     <div className="second-station-card">
@@ -13,6 +14,7 @@ export function SecondStationList ({ stations }){
                     </div>
                 </Link>
             )}
+            <h2>Recommended songs</h2>
         </section>
     )
 
