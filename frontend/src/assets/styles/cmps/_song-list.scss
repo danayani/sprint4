@@ -2,6 +2,19 @@
     // background-color: pink;
 }
 
+.song-list-tbody {
+    color: white;
+}
+
+.song-list-tbodyHashtag {
+    width: 30px;
+}
+
 .btn-song-title-play {
     all: unset;
+
+    &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
 }
