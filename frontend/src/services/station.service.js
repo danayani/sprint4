@@ -6,7 +6,6 @@ import data from '../data/station-data.json'
 
 const STATION_KEY = 'stationDB'
 const stationsData = data
-console.log('stationsData from station service', stationsData)
 
 _createStations()
 
