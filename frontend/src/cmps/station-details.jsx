@@ -8,19 +8,30 @@ import { loadStationById } from "../store/station/station.actions.js"
 
 
 
-export function StationDetails() {
+export function StationDetails({ station }) {
+    console.log('station from STATION-DETAILS :>> ', station);
 
-    // const station = useSelector(storeState => storeState.stationModule.currStation)
-    const { stationId } = useParams()
-
-    // useEffect(() => {
-    //     loadStationById(stationId)
-    // }, [])
-
+    const stationDuration = station.songs.reduce((totalDuration, idx, songDuration) => {
+        songDuration = station.songs[idx].duration
+        return totalDuration + songDuration
+    })
     // add loader 
     return (
-        <div className="station-details-container">
-            <h1>StationDetails : {stationId}</h1>
-        </div>
+        <section className="station-details">
+            <div className="img-container">
+                <img src={station.songs[0].imgUrl} alt="play list image" />
+            </div>
+            <div className="info-container">
+                <p className="title">PLAYLIST</p>
+                <h1>{station.name}</h1>
+                <p>
+                    {station.createdBy.fullname} ◽ 
+                    {station.songs.length} <span>songs,</span>
+
+                </p>
+            </div>
+
+        </section>
+
     )
 }
