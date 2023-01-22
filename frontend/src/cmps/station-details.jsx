@@ -15,7 +15,7 @@ export function StationDetails() {
             setStation(res)
 
         })
-    }, [])
+    }, [stationId])
 
     console.log('station', station)
     if (!station) return (<h1> loading...</h1>)
