@@ -18,9 +18,8 @@ span{
     color: $txtselected;
     margin-right: 7px;
     font-size: 20px;
+    cursor: pointer;
 }
-
-
 
 .nav-link {
     text-transform: none;
@@ -31,10 +30,13 @@ span{
     // gap: 16px;
     justify-content: center;
     align-items: center;
-
+    
     &-logo{
         padding-bottom: 20px;
-        
+    }
+
+    .logo-img{
+        // justify-content: ;
     }
 
     // &.active{
