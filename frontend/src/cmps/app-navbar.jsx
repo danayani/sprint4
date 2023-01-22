@@ -37,7 +37,7 @@ export function AppNavBar() {
                 </li>
                 <li className='nav-link'>
                     <NavLink to="/create">
-                        <img className='icon' src={addIcon} />
+                    <i class="fa-solid fa-square-plus"></i>
                         <span>Create Playlist</span>
                     </NavLink>
 

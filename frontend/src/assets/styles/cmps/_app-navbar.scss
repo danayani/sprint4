@@ -1,7 +1,7 @@
 .side-navbar {
     height: 100%;
     background-color: $bgcnav;
-    width: 230px;
+    width: 220px;
     grid-area: "navbar";
     grid-row: 1 / -1;
 }
@@ -9,6 +9,18 @@
 ul{
     list-style-type: none;
 }
+
+span{
+    font-size: 15px;
+}
+.fa-solid{
+    // background-color: $txtselected;
+    color: $txtselected;
+    margin-right: 7px;
+    font-size: 20px;
+}
+
+
 
 .nav-link {
     text-transform: none;
