@@ -1,24 +1,30 @@
-// Music player
-
-import { useState } from 'react'
+import { useState , useEffect} from 'react'
 import { useSelector } from 'react-redux'
 import { showErrorMsg, showSuccessMsg } from '../services/event-bus.service'
 import ReactPlayer from 'react-player/youtube'
 import ProgressBar from 'react-bootstrap/ProgressBar'
-
-
-//icons
-import volumeIcon from '../assets/icons/player/speaker/volume-high-solid.svg'
-
+import { playerService } from '../services/player.service'
 // import { UserMsg } from './user-msg.jsx'
 
-//TODO : get (props) song-item
+
+
+
+
 //TODO : control button
 
 export function AppPlayer() {
-    return (
 
+    const[songs, setSongs] = useState([]) //TODO : get default song
+
+    useEffect(() => {
+        setSongs(playerService.getSongs())
+        
+    }, [])
+
+    if(!songs) return 
+    else return (
         <div className="app-playerS flex">
+            {console.log('songs in player',songs )}
             <ReactPlayer className="player-video" url='https://www.youtube.com/watch?v=oUFJJNQGwhk'
                 loop={true}
                 width='100px'
