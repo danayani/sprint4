@@ -6,12 +6,12 @@ export function AppNavBar() {
 
     return (
         <aside className='side-navbar'>
+            <div className='nav-link-logo '>
+                <a href='/'>
+                    <img className='logo-img' src={logo} />
+                </a>
+            </div>
             <ul className='nav-bar'>
-                <li className='nav-link-logo '>
-                    <a href='/'>
-                        <img className='logo-img' src={logo} />
-                    </a>
-                </li>
                 <li className='nav-link'>
                     <a href='/'>
                         <i className="fa-solid fa-house"></i>
@@ -33,7 +33,7 @@ export function AppNavBar() {
                 </li>
                 <li className='nav-link'>
                     <NavLink to="/create">
-                    <i className="fa-solid fa-square-plus"></i>
+                        <i className="fa-solid fa-square-plus"></i>
                         <span>Create Playlist</span>
                     </NavLink>
 

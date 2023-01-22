@@ -10,7 +10,7 @@ ul {
     list-style-type: none;
 
     &.nav-bar {
-        padding: 25px;
+        padding-left: 25px;
     }
 }
 
@@ -35,14 +35,17 @@ span {
     align-items: center;
 
     &-logo {
-        padding-bottom: 20px;
+        margin-top: 20px;
+        // margin-bottom: 20px;
+
+        .logo-img {
+            padding: 25px;
+            height: 100px;
+            object-fit: cover;
+            aspect-ratio: 1/1;
+        }
     }
 
-    .logo-img {
-        padding: 15px;
-        height: 57px;
-        object-fit: cover;
-    }
 
 }
 
