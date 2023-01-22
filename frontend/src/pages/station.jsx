@@ -37,7 +37,6 @@ export function Station({saveStation}){
         <section className="station">
             {/* <StationDetails /> */}
             <SongList />
-            {/* <StationList station={station} /> */}
         </section>
     )
 }
