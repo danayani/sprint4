@@ -9,7 +9,7 @@ import { loadStationById } from "../store/station/station.actions.js"
 
 
 
-export function StationDetails({ station }) {
+export function StationDetails() {
     console.log('station from station details', station)
 
     return (

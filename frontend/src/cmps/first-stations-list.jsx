@@ -8,7 +8,7 @@ export function FirstStationList({ stations }) {
     return (
         <section className='first-station-cards'>
             {stations.map(station =>
-                <Link to={`/${station._id}`}>
+                <Link key={station._id} to={`/${station._id}`}>
                     <div className="first-station-card">
                         
                         <img className="song-img" src={station.songs[0].imgUrl} alt="song img" />
