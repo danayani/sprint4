@@ -42,7 +42,7 @@ export function AppPlayer() {
                         <i classNameName="fa-solid fa-circle-play"></i>
                     </button>
                     <i className="fa-solid fa-backward-step btn-next"></i>
-                    <i class="fa-solid fa-repeat"></i>
+                    <i className="fa-solid fa-repeat"></i>
                 </div>
                 <div className="player-range flex">
                     <input type="range" />
