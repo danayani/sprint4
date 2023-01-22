@@ -39,10 +39,10 @@ export function AppPlayer() {
                     <i className="fa-solid fa-shuffle"></i>
                     <i className="fa-solid fa-backward-step"></i>
                     <button className="player-btn-play-pause">
-                        <i classNameName="fa-solid fa-circle-play"></i>
+                        <i className="fa-solid fa-circle-play"></i>
                     </button>
                     <i className="fa-solid fa-backward-step btn-next"></i>
-                    <i class="fa-solid fa-repeat"></i>
+                    <i className="fa-solid fa-repeat"></i>
                 </div>
                 <div className="player-range flex">
                     <input type="range" />
