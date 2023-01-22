@@ -57,15 +57,19 @@ export function AppHeader() {
                 </div>
 
                 {location.pathname == '/search' &&
-                        <form className='searchInput-container' onSubmit={onSearch}>
-                            <input type="text"
+                    <div className='searchInput-container flex'>
+                        <button className="search-key-btn">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                        <form onSubmit={onSearch}>
+                            <input className='search-key-input' type="text"
                                 name="searchKey"
                                 value={txtSearchKey}
                                 placeholder={txtSearchPlaceHolder}
                                 onChange={handleChange} />
-                            <button>🔍</button>
                         </form>
-                    }
+                    </div>}
+                    
                 {(user) ?
                     <div onClick={onLogoutUser}>
                         {user.fullname}
