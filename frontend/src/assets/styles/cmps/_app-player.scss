@@ -19,11 +19,6 @@
 }
 
 
-.fa.facebook::before {
-    content: "\f39e";
-}
-
-
 .song-details {
     // background-color: rgb(164, 53, 72);
     // justify-content: flex-start;
@@ -43,6 +38,8 @@
 
 .player-actions{
     gap:3px;
+    align-items: center;
+    justify-content: center;
 }
 .player-btn-play-pause{
     background-color: transparent;

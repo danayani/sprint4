@@ -34,7 +34,7 @@ export function AppPlayer() {
                 <p className="song-title">song title</p>
             </div>
 
-            <div className="player-actions-container flex justify-center">
+            <div className="player-actions-container grid justify-center">
                 <div className="player-actions flex">
                     <i className="fa-solid fa-shuffle"></i>
                     <i className="fa-solid fa-backward-step"></i>
@@ -44,9 +44,12 @@ export function AppPlayer() {
                     <i className="fa-solid fa-backward-step btn-next"></i>
                     <i className="fa-solid fa-repeat"></i>
                 </div>
-                <div className="player-range flex">
+                <div className="player-range-container">
+                   <div className="player-range flex">
                     <input type="range" />
+                </div> 
                 </div>
+                
             </div>
 
             <div className="volume-controller flex">
