@@ -458,5 +458,176 @@
                 "txt": "This playlist rocks!"
             }
         ]
+    },
+    {
+        "_id": "5cksxj123789sa8xjsa8jxs09",
+        "name": "Rockin' Rollers 5",
+        "duration": "",
+        "tags": [
+            "Rock",
+            "Roll"
+        ],
+        "createdBy": {
+            "_id": "u102",
+            "fullname": "John Smith",
+            "imgUrl": "http://some-photo/"
+        },
+        "likedByUsers": [
+            "{minimal-user}",
+            "{minimal-user}"
+        ],
+        "songs": [
+            {
+                "id": "s1002",
+                "title": "Stairway to Heaven",
+                "createdBy": "Led Zeppelin",
+                "url": "https://www.youtube.com/watch?v=qnpZCB9BUIw&ab_channel=GootieMusic",
+                "imgUrl": "https://i.ytimg.com/vi/4_iC0MyIykM/mqdefault.jpg",
+                "addedBy": "{minimal-user}",
+                "addedAt": 162521765262,
+                "duration": ""
+            },
+            {
+                "id": "mUkfiLjooxs",
+                "title": "The Rolling Stones - Paint It Black",
+                "createdBy": "The Rolling Stones",
+                "url": "https://www.youtube.com/watch?v=J0D1ty9Qbl4&ab_channel=SexyEmotion",
+                "imgUrl": "https://i.ytimg.com/vi/mUkfiLjooxs/mqdefault.jpg",
+                "addedBy": "{minimal-user}",
+                "addedAt": 162521755712,
+                "duration": ""
+            },
+            {
+                "id": "mUzeiLjo76s",
+                "title": "Highway to Hell",
+                "createdBy": "AC/DC",
+                "url": "https://www.youtube.com/watch?v=ssQPYVGaJ04&ab_channel=Spanhok",
+                "imgUrl": "rh.png",
+                "addedBy": "{minimal-user}",
+                "addedAt": 162521743262,
+                "duration": ""
+            }
+        ],
+        "msgs": [
+            {
+                "id": "m102",
+                "from": "{mini-user}",
+                "txt": "This playlist rocks!"
+            }
+        ]
+    },
+    {
+        "_id": "5cksxj123456sa8xjsadrxs09",
+        "name": "Rockin' Rollers 5",
+        "duration": "",
+        "tags": [
+            "Rock",
+            "Roll"
+        ],
+        "createdBy": {
+            "_id": "u102",
+            "fullname": "John Smith",
+            "imgUrl": "http://some-photo/"
+        },
+        "likedByUsers": [
+            "{minimal-user}",
+            "{minimal-user}"
+        ],
+        "songs": [
+            {
+                "id": "s1002",
+                "title": "Stairway to Heaven",
+                "createdBy": "Led Zeppelin",
+                "url": "https://www.youtube.com/watch?v=qnpZCB9BUIw&ab_channel=GootieMusic",
+                "imgUrl": "https://i.ytimg.com/vi/4_iC0MyIykM/mqdefault.jpg",
+                "addedBy": "{minimal-user}",
+                "addedAt": 162521765262,
+                "duration": ""
+            },
+            {
+                "id": "mUkfiLjooxs",
+                "title": "The Rolling Stones - Paint It Black",
+                "createdBy": "The Rolling Stones",
+                "url": "https://www.youtube.com/watch?v=J0D1ty9Qbl4&ab_channel=SexyEmotion",
+                "imgUrl": "https://i.ytimg.com/vi/mUkfiLjooxs/mqdefault.jpg",
+                "addedBy": "{minimal-user}",
+                "addedAt": 162521755712,
+                "duration": ""
+            },
+            {
+                "id": "mUzeiLjo76s",
+                "title": "Highway to Hell",
+                "createdBy": "AC/DC",
+                "url": "https://www.youtube.com/watch?v=ssQPYVGaJ04&ab_channel=Spanhok",
+                "imgUrl": "rh.png",
+                "addedBy": "{minimal-user}",
+                "addedAt": 162521743262,
+                "duration": ""
+            }
+        ],
+        "msgs": [
+            {
+                "id": "m102",
+                "from": "{mini-user}",
+                "txt": "This playlist rocks!"
+            }
+        ]
+    },
+    {
+        "_id": "6cksxj123456sa8xjsadrxs09",
+        "name": "Rockin' Rollers 5",
+        "duration": "",
+        "tags": [
+            "Rock",
+            "Roll"
+        ],
+        "createdBy": {
+            "_id": "u102",
+            "fullname": "John Smith",
+            "imgUrl": "http://some-photo/"
+        },
+        "likedByUsers": [
+            "{minimal-user}",
+            "{minimal-user}"
+        ],
+        "songs": [
+            {
+                "id": "s1002",
+                "title": "Stairway to Heaven",
+                "createdBy": "Led Zeppelin",
+                "url": "https://www.youtube.com/watch?v=qnpZCB9BUIw&ab_channel=GootieMusic",
+                "imgUrl": "https://i.ytimg.com/vi/4_iC0MyIykM/mqdefault.jpg",
+                "addedBy": "{minimal-user}",
+                "addedAt": 162521765262,
+                "duration": ""
+            },
+            {
+                "id": "mUkfiLjooxs",
+                "title": "The Rolling Stones - Paint It Black",
+                "createdBy": "The Rolling Stones",
+                "url": "https://www.youtube.com/watch?v=J0D1ty9Qbl4&ab_channel=SexyEmotion",
+                "imgUrl": "https://i.ytimg.com/vi/mUkfiLjooxs/mqdefault.jpg",
+                "addedBy": "{minimal-user}",
+                "addedAt": 162521755712,
+                "duration": ""
+            },
+            {
+                "id": "mUzeiLjo76s",
+                "title": "Highway to Hell",
+                "createdBy": "AC/DC",
+                "url": "https://www.youtube.com/watch?v=ssQPYVGaJ04&ab_channel=Spanhok",
+                "imgUrl": "rh.png",
+                "addedBy": "{minimal-user}",
+                "addedAt": 162521743262,
+                "duration": ""
+            }
+        ],
+        "msgs": [
+            {
+                "id": "m102",
+                "from": "{mini-user}",
+                "txt": "This playlist rocks!"
+            }
+        ]
     }
 ]

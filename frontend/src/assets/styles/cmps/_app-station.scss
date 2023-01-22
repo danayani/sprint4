@@ -1,13 +1,75 @@
-.stations-cards{
-  
-    // grid-template-columns: repeat(3ת auto-fit, minmax(242px, 1fr))
-    
-    
-}
+.home-stations-container {
 
-.station-card{
-    // max-height: 220px;
-    // max-width: 220px;
+    .first-station-cards {
+        padding: 5px;
+        margin: auto;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(242px, 1fr));
+        grid-gap: 10px;
 
-    border: 1px white solid;
+    }
+
+    .first-station-card {
+        height: 64px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        margin: 0;
+        border-radius: 5px;
+        border: 0;
+        background-color: $bgcplaylistup;
+
+    }
+
+    .song-img {
+        margin-right: 15px;
+        width: 64px;
+        height: 64px;
+        border-radius: 5px;
+    }
+
+    h3 {
+
+        display: inline-block;
+        line-height: 10px;
+    }
+
+    .second-station-container{
+        margin-top: 40px;
+    }
+
+    h2 {
+        display: inline-block;
+        color: $txtselected;
+        margin-bottom: 16px;
+    }
+
+    .second-station-cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+    
+    .second-station-card {
+        margin-bottom: 20px;
+        background-color: $bgcplaylistdown;
+        border-radius: 5px;
+        height: 270px;
+        width: 180px;
+
+        .song-img{
+            padding: 10px;
+            border-radius: 5px;
+            height: 180px;
+            width: 180px;
+        }
+
+        h3{
+            padding: 10px;
+        }
+    }
+
 }

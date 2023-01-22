@@ -7,54 +7,18 @@
 
 .main-home-container {
     padding: 24px 32px 0 32px;
+
+    // overscroll-behavior-y: none;
+    // ::-webkit-scrollbar-track{
+    //     scrollbar-track-color: $bgcmain;
+
+    // }
+
     h1{
         color: $txtselected;
         font-size: 32px;
         font-weight: 600;
     }
-
-    .home-stations-container {
-
-        .first-station-cards {
-            padding: 5px;
-            margin: auto;
-            width: 100%;
-            display: grid;
-            grid-template-columns: repeat(2, minmax(242px, 1fr));
-            grid-gap: 10px;
-
-        }
-
-        .first-station-card {
-            height: 64px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            text-align: center;
-            margin: 0;
-            border-radius: 5px;
-            border:0;
-            background-color: $bgcplaylistup;
-            
-        }
-        .song-img{
-           margin-right: 15px;
-           width: 64px;
-           height: 64px;
-           border-radius: 5px;
-        }
-        h3{
-           
-            display: inline-block;
-            line-height: 10px;
-        }
-
-        .second-station-cards {
-            margin-top: 40px;
-        }
-        h2{
-            color: $txtselected;
-        }
-
-    }
 }
+
+    
