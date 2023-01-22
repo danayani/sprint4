@@ -17,7 +17,7 @@ export function AppHeader() {
     const [txtSearchPlaceHolder, setTxtSearchPlaceHolder] = useState('What do you want to listen to ?')
     const [txtSearchKey, setTxtSearchKey] = useState('')
     // const search = useRef(utilService.debounce(getSongsFromSearch,500))
-    
+
     // async function getSongsFromSearch(value) {
     //     if(!value.length) {
     //         setTxtSearchPlaceHolder([])
@@ -52,7 +52,7 @@ export function AppHeader() {
                 <div>
 
                     <button className="go-btn" onClick={() => onGo(-1)}>
-                        <img className='btn-icon' src={left} />
+                        <i class="fa-solid fa-circle-chevron-left"></i>
                     </button>
                 </div>
 
@@ -69,7 +69,7 @@ export function AppHeader() {
                                 onChange={handleChange} />
                         </form>
                     </div>}
-                    
+
                 {(user) ?
                     <div onClick={onLogoutUser}>
                         {user.fullname}
