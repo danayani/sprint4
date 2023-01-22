@@ -39,7 +39,7 @@ export function AppPlayer() {
                     <i className="action-btn fa-solid fa-shuffle"></i>
                     <i className="action-btn fa-solid fa-backward-step"></i>
                     <button className="player-btn-play-pause">
-                        <i className="action-btn fa-solid fa-circle-play"></i>
+                        <i className="action-btn1 play-pause-btn fa-solid fa-circle-play"></i>
                     </button>
                     <i className="action-btn fa-solid fa-backward-step btn-next"></i>
                     <i className="action-btn fa-solid fa-repeat"></i>
