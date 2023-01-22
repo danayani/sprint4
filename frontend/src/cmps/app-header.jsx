@@ -57,8 +57,7 @@ export function AppHeader() {
                 </div>
 
                 {location.pathname == '/search' &&
-                    <div className='searchInput-container'>
-                        <form onSubmit={onSearch}>
+                        <form className='searchInput-container' onSubmit={onSearch}>
                             <input type="text"
                                 name="searchKey"
                                 value={txtSearchKey}
@@ -66,7 +65,7 @@ export function AppHeader() {
                                 onChange={handleChange} />
                             <button>🔍</button>
                         </form>
-                    </div>}
+                    }
 
 
                 {(user) ?

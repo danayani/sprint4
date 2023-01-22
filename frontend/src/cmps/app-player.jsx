@@ -28,7 +28,7 @@ export function AppPlayer() {
 
             <div className="actions flex justify-center">
                 on/off
-                <a href="#" class="fa facebook"></a>
+                <a href="#" className="fa facebook"></a>
             </div>
 
             <div className="volume-controller flex">

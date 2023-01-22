@@ -1,10 +1,13 @@
 // gets the stations from Home and renders the stations list
 
 import { Link } from 'react-router-dom';
+
+
 import { StationDetails } from './station-details';
 
 export function StationList({ stations }){
     console.log('stations list :>> ', stations);
+    
     
     // const firstSixStation = stations.splice(0,5)
     
