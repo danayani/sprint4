@@ -1,15 +1,20 @@
 import { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+// import { useSelector } from "react-redux";
+import { useNavigate, useParams } from "react-router-dom"
 
 import { SongList } from '../cmps/song-list'
-import {StationDetails} from '../cmps/station-details'
-import {stationService} from '../services/station.service'
-import { removeStation } from "../store/station/station.actions"
+import { StationDetails } from '../cmps/station-details'
+import { stationService } from '../services/station.service'
+import { updateStation, removeStation } from "../store/station/station.actions"
 
-export function Station({saveStation}){
-    const [station,setStation] = useState([])
-    const {stationId} = useParams()
+
+
+export function Station({ saveStation }){
+
+    const [station, setStation] = useState(null)
+    const { stationId } = useParams()
     const navigate = useNavigate()
+    console.log('station from station', station)
 
     useEffect(()=>{
         if(!stationId) setStation(stationService.getEmptyStation())
@@ -19,7 +24,6 @@ export function Station({saveStation}){
     async function loadStation(){
         const currStation = await stationService.getById(stationId)
         setStation(currStation)
-
     }
 
     function onSaveStation(){
@@ -35,7 +39,7 @@ export function Station({saveStation}){
 
     return (
         <section className="station">
-            <StationDetails station={ station }/>
+            <StationDetails station={station}/>
             <SongList />
         </section>
     )
