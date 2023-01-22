@@ -27,7 +27,7 @@ export function SongList() {
         <tbody className="song-list">
             <tr>
                 <th>#</th>
-                <th>TITLE</th>
+                <th className="song-list-title">TITLE</th>
                 <th>DATE ADDED</th>
                 <th><i className="fa-regular fa-clock"></i></th>
             </tr>
@@ -39,7 +39,9 @@ export function SongList() {
             {station.map(station => { 
                 return<tr>
                     <td></td>
-                    <td>{station.title}</td>
+                    <td><button className="btn-song-title-play">{station.title}</button></td>
+                    <td>{station.addedAt}</td>
+                    <td>03:15</td>
                 </tr>
             })
             }
@@ -47,19 +49,19 @@ export function SongList() {
                 <td>1</td>
                 <td>coldplay - bla bla bla</td>
                 <td> 14.3.1997</td>
-                <td> 3M7S</td>
+                <td> 03:15</td>
             </tr>
             <tr>
                 <td>1</td>
                 <td>coldplay - bla bla bla</td>
                 <td> 14.3.1997</td>
-                <td> 3M7S</td>
+                <td> 03:15</td>
             </tr>
             <tr>
                 <td>1</td>
                 <td>coldplay - bla bla bla</td>
                 <td> 14.3.1997</td>
-                <td> 3M7S</td>
+                <td> 03:15</td>
             </tr>
         </tbody>
 
