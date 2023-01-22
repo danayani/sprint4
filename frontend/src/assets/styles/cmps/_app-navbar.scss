@@ -6,14 +6,19 @@
     grid-row: 1 / -1;
 }
 
-ul{
+ul {
     list-style-type: none;
+
+    &.nav-bar {
+        padding: 25px;
+    }
 }
 
-span{
+span {
     font-size: 15px;
 }
-.fa-solid{
+
+.fa-solid {
     // background-color: $txtselected;
     color: $txtselected;
     margin-right: 7px;
@@ -25,29 +30,25 @@ span{
     text-transform: none;
     display: block;
     height: 40px;
-    // padding: 0 16px;
     cursor: pointer;
-    // gap: 16px;
     justify-content: center;
     align-items: center;
-    
-    &-logo{
+
+    &-logo {
         padding-bottom: 20px;
     }
 
-    .logo-img{
-        // justify-content: ;
+    .logo-img {
+        padding: 15px;
+        height: 57px;
+        object-fit: cover;
     }
 
-    // &.active{
-    //     color: $txtselected;
-    // }
 }
 
 span {
     color: $txtfill;
-
-    &:hover{
+    &:hover {
         transition: 0.7s;
         color: $txtselected;
     }
