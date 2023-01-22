@@ -18,15 +18,12 @@ span {
     font-size: 15px;
 }
 
-svg{
-    // background-color: white;
+svg {
     fill: white;
 }
 
 .fa-solid {
-    // background-color: $txtselected;
     color: $txtselected;
-    margin-right: 20px;
     font-size: 25px;
     cursor: pointer;
 }
@@ -41,21 +38,28 @@ svg{
 
     &-logo {
         margin-top: 20px;
-        // margin-bottom: 20px;
+        span {
+            display: inline-block;
+            font-size: 30px;
+            margin-bottom: 15px;
+            color: $txtselected;
+        }
 
         .logo-img {
-            padding: 25px;
-            height: 100px;
+            display: inline-block;
+            height: 35px;
+            width: 35px;
+            border-radius: 50%;
             object-fit: cover;
             aspect-ratio: 1/1;
         }
     }
-
-
 }
 
 span {
     color: $txtfill;
+    margin-left: 10px;
+
     &:hover {
         transition: 0.7s;
         color: $txtselected;
