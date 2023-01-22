@@ -31,22 +31,27 @@ export function AppPlayer() {
 
 
                 <img className="song-img" src='../assets/img/rh.jpg' />
-                <p className="song-name">song name</p>
-                <p className="song-artist">song artist</p>
+                <p className="song-title">song title</p>
             </div>
 
-            <div className="actions flex justify-center">
-                <div>
-                    <i class="fa-solid fa-shuffle"></i>
+            <div className="player-actions-container flex justify-center">
+                <div className="player-actions flex">
+                    <i className="fa-solid fa-shuffle"></i>
+                    <i className="fa-solid fa-backward-step"></i>
+                    <button className="player-btn-play-pause">
+                        <i className="fa-solid fa-circle-play"></i>
+                    </button>
+                    <i className="fa-solid fa-backward-step btn-next"></i>
+                    <i class="fa-solid fa-repeat"></i>
                 </div>
-                <div>
+                <div className="player-range flex">
                     <input type="range" />
                 </div>
             </div>
 
             <div className="volume-controller flex">
-                <i class="fa-solid fa-volume-high"></i>
-                <input type="range" />
+                <div className="volume-icon"> <i className="fa-solid fa-volume-high"></i></div>
+                <input className="volume-range" type="range" />
             </div>
 
 

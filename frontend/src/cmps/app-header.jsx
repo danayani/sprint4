@@ -52,8 +52,8 @@ export function AppHeader() {
                 <div>
 
                     <button className="go-btn" onClick={() => onGo(-1)}>
-                        <img className='btn-icon' src={left} />
-                    </button>
+                        {/* <img className='btn-icon' src={left} /> */}
+                        <i class="fa-solid fa-circle-chevron-left" ></i>                    </button>
                 </div>
 
                 {location.pathname == '/search' &&
