@@ -29,7 +29,7 @@ export function SongList() {
     }
 
     console.log('wtf', stationSongs)
-    if (!stationSongs) return (<h1> loading...</h1>)
+    if (!stationSongs || !stationSongs.length ) return <h1> loading...</h1>
     return (<div className="song-list-container" >
         <header className="header-song-list grid">
             <span>#</span>
