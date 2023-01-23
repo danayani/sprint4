@@ -1,64 +1,109 @@
-// Music player
-
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { useSelector } from 'react-redux'
 import { showErrorMsg, showSuccessMsg } from '../services/event-bus.service'
 import ReactPlayer from 'react-player/youtube'
 import ProgressBar from 'react-bootstrap/ProgressBar'
+import { playerService } from '../services/player.service'
+import { utilService } from '../services/util.service'
 
-
-//icons
-import volumeIcon from '../assets/icons/player/speaker/volume-high-solid.svg'
-
+// import Duration from 'react-player/Duration'
 // import { UserMsg } from './user-msg.jsx'
 
-//TODO : get (props) song-item
 //TODO : control button
 
 export function AppPlayer() {
-    return (
 
-        <div className="app-playerS flex">
-            <ReactPlayer className="player-video" url='https://www.youtube.com/watch?v=oUFJJNQGwhk'
-                loop={true}
-                width='100px'
-                height='100px' />
+    const [state, setState] = useState({
+        url: ['https://www.youtube.com/watch?v=QtXby3twMmI', 'https://www.youtube.com/watch?v=oUFJJNQGwhk'],
+        pip: false,
+        playing: true,
+        controls: false,
+        light: false,
+        volume: 0.8,
+        muted: false,
+        duration: 0,
+        loop: false
+    })
 
-            <div className="song-details flex">
-                {/* <iframe className='video-player' id="player" type="text/html" width="100" height="70"
-                src={`http://www.youtube.com/embed/QtXby3twMmI`}
-                frameBorder="0"></iframe> */}
+    const [songs, setSongs] = useState([]) //TODO : get default song
+    const [playingS, setPlayingS] = useState(false)
+    const playingTimePass = useRef()
+    const volumePlayer = useRef(0.8)
+
+    useEffect(() => {
+        setSongs(playerService.getSongs())
+
+    }, [])
 
 
-                <img className="song-img" src='../assets/img/rh.jpg' />
-                <p className="song-title">song title</p>
-            </div>
+    function onTagglePlaying() { //taggle playingS
+        console.log('play/pause')
+        setState({ playing: !state.playing })
+    }
 
-            <div className="player-actions-container grid justify-center">
-                <div className="player-actions flex">
-                    <i className="action-btn fa-solid fa-shuffle"></i>
-                    <i className="action-btn fa-solid fa-backward-step"></i>
-                    <button className="player-btn-play-pause">
-                        <i className="action-btn1 play-pause-btn fa-solid fa-circle-play"></i>
-                    </button>
-                    <i className="action-btn fa-solid fa-backward-step btn-next"></i>
-                    <i className="action-btn fa-solid fa-repeat"></i>
+    function handleVolumeChange(ev) {
+        // ev.preventDefault()
+        console.log('volume changed', ev.target.value)
+        setState({ volume: +ev.target.value })
+    }
+
+    function shuffleSongs() {
+        { console.log('shuffle test', utilService.shuffle()) }
+    }
+
+
+
+
+    const classPlayPause = (!state.playing) ? 'play-pause-btn fa-solid fa-circle-play' : 'play-pause-btn fa-solid  fa-circle-pause'
+    if (songs === []) return (<h1> loading</h1>)
+    else if (songs !== []) return (
+        <div className="app-playerS">
+            < ReactPlayer className="player-video"
+                url={['https://www.youtube.com/watch?v=QtXby3twMmI', 'https://www.youtube.com/watch?v=oUFJJNQGwhk']}
+                pip={state.pip}
+                playing={state.playing}
+                controls={state.controls}
+                volume={state.volume}
+                muted={state.muted}
+                duration={state.duration}
+                loop={state.loop}
+            />
+            <div className="app-playerS flex">
+                <div className="song-details flex">
+                    <img className="song-img" src='../assets/img/rh.jpg' />
+                    {/* <p className="song-title">{songs[0].title}</p> */}
                 </div>
-                <div className="player-range-container">
-                   <div className="player-range flex">
-                    <input className="player-range-action" type="range" />
-                </div> 
+
+                <div className="player-actions-container grid justify-center">
+                    <div className="player-actions flex">
+                        <i className="action-btn fa-solid fa-shuffle"></i>
+                        <i className="action-btn fa-solid fa-backward-step"></i>
+                        <button className="player-btn-play-pause" onClick={onTagglePlaying}>
+                            <i className={classPlayPause}></i>
+
+                        </button>
+                        <i className="action-btn fa-solid fa-backward-step btn-next"></i>
+                        <i className="action-btn fa-solid fa-repeat"></i>
+                    </div>
+                    <div className="player-range-container">
+                        <div className="player-range flex">
+                            <input className="player-range-action" type="range" />
+                        </div>
+                    </div>
+
                 </div>
-                
+                <div className="volume-controller flex">
+                    <div className="volume-icon"> <i className="fa-solid fa-volume-high"></i></div>
+                    {/* <input  type="range" /> */}
+
+                    <input className="volume-range"
+                        type='range' min={0} max={0.999999} step='any'
+                        value={state.volume}
+                        onChange={handleVolumeChange}
+                    />
+
+                </div>
             </div>
-
-            <div className="volume-controller flex">
-                <div className="volume-icon"> <i className="fa-solid fa-volume-high"></i></div>
-                <input className="volume-range" type="range" />
-            </div>
-
-
-
         </div>
     )
 }

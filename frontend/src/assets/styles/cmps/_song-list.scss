@@ -1,14 +1,33 @@
-.song-list {
-    // background-color: pink;
+.song-list-container {
+    background-color: rgb(92, 73, 77);
+
+    &.header-song-list {
+        grid-template-columns: 3fr 20fr 5fr 5fr 7.5fr;
+
+    }
+
+    & ul {
+        padding: 0px;
+    }
 }
 
-.song-list-tbody {
-    color: white;
+.header-song-list {
+    grid-template-columns: 3fr 20fr 5fr 5fr 7.5fr;
 }
 
-.song-list-tbodyHashtag {
-    width: 30px;
+.song-list-li {
+    grid-template-columns: 3fr 20fr 5fr 5fr 7.5fr;
+
 }
+
+.song-list-img{
+    width: 40px;
+    height: 40px;
+}
+
+
+
+
 
 .btn-song-title-play {
     all: unset;

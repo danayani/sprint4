@@ -1,40 +1,35 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom"
 import { stationService } from "../services/station.service.js"
-import { loadStationById } from "../store/station/station.actions.js"
+// import { loadStationById } from "../store/station/station.actions.js"
 
 
 
 export function StationDetails() {
     const { stationId } = useParams()
-    const [station, setStation] = useState([])
+    const [station, setStation] = useState(null)
 
     useEffect(() => {
-        stationService.getById(stationId).then(res => {
-            console.log('res ', res)
-            setStation(res)
-
+        stationService.getById(stationId).then(station => {
+            setStation(station)
         })
     }, [stationId])
 
-    console.log('station', station)
-    if (!station) return (<h1> loading...</h1>)
-    else return (
+    if (!station) return <h1> loading...</h1>
+    return (
         <section className="station-details">
             <div className="img-container">
-                img
-                {/* <img src={station.songs[0].imgUrl} alt="play list image" /> */}
+                <img src={station.songs[0].imgUrl} alt="play list image" />
             </div>
             <div className="info-container">
-                <p className="title">PLAYLIST</p>
+                <h2 className="title">PLAYLIST</h2>
                 <h1>{station.name}</h1>
-                <p>
-                    {/* <span>{station.createdBy} ◽ </span> */}
-                    {/* {station.songs.length} <span>songs, </span> */}
+                <p className="station-description">
+                    <span>{station.createdBy.fullname} ◽ </span>
                     <span>24 min 25 sec </span>
                 </p>
             </div>
-            <span className="options">
+            <span className="stations-controls">
                 play | like | options
             </span>
 

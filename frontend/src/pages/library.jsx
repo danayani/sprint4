@@ -29,7 +29,7 @@ export function Library() {
         //     console.log('song from lib', songs)
         //     setListItemSearch(songs)
         // })
-        youtubeService.getPlaylistInfo().then(res =>{
+        youtubeService.getPlaylistInfo().then(res => {
             setItemInfo(res)
         })
 
@@ -47,6 +47,18 @@ export function Library() {
                     src={`http://www.youtube.com/embed/${item.snippet.resourceId.videoId}`}
                     frameBorder="0"></iframe>
             })}
+
+
+
+
+
+
+
+            <div className='footer-spacer'>
+                <h2 className='footer-filler'></h2>
+                <hr />
+                <h2 className='footer-filler'></h2>
+            </div>
         </div>
     )
 }
