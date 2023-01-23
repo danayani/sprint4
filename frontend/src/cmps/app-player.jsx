@@ -31,9 +31,13 @@ export function AppPlayer() {
     const volumePlayer = useRef(0.8)
 
     useEffect(() => {
-        setSongs(playerService.getSongs())
-
+        loadSongs()
     }, [])
+
+    function loadSongs() {
+        setSongs(['https://www.youtube.com/watch?v=QtXby3twMmI', 'https://www.youtube.com/watch?v=oUFJJNQGwhk'])
+
+    }
 
 
     function onTagglePlaying() { //taggle playingS
@@ -55,11 +59,12 @@ export function AppPlayer() {
 
 
     const classPlayPause = (!state.playing) ? 'play-pause-btn fa-solid fa-circle-play' : 'play-pause-btn fa-solid  fa-circle-pause'
-    if (songs === []) return (<h1> loading</h1>)
+    if (!songs || !songs.length) return (<h1> loading</h1>)
     else if (songs !== []) return (
         <div className="app-playerS">
+            {console.log('songs player', songs)}
             < ReactPlayer className="player-video"
-                url={['https://www.youtube.com/watch?v=QtXby3twMmI', 'https://www.youtube.com/watch?v=oUFJJNQGwhk']}
+                url={songs}
                 pip={state.pip}
                 playing={state.playing}
                 controls={state.controls}
