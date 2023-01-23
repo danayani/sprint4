@@ -18,6 +18,7 @@
     background-color: #c7c4c4;
     
 }
+
 ::-webkit-scrollbar-thumb:hover {
     background-color: #b3b3b3;
 }
@@ -44,13 +45,20 @@ body {
     background-color: $bgcmain;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin: 0 0 0.6em;
     line-height: 1;
 }
 
 
-section, main, footer {
+section,
+main,
+footer {
     // padding: 5px;
 }
 
@@ -65,7 +73,7 @@ p {
 a {
     text-decoration: none;
 }
+
 // a:hover {
 //     text-decoration: underline;
 // }
-
