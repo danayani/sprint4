@@ -15,6 +15,7 @@ export const stationService = {
     save,
     remove,
     getEmptyStation,
+    getMusicGeners
 }
 // window.cs = stationService
 
@@ -51,6 +52,18 @@ async function save(station) {
 //     const savedMsg = await httpService.post(`station/${stationId}/msg`, {txt})
 //     return savedMsg
 // }
+
+function getMusicGeners(){
+    return (["Podcasts", "New release", "Made for you", "Pop", "Electronic", "Hip-Hop", "R&B",
+    "Rock", "Indie","Afro", "Workout", "Discover", "Chill", "Folk", "Jazz", "Blues", "Country",
+    "Classical", "Metal", "Punk", "Reggae", "Mood", "R&B", "Romnce", "Ambient", "Netflix", "Travel",
+    "Soul", "Funk", "Latin", "World", "Gospel", "Decades", "Gaming", "Science", "Summer", "RADAR",
+    "Grunge", "Emo", "Techno", "House", "Dubstep", "Anime", "Folk & acoustic", "League Of Legends",
+    "Trance", "Drum and Bass", "Reggaeton", "TV & Movies", "Instrumental", "Cooking & Dinning",
+    "K-Pop", "J-Pop", "Cumbia", "Salsa", "Caribbean", 
+    "Samba", "Ska", "Calypso", "Merengue",
+    "Bachata", "Zouk", "Tango", "Bollywood"])
+}
 
 function getEmptyStation() {
     return {
