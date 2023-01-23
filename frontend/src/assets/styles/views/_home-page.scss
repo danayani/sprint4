@@ -1,6 +1,6 @@
 // includes all the stations elements in home page
 .main-app-container {
-    height: 100%;
+    // height: 100%;
     background-color: $bgcplayer;
     color: $txtfill;
 }
@@ -18,6 +18,15 @@
         color: $txtselected;
         font-size: 32px;
         font-weight: 600;
+    }
+
+    .footer-spacer{
+
+        .footer-filler{
+            height: 100px;
+            width: 100%;
+        }
+
     }
 }
 
