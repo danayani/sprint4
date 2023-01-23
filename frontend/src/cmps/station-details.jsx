@@ -10,10 +10,9 @@ export function StationDetails() {
     const [station, setStation] = useState([])
 
     useEffect(() => {
-        stationService.getById(stationId).then(res => {
-            console.log('res ', res)
-            setStation(res)
-
+        stationService.getById(stationId).then(station => {
+            setStation(station)
+            console.log('station from details',station)
         })
     }, [stationId])
 
@@ -23,12 +22,14 @@ export function StationDetails() {
         <section className="station-details">
             <div className="img-container">
                 img
-                {/* <img src={station.songs[0].imgUrl} alt="play list image" /> */}
+                {/* <img src={station.createdBy.imgUrl} alt="play list image" /> */}
+                {/* <img src={station.imgUrl} alt="play list image" /> */}
             </div>
             <div className="info-container">
                 <p className="title">PLAYLIST</p>
                 <h1>{station.name}</h1>
                 <p>
+                    {/* <span>{station.createdBy.fullname} ◽ </span> */}
                     {/* <span>{station.createdBy} ◽ </span> */}
                     {/* {station.songs.length} <span>songs, </span> */}
                     <span>24 min 25 sec </span>
