@@ -10,16 +10,66 @@ export function SongList() {
     const [stationSongs, setStationSongs] = useState([])
 
     useEffect(() => {
+        loadSongs()
+    }, [])
+
+    function loadSongs() {
         stationService.getById(stationId).then(res => {
             const songsList = res.songs
             setStationSongs(songsList)
         })
-    }, [])
-    console.log('station ', stationId, ' : ', stationSongs)
+        .catch((err) =>{
+            console.log('Had issues in song list', err)
+        })
 
+    }
+
+    function onPlay(songId) {
+
+    }
+
+    console.log('wtf', stationSongs)
     if (!stationSongs) return (<h1> loading...</h1>)
-    else return (
-        <h1>hi</h1>
+    return (<div className="song-list-container" >
+        <header className="header-song-list grid">
+            <span>#</span>
+            <span>TITLE</span>
+            <span>DATE ADDED</span>
+            <span><i className="song-list-tbodyTime fa-regular fa-clock"></i></span>
+        </header>
+        <ul>
+            {console.log('stationSongs', stationSongs)}
+            {/* <h1>{stationSongs[0].createdBy}</h1> */}
+            {/* {stationSongs.map(song => { */}
+            <article role="button">
+                <li className="song-list-li grid">
+                    <div className="btn-song-list-play">
+                        1
+                    </div>
+                    <section>
+                        <div className="song-list-img">
+                            img
+                        </div>
+                        <section>
+                            <p>song name</p>
+                        </section>
+                    </section>
+                    <div className="song-list-artist">
+                        artist
+                    </div>
+                    <div className="song-list-add-date">
+                        add-date
+                    </div>
+                    <div className="song-list-duration">
+                        00:00
+                    </div>
+                </li>
+            </article>
+            {/* }) */}
+            {/* } */}
+        </ul>
+    </div>
+
         // <h2>song list for station : {stationId} </h2>
         // <tbody className="song-list-tbody">
         //     <tr>
