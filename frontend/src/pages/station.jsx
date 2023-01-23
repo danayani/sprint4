@@ -47,11 +47,11 @@ export function Station({ saveStation }) {
 
 
 
-            <div className='footer-spacer'>
+            {/* <div className='footer-spacer'>
                 <h2 className='footer-filler'></h2>
                 <hr/>
                 <h2 className='footer-filler'></h2>
-            </div>
+            </div> */}
         </section>
     )
 }
