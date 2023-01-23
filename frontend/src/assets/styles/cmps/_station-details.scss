@@ -10,46 +10,37 @@
 
     background-image: linear-gradient(red, black);
 
-
-
-    .img-container {
-        width: 230px;
-        height: 230px;
-        box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 60px 0px;
+    .top-container{
         display: flex;
-        margin: 5vw;
-
-        img {
+        .img-container {
+            width: 230px;
+            height: 230px;
+            box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 60px 0px;
+            display: flex;
+            margin: 5vw;
             object-fit: cover;
             aspect-ratio: 1 / 1;
         }
-
+        .info-container {
+            // position: relative;
+            flex-flow: column;
+            flex: 1;
+            color: $txtselected;
+           
+            // h2 {
+            //     font-size: 10px;
+            // }
+    
+            // h1 {
+            //     font-size: 4rem;
+            // }
+    
+            // p {
+            //     font-size: 16px;
+            // }
+        }
     }
 
-    .info-container {
-        // height: 230px;
-        // width: auto;
-        display: flex;
-        position: relative;
-        flex-flow: column;
-        flex: 1;
-        left: 320px;
-        bottom: 200px;
-        z-index: 0;
 
-
-        h2 {
-            font-size: 10px;
-        }
-
-        h1 {
-            font-size: 4rem;
-        }
-
-        p {
-            font-size: 16px;
-        }
-
-    }
 
 }
