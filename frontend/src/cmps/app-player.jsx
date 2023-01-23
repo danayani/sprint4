@@ -26,6 +26,7 @@ export function AppPlayer() {
     const [songs, setSongs] = useState([]) //TODO : get default song
     const [playingS, setPlayingS] = useState(false)
     const playingTimePass = useRef()
+    const volumePlayer = useRef(0.8)
 
     useEffect(() => {
         setSongs(playerService.getSongs())
@@ -38,13 +39,19 @@ export function AppPlayer() {
         setState({ playing: !state.playing })
     }
 
+    function handleVolumeChange(ev) {
+        // ev.preventDefault()
+        console.log('volume changed', ev.target.value)
+        setState({ volume: +ev.target.value })
+    }
+    
+
+
+
     const classPlayPause = (!state.playing) ? 'play-pause-btn fa-solid fa-circle-play' : 'play-pause-btn fa-solid  fa-circle-pause'
     if (songs === []) return (<h1> loading</h1>)
     else if (songs !== []) return (
         <div className="app-playerS">
-
-
-
             {console.log('songs in player', songs)}
 
             < ReactPlayer className="player-video"
@@ -86,12 +93,10 @@ export function AppPlayer() {
                     {/* <input  type="range" /> */}
 
                     <input className="volume-range"
-                    type='range' min={0} max={0.999999} step='any'
-                    value={state.volume}
-                    // onMouseDown={this.handleSeekMouseDown}
-                    // onChange={this.handleSeekChange}
-                    // onMouseUp={this.handleSeekMouseUp}
-                  />
+                        type='range' min={0} max={0.999999} step='any'
+                        value={state.volume}
+                        onChange={handleVolumeChange}
+                    />
 
                 </div>
             </div>
