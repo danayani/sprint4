@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom"
 import { useEffect, useState } from "react";
 import { stationService } from "../services/station.service"
+import { SHOW_MSG } from "../services/event-bus.service";
 
 
 //TODO : service function 'getSongListByStationId'
@@ -18,9 +19,9 @@ export function SongList() {
             const songsList = res.songs
             setStationSongs(songsList)
         })
-        .catch((err) =>{
-            console.log('Had issues in song list', err)
-        })
+            .catch((err) => {
+                console.log('Had issues in song list', err)
+            })
 
     }
 
@@ -28,8 +29,7 @@ export function SongList() {
 
     }
 
-    console.log('wtf', stationSongs)
-    if (!stationSongs || !stationSongs.length ) return <h1> loading...</h1>
+    if (!stationSongs || !stationSongs.length) return <h1> loading...</h1>
     return (<div className="song-list-container" >
         <header className="header-song-list grid">
             <span>#</span>
@@ -39,34 +39,36 @@ export function SongList() {
         </header>
         <ul>
             {console.log('stationSongs', stationSongs)}
-            {/* <h1>{stationSongs[0].createdBy}</h1> */}
-            {/* {stationSongs.map(song => { */}
-            <article role="button">
-                <li className="song-list-li grid">
-                    <div className="btn-song-list-play">
-                        1
-                    </div>
-                    <section>
-                        <div className="song-list-img">
-                            img
+            {stationSongs.map(song => {
+                { console.log('song', song) }
+                return <article role="button">
+                    <li className="song-list-li grid">
+                        <div className="btn-song-list-play">
+                            1
                         </div>
                         <section>
-                            <p>song name</p>
+                            <div >
+                                <img className="song-list-img" src={song.imgUrl} />
+
+                            </div>
+                            <section>
+                                <p>{song.title}</p>
+
+                            </section>
                         </section>
-                    </section>
-                    <div className="song-list-artist">
-                        artist
-                    </div>
-                    <div className="song-list-add-date">
-                        add-date
-                    </div>
-                    <div className="song-list-duration">
-                        00:00
-                    </div>
-                </li>
-            </article>
-            {/* }) */}
-            {/* } */}
+                        <div className="song-list-artist">
+                            {song.createdBy}
+                        </div>
+                        <div className="song-list-add-date">
+                            {song.addedAt}
+                        </div>
+                        <div className="song-list-duration">
+                            00:00
+                        </div>
+                    </li>
+                </article>
+            })
+            }
         </ul>
     </div>
 

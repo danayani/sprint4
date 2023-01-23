@@ -4,8 +4,6 @@ export const playerService = {
     getSongs
 }
 
-
-
 function getSongs() {
     const songs = [
         {
@@ -41,3 +39,5 @@ function getSongs() {
     ]
     return songs
 }
+
+
