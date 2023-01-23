@@ -61,7 +61,9 @@ export function AppPlayer() {
 
     }
 
-
+    function onReady(x) {
+        console.log(x)
+    }
 
 
     const classPlayPause = (!state.playing) ? 'play-pause-btn fa-solid fa-circle-play' : 'play-pause-btn fa-solid  fa-circle-pause'
@@ -78,6 +80,7 @@ export function AppPlayer() {
                 muted={state.muted}
                 duration={state.duration}
                 loop={state.loop}
+                onReady={onReady}
             />
             <div className="app-playerS flex">
                 <div className="song-details flex">
