@@ -1,0 +1,17 @@
+.main-search-container {
+    
+    .filter-cards-container {
+        height: 100vh;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(157px, 1fr));
+        justify-content: center;
+        gap: 24px;
+        
+        .filter-card{
+            border: 1px white solid;
+            border-radius: 4px;
+            
+        }
+        .filter-img {}
+    }
+}
