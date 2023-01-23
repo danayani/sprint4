@@ -1,7 +1,7 @@
 .app-playerS {
     grid-area: "player";
     background-color: $bgcmain;
-    height: 300px; //#################################
+    height: 90px; 
     bottom: 0;
     justify-content: space-between;
     position: fixed;
@@ -80,7 +80,7 @@
 }
 
 .player-video {
-    // opacity: 0;
-    // width: 1px;
-    // width: 0px;
+    opacity: 0;
+    width: 1px;
+    width: 0px;
 }
