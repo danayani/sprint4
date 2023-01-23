@@ -9,7 +9,7 @@ import { loadStations } from '../store/station/station.actions.js'
 export function Home() {
     // data retrival
     const stations = useSelector((storeState) => storeState.stationModule.stations)
-    console.log('stations from home', stations)
+    // console.log('stations from home', stations)
     useEffect(() => {
         loadStations()
     }, [])

@@ -9,8 +9,9 @@ export function Search() {
     // when a card is clicked it sends a req to youtube
     function onFilterCardClicked(filterByGener) {
         // call the search function from youtube.
+
         // const searchRes = youtubeService.getServerSideSearch()
-        // console.log('searchRes :>> ', searchRes);
+        // con sole.log('searchRes :>> ', searchRes);
     }
 
     return (

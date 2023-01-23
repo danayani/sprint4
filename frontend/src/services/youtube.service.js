@@ -47,12 +47,12 @@ async function getServerSideProps() {
 
 //TODO: need wait mathod
 async function getServerSideSearch(searchKey) {
-    console.log('search ', searchKey)
+    console.log('youtube.service is searching for: ', searchKey)
     const res = await fetch(`${YOUTUBE_LIST_SEARCH_API}?part=snippet&order=viewCount&maxResults=6&type=video&q=${searchKey}}&key=${YOUTUBE_API_KEY}`)
 
-    console.log('res search', res)
+    // console.log('Search res ', res)
     const data = await res.json()
-    console.log('data search', data)
+    // console.log('Search data', data)
     return data
 }
 
