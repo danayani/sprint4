@@ -11,14 +11,21 @@
     }
 }
 
+.header-song-list {
+    grid-template-columns: 3fr 20fr 5fr 5fr 7.5fr;
+}
+
 .song-list-li {
     grid-template-columns: 3fr 20fr 5fr 5fr 7.5fr;
 
 }
 
-.header-song-list {
-    grid-template-columns: 3fr 20fr 5fr 5fr 7.5fr;
+.song-list-img{
+    width: 40px;
+    height: 40px;
 }
+
+
 
 
 

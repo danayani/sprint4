@@ -83,7 +83,16 @@ export function AppPlayer() {
                 </div>
                 <div className="volume-controller flex">
                     <div className="volume-icon"> <i className="fa-solid fa-volume-high"></i></div>
-                    <input className="volume-range" type="range" />
+                    {/* <input  type="range" /> */}
+
+                    <input className="volume-range"
+                    type='range' min={0} max={0.999999} step='any'
+                    value={state.volume}
+                    // onMouseDown={this.handleSeekMouseDown}
+                    // onChange={this.handleSeekChange}
+                    // onMouseUp={this.handleSeekMouseUp}
+                  />
+
                 </div>
             </div>
         </div>
