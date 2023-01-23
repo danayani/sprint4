@@ -4,6 +4,8 @@ import { showErrorMsg, showSuccessMsg } from '../services/event-bus.service'
 import ReactPlayer from 'react-player/youtube'
 import ProgressBar from 'react-bootstrap/ProgressBar'
 import { playerService } from '../services/player.service'
+import { utilService } from '../services/util.service'
+
 // import Duration from 'react-player/Duration'
 // import { UserMsg } from './user-msg.jsx'
 
@@ -44,7 +46,11 @@ export function AppPlayer() {
         console.log('volume changed', ev.target.value)
         setState({ volume: +ev.target.value })
     }
-    
+
+    function shuffleSongs() {
+        { console.log('shuffle test', utilService.shuffle()) }
+    }
+
 
 
 
@@ -52,8 +58,6 @@ export function AppPlayer() {
     if (songs === []) return (<h1> loading</h1>)
     else if (songs !== []) return (
         <div className="app-playerS">
-            {console.log('songs in player', songs)}
-
             < ReactPlayer className="player-video"
                 url={['https://www.youtube.com/watch?v=QtXby3twMmI', 'https://www.youtube.com/watch?v=oUFJJNQGwhk']}
                 pip={state.pip}
