@@ -4,8 +4,9 @@ export const playerService = {
     getSongs
 }
 
-function getSongs() {
 
+
+function getSongs() {
     const songs = [
         {
             id: "s1001",
@@ -38,6 +39,5 @@ function getSongs() {
             duration: ""
         }
     ]
-
     return songs
 }
