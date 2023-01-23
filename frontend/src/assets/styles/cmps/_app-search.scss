@@ -1,16 +1,26 @@
 .main-search-container {
+    margin-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: grid;
+    h2{
+        margin-bottom: 20px;
+    }
     
     .filter-cards-container {
         height: 100vh;
+
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(157px, 1fr));
-        justify-content: center;
+        grid-auto-rows: auto;
         gap: 24px;
         
         .filter-card{
-            border: 1px white solid;
-            border-radius: 4px;
-            
+            background-color: rgb(66, 62, 62);
+            padding: 16px;
+            border-radius: 5px;
+            min-height: 157px;
+            max-height: 220px;
         }
         .filter-img {}
     }
