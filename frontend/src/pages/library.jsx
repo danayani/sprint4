@@ -29,6 +29,7 @@ export function Library() {
         //     console.log('song from lib', songs)
         //     setListItemSearch(songs)
         // })
+        
         youtubeService.getPlaylistInfo().then(res => {
             setItemInfo(res)
         })
@@ -53,12 +54,12 @@ export function Library() {
 
 
 
-
+{/* 
             <div className='footer-spacer'>
                 <h2 className='footer-filler'></h2>
                 <hr />
                 <h2 className='footer-filler'></h2>
-            </div>
+            </div> */}
         </div>
     )
 }

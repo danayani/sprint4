@@ -18,16 +18,18 @@ export function StationDetails() {
     if (!station) return <h1> loading...</h1>
     return (
         <section className="station-details">
-            <div className="img-container">
-                <img src={station.songs[0].imgUrl} alt="play list image" />
-            </div>
-            <div className="info-container">
-                <h2 className="title">PLAYLIST</h2>
-                <h1>{station.name}</h1>
-                <p className="station-description">
-                    <span>{station.createdBy.fullname} ◽ </span>
-                    <span>24 min 25 sec </span>
-                </p>
+            <div className="top-container">
+                <div className="img-container">
+                    <img src={station.songs[0].imgUrl} alt="play list image" />
+                </div>
+                <div className="info-container">
+                    <h2 className="title">PLAYLIST</h2>
+                    <h1>{station.name}</h1>
+                    <p className="station-description">
+                        <span>{station.createdBy.fullname} ◽ </span>
+                        <span>24 min 25 sec </span>
+                    </p>
+                </div>
             </div>
             <span className="stations-controls">
                 play | like | options

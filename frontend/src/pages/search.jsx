@@ -1,12 +1,35 @@
-//TODO : changing headder, input search line
-
-//TODO: main-search, card show with grid
+import { youtubeService } from "../services/youtube.service";
+import { stationService } from "../services/station.service.js";
 
 
 export function Search() {
-    return(
-        <section>
-            <h2>Search</h2>
-        </section>
+    const geners = stationService.getMusicGeners()
+    // console.log('geners from search', geners)
+
+    // when a card is clicked it sends a req to youtube
+    function onFilterCardClicked(filterByGener) {
+        // call the search function from youtube.
+
+        // const searchRes = youtubeService.getServerSideSearch()
+        // con sole.log('searchRes :>> ', searchRes);
+    }
+
+    return (
+        <main className="main-search-container">
+            <h2>Browse all</h2>
+
+            <section className="filter-cards-container">
+                {geners.map(gener =>
+
+                    <div className="filter-card" onClick={onFilterCardClicked(gener)}>
+                        <h3>{gener}</h3>
+                        <img className="filter-img" src="" alt="filter img" />
+                        {/* <button className='play'>Play</button> */}
+                    </div>
+
+                )}
+            </section>
+
+        </main>
     )
 }

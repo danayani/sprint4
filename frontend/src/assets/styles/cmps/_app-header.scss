@@ -6,6 +6,7 @@
     background-color: $bgcmain;
     grid-area: "app-header";
     grid-column: 2 / -1;
+    opacity: 90%;
 }
 
 .app-header {
@@ -24,6 +25,7 @@
     justify-content: center;
     position: relative;
     border-radius: 50%;
+    opacity: 90%;
 }
 
 button svg{

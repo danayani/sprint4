@@ -8,26 +8,9 @@
 .main-home-container {
     padding: 24px 32px 0 32px;
 
-    // overscroll-behavior-y: none;
-    // ::-webkit-scrollbar-track{
-    //     scrollbar-track-color: $bgcmain;
-
-    // }
-
-    h1{
+    h1 {
         color: $txtselected;
         font-size: 32px;
         font-weight: 600;
     }
-
-    .footer-spacer{
-
-        .footer-filler{
-            height: 100px;
-            width: 100%;
-        }
-
-    }
 }
-
-    

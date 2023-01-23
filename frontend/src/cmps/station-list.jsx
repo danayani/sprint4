@@ -13,7 +13,7 @@ export function StationList({ stations }) {
         // Should we splice the stations array to display the first 6?
         <section className='stations-cards'>
             {stations.map(station =>
-                <Link to={`/station/${station._id}`}>
+                <Link key={song._id} to={`/station/${station._id}`}>
                     <div className="station-card">
                         {/* <StationDetails /> */}
                         <h3>{station.name}</h3>
