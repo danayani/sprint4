@@ -61,6 +61,7 @@ export function AppPlayer() {
             {console.log('songs player', songs)}
 
             < ReactPlayer className="player-video"
+                height="1px"
                 url={songs}
                 pip={playerState.pip}
                 playing={playerState.playing}

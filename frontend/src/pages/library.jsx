@@ -43,11 +43,11 @@ export function Library() {
 
             {console.log('search list', itemListSearch)}
             {console.log('itemInfo', itemInfo)}
-            {itemList2.map((item) => {
+            {/* {itemList2.map((item) => {
                 return <iframe key={item.id} id="player" type="text/html" width="640" height="390"
                     src={`http://www.youtube.com/embed/${item.snippet.resourceId.videoId}`}
                     frameBorder="0"></iframe>
-            })}
+            })} */}
 
 
 
