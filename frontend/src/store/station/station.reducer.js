@@ -6,7 +6,9 @@ export const UPDATE_STATION = 'UPDATE_STATION'
 export const UPDATE_CURR_STATION = 'UPDATE_CURR_STATION'
 // TODO: Add like-song
 
+console.log('in ')
 const initialState = {
+    
     stations: null,
     currStation: null
 }
