@@ -10,31 +10,43 @@
     }
 
     .filter-cards-container {
-        height: 100vh;
-
+        // height: 100vh;
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(157px, 1fr));
         gap: 24px;
 
-
-
         .filter-card {
+            position: relative;
             background-color: rgb(66, 62, 62);
-
-            border-radius: 5px;
-            padding-bottom: 65%;
+            border-radius: 8px;
+            border: none;
+            display: grid;
+            overflow: hidden;
         }
 
-        h3 {
-            padding-left: 16px;
-            padding-right: 16px;
-            padding-top: 16px;
+        .filter-card::before {
+            content: "";
+            padding-top: 100%;
+            display: block;
+            grid-area: 1 / 1 / 2 / 2;
+
         }
-    
+
+
+        h2 {
+            font-weight: 700;
+            grid-area: 1 / 1 / 2 / 2;
+            padding: 16px 0 0 16px
+        }
+
         .filter-img {
-            padding-left: 16px;
-            padding-right: 16px;
-            padding-top: 16px;
+            
+            grid-area: 1 / 1 / 2 / 2;
+            position: absolute;
+            rotate: z 25deg;
+            width: 100px;
+            left: 47%;
+            bottom: -3%;
         }
     }
 }

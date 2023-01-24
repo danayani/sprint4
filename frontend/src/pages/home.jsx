@@ -7,9 +7,7 @@ import { SecondStationList } from '../cmps/second-stations-list'
 import { loadStations } from '../store/station/station.actions.js'
 
 export function Home() {
-    // data retrival
     const stations = useSelector((storeState) => storeState.stationModule.stations)
-    // console.log('stations from home', stations)
     useEffect(() => {
         loadStations()
     }, [])
@@ -22,14 +20,14 @@ export function Home() {
         else if (currHour > 22 || currHour < 6) return 'Good night'
     }
 
-    // home-container stations-container
+    if (!stations) return (<div>Loding...</div>)
     return (
         <main className='main-home-container'>
             <div className="home-stations-container">
                 <h1>{setGreeting()}</h1>
                 <FirstStationList stations={stations.slice(0, 6)} />
                 {/* better name is needed */}
-                <SecondStationList stations={stations.slice(6, 20)}/>
+                <SecondStationList stations={stations.slice(6, 20)} />
             </div>
             {/* <div className='footer-spacer'>
                 <h2 className='footer-filler'></h2>
