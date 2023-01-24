@@ -1,11 +1,12 @@
 .home-stations-container {
 
     .first-station-cards {
-        padding: 13px 0px 30px 15px;
+        // padding: 13px 0px 30px 15px;
+        padding: 11px 14px;
         width: 100%;
         display: grid;
         grid-template-columns: repeat(3, minmax(240px, 1fr));
-        grid-gap: 16px;
+        grid-gap: 16px 70px;
     }
     
 
@@ -22,7 +23,7 @@
 
         overflow: hidden;
 
-        &hover{
+        &:hover{
             background-color: ligthen($bgcplaylistup,20%);
         }
 
