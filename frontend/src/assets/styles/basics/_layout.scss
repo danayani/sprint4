@@ -21,7 +21,7 @@
 
 
     @include for-narrow-layout {
-        grid-template-columns: 
+        grid-template-areas: 
         "navbar app-header"
         "navbar main"
         "player player";
@@ -30,7 +30,7 @@
             // minmax(20px, 1fr);
     }
     @include for-normal-layout {
-        grid-template-columns: 
+        grid-template-areas: 
         "navbar app-header"
         "navbar main"
         "player player";
@@ -39,7 +39,7 @@
         // minmax(20px, 1fr);
     }
     @include for-wide-layout {
-        grid-template-columns: 
+        grid-template-areas: 
         "navbar app-header"
         "navbar main"
         "player player";

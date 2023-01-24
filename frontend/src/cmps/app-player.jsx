@@ -1,10 +1,10 @@
 import { useState, useEffect, useRef } from 'react'
 import { useSelector } from 'react-redux'
-import { showErrorMsg, showSuccessMsg } from '../services/event-bus.service'
 import ReactPlayer from 'react-player/youtube'
 import ProgressBar from 'react-bootstrap/ProgressBar'
 import { playerService } from '../services/player.service'
 import { utilService } from '../services/util.service'
+import { getActionPlayPausePlayer } from '../store/player/player.action'
 
 //load store 22:25
 //load actions 27:19
@@ -14,25 +14,9 @@ import { utilService } from '../services/util.service'
 // import { UserMsg } from './user-msg.jsx'
 
 export function AppPlayer() {
-    //const state useSelector((storePlayer) => storePlayer.state)
     const playerState = useSelector(storeState => storeState.playerModule.playerState)
 
-    const [state, setState] = useState({
-        url: ['https://www.youtube.com/watch?v=QtXby3twMmI', 'https://www.youtube.com/watch?v=oUFJJNQGwhk'],
-        pip: false,
-        playing: true,
-        controls: false,
-        light: false,
-        volume: 0.8,
-        muted: false,
-        duration: 0,
-        loop: false
-    })
-
-    const [songs, setSongs] = useState([]) //TODO : get default song
-    const [playingS, setPlayingS] = useState(false)
-    const playingTimePass = useRef()
-    const volumePlayer = useRef(0.8)
+    const [songs, setSongs] = useState([]) //TODO : useSelector, show only when i have a song 
 
     useEffect(() => {
         loadSongs()
@@ -47,22 +31,19 @@ export function AppPlayer() {
 
     function onTagglePlaying() { //taggle playingS
         console.log('play/pause')
-        setState({ playing: !state.playing })
+        getActionPlayPausePlayer()
+        // setState({ playing: !state.playing })
     }
 
     function handleVolumeChange(ev) {
         // ev.preventDefault()
         console.log('volume changed', ev.target.value)
-        setState({ volume: +ev.target.value })
+        // setState({ volume: +ev.target.value })
     }
 
     function onShuffleSongs() {
         console.log('shuffleSongs')
-        setSongs(utilService.shuffle(songs))
-    }
-
-    function onNextSong() {
-
+        // setSongs(utilService.shuffle(songs))
     }
 
     function onReady(x) {
@@ -70,20 +51,25 @@ export function AppPlayer() {
     }
 
 
-    const classPlayPause = (!state.playing) ? 'play-pause-btn fa-solid fa-circle-play' : 'play-pause-btn fa-solid  fa-circle-pause'
-    if (!songs || !songs.length) return (<h1> loading</h1>)
-    else if (songs !== []) return (
+
+    const classPlayPause = (!playerState.playing) ? 'play-pause-btn fa-solid fa-circle-play' : 'play-pause-btn fa-solid  fa-circle-pause'
+    if (!songs || !songs.length || !playerState) return (<h1> loading</h1>)
+    return (
         <div className="app-playerS">
 
+            {console.log('playerState =>', playerState)}
+            {console.log('songs player', songs)}
+
             < ReactPlayer className="player-video"
+                height="1px"
                 url={songs}
-                pip={state.pip}
-                playing={state.playing}
-                controls={state.controls}
-                volume={state.volume}
-                muted={state.muted}
-                duration={state.duration}
-                loop={state.loop}
+                pip={playerState.pip}
+                playing={playerState.playing}
+                controls={playerState.controls}
+                volume={playerState.volume}
+                muted={playerState.muted}
+                duration={playerState.duration}
+                loop={playerState.loop}
                 onReady={onReady}
             />
             <div className="app-playerS flex">
@@ -107,6 +93,9 @@ export function AppPlayer() {
                     <div className="player-range-container">
                         <div className="player-range flex">
                             <input className="player-range-action range" type="range" />
+                            {/* <div class="progress-bar" role="progressbar" aria-valuenow="70"
+                                aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                            </div> */}
                         </div>
                     </div>
 
@@ -116,7 +105,7 @@ export function AppPlayer() {
 
                     <input className="volume-range range"
                         type='range' min={0} max={0.999999} step='any'
-                        value={state.volume}
+                        value={playerState.volume}
                         onChange={handleVolumeChange}
                     />
 

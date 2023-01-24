@@ -1,25 +1,32 @@
 import { playerService } from "../../services/player.service"
 
-export const SET_PLAYER = 'SET_PLAYER'
-export const SET_SONG_ID = 'SET_SONG_ID'
-console.log('in player reducer')
+export const PLAY_PAUSE_PLAYER = 'PLAY_PLAYER'
+export const NEXT_SONG = 'NEXT_SONG'
+export const PREVIOUS_SONG = 'PREVIOUS_SONG'
+export const LOAD_STATION_FOR_PLAYER = 'LOAD_STATION_FOR_PLAYER'
 
 const initialState = { //אם אני רוצה שכמה קומפוננטות ישתמשו במידע
-    station: {},
+    currPlayingStation: {},
     playerState: playerService.getDefaultState(),
     songs: [],
     currSongIndex: 0
 }
+
 export function playerReducer(state = initialState, action) {
-    let songs
+    let playerState
     switch (action.type) {
-        case SET_PLAYER:
-            return { ...state, player: action.player }
-        case SET_SONG_ID:
-            return { ...state, songId: action.songId }
+        case PLAY_PAUSE_PLAYER:
+            console.log('PLAY_PAUSE_PLAYER', state.playerState.playing)
+            playerState = { ...state.playerState, playing: !state.playerState.playing }
+            return { ...state, playerState }
+        case NEXT_SONG:
+            console.log('NEXT_SONG')
+            return
+        case LOAD_STATION_FOR_PLAYER:
+            console.log('LOAD_STATION_FOR_PLAYER')
+            return { ...state, currPlayingStation : action.station }
+            return
         default:
             return state
-
     }
-
 }
