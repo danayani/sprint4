@@ -18,15 +18,15 @@ export function playerReducer(state = initialState, action) {
     let songs
     let playerState
     switch (action.type) {
-        case PLAY_PLAYER:
+        case PLAY_PAUSE_PLAYER:
             playerState = { ...state.playerState, playing: !state.playing }
             return { ...state, playerState }
         case NEXT_SONG:
             console.log('NEXT_SONG')
             return 
         case REMOVE_SONG_PLAYER:
-            songs = state.songs.filter(toy => toy._id !== action.toyId)
-            return { ...state, toys }
+            // songs = state.songs.filter(toy => toy._id !== action.toyId)
+            return 
         default:
             return state
 
