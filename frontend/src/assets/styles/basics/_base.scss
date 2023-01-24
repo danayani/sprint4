@@ -23,9 +23,6 @@
     background-color: #b3b3b3;
 }
 
-
-
-
 ::selection {
     background-color: $bgcnav;
     color: $txtfill;
@@ -40,7 +37,6 @@ html {
 body {
     font-size: rem(14px);
     font-family: $txtf;
-    margin: 0;
     margin: auto;
     background-color: $bgcmain;
 }
@@ -52,7 +48,7 @@ h4,
 h5,
 h6 {
     margin: 0 0 0.6em;
-    line-height: 1;
+    line-height: 0.7;
 }
 
 
