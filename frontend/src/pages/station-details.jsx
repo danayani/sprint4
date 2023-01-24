@@ -1,29 +1,30 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from "react"
 // import { useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom"
 
 import { SongList } from '../cmps/song-list'
-import { StationDetails } from '../cmps/station-details'
+import { StationHeader } from '../cmps/station-header'
 import { stationService } from '../services/station.service'
 import { updateStation, removeStation } from "../store/station/station.actions"
 
+// all logic happends here
 
-
-export function Station({ saveStation }) {
+export function StationDetails({ saveStation }) {
 
     const [station, setStation] = useState(null)
     const { stationId } = useParams()
     const navigate = useNavigate()
 
-    // useEffect(() => {
-    //     if (!stationId) setStation(stationService.getEmptyStation())
-    //     else loadStation()
-    // }, [stationId])
+    useEffect(() => {
+        // if (!stationId) setStation(stationService.getEmptyStation())
+       //פניה אל ה-statiםn action והוא מעדכן את הרידוסר ואת הסטור
+        loadStation()
+    }, [stationId])
 
-    // async function loadStation() {
-    //     const currStation = await stationService.getById(stationId)
-    //     setStation(currStation)
-    // }
+    async function loadStation() {
+        const currStation = await stationService.getById(stationId)
+        setStation(currStation)
+    }
 
     function onSaveStation() {
         saveStation(station)
@@ -34,24 +35,11 @@ export function Station({ saveStation }) {
         navigate('/')
     }
 
-
-
+    if (!station) return <h1>Loading...</h1>
     return (
         <section className="station">
-            <StationDetails />
+            <StationHeader  />
             <SongList />
-
-
-
-
-
-
-
-            {/* <div className='footer-spacer'>
-                <h2 className='footer-filler'></h2>
-                <hr/>
-                <h2 className='footer-filler'></h2>
-            </div> */}
         </section>
     )
 }

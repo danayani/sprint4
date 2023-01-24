@@ -5,17 +5,10 @@ import { utilService } from "../services/util.service";
 
 export function Search() {
     const geners = stationService.getMusicGeners()
-    // console.log('geners from search', geners)
-    console.log(utilService.makeId(25))
-    console.log(utilService.makeId(25))
-    console.log(utilService.makeId(25))
-    console.log(utilService.makeId(25))
-    // when a card is clicked it sends a req to youtube
+   
     function onFilterCardClicked(filterByGener) {
-        // call the search function from youtube.
+        // when a card is clicked it sends a filterBy to the server
 
-        // const searchRes = youtubeService.getServerSideSearch()
-        // con sole.log('searchRes :>> ', searchRes);
     }
 
     return (
