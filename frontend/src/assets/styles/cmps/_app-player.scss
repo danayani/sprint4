@@ -71,10 +71,24 @@
 }
 
 .volume-range {
+
     width: 93px;
+
 }
+
 
 .player-video {
     opacity: 0;
     width: 20px;
+}
+
+//player helpers
+
+.range {
+    -webkit-appearance: none;/* Override default look */
+    
+    background: hsla(0, 0%, 100%, .3);
+    height: 5px;
+    cursor: pointer;
+    border-radius: 1.7px;
 }

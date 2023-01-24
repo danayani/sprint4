@@ -108,7 +108,7 @@ export function AppPlayer() {
                     </div>
                     <div className="player-range-container">
                         <div className="player-range flex">
-                            <input className="player-range-action" type="range" />
+                            <input className="player-range-action range" type="range" />
                         </div>
                     </div>
 
@@ -116,7 +116,7 @@ export function AppPlayer() {
                 <div className="volume-controller flex">
                     <div className="volume-icon"> <i className="fa-solid fa-volume-high"></i></div>
 
-                    <input className="volume-range"
+                    <input className="volume-range range"
                         type='range' min={0} max={0.999999} step='any'
                         value={state.volume}
                         onChange={handleVolumeChange}
