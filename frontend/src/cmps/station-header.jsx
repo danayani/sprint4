@@ -1,17 +1,22 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom"
+import { CreateStation } from "../pages/create-station.jsx";
 import { stationService } from "../services/station.service.js"
 // import { loadStationById } from "../store/station/station.actions.js"
 
+// TODO: make the station-details-cmp usable for both here and create-station
 
-
-export function StationDetails() {
+export function StationHeader() {
     const { stationId } = useParams()
     const [station, setStation] = useState(null)
 
     useEffect(() => {
+        if(!stationId) {
+            stationService.getEmptyStation()
+            // דרך האקשן
+        }
         stationService.getById(stationId).then(station => {
-            setStation(station)
+        setStation(station)
         })
     }, [stationId])
 
@@ -20,7 +25,7 @@ export function StationDetails() {
         <section className="station-details">
             <div className="top-container">
                 <div className="img-container">
-                    <img src={station.songs[0].imgUrl} alt="play list image" />
+                    <img src={station.imgUrl} alt="play list image" />
                 </div>
                 <div className="info-container">
                     <h2 className="title">PLAYLIST</h2>

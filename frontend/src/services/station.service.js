@@ -1,8 +1,8 @@
 
 import { storageService } from './async-storage.service.js'
 import { utilService } from './util.service.js'
+import { userService } from './user.service.js'
 import data from '../data/station-data.json'
-// console.log('data', data)
 
 const STATION_KEY = 'stationDB'
 const stationsData = data
@@ -62,18 +62,22 @@ function getEmptyFilterBy() {
 }
 
 function getEmptyStation() {
+    const user = userService.getLoggedinUser()
+
     return {
         "_id": "",
-        "name": "",
+        "name": "My Playlist",
+        "imgUrl": "https://www.clipartmax.com/png/middle/69-697655_music-music-note-music-notes-musical-note-notes-music-icon-grey-png.png",
         "tags": [],
-        "createdBy": { //loggedinUser
-            "_id": "",
-            "fullname": "",
-            "imgUrl": ""
+        "createdBy": user ? user : {
+          _id: '5cksxjas89xjsa8xjsa8GGG7',
+          username: 'guest',
+          imgUrl: "https://robohash.org/set=set3",
+          fullname: 'Guest'
         },
         "likedByUsers": [],
         "songs": [],
-        "msgs": []
+        "msgs": [],
     }
 }
 

@@ -69,14 +69,11 @@ export function AppPlayer() {
         console.log(x)
     }
 
-    console.log('playerState =>', playerState)
 
     const classPlayPause = (!state.playing) ? 'play-pause-btn fa-solid fa-circle-play' : 'play-pause-btn fa-solid  fa-circle-pause'
     if (!songs || !songs.length) return (<h1> loading</h1>)
     else if (songs !== []) return (
         <div className="app-playerS">
-
-            {console.log('songs player', songs)}
 
             < ReactPlayer className="player-video"
                 url={songs}

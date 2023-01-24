@@ -5,24 +5,30 @@ import { utilService } from './util.service'
 const STORAGE_KEY_LOGGEDIN_USER = 'loggedinUser'
 const STORAGE_KEY_USERS = 'users'
 
-var users
 _createUsers()
-
 
 export const userService = {
     login,
     logout,
     signup,
     getLoggedinUser,
+    getUserLikedStationsLength,
     saveLocalUser,
     getUsers,
     getById,
     remove,
     update,
-    // changeScore,
 }
 
 window.userService = userService
+
+function getUserLikedStationsLength(userId) {
+    const user =  getById(userId).
+    then(res =>  {
+        console.log('res :>> ', res.data)
+    })
+    return user
+}
 
 function getUsers() {
     return storageService.query(STORAGE_KEY_USERS)
@@ -75,13 +81,6 @@ async function logout() {
     // return await httpService.post('auth/logout')
 }
 
-// async function changeScore(by) {
-//     const user = getLoggedinUser()
-//     if (!user) throw new Error('Not loggedin')
-//     user.score = user.score + by || by
-//     await update(user)
-//     return user.score
-// }
 
 function saveLocalUser(user) {
     user = { _id: user._id, fullname: user.fullname, imgUrl: user.imgUrl, score: user.score }
@@ -93,33 +92,45 @@ function getLoggedinUser() {
     return JSON.parse(sessionStorage.getItem(STORAGE_KEY_LOGGEDIN_USER))
 }
 
-//private funcs:
 
+    // Private funcs:
 function _createUsers() {
     let users = utilService.loadFromStorage(STORAGE_KEY_USERS)
     if (!users || !users.length) {
         users = [
             {
-                _id: 'pofj348',
-                fullname: 'Shelly Paxton Eliyahu',
-                email: 'shellypax@gmail.com',
-                username: 'shelly',
-                password: 'shelly'
+                id: '9RkOQpLei27I0dxRao1yttQLq',
+                firstname: 'Dana',
+                lastname: 'Yaniv',
+                username: 'Dananiv',
+                password: '1234',
+                stations: [
+                    '2bKRDtaf0Y86Q4hby91hqs6NX'
+                ],
+                likedSongs: []
             },
             {
-                _id: 'pojs358',
-                fullname: 'Dana Yaniv',
-                email: 'danayani@gmail.com',
-                username: 'dana',
-                password: 'dana'
+                id: 'vBNVRcGab4y2QhreSNnIA4nrm',
+                firstname: 'Shelly',
+                lastname: 'Paxton Eliyahu',
+                username: 'Shellyahu',
+                password: '1234',
+                stations: [
+                    'rQP8Jnlxyk4RjyHXvrmruwTQa'
+                ],
+                likedSongs: []
             },
             {
-                _id: 'pohy845',
-                fullname: 'Shachak Armon',
-                email: '',
-                username: 'shachak',
-                password: 'shachak'
-            },
+                _id: 'MocCGnQtjh6yHcIYvkSkIdJKb',
+                firstname: 'Shachak',
+                lastname: 'Armon',
+                username: 'Captain',
+                password: '1234',
+                likedStations: [
+                    '5cksxjas29xjsa8xjsa8jxs09'
+                ],
+                likedSongs: []
+            }
         ]
         utilService.saveToStorage(STORAGE_KEY_USERS, users)
     }

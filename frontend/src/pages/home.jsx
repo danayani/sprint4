@@ -8,6 +8,7 @@ import { loadStations } from '../store/station/station.actions.js'
 
 export function Home() {
     const stations = useSelector((storeState) => storeState.stationModule.stations)
+    
     useEffect(() => {
         loadStations()
     }, [])

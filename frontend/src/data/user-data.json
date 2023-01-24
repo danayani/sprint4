@@ -1,11 +1,35 @@
 [
     {
-        "id": "",
-        "password": "",
-        "firstname": "",
-        "lastname": "",
-        "username": "",
-        "stations": [ "5ck4xjas89xjsa8trsa8jxs09","5cksxjas89xjsa8xjsa8jxs09"]
-        
+        "_id": "9RkOQpLei27I0dxRao1yttQLq",
+        "firstname": "Dana",
+        "lastname": "Yaniv",
+        "username": "Dananiv",
+        "password": "1234",
+        "stations": [
+            "2bKRDtaf0Y86Q4hby91hqs6NX"
+        ],
+        "likedSongs": []
+    },
+    {
+        "_id": "vBNVRcGab4y2QhreSNnIA4nrm",
+        "firstname": "Shelly",
+        "lastname": "Paxton Eliyahu",
+        "username": "Shellyahu",
+        "password": "1234",
+        "stations": [
+            "rQP8Jnlxyk4RjyHXvrmruwTQa"
+        ],
+        "likedSongs": []
+    },
+    {
+        "_id": "MocCGnQtjh6yHcIYvkSkIdJKb",
+        "firstname": "Shachak",
+        "lastname": "Armon",
+        "username": "Captain",
+        "password": "1234",
+        "likedStations": [
+            "5cksxjas29xjsa8xjsa8jxs09"
+        ],
+        "likedSongs": []
     }
 ]
