@@ -78,11 +78,15 @@
 
 .range {
     -webkit-appearance: none;/* Override default look */
-    
     background: hsla(0, 0%, 100%, .3);
     height: 5px;
     cursor: pointer;
     border-radius: 1.7px;
+}
+.range ::-webkit-slider-runnable-track {
+    -webkit-appearance: none;/* Override default look */
+    background: black;
+    
 }
 
 .player-video {
