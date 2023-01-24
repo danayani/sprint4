@@ -32,9 +32,9 @@ export function RootCmp() {
                             <Route path='/login-signug/:login' element={<LoginSignup />} />
                             <Route path='/login-signug/:signup' element={<LoginSignup />} />
                         </Routes>
-                        <hr/>
-                        <AppPlayer />
+                        <hr />
                     </main>
+                    <AppPlayer />
                 </section>
             </Router>
         </Provider>

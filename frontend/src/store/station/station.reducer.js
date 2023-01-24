@@ -11,6 +11,7 @@ const initialState = {
     currStation: null
 }
 
+
 export function stationReducer(state = initialState, action) {
     let stations
     switch (action.type) {
