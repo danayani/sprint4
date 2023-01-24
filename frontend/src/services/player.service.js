@@ -1,7 +1,21 @@
 
 
 export const playerService = {
-    getSongs
+    getSongs,
+    getDefaultState
+}
+
+function getDefaultState(){
+    return {
+        pip: false,
+        playing: true,
+        controls: false,
+        light: false,
+        volume: 0.8,
+        muted: false,
+        duration: 0,
+        loop: false
+    }
 }
 
 function getSongs() {
