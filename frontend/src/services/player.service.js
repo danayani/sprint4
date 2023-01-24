@@ -8,7 +8,7 @@ export const playerService = {
 function getDefaultState(){
     return {
         pip: false,
-        playing: true,
+        playing: false,
         controls: false,
         light: false,
         volume: 0.8,
