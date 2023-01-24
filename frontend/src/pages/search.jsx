@@ -1,11 +1,15 @@
 import { youtubeService } from "../services/youtube.service";
 import { stationService } from "../services/station.service.js";
+import { utilService } from "../services/util.service";
 
 
 export function Search() {
     const geners = stationService.getMusicGeners()
-    console.log('geners from search', geners)
-
+    // console.log('geners from search', geners)
+    console.log(utilService.makeId(25))
+    console.log(utilService.makeId(25))
+    console.log(utilService.makeId(25))
+    console.log(utilService.makeId(25))
     // when a card is clicked it sends a req to youtube
     function onFilterCardClicked(filterByGener) {
         // call the search function from youtube.
