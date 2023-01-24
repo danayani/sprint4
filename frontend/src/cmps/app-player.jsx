@@ -63,7 +63,7 @@ export function AppPlayer() {
                             <i className="action-btn fa-solid fa-shuffle"></i>
                         </button>
                         <i className="action-btn fa-solid fa-backward-step"></i>
-                        <button className="player-btn-play-pause" onClick={onTagglePlaying}>
+                        <button className="player-btn-play-pause" >
                             <i className={classPlayPause}></i>
                         </button>
                         <i className="action-btn fa-solid fa-backward-step btn-next"></i>
