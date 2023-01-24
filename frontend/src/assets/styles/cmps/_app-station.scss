@@ -43,15 +43,15 @@
     }
 
     .second-station-container {
-        margin-top: 30px;
-        margin-left: 14px;
+        margin-top: 32px;
+        margin-left: 15px;
     }
 
     h2 {
         display: inline-block;
         color: $txtselected;
         font-size: 24px;
-        margin-bottom: 16px;
+        margin-bottom: 26px;
     }
 
     .second-station-cards {
@@ -66,15 +66,14 @@
         background-color: $bgcplaylistdown;
         border-radius: 5px;
         height: 270px;
-        width: 180px;
+        width: 195px;
 
         .song-img {
-            padding: 10px;
-            border-radius: 5px;
-            height: 180px;
-            width: 180px;
-            // object-fit: cover;
-            // aspect-ratio: 1/1;
+            padding: 15px;
+            height: 193px;
+            width: 193px;
+            object-fit: cover;
+            aspect-ratio: 1/1;
         }
 
         h3 {
