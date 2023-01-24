@@ -11,7 +11,6 @@ import { utilService } from '../services/util.service';
 export function AppHeader() {
     const user = useSelector((storeState => storeState.userModule.user))
     const location = useLocation()
-    console.log('location', location.pathname)
 
     const navigate = useNavigate()
     const [txtSearchPlaceHolder, setTxtSearchPlaceHolder] = useState('What do you want to listen to ?')
@@ -35,11 +34,7 @@ export function AppHeader() {
 
     function handleChange({ target }) {
         let { value } = target
-        // let { name: field, value } = target
-        console.log('setTxtSearchKey', value)
         setTxtSearchKey(value)
-        // setTxtSearchKey(prevTxt => ({ ...prevTxt, [field]: value }))
-        // search.current(value)
     }
 
     function onSearch() {

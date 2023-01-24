@@ -66,6 +66,7 @@ async function getPlaylistInfo() {
  
     const data = await res.json()
     console.log('data info', data)
+    
     return data
 }
 
