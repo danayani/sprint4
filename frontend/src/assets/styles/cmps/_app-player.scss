@@ -54,8 +54,8 @@
 
 .player-range-action {
     width: 505px;
+    margin-bottom: 15px;
 }
-
 
 .volume-controller {
     // background-color: rgb(233, 106, 127);
@@ -72,6 +72,17 @@
 
 .volume-range {
     width: 93px;
+}
+
+//player helpers
+
+.range {
+    -webkit-appearance: none;/* Override default look */
+    
+    background: hsla(0, 0%, 100%, .3);
+    height: 5px;
+    cursor: pointer;
+    border-radius: 1.7px;
 }
 
 .player-video {
