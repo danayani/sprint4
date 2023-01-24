@@ -5,14 +5,20 @@ import ReactPlayer from 'react-player/youtube'
 import ProgressBar from 'react-bootstrap/ProgressBar'
 import { playerService } from '../services/player.service'
 import { utilService } from '../services/util.service'
+//load store 22:25
+//load actions 27:19
+//כל פעם שאני רוצה לעשות פעולה אסינכרונית
 
 // import Duration from 'react-player/Duration'
 // import { UserMsg } from './user-msg.jsx'
 
 //TODO : control button
 
+
+
 export function AppPlayer() {
 
+    //const state useSelector((storePlayer) => storePlayer.state)
     const [state, setState] = useState({
         url: ['https://www.youtube.com/watch?v=QtXby3twMmI', 'https://www.youtube.com/watch?v=oUFJJNQGwhk'],
         pip: false,

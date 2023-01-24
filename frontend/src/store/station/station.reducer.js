@@ -8,6 +8,7 @@ const initialState = {
     currStation: {}
 }
 
+
 export function stationReducer(state = initialState, action) {
     var stations
     switch (action.type) {
