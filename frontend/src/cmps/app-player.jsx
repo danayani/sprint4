@@ -6,16 +6,8 @@ import { playerService } from '../services/player.service'
 import { utilService } from '../services/util.service'
 import { getActionPlayPausePlayer } from '../store/player/player.action'
 
-//load store 22:25
-//load actions 27:19
-//כל פעם שאני רוצה לעשות פעולה אסינכרונית
-
-// import Duration from 'react-player/Duration'
-// import { UserMsg } from './user-msg.jsx'
-
 export function AppPlayer() {
     const playerState = useSelector(storeState => storeState.playerModule.playerState)
-
     const [songs, setSongs] = useState([]) //TODO : useSelector, show only when i have a song 
 
     useEffect(() => {
@@ -27,7 +19,6 @@ export function AppPlayer() {
             'https://www.youtube.com/watch?v=oUFJJNQGwhk'])
 
     }
-
 
     function onTagglePlaying() { //taggle playingS
         console.log('play/pause')
@@ -50,16 +41,10 @@ export function AppPlayer() {
         console.log(x)
     }
 
-
-
     const classPlayPause = (!playerState.playing) ? 'play-pause-btn fa-solid fa-circle-play' : 'play-pause-btn fa-solid  fa-circle-pause'
     if (!songs || !songs.length || !playerState) return (<h1> loading</h1>)
     return (
         <div className="app-playerS">
-
-            {console.log('playerState =>', playerState)}
-            {console.log('songs player', songs)}
-
             < ReactPlayer className="player-video"
                 height="1px"
                 url={songs}
@@ -108,7 +93,6 @@ export function AppPlayer() {
                         value={playerState.volume}
                         onChange={handleVolumeChange}
                     />
-
                 </div>
             </div>
         </div>

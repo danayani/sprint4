@@ -13,8 +13,7 @@ export async function loadPlayer(player) {
     }
 }
 
-
-export async function loadcurrPlayingStation(stationId) {
+export async function loadCurrPlayingStation(stationId, songIndex = 0) {
     try {
         console.log('loadcurrPlayingStation:', stationId)
         // store.dispatch({ type: LOAD_STATION_FOR_PLAYER, station : stationService.getById(stationId) })
