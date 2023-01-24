@@ -19,8 +19,8 @@ export function playerReducer(state = initialState, action) {
     let playerState
     switch (action.type) {
         case PLAY_PAUSE_PLAYER:
-            console.log('PLAY_PAUSE_PLAYER')
-            playerState = { ...state.playerState, playing: !state.playing }
+            console.log('PLAY_PAUSE_PLAYER', state.playerState.playing)
+            playerState = { ...state.playerState, playing: !state.playerState.playing }
             return { ...state, playerState }
         case NEXT_SONG:
             console.log('NEXT_SONG')

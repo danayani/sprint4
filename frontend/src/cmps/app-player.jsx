@@ -4,6 +4,7 @@ import ReactPlayer from 'react-player/youtube'
 import ProgressBar from 'react-bootstrap/ProgressBar'
 import { playerService } from '../services/player.service'
 import { utilService } from '../services/util.service'
+import { getActionPlayPausePlayer } from '../store/player/player.action'
 
 //load store 22:25
 //load actions 27:19
@@ -30,6 +31,7 @@ export function AppPlayer() {
 
     function onTagglePlaying() { //taggle playingS
         console.log('play/pause')
+        getActionPlayPausePlayer()
         // setState({ playing: !state.playing })
     }
 
