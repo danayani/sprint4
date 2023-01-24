@@ -1,5 +1,10 @@
+import { playerService } from '../../services/player.service.js';
 import { store } from '../store.js'
 import { SET_PLAYER ,SET_SONG_ID } from '../store/player/player.reducer.js'
+
+//אקשן הוא זה שעובד מול הסרוויס
+//הוא פונה לסרוויס שמעדכן את הסטורג
+
 
 export async function loadPlayer(player) {
     try {

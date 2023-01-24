@@ -5,14 +5,20 @@ import ReactPlayer from 'react-player/youtube'
 import ProgressBar from 'react-bootstrap/ProgressBar'
 import { playerService } from '../services/player.service'
 import { utilService } from '../services/util.service'
+//load store 22:25
+//load actions 27:19
+//כל פעם שאני רוצה לעשות פעולה אסינכרונית
 
 // import Duration from 'react-player/Duration'
 // import { UserMsg } from './user-msg.jsx'
 
 //TODO : control button
 
+
+
 export function AppPlayer() {
 
+    //const state useSelector((storePlayer) => storePlayer.state)
     const [state, setState] = useState({
         url: ['https://www.youtube.com/watch?v=QtXby3twMmI', 'https://www.youtube.com/watch?v=oUFJJNQGwhk'],
         pip: false,
@@ -71,7 +77,7 @@ export function AppPlayer() {
     else if (songs !== []) return (
         <div className="app-playerS">
             {console.log('songs player', songs)}
-            < ReactPlayer className="player-video"
+            {/* < ReactPlayer className="player-video"
                 url={songs}
                 pip={state.pip}
                 playing={state.playing}
@@ -81,7 +87,7 @@ export function AppPlayer() {
                 duration={state.duration}
                 loop={state.loop}
                 onReady={onReady}
-            />
+            /> */}
             <div className="app-playerS flex">
                 <div className="song-details flex">
                     <img className="song-img" src='../assets/img/rh.jpg' />
