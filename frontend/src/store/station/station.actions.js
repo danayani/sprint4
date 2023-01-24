@@ -1,20 +1,17 @@
 
-// import { stationService } from "../services/station.service.js";
-import { stationService } from '../../services/station.service';
+import { stationService } from '../../services/station.service'
+import { ADD_STATION, REMOVE_STATION, SET_STATIONS, UPDATE_STATION, UPDATE_CURR_STATION } from "./station.reducer.js"
 import { store } from '../store'
 
-import { SET_STATIONS, SET_CURR_STATION, ADD_STATION,REMOVE_STATION} from "./station.reducer.js";
 
 // Action Creators:
 
 export async function loadStations(filterBy) {
+    // console.log('hi from STATION ACTION');
     try {
         const stations = await stationService.query(filterBy)
         console.log('Stations from DB:', stations)
-        store.dispatch({
-            type: SET_STATIONS,
-            stations
-        })
+        store.dispatch({ type: SET_STATIONS, stations })
     } catch (err) {
         console.log('Cannot load stations', err)
         throw err
@@ -26,7 +23,7 @@ export async function loadStationById (stationId) {
         const currStation = await stationService.get(stationId)
         console.log('Station uploaded successfuly')
         store.dispatch({
-            type: SET_CURR_STATION, currStation
+            type: UPDATE_CURR_STATION, currStation
         })
     } catch (err) {
         console.log('Cannot load currStations', err)
@@ -36,10 +33,10 @@ export async function loadStationById (stationId) {
 
 export async function saveStation(station) {
     try{
-        const currStation =await stationService.save(station)
-        store.dispatch({type:ADD_STATION,station:currStation})
+        const newStation = await stationService.save(station)
+        store.dispatch({ type: ADD_STATION, station: newStation })
     } catch(err) {
-        console.log('error saving station')
+        console.log('Cannot save station')
         throw err
     }
 }
@@ -47,11 +44,21 @@ export async function saveStation(station) {
 export async function removeStation(stationId) {
     try {
         await stationService.remove(stationId)
-        store.dispatch({type:REMOVE_STATION,stationId})
+        store.dispatch({ type: REMOVE_STATION, stationId })
     } catch (err) {
         console.log('Cannot remove station', err)
         throw err
     }
+}
+
+export async function updateStation(station) {
+    try {
+        const updatedStation = await stationService.save(station)
+        store.dispatch({ type: UPDATE_STATION, station: updatedStation})
+    } catch (err) {
+        console.log('Cannot upadte station', err)
+        throw err
+    }  
 }
 
 // export async function addStation(station) {
@@ -66,18 +73,6 @@ export async function removeStation(stationId) {
 //     }
 // }
 
-// export async function updateStation(station) {
-//     return stationService.save(station)
-//     .then(savedStation => {
-//         console.log('Updated Station:', savedStation)
-//         store.dispatch(getActionUpdateStation(savedStation))
-//         return savedStation
-//     })
-//     .catch(err => {
-//             console.log('Cannot save station', err)
-//             throw err
-//         })
-//     }
     
     
     // export function getActionRemoveStation(stationId) {
