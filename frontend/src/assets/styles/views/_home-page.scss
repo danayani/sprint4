@@ -1,7 +1,10 @@
 .main-app-container {
-    height: 100%;
+    grid-area: 1/2/3/-1;
+    height: calc(100vh - 89px);
     background-color: $bgcmain;
     color: $txtfill;
+    overflow-y: auto;
+    padding-top: 50px;
 }
 
 .main-home-container {
@@ -12,6 +15,6 @@
         font-size: 2.15em;
         font-family: $txtf;
         padding-left: 15px;
-        margin-top: 7px;
+        margin-top: 21px;
     }
 }

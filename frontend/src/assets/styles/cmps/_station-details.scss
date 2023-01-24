@@ -51,25 +51,12 @@
         background-color: transparent;
         background-color: $bgcplay;
         align-items: center;
+        justify-content: center;
         border-radius: 50%;
-        .btn-play-out{
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .btn-play-in{
-            // bgc: black;
-        }
-
+      
         svg{
-            // align-items: center;
-            // justify-content: center;
-            // display: inline-flex;
-            position: absolute;
             fill: black;
         }
-        
-        
     }
 
     .btn-like{

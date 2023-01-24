@@ -1,44 +1,41 @@
-.top-bar-container{
+.top-bar-container {
     height: 64px;
-    // border: 0;
-    // padding: 0;
-    // margin: 0;
     background-color: $bgcmain;
-    grid-area: "app-header";
+    grid-area: app-header;
     grid-column: 2 / -1;
-    opacity: 90%;
 }
 
 .app-header {
+    opacity: 90%;
     display: flex;
-    position: fixed;
-    // gap: 16px;
+    // position: fixed;
     height: 64px;
-    // padding-inline-end: 16px;
     width: 100%;
-    
 }
 
-.go-btn{
+.go-btn {
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 50%;
-    opacity: 80%;
     background-color: $bgcmain;
-    margin-left:17px;
     margin-top: 12px;
 }
 
-button svg{
+button svg {
     height: 17px;
     width: 17px;
     fill: white;
 }
 
-svg.search-key{
+svg.search-key {
     fill: black;
     margin-top: 0;
 }
 
-.searchInput-container{
+.searchInput-container {
     width: 364px;
     height: 40px;
     background-color: white;
@@ -48,17 +45,19 @@ svg.search-key{
     border-radius: 20px;
     margin-top: 9px;
 }
-.search-key-icon{
+
+.search-key-icon {
     color: black !important;
 }
-.search-key-btn{
+
+.search-key-btn {
     background-color: transparent;
     color: black;
     font-size: 20px;
     // transform: scale(-1, 1);
 }
 
-.search-key-input{
+.search-key-input {
     font-size: 14px;
     width: 250px;
     background-color: transparent;
