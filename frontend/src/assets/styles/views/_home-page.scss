@@ -1,16 +1,17 @@
-// includes all the stations elements in home page
 .main-app-container {
-    // height: 100%;
-    background-color: $bgcplayer;
+    height: 100%;
+    background-color: $bgcmain;
     color: $txtfill;
 }
 
 .main-home-container {
-    padding: 24px 32px 0 32px;
+    padding: 1.43em 2.28em 0 1.21em;
 
     h1 {
         color: $txtselected;
-        font-size: 32px;
-        font-weight: 600;
+        font-size: 2.15em;
+        font-family: $txtf;
+        padding-left: 15px;
+        margin-top: 7px;
     }
 }
