@@ -29,7 +29,7 @@ export function playerReducer(state = initialState, action){
         default: 
             return { state }
     }
-    default: //פעם ראשונה שיוצרים סטור ושעושים דיספרצ
+    // default: //פעם ראשונה שיוצרים סטור ושעושים דיספרצ
         // if ()
         // return 
 }
