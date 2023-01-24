@@ -1,9 +1,7 @@
 button {
     border:0;
-    background-color: $bgcmain;
-    color:whitesmoke;
-    padding: 5px 10px;
-    margin: 5px;
+    // padding: 5px 10px;
+    // margin: 5px;
     cursor: pointer;
 }
 
@@ -16,10 +14,10 @@ form > * {
 .btn-link {
     border:0;
     background-color: transparent;
-    text-decoration: underline;
+    text-decoration: none;
     transition: .5s;
 }
 .btn-link:hover {
-    background-color: $bgcmain;
+    // background-color: $bgcmain;
     transform: scale(1.1);
 }

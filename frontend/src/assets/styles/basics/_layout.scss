@@ -7,18 +7,17 @@
     "player player";
     grid-template-columns: auto 1fr;
     grid-template-rows: auto 1fr auto;
-    padding: 0;
+    // padding: 0;
     grid-gap: 10px;
-    // max-height: 500px;
     max-width: 100%;
     overflow-y: auto; 
     
     > * {
         // grid-column: 2;
 
-        // &.full {
-        //     grid-column: 1 /-1;
-        // }
+        &.full {
+            grid-column: 1 /-1;
+        }
     }
 
 
@@ -48,11 +47,8 @@
         // minmax(20px, 1fr)
         // minmax(auto, $normal-breakpoint)
         // minmax(20px, 1fr);
-    }
-
-    
+    }    
 }
-
 
 // .card-grid {
 //     display: grid;

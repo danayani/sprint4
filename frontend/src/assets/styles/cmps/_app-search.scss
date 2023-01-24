@@ -6,6 +6,8 @@
 
     h2 {
         margin-bottom: 20px;
+        overflow-wrap: break-word;
+        word-break: break-word;
         color: #fff;
     }
 
@@ -17,6 +19,7 @@
 
         .filter-card {
             position: relative;
+            aspect-ratio: 1 / 1;
             background-color: rgb(66, 62, 62);
             border-radius: 8px;
             border: none;
@@ -36,7 +39,7 @@
         h2 {
             font-weight: 700;
             grid-area: 1 / 1 / 2 / 2;
-            padding: 16px 0 0 16px
+            padding: 16px;
         }
 
         .filter-img {
