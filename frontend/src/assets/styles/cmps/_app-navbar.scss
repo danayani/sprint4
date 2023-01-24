@@ -1,10 +1,9 @@
 .side-navbar {
-    height: 100vh;
+    height: 100%;
     background-color: $bgcnav;
     width: 235px;
     grid-area: "navbar";
     grid-row: 1 / -1;
-    margin-top: 12px;
 }
 
 ul {
@@ -12,6 +11,7 @@ ul {
 
     &.nav-bar {
         padding-left: 25px;
+        padding-top: 0.64em;
     }
 }
 
@@ -20,7 +20,7 @@ span {
 }
 
 svg {
-    fill: white;
+    fill: $txtfill;
 }
 
 .fa-solid {
@@ -29,27 +29,44 @@ svg {
     cursor: pointer;
 }
 
-.last{
-    // padding-top: 2.1em;
+.create{
+    margin-top: 1.8em;
+}
+
+.like{
+    margin-top: 0.1em;
+    .like-box{
+        display: inline-block;
+        height: 1.6em;
+        width: 1.6em;
+        background-image: linear-gradient(rgb(145, 20, 177), white);
+        
+        svg{
+            margin-left: 5px;
+            margin-top: 5px;
+            
+        }
+    }
 }
 
 .nav-link {
+    padding-top: 2.3em;
     text-transform: none;
     display: block;
-    height: 40px;
+    height: 2.86em;
     cursor: pointer;
     justify-content: center;
     align-items: center;
 
     &-logo {
         span {
-            // float:right;
-            font-size: 23px;
-            color: $txtselected;
+            font-size: 24px;
+            color: $txtfill;
         }
 
         .logo-img {
-            display: inline-block;
+            vertical-align: middle;
+            // display: inline-block;
             height: 38px;
             width: 38px;
             border-radius: 50%;
