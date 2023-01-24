@@ -6,6 +6,7 @@ import { SongList } from '../cmps/song-list'
 import { StationHeader } from '../cmps/station-header'
 import { stationService } from '../services/station.service'
 import { updateStation, removeStation } from "../store/station/station.actions"
+import loader from "../assets/icons/loader.svg"
 
 // all logic happends here
 
@@ -17,7 +18,7 @@ export function StationDetails({ saveStation }) {
 
     useEffect(() => {
         // if (!stationId) setStation(stationService.getEmptyStation())
-       //פניה אל ה-statiםn action והוא מעדכן את הרידוסר ואת הסטור
+        //פניה אל ה-statiםn action והוא מעדכן את הרידוסר ואת הסטור
         loadStation()
     }, [stationId])
 
@@ -35,10 +36,10 @@ export function StationDetails({ saveStation }) {
         navigate('/')
     }
 
-    if (!station) return <h1>Loading...</h1>
+    if (!station) return <div><img src={loader} /></div>
     return (
         <section className="station">
-            <StationHeader  />
+            <StationHeader />
             <SongList />
         </section>
     )

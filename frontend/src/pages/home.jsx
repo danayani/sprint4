@@ -1,4 +1,3 @@
-// Display of all playlists
 import { useEffect } from 'react'
 import { useSelector } from "react-redux"
 

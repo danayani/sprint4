@@ -1,8 +1,7 @@
 import { playerService } from "../../services/player.service"
 
 export const PLAY_PAUSE_PLAYER = 'PLAY_PLAYER'
-export const NEXT_SONG = 'NEXT_SONG'
-export const PREVIOUS_SONG = 'PREVIOUS_SONG'
+export const MOVE_SONG = 'MOVE_SONG'
 export const LOAD_STATION_FOR_PLAYER = 'LOAD_STATION_FOR_PLAYER'
 
 const initialState = { //אם אני רוצה שכמה קומפוננטות ישתמשו במידע
@@ -24,7 +23,6 @@ export function playerReducer(state = initialState, action) {
         case LOAD_STATION_FOR_PLAYER:
             console.log('LOAD_STATION_FOR_PLAYER')
             return { ...state, currPlayingStation : action.station }
-            return
         default:
             return state
     }

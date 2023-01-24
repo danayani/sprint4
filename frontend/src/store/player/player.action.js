@@ -13,6 +13,16 @@ export async function loadPlayer(player) {
     }
 }
 
+export async function loadPlayer(player) {
+    try {
+        console.log('player from actions:', player);
+        // store.dispatch({ type: SET_PLAYER, player })
+    } catch (err) {
+        console.error(err)
+        throw err
+    }
+}
+
 export async function loadCurrPlayingStation(stationId, songIndex = 0) {
     try {
         console.log('loadcurrPlayingStation:', stationId)

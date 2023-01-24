@@ -20,12 +20,6 @@ export function AppPlayer() {
 
     }
 
-    function onTagglePlaying() { //taggle playingS
-        console.log('play/pause')
-        getActionPlayPausePlayer()
-        // setState({ playing: !state.playing })
-    }
-
     function handleVolumeChange(ev) {
         // ev.preventDefault()
         console.log('volume changed', ev.target.value)
