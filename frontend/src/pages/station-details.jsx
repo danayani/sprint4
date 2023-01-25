@@ -5,41 +5,50 @@ import { useNavigate, useParams } from "react-router-dom"
 import { SongList } from '../cmps/song-list'
 import { StationHeader } from '../cmps/station-header'
 import { stationService } from '../services/station.service'
-import { updateStation, removeStation } from "../store/station/station.actions"
+import { saveStation, removeStation, loadCurrStation } from "../store/station/station.actions"
 
-// all logic happends here
-
-export function StationDetails({ saveStation }) {
+export function StationDetails(onAddSong) {
 
     const [station, setStation] = useState(null)
     const { stationId } = useParams()
     const navigate = useNavigate()
 
     useEffect(() => {
-        // if (!stationId) setStation(stationService.getEmptyStation())
-       //פניה אל ה-statiםn action והוא מעדכן את הרידוסר ואת הסטור
-        loadStation()
+        loadCurrStation(stationId)
     }, [stationId])
 
-    async function loadStation() {
-        const currStation = await stationService.getById(stationId)
-        setStation(currStation)
+    function handleChange(field, val) {
+        setStation(prevStation => ({ ...prevStation, [field]: val }))
     }
+
+    async function deleteStation(stationId) {
+        await removeStation(stationId)
+        navigate('/')
+    }
+
+    async function updateStation() {
+        await saveStation(station)
+      }
 
     function onSaveStation() {
         saveStation(station)
     }
 
-    async function onRemoveStation(stationId) {
-        await removeStation(station)
-        navigate('/')
+    async function onDeleteSong(songId) {
+        if (station.songs.length === 0) return
+        else {
+            const updatedStation = await stationService.remove(station._id, songId)
+            setStation(updatedStation)
+        }
     }
+    
+    
 
     if (!station) return <h1>Loading...</h1>
     return (
-        <section className="station">
-            <StationHeader  />
-            <SongList />
+        <section className="station-details">
+            <StationHeader station={station} handleChange={handleChange} deleteStation={deleteStation} updateStation={updateStation} onSaveStation={onSaveStation} />
+            <SongList station={station} onDeleteSong={onDeleteSong} handleChange={handleChange} onAddSong={onAddSong}/>
         </section>
     )
 }

@@ -46,3 +46,11 @@ export function getActionPlayPausePlayer() {
 //         throw err
 //     }
 // }
+
+// export async function setSong(song) {
+//     try {
+//         store.dispatch({ type: SET_SONG, song })
+//     } catch (err) {
+//         console.log('Cant set song id', err)
+//     }
+// }

@@ -1,21 +1,19 @@
-import { useParams } from "react-router-dom"
 import { useEffect, useState } from "react";
 import { stationService } from "../services/station.service"
-import { SHOW_MSG } from "../services/event-bus.service";
+import { SearchYoutube } from "./search-youtube";
 
+export function SongList(station, onDeleteSong, handleChange, onAddSong) {
 
-//TODO : service function 'getSongListByStationId'
-export function SongList() {
+    const [stationSongs, setStationSongs] = useState(station.songs)
+    const [items, setItems] = useState(station.songs)
 
-    const { stationId } = useParams()
-    const [stationSongs, setStationSongs] = useState([])
 
     useEffect(() => {
         loadSongs()
     }, [])
 
     function loadSongs() {
-        stationService.getById(stationId).then(res => {
+        stationService.getById(station._id).then(res => {
             const songsList = res.songs
             setStationSongs(songsList)
         })

@@ -25,7 +25,6 @@ export function playerReducer(state = initialState, action) {
         case LOAD_STATION_FOR_PLAYER:
             console.log('LOAD_STATION_FOR_PLAYER')
             return { ...state, currPlayingStation : action.station }
-            return
         default:
             return state
     }

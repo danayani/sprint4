@@ -6,6 +6,7 @@ import { utilService } from "../services/util.service";
 export function Search() {
     const geners = stationService.getMusicGeners()
    
+    
     function onFilterCardClicked(filterByGener) {
         // when a card is clicked it sends a filterBy to the server
 
