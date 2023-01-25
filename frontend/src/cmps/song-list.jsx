@@ -34,11 +34,11 @@ export function SongList() {
             <span><i className="song-list-tbodyTime fa-regular fa-clock"></i></span>
         </header>
         <ul>
-            {stationSongs.map(song => {
+            {stationSongs.map((song,idx) => {
                 return <article role="button">
                     <li className="song-list-li grid">
                         <div className="btn-song-list-play">
-                            1
+                            {idx+1}
                         </div>
                         <section>
                             <div >
