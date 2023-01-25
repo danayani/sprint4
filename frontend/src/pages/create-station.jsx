@@ -2,14 +2,9 @@ import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 
 import { saveStation } from '../store/station/station.actions'
-import { Station } from "./station-details"
-
-// import { StationDetails } from "../cmps/station-details"
-import { userService } from "../services/user.service.js"
+import { StationDetails } from "./station-details"
 import { stationService } from "../services/station.service.js"
-import { StationDetails } from "../pages/station-details.jsx"
 
-// userService.getUserLikedStationsLength()
 
 export function CreateStation() {
     const navigate = useNavigate()
