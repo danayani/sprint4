@@ -74,16 +74,22 @@ export function StationHeader({ station, playStation, handleChange, deleteStatio
     return (
         <section className="station-header">
             <div className="top-container">
-                {/* {station.songs.length > 0 || station.imgUrl ?
-                    <div className="img-container" onClick={onOpenEditor}>
+                {station.songs.length > 0 || station.imgUrl ?
+                    // <div className="img-container" onClick={onOpenEditor}>
+                    //     <img src={station.imgUrl} alt="station image" />
+                    // </div> 
+                    <div className="img-container">
                         <img src={station.imgUrl} alt="station image" />
-                    </div> :
-
-                    <div onClick={onOpenEditor} className="img-container">
+                    </div> 
+                    :
+                    <div className="img-container" >
                         <img src="../assets/img/add-station.jpg" alt="station image" />
-                        <span>Upload Image</span>
                     </div>
-                } */}
+                    // <div onClick={onOpenEditor} className="img-container">
+                    //     <img src="../assets/img/add-station.jpg" alt="station image" />
+                    //     <span>Upload Image</span>
+                    // </div>
+                }
                 <div className="info-container">
                     <h2 className="title">PLAYLIST</h2>
                     <h1>{station.name}</h1>
@@ -138,8 +144,6 @@ export function StationHeader({ station, playStation, handleChange, deleteStatio
                 </div>
             </div>
             } */}
-
         </section>
-
     )
 }

@@ -43,8 +43,8 @@ export function AppHeader() {
         youtubeService.getServerSideSearch(txtSearchKey).then(res => {
             let songs = res
             console.log('youtubeService', songs)
+            // setSearchSongs(songs)
         })
-        // setSearchSongs()
     }
 
     return (

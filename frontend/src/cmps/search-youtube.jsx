@@ -14,10 +14,12 @@ export function SearchYoutube({ onAddSong, isSearchingSongs }) {
     const [songsFromSearch, setsongsFromSearch] = useState(null)
     const searchTxtForSongs = useRef(utilService.debounce(getSearchReasults, 500))
 
+    
     useEffect(() => {
         if (isSearchingSongs) return
         loadStations()
     }, [])
+
 
     async function getSearchReasults(val) {
         if (val.length === 0) {

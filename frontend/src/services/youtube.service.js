@@ -49,6 +49,7 @@ async function getServerSideProps() {
 async function getServerSideSearch(searchKey) {
     console.log('youtube.service is searching for: ', searchKey)
     const res = await fetch(`${YOUTUBE_LIST_SEARCH_API}?part=snippet&order=viewCount&maxResults=6&type=video&q=${searchKey}}&key=${YOUTUBE_API_KEY}`)
+    console.log('res', res)
     const data = await res.json()
     return data
 }
