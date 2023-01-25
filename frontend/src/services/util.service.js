@@ -1,3 +1,7 @@
+
+import { FastAverageColor } from "fast-average-color"
+
+
 export const utilService = {
     makeId,
     makeLorem,
@@ -6,7 +10,8 @@ export const utilService = {
     randomPastTime,
     saveToStorage,
     loadFromStorage,
-    shuffle
+    shuffle,
+    getAvgImgColor
 }
 
 function shuffle(array = [2, 11, 37, 42]) {
@@ -26,6 +31,18 @@ function shuffle(array = [2, 11, 37, 42]) {
             array[randomIndex], array[currentIndex]];
     }
     return array;
+}
+
+async function getAvgImgColor(url) {
+    if (!url) return
+    const avgColor = new FastAverageColor()
+    try {
+        const color = await avgColor.getColorAsync(url)
+        return color.rgba
+    } catch (err) {
+        console.error('Unable to get avg img color', err)
+        throw err
+    }
 }
 
 
