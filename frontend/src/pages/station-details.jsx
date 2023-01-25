@@ -1,21 +1,21 @@
 import { useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
-
 import { SongList } from '../cmps/song-list'
 import { StationHeader } from '../cmps/station-header'
 import { stationService } from '../services/station.service'
 import loader from "../assets/icons/loader.svg"
-import { saveStation, loadStation, removeStation, loadCurrStation } from "../store/station/station.actions"
+import { saveStation, removeStation, loadCurrStation } from "../store/station/station.actions"
 
-export function StationDetails({ saveStation, onAddSong }) {
+export function StationDetails({ saveStation, onAddSong}) {
 
     const [station, setStation] = useState(null)
     const { stationId } = useParams()
     const navigate = useNavigate()
 
     useEffect(() => {
-        loadStation()
-        loadCurrStation(stationId)
+        // if(stationId) loadStation(stationId)
+        // else 
+
     }, [stationId])
 
     function handleChange(field, val) {

@@ -4,7 +4,7 @@ export const PLAY_PAUSE_PLAYER = 'PLAY_PLAYER'
 export const MOVE_SONG = 'MOVE_SONG'
 export const LOAD_STATION_FOR_PLAYER = 'LOAD_STATION_FOR_PLAYER'
 
-const initialState = { //אם אני רוצה שכמה קומפוננטות ישתמשו במידע
+const initialState = { 
     currPlayingStation: {},
     playerState: playerService.getDefaultState(),
     songs: [],

@@ -6,9 +6,12 @@ import { playerService } from '../services/player.service'
 import { utilService } from '../services/util.service'
 import { getActionPlayPausePlayer } from '../store/player/player.action'
 
+
 export function AppPlayer() {
     const playerState = useSelector(storeState => storeState.playerModule.playerState)
-    const [songs, setSongs] = useState([]) //TODO : useSelector, show only when i have a song 
+    // const songs = useSelector(storeState => storeState.playerModule.songs)
+    const [songs, setSongs] = useState([])
+    const station = useSelector(storeState => storeState.playerModule.currPlayingStation)
 
     useEffect(() => {
         loadSongs()
@@ -21,7 +24,6 @@ export function AppPlayer() {
     }
 
     function handleVolumeChange(ev) {
-        // ev.preventDefault()
         console.log('volume changed', ev.target.value)
         // setState({ volume: +ev.target.value })
     }
@@ -39,6 +41,8 @@ export function AppPlayer() {
     if (!songs || !songs.length || !playerState) return (<h1> loading</h1>)
     return (
         <div className="app-playerS">
+            {console.log('songs', songs)}
+            {console.log('station', station)}
             < ReactPlayer className="player-video"
                 height="1px"
                 url={songs}

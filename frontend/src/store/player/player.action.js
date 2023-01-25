@@ -3,19 +3,6 @@ import { stationService } from '../../services/station.service.js';
 import { store } from '../store.js'
 import {LOAD_STATION_FOR_PLAYER, PLAY_PAUSE_PLAYER, NEXT_SONG, PREVIOUS_SONG, REMOVE_SONG_PLAYER } from './player.reducer.js'
 
-export function loadSongs(stationId) {
-    // return carService.query(filterBy)
-    //     .then((cars) => {
-    //         store.dispatch({ type: SET_CARS, cars })
-    //     })
-    //     .catch(err => {
-    //         console.log('Had issues loading cars', err)
-    //         throw err
-    //     })
-    //     .finally(()=>{
-    //         store.dispatch({ type: SET_IS_LOADING, isLoading: false })
-    //     })
-}
 
 export async function loadPlayer(player) {
     try {
