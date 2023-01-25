@@ -5,24 +5,34 @@ import { StationHeader } from '../cmps/station-header'
 import { stationService } from '../services/station.service'
 import loader from "../assets/icons/loader.svg"
 import { saveStation, removeStation, loadCurrStation } from "../store/station/station.actions"
+import { Loader } from "../cmps/loader"
 
-export function StationDetails({ saveStation, onAddSong}) {
+export function StationDetails() {
 
     const [station, setStation] = useState(null)
     const { stationId } = useParams()
     const navigate = useNavigate()
 
     useEffect(() => {
-        // if(stationId) loadStation(stationId)
+        if (stationId) loadStation()
         // else 
 
     }, [stationId])
 
+    function loadStation() {
+        stationService.getById(stationId).then(res => {
+            setStation(res)
+        })
+            .catch((err) => {
+                console.error(err)
+            })
+    }
     function handleChange(field, val) {
-        setStation(prevStation => ({ ...prevStation, [field]: val }))
+        // setStation(prevStation => ({ ...prevStation, [field]: val }))
     }
 
     async function deleteStation(stationId) {
+        //TODO : only if user = creator
         await removeStation(stationId)
         navigate('/')
     }
@@ -35,7 +45,7 @@ export function StationDetails({ saveStation, onAddSong}) {
         saveStation(station)
     }
 
-    async function onDeleteSong(songId) {
+    async function onRemoveSong(songId) {
         if (station.songs.length === 0) return
         else {
             const updatedStation = await stationService.remove(station._id, songId)
@@ -43,11 +53,16 @@ export function StationDetails({ saveStation, onAddSong}) {
         }
     }
 
-    if (!station) return <div><img src={loader} /></div>
+    function addToLikedSong(songId) {
+        console.log('addToLikedSong')
+    }
+
+    if (!station) return <Loader />
+    // if (!station) return <div><img src={loader} /></div>
     return (
         <section className="station-details">
             <StationHeader station={station} handleChange={handleChange} deleteStation={deleteStation} updateStation={updateStation} onSaveStation={onSaveStation} />
-            <SongList station={station} onDeleteSong={onDeleteSong} handleChange={handleChange} onAddSong={onAddSong} />
+            <SongList station={station} onRemoveSong={onRemoveSong} addToLikedSong={addToLikedSong} />
         </section>
     )
 }
