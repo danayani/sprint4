@@ -7,7 +7,7 @@
             "min": "00",
             "sec": "00"
         },
-        "gener": "",
+        "gener": ["Rock"],
         "tags": [
             "Rock",
             "Happy",
@@ -194,6 +194,7 @@
             "min": "",
             "sec": ""
         },
+        "gener": ["Funk","Soul"],
         "tags": [
             "Funk",
             "Happy",
@@ -330,6 +331,7 @@
             "min": "",
             "sec": ""
         },
+        "gener": ["Funk","House"],
         "tags": [
             "funk",
             "happy",
@@ -404,8 +406,6 @@
             }
         ]
     },
-
-
     {
         "_id": "5cksxjas89xksa8xjsa8jxs09",
         "name": "All New Rock",
@@ -414,6 +414,7 @@
             "min": "",
             "sec": ""
         },
+        "gener": ["Rock"],
         "tags": [
             "Rock",
             "Roll"
@@ -528,8 +529,9 @@
     },
     {
         "_id": "5cksxjasbmnfsa8xjsa8jxs09",
-        "name": "Rockin' Rollers 3",
+        "name": "Rockin' In The 70's",
         "duration": "",
+        "gener": ["Rock"],
         "tags": [
             "Rock",
             "Roll"
@@ -585,8 +587,9 @@
     },
     {
         "_id": "5cksxjas89xksa8xjsa812345",
-        "name": "Rockin' Rollers 4",
+        "name": "70's Rock",
         "duration": "",
+        "gener": ["Rock"],
         "tags": [
             "Rock",
             "Roll"
@@ -642,8 +645,9 @@
     },
     {
         "_id": "5cksxj123456sa8xjsa8jxs09",
-        "name": "Rockin' Rollers 5",
+        "name": "Rock n Roll",
         "duration": "",
+        "gener": ["Rock"],
         "tags": [
             "Rock",
             "Roll"
@@ -699,8 +703,9 @@
     },
     {
         "_id": "5cksxj123789sa8xjsa8jxs09",
-        "name": "Rockin' Rollers 5",
+        "name": "Get The Rocking Started",
         "duration": "",
+        "gener": ["Rock"],
         "tags": [
             "Rock",
             "Roll"
@@ -756,7 +761,7 @@
     },
     {
         "_id": "5cksxj123456sa8xjsadrxs09",
-        "name": "Rockin' Rollers 5",
+        "name": "Let's Rock",
         "duration": "",
         "tags": [
             "Rock",
@@ -813,7 +818,7 @@
     },
     {
         "_id": "6cksxj123456sa8xjsadrxs09",
-        "name": "Rockin' Rollers 5",
+        "name": "Rock In The House",
         "duration": "",
         "tags": [
             "Rock",
