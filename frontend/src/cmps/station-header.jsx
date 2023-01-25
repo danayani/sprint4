@@ -10,14 +10,14 @@ export function StationHeader({ station, handleChange, deleteStation, updateStat
     // const [stationName, setStationName] = useState(null)
     // const [stationDescription, setStationDescription] = useState(null)
 
-    useEffect(() => {
-        if(!stationId) {
-            stationService.getEmptyStation()
-        }
-        stationService.getById(stationId).then(station => {
-        setStation(station)
-        })
-    }, [stationId])
+    // useEffect(() => {
+    //     if(!stationId) {
+    //         stationService.getEmptyStation()
+    //     }
+    //     stationService.getById(stationId).then(station => {
+    //     setStation(station)
+    //     })
+    // }, [stationId])
 
     function onPlayStation(){
         // loadCurrPlayingStation(stationId)
