@@ -18,7 +18,7 @@ export function SongList({ station, onRemoveSong, addToLikedSong }) {
         // LOAD_STATION_FOR_PLAYER(stationId, songId)
     }
 
-    if (!songs || !songs.length) <h1> loading...</h1>
+    if (!songs || !songs.length) <h1></h1>
     return (
         <div className="song-list-container" >
             <header className="header-song-list grid">
