@@ -1,8 +1,8 @@
-import { useParams } from "react-router-dom"
 import { useEffect, useState } from "react";
 import { stationService } from "../services/station.service.js"
-import { SHOW_MSG } from "../services/event-bus.service.js";
+import { SearchYoutube } from "./search-youtube.js";
 import { LOAD_STATION_FOR_PLAYER } from "../store/player/player.reducer.js";
+export function SongList(station, onDeleteSong, handleChange, onAddSong) {
 
 export function SongList() {
     const { stationId } = useParams()
@@ -12,7 +12,7 @@ export function SongList() {
     }, [])
 
     function loadSongs() {
-        stationService.getById(stationId).then(res => {
+        stationService.getById(station._id).then(res => {
             const songsList = res.songs
             setStationSongs(songsList)
         })

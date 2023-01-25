@@ -62,15 +62,13 @@ function getEmptyFilterBy() {
 }
 
 function getEmptyStation() {
-    const user = userService.getLoggedinUser()
-
     return {
         "_id": "",
         "name": "My Playlist",
         "imgUrl": "https://www.clipartmax.com/png/middle/69-697655_music-music-note-music-notes-musical-note-notes-music-icon-grey-png.png",
         "tags": [],
-        "createdBy": user ? user : {
-          _id: '5cksxjas89xjsa8xjsa8GGG7',
+        "createdBy": {
+          _id: 'vE45naZh9Slu1r5Kw40M97qii',
           username: 'guest',
           imgUrl: "https://robohash.org/set=set3",
           fullname: 'Guest'

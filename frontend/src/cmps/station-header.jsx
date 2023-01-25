@@ -5,11 +5,10 @@ import { stationService } from "../services/station.service.js"
 import { loadCurrPlayingStation } from "../store/player/player.action.js";
 // import { loadStationById } from "../store/station/station.actions.js"
 
-// TODO: make the station-details-cmp usable for both here and create-station
-
-export function StationHeader() {
-    const { stationId } = useParams()
-    const [station, setStation] = useState(null)
+export function StationHeader({ station, handleChange, deleteStation, updateStation, saveChanges }) {
+    
+    // const [stationName, setStationName] = useState(null)
+    // const [stationDescription, setStationDescription] = useState(null)
 
     useEffect(() => {
         if(!stationId) {
@@ -25,12 +24,11 @@ export function StationHeader() {
     }
 
 
-    if (!station) return <h1> loading...</h1>
     return (
         <section className="station-details">
             <div className="top-container">
-                <div className="img-container">
-                    <img src={station.imgUrl} alt="play list image" />
+                <div className="img-container" >
+                    <img src={station.imgUrl ? station.imgUrl : "../assets/img/add-station.jpg"} alt="play list image" />
                 </div>
                 <div className="info-container">
                     <h2 className="title">PLAYLIST</h2>
