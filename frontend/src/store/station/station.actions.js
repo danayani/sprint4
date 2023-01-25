@@ -21,7 +21,7 @@ export async function addStation(station) {
         store.dispatch({ type: ADD_STATION, station: newStation })
         return newStation
     } catch (err) {
-        console.log('Had issues to get current station', err)
+        console.error('Unable to save station', err)
         throw err
     }
 }
@@ -31,7 +31,7 @@ export async function updateStation(station) {
         const updatedStation = await stationService.save(station)
         store.dispatch({ type: UPDATE_STATION, station: updatedStation })
     } catch (err) {
-        console.log('Had issues to get current station', err)
+        console.error('Unable to save station', err)
         throw err
     }
 }

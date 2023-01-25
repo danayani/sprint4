@@ -19,7 +19,7 @@ export function stationReducer(state = initialState, action) {
             stations = state.stations.filter(station => station._id !== action.stationId)
             return { ...state, stations }
         case ADD_STATION:
-            stations = [action.station, ...state]
+            stations = { ...state.stations, station: action.station }
             return { ...state, stations: stations }
         case UPDATE_STATION:
             stations = state.stations.map(station => (station._id === action.station._id) ? action.station : station)
