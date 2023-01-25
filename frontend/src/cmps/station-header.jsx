@@ -21,7 +21,7 @@ export function StationHeader() {
     }, [stationId])
 
     function onPlayStation(){
-        loadCurrPlayingStation(stationId)
+        // loadCurrPlayingStation(stationId)
     }
 
 
