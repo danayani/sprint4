@@ -34,7 +34,7 @@ export function AppNavBar() {
                     </NavLink>
                 </li>
                 <li className='nav-link last create'>
-                    <NavLink to="/create">
+                    <NavLink to="/create-station">
                         <i className="icon fa-solid fa-square-plus"></i>
                         Create Playlist
                     </NavLink>

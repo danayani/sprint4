@@ -4,7 +4,7 @@ import { SongList } from '../cmps/song-list'
 import { StationHeader } from '../cmps/station-header'
 import { stationService } from '../services/station.service'
 import loader from "../assets/icons/loader.svg"
-import { saveStation, removeStation, loadCurrStation } from "../store/station/station.actions"
+import { addStation, updateStation, removeStation, loadCurrStation } from "../store/station/station.actions"
 import { Loader } from "../cmps/loader"
 
 export function StationDetails() {
@@ -38,11 +38,11 @@ export function StationDetails() {
     }
 
     async function updateStation() {
-        await saveStation(station)
+        await updateStation(station)
     }
 
     function onSaveStation() {
-        saveStation(station)
+        addStation(station)
     }
 
     async function onRemoveSong(songId) {

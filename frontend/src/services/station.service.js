@@ -1,7 +1,7 @@
 
 import { storageService } from './async-storage.service.js'
 import { utilService } from './util.service.js'
-import { userService } from './user.service.js'
+// import { userService } from './user.service.js'
 import data from '../data/station-data.json'
 
 const STATION_KEY = 'stationDB'
@@ -37,7 +37,7 @@ async function remove(stationId) {
 }
 async function save(station) {
     var savedStation
-    if (station._id) {
+    if (station.songs.length > 0) {
         savedStation = await storageService.put(STATION_KEY, station)
         // savedStation = await httpService.put(`station/${station._id}`, station)
     } else {
@@ -68,10 +68,10 @@ function getEmptyStation() {
         "imgUrl": "https://www.clipartmax.com/png/middle/69-697655_music-music-note-music-notes-musical-note-notes-music-icon-grey-png.png",
         "tags": [],
         "createdBy": {
-          _id: 'vE45naZh9Slu1r5Kw40M97qii',
-          username: 'guest',
+          _id: utilService.makeId(25),
+          username: "guest",
           imgUrl: "https://robohash.org/set=set3",
-          fullname: 'Guest'
+          fullname: "Guest"
         },
         "likedByUsers": [],
         "songs": [],

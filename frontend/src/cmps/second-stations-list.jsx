@@ -9,7 +9,7 @@ export function SecondStationList({ stations }) {
                     <Link key={station._id} to={`/station/${station._id}`}>
                         <div className="second-station-card">
                             {/* <StationDetails /> */}
-                            <img className="song-card-img" src={station.songs[0].imgUrl} alt="song img" />
+                            <img className="song-card-img" src={station.imgUrl} alt="song img" />
                             <h3>{station.name}</h3>
                             {/* <button className='play'>Play</button> */}
                         </div>

@@ -15,17 +15,38 @@ export async function loadStations(filterBy) {
     }
 }
 
-export async function saveStation(station) {
-    try{
-        const type = (station._id) ? UPDATE_STATION : ADD_STATION
-        const savedStation = await stationService.save(station)
-        store.dispatch({ type: type, station: savedStation })
-        return savedStation
-    } catch(err) {
-        console.error('Cannot save station', err)
+export async function addStation(station) {
+    try {
+        const newStation = await stationService.save(station)
+        store.dispatch({ type: ADD_STATION, station: newStation })
+        return newStation
+    } catch (err) {
+        console.log('Had issues to get current station', err)
         throw err
     }
 }
+
+export async function updateStation(station) {
+    try {
+        const updatedStation = await stationService.save(station)
+        store.dispatch({ type: UPDATE_STATION, station: updatedStation })
+    } catch (err) {
+        console.log('Had issues to get current station', err)
+        throw err
+    }
+}
+
+// export async function saveStation(station) {
+//     try{
+//         const type = (station._id) ? UPDATE_STATION : ADD_STATION
+//         const savedStation = await stationService.save(station)
+//         store.dispatch({ type: type, station: savedStation })
+//         return savedStation
+//     } catch(err) {
+//         console.error('Cannot save station', err)
+//         throw err
+//     }
+// }
 
 export async function removeStation(stationId) {
     try {

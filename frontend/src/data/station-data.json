@@ -322,8 +322,6 @@
         ]
     },
 
-
-
     {
         "_id": "rQP8Jnlxyk4RjyHXvrmruwTQa",
         "name": "Beast Mode",
@@ -371,9 +369,15 @@
                 "createdBy": "Jaded",
                 "url": "youtube/song.mp4",
                 "imgUrl": "https://www.youtube.com/watch?v=AoySz9cx_3c&ab_channel=PrepixDanceStudio",
-                "addedBy": "{minimal-user}",
-                "addedAt": 162521425262,
-                "duration": ""
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521543763,
+                "duration": {
+                    "min": 4,
+                    "sec": 7
+                }
             },
             {
                 "id": "hldMjKHGpag",
@@ -381,9 +385,15 @@
                 "createdBy": "Dua lipa",
                 "url": "https://www.youtube.com/watch?v=hldMjKHGpag&ab_channel=RachelGardner",
                 "imgUrl": "rh.png",
-                "addedBy": "{minimal-user}",
-                "addedAt": 162521755262,
-                "duration": ""
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521543763,
+                "duration": {
+                    "min": 4,
+                    "sec": 7
+                }
             }
         ],
         "msgs": [
@@ -457,10 +467,16 @@
             }
         ]
     },
+
+
     {
         "_id": "5cksxjas89xdtfnxjsa8jxs09",
-        "name": "Rockin' Rollers 2",
-        "duration": "",
+        "name": "Rock and Roll Classics",
+        "imgUrl": "https://mosaic.scdn.co/300/ab67616d0000b27320ee3e8…8d505d7dbab67616d0000b273f45cec7e72b9dec993c18872",
+        "duration": {
+            "min": "",
+            "sec": ""
+        },
         "tags": [
             "Rock",
             "Roll"
@@ -470,13 +486,9 @@
             "fullname": "John Smith",
             "imgUrl": "http://some-photo/"
         },
-        "likedByUsers": [
-            "{minimal-user}",
-            "{minimal-user}"
-        ],
         "songs": [
             {
-                "id": "s1002",
+                "id": "qnpZCB9BUIw",
                 "title": "Stairway to Heaven",
                 "createdBy": "Led Zeppelin",
                 "url": "https://www.youtube.com/watch?v=qnpZCB9BUIw&ab_channel=GootieMusic",
@@ -486,8 +498,8 @@
                 "duration": ""
             },
             {
-                "id": "mUkfiLjooxs",
-                "title": "The Rolling Stones - Paint It Black",
+                "id": "J0D1ty9Qbl4",
+                "title": "Paint It Black",
                 "createdBy": "The Rolling Stones",
                 "url": "https://www.youtube.com/watch?v=J0D1ty9Qbl4&ab_channel=SexyEmotion",
                 "imgUrl": "https://i.ytimg.com/vi/mUkfiLjooxs/mqdefault.jpg",
@@ -496,7 +508,7 @@
                 "duration": ""
             },
             {
-                "id": "mUzeiLjo76s",
+                "id": "ssQPYVGaJ04",
                 "title": "Highway to Hell",
                 "createdBy": "AC/DC",
                 "url": "https://www.youtube.com/watch?v=ssQPYVGaJ04&ab_channel=Spanhok",

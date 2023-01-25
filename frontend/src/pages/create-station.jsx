@@ -1,35 +1,38 @@
 import { useEffect, useState } from "react"
-import { useNavigate } from "react-router-dom"
-import { saveStation } from "../store/station/station.actions"
+// import { useNavigate } from "react-router-dom"
+import { addStation } from "../store/station/station.actions"
 import { stationService } from "../services/station.service"
 import { StationDetails } from "../pages/station-details.jsx"
+import { Loader } from "../cmps/loader"
 // import { SearchYoutube } from "../cmps/search-youtube.jsx"
 
-export function CreateStation() {
-    const navigate = useNavigate()
-    const [stationSongs, setStationSongs] = useState(station.songs)
-    const [station, setStation] = useState(null)
 
+export function CreateStation() {
+
+    // const navigate = useNavigate()
+    const [station, setStation] = useState(null)
+    const [stationSongs, setStationSongs] = useState(null)
+    
     useEffect(() => {
-        const newStation = (createEmptyStation())
-        setStation(newStation)
+        const newStation = (stationService.getEmptyStation())
+        saveNewStation(newStation)
     }, [])
 
-    async function createEmptyStation() {
-        const newStation = await saveStation(stationService.getEmptyStation())
-        setStation(newStation)
+    async function saveNewStation(station) {
+        station = await addStation(stationService.getEmptyStation())
+        setStation(station)
     }
 
-    async function onSaveStation(station) {
-        try {
-            if (!station.name) station.name = 'My Playlist'
-            await saveStation(station)
-            navigate('/')
-        } catch (err) {
-            console.error('cannot save station', err)
-            throw err
-        }
-    }
+    // async function onSaveStation(station) {
+    //     try {
+    //         await saveStation(station)
+    //         navigate('/')
+    //        // TODO: Add user msg?
+    //     } catch (err) {
+    //         console.error('cannot save station', err)
+    //         throw err
+    //     }
+    // }
 
     function handleChange(field, val) {
         setStation(prevStation => ({ ...prevStation, [field]: val }))
@@ -40,10 +43,12 @@ export function CreateStation() {
         handleChange('songs', [...stationSongs, song])
     }
 
-    if (!station) return <h1>Loading...</h1>
+    if (!station) return <Loader />
     return (
         <section className="create-station-container">
             <StationDetails onAddSong={onAddSong} />
+            <h1>hi</h1>
+
             {/* <SearchYoutube onAddSong={onAddSong} isSearchingSongs={true} /> */}
 
             {/* <div className=' flex'>
