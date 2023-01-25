@@ -4,13 +4,10 @@ import { useNavigate, useParams } from "react-router-dom"
 import { SongList } from '../cmps/song-list'
 import { StationHeader } from '../cmps/station-header'
 import { stationService } from '../services/station.service'
-import { updateStation, removeStation } from "../store/station/station.actions"
 import loader from "../assets/icons/loader.svg"
+import { saveStation, loadStation, removeStation, loadCurrStation } from "../store/station/station.actions"
 
-export function StationDetails({ saveStation }) {
-import { saveStation, removeStation, loadCurrStation } from "../store/station/station.actions"
-
-export function StationDetails(onAddSong) {
+export function StationDetails({ saveStation, onAddSong }) {
 
     const [station, setStation] = useState(null)
     const { stationId } = useParams()
@@ -32,7 +29,7 @@ export function StationDetails(onAddSong) {
 
     async function updateStation() {
         await saveStation(station)
-      }
+    }
 
     function onSaveStation() {
         saveStation(station)
@@ -50,7 +47,7 @@ export function StationDetails(onAddSong) {
     return (
         <section className="station-details">
             <StationHeader station={station} handleChange={handleChange} deleteStation={deleteStation} updateStation={updateStation} onSaveStation={onSaveStation} />
-            <SongList station={station} onDeleteSong={onDeleteSong} handleChange={handleChange} onAddSong={onAddSong}/>
+            <SongList station={station} onDeleteSong={onDeleteSong} handleChange={handleChange} onAddSong={onAddSong} />
         </section>
     )
 }
