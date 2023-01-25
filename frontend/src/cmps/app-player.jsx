@@ -6,16 +6,8 @@ import { playerService } from '../services/player.service'
 import { utilService } from '../services/util.service'
 import { getActionPlayPausePlayer } from '../store/player/player.action'
 
-//load store 22:25
-//load actions 27:19
-//כל פעם שאני רוצה לעשות פעולה אסינכרונית
-
-// import Duration from 'react-player/Duration'
-// import { UserMsg } from './user-msg.jsx'
-
 export function AppPlayer() {
     const playerState = useSelector(storeState => storeState.playerModule.playerState)
-
     const [songs, setSongs] = useState([]) //TODO : useSelector, show only when i have a song 
 
     useEffect(() => {
@@ -26,13 +18,6 @@ export function AppPlayer() {
         setSongs(['https://www.youtube.com/watch?v=QtXby3twMmI',
             'https://www.youtube.com/watch?v=oUFJJNQGwhk'])
 
-    }
-
-
-    function onTagglePlaying() { //taggle playingS
-        console.log('play/pause')
-        getActionPlayPausePlayer()
-        // setState({ playing: !state.playing })
     }
 
     function handleVolumeChange(ev) {
@@ -50,16 +35,10 @@ export function AppPlayer() {
         console.log(x)
     }
 
-
-
     const classPlayPause = (!playerState.playing) ? 'play-pause-btn fa-solid fa-circle-play' : 'play-pause-btn fa-solid  fa-circle-pause'
     if (!songs || !songs.length || !playerState) return (<h1> loading</h1>)
     return (
         <div className="app-playerS">
-
-            {console.log('playerState =>', playerState)}
-            {console.log('songs player', songs)}
-
             < ReactPlayer className="player-video"
                 height="1px"
                 url={songs}
@@ -84,7 +63,7 @@ export function AppPlayer() {
                             <i className="action-btn fa-solid fa-shuffle"></i>
                         </button>
                         <i className="action-btn fa-solid fa-backward-step"></i>
-                        <button className="player-btn-play-pause" onClick={onTagglePlaying}>
+                        <button className="player-btn-play-pause" >
                             <i className={classPlayPause}></i>
                         </button>
                         <i className="action-btn fa-solid fa-backward-step btn-next"></i>
@@ -108,7 +87,6 @@ export function AppPlayer() {
                         value={playerState.volume}
                         onChange={handleVolumeChange}
                     />
-
                 </div>
             </div>
         </div>

@@ -1,9 +1,6 @@
-// gets the stations from Home and renders the stations list
-
 import { Link } from 'react-router-dom';
 
 export function FirstStationList({ stations }) {
-    console.log('stations list :>> ', stations);
 
     return (
         <section className='first-station-cards'>

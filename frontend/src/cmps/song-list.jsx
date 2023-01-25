@@ -1,13 +1,12 @@
 import { useEffect, useState } from "react";
-import { stationService } from "../services/station.service"
-import { SearchYoutube } from "./search-youtube";
-
+import { stationService } from "../services/station.service.js"
+import { SearchYoutube } from "./search-youtube.js";
+import { LOAD_STATION_FOR_PLAYER } from "../store/player/player.reducer.js";
 export function SongList(station, onDeleteSong, handleChange, onAddSong) {
 
-    const [stationSongs, setStationSongs] = useState(station.songs)
-    const [items, setItems] = useState(station.songs)
-
-
+export function SongList() {
+    const { stationId } = useParams()
+    const [stationSongs, setStationSongs] = useState([])
     useEffect(() => {
         loadSongs()
     }, [])
@@ -18,13 +17,12 @@ export function SongList(station, onDeleteSong, handleChange, onAddSong) {
             setStationSongs(songsList)
         })
             .catch((err) => {
-                console.log('Had issues in song list', err)
+                console.error('Had issues in song list', err)
             })
-
     }
 
     function onPlay(songId) {
-
+        LOAD_STATION_FOR_PLAYER(stationId, songId)
     }
 
     if (!stationSongs || !stationSongs.length) return <h1> loading...</h1>
@@ -36,22 +34,18 @@ export function SongList(station, onDeleteSong, handleChange, onAddSong) {
             <span><i className="song-list-tbodyTime fa-regular fa-clock"></i></span>
         </header>
         <ul>
-            {console.log('stationSongs', stationSongs)}
-            {stationSongs.map(song => {
-                { console.log('song', song) }
+            {stationSongs.map((song,idx) => {
                 return <article role="button">
                     <li className="song-list-li grid">
                         <div className="btn-song-list-play">
-                            1
+                            {idx+1}
                         </div>
                         <section>
                             <div >
                                 <img className="song-list-img" src={song.imgUrl} />
-
                             </div>
                             <section>
                                 <p>{song.title}</p>
-
                             </section>
                         </section>
                         <div className="song-list-artist">
@@ -69,32 +63,5 @@ export function SongList(station, onDeleteSong, handleChange, onAddSong) {
             }
         </ul>
     </div>
-
-        // <h2>song list for station : {stationId} </h2>
-        // <tbody className="song-list-tbody">
-        //     <tr>
-        //         <th className="song-list-tbodyHashtag" >#</th>
-        //         <th className="song-list-title">TITLE</th>
-        //         <th>DATE ADDED</th>
-        //         <th><i className="song-list-tbodyTime fa-regular fa-clock"></i></th>
-        //     </tr>
-        //     {/* {mails.map(mail => <li className="mail-item" key={mail.id}>
-        //         <MailPreview onRemoveMail={onRemoveMail} mail={mail} />
-        //     </li>)} */}
-
-        //     {console.log('station', stationSongs)}
-        //     {stationSongs.map(station => {
-        //         return <tr key={station.id}>
-        //             <td></td>
-        //             <td><button className="btn-song-title-play">{station.title}</button></td>
-        //             <td>{station.addedAt}</td>
-        //             <td>03:15</td>
-        //         </tr>
-        //     })
-        //     }
-
-        // </tbody>
-
-
     )
 }

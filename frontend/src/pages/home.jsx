@@ -1,4 +1,3 @@
-// Display of all playlists
 import { useEffect } from 'react'
 import { useSelector } from "react-redux"
 
@@ -21,7 +20,7 @@ export function Home() {
         else if (currHour > 22 || currHour < 6) return 'Good night'
     }
 
-    if (!stations) return (<div>Loding...</div>)
+    if (!stations) return <div><img src='../assets/icons/loader.svg' /></div>
     return (
         <main className='main-home-container'>
             <div className="home-stations-container">

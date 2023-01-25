@@ -3,6 +3,20 @@ import { stationService } from '../../services/station.service.js';
 import { store } from '../store.js'
 import {LOAD_STATION_FOR_PLAYER, PLAY_PAUSE_PLAYER, NEXT_SONG, PREVIOUS_SONG, REMOVE_SONG_PLAYER } from './player.reducer.js'
 
+export function loadSongs(stationId) {
+    // return carService.query(filterBy)
+    //     .then((cars) => {
+    //         store.dispatch({ type: SET_CARS, cars })
+    //     })
+    //     .catch(err => {
+    //         console.log('Had issues loading cars', err)
+    //         throw err
+    //     })
+    //     .finally(()=>{
+    //         store.dispatch({ type: SET_IS_LOADING, isLoading: false })
+    //     })
+}
+
 export async function loadPlayer(player) {
     try {
         console.log('player from actions:', player);
@@ -13,44 +27,15 @@ export async function loadPlayer(player) {
     }
 }
 
-
-export async function loadcurrPlayingStation(stationId) {
+export async function loadCurrPlayingStation(stationId, songIndex = 0) {
     try {
-        console.log('loadcurrPlayingStation:', stationId)
-        // store.dispatch({ type: LOAD_STATION_FOR_PLAYER, station : stationService.getById(stationId) })
+        store.dispatch({ type: LOAD_STATION_FOR_PLAYER, station : stationService.getById(stationId) })
     } catch (err) {
         console.error(err)
         throw err
     }
 }
 
-
 export function getActionPlayPausePlayer() {
     return store.dispatch({ type: PLAY_PAUSE_PLAYER })
 }
-
-//   export function getActionAddReview(review) {
-//     return { type: 'ADD_REVIEW', review }
-//   }
-//   export function getActionSetWatchedUser(user) {
-//     return { type: 'SET_WATCHED_USER', user }
-//   }
-
-// export async function loadToys(filterBy) {
-//     try {
-//         const toys = await toyService.query(filterBy)
-//         store.dispatch({ type: SET_TOYS, toys })
-
-//     } catch (err) {
-//         console.log('Had issues loading toys')
-//         throw err
-//     }
-// }
-
-// export async function setSong(song) {
-//     try {
-//         store.dispatch({ type: SET_SONG, song })
-//     } catch (err) {
-//         console.log('Cant set song id', err)
-//     }
-// }
