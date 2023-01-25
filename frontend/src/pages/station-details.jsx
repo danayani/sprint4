@@ -5,6 +5,7 @@ import { StationHeader } from '../cmps/station-header'
 import { stationService } from '../services/station.service'
 import loader from "../assets/icons/loader.svg"
 import { saveStation, removeStation, loadCurrStation } from "../store/station/station.actions"
+import { Loader } from "../cmps/loader"
 
 export function StationDetails() {
 
@@ -56,7 +57,8 @@ export function StationDetails() {
         console.log('addToLikedSong')
     }
 
-    if (!station) return <div><img src={loader} /></div>
+    if (!station) return <Loader />
+    // if (!station) return <div><img src={loader} /></div>
     return (
         <section className="station-details">
             <StationHeader station={station} handleChange={handleChange} deleteStation={deleteStation} updateStation={updateStation} onSaveStation={onSaveStation} />
