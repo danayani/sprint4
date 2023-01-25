@@ -5,7 +5,6 @@ import { store } from '../store'
 
 
 // Action Creators:
-
 export async function loadStations(filterBy) {
     try {
         const stations = await stationService.query(filterBy)

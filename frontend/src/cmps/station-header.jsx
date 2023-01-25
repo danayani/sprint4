@@ -20,7 +20,7 @@ export function StationHeader({ station, handleChange, deleteStation, updateStat
     }, [station._id])
 
     function onPlayStation(){
-        loadCurrPlayingStation(station._id)
+        // loadCurrPlayingStation(stationId)
     }
 
 
