@@ -57,28 +57,37 @@
     .second-station-cards {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        gap: 23px;
         flex-direction: row;
     }
 
     .second-station-card {
-        margin-bottom: 20px;
+        margin-bottom: 35px;
         background-color: $bgcplaylistdown;
         border-radius: 5px;
-        height: 270px;
+        height: 284px;
         width: 195px;
 
-        .song-img {
+
+         &:hover{
+            background-color: $bgcplaylistup;
+            transition: background-color 0.7s;
+         }
+
+        .song-card-img {
             padding: 15px;
-            height: 193px;
-            width: 193px;
+            height: 192px;
+            width: 192px;
             object-fit: cover;
             aspect-ratio: 1/1;
         }
 
-        h3 {
-            padding: 10px;
+        h3{
+            padding-left:17px;
+            margin-top: 0;
         }
+
+        
     }
 
 }
