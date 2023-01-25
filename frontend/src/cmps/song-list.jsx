@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import { stationService } from "../services/station.service.js"
 import { LOAD_STATION_FOR_PLAYER } from "../store/player/player.reducer.js";
 
-export function SongList({ station, onRemoveSong, addToLikedSong }) {
+
+export function SongList({ station, onRemoveSong, addToLikedSong, onPlaySong }) {
 
     const [songs, setSongs] = useState([])
 
@@ -18,6 +19,7 @@ export function SongList({ station, onRemoveSong, addToLikedSong }) {
         // LOAD_STATION_FOR_PLAYER(stationId, songId)
     }
 
+
     if (!songs || !songs.length) <h1></h1>
     return (
         <div className="song-list-container" >
@@ -29,7 +31,7 @@ export function SongList({ station, onRemoveSong, addToLikedSong }) {
             </header>
             <ul>
                 {songs.map((song, idx) => {
-                    return <article role="button" key={song.id}>
+                    return <article role="button" onClick={()=>onPlaySong(idx)} key={song.id}>
                         <li key={song.id} className="song-list-li grid">
                             <div className="btn-song-list-play">
                                 {idx + 1}
