@@ -1,31 +1,24 @@
-import { useEffect, useState, useParams } from "react";
+import { useEffect, useState } from "react";
 import { stationService } from "../services/station.service.js"
-// import { SearchYoutube } from "./search-youtube.js";
 import { LOAD_STATION_FOR_PLAYER } from "../store/player/player.reducer.js";
 
-export function SongList(station, onDeleteSong, handleChange, onAddSong) {
+export function SongList({ station, onRemoveSong, addToLikedSong }) {
 
-    const { stationId } = useParams()
-    const [stationSongs, setStationSongs] = useState([])
+    const [songs, setSongs] = useState([])
+
     useEffect(() => {
         loadSongs()
     }, [])
 
     function loadSongs() {
-        stationService.getById(stationId).then(res => {
-            const songsList = res.songs
-            setStationSongs(songsList)
-        })
-            .catch((err) => {
-                console.error('Had issues in song list', err)
-            })
+        setSongs(station.songs)
     }
 
     function onPlay(songId) {
-        LOAD_STATION_FOR_PLAYER(stationId, songId)
+        // LOAD_STATION_FOR_PLAYER(stationId, songId)
     }
 
-    if (!stationSongs || !stationSongs.length) <h1> loading...</h1>
+    if (!songs || !songs.length) <h1> loading...</h1>
     return (
         <div className="song-list-container" >
             <header className="header-song-list grid">
@@ -35,9 +28,9 @@ export function SongList(station, onDeleteSong, handleChange, onAddSong) {
                 <span><i className="song-list-tbodyTime fa-regular fa-clock"></i></span>
             </header>
             <ul>
-                {stationSongs.map((song, idx) => {
-                    return <article role="button">
-                        <li className="song-list-li grid">
+                {songs.map((song, idx) => {
+                    return <article role="button" key={song.id}>
+                        <li key={song.id} className="song-list-li grid">
                             <div className="btn-song-list-play">
                                 {idx + 1}
                             </div>
