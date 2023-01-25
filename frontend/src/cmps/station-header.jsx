@@ -7,8 +7,8 @@ import { loadCurrPlayingStation } from "../store/player/player.action.js";
 
 export function StationHeader({ station, handleChange, deleteStation, updateStation, saveChanges }) {
     
-    // const [stationName, setStationName] = useState(null)
-    // const [stationDescription, setStationDescription] = useState(null)
+    const [stationName, setStationName] = useState(null)
+    const [stationDescription, setStationDescription] = useState(null)
 
     // useEffect(() => {
     //     if(!stationId) {

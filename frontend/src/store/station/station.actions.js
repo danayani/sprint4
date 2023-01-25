@@ -39,7 +39,6 @@ export async function removeStation(stationId) {
 
 export async function loadCurrStation (stationId) {
     try {
-
         const currStation = await stationService.getById(stationId)
         store.dispatch({type: UPDATE_CURR_STATION, currStation})
     } catch (err) {
