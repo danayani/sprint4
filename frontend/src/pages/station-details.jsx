@@ -1,10 +1,8 @@
 import { useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
-
 import { SongList } from '../cmps/song-list'
 import { StationHeader } from '../cmps/station-header'
 import { stationService } from '../services/station.service'
-import { updateStation, removeStation } from "../store/station/station.actions"
 import loader from "../assets/icons/loader.svg"
 import { saveStation, removeStation, loadCurrStation } from "../store/station/station.actions"
 
@@ -15,7 +13,7 @@ export function StationDetails({ saveStation, onAddSong}) {
     const navigate = useNavigate()
 
     useEffect(() => {
-        if(stationId) loadStation(stationId)
+        // if(stationId) loadStation(stationId)
         // else 
 
     }, [stationId])
