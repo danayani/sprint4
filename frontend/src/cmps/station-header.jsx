@@ -2,7 +2,7 @@ import { useState } from "react"
 // import { uploadService } from "../services/upload.service.js"
 // import { utilService } from "../services/util.service.js" 
 
-export function StationHeader({ station, handleChange, deleteStation, updateStation, saveChanges }) {
+export function StationHeader({ station, playStation, handleChange, deleteStation, updateStation, saveChanges }) {
 
     // const [stationName, setStationName] = useState(null)
     // const [stationDescription, setStationDescription] = useState(null)
@@ -13,9 +13,7 @@ export function StationHeader({ station, handleChange, deleteStation, updateStat
 
     function onPlay(ev) {
         ev.stopPropagation()
-        console.log('this ', station)
-        // TODO: Send action to player.action
-        // loadCurrPlayingStation()
+        playStation()
     }
 
     // function onChangeDescription({ target }) {

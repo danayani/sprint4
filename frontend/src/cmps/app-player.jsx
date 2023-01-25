@@ -8,18 +8,24 @@ import { getActionPlayPausePlayer } from '../store/player/player.action'
 
 
 export function AppPlayer() {
+
     const playerState = useSelector(storeState => storeState.playerModule.playerState)
-    // const songs = useSelector(storeState => storeState.playerModule.songs)
-    const [songs, setSongs] = useState([])
     const station = useSelector(storeState => storeState.playerModule.currPlayingStation)
+    const songIdx = useSelector(storeState => storeState.playerModule.currSongIdx)
+
+    const [song, setSong] = useState(null)
 
     useEffect(() => {
-        loadSongs()
-    }, [])
+        loadSong()
+    }, [station, songIdx])
 
-    function loadSongs() {
-        setSongs(['https://www.youtube.com/watch?v=QtXby3twMmI',
-            'https://www.youtube.com/watch?v=oUFJJNQGwhk'])
+    function loadSong() {
+        if(!station) return
+        const songUrl = station.songs.map(song => song.url)[songIdx || 0]  
+        setSong(songUrl)
+
+        // setSongs(['https://www.youtube.com/watch?v=QtXby3twMmI',
+        //     'https://www.youtube.com/watch?v=oUFJJNQGwhk'])
 
     }
 
@@ -34,18 +40,17 @@ export function AppPlayer() {
     }
 
     function onReady(x) {
-        console.log(x)
+        console.log('onReady', x)
     }
 
     const classPlayPause = (!playerState.playing) ? 'play-pause-btn fa-solid fa-circle-play' : 'play-pause-btn fa-solid  fa-circle-pause'
-    if (!songs || !songs.length || !playerState) return (<h1> loading</h1>) //TODO: only hidden song details
+    if (!song  || !playerState || !station) return (<h1> loading</h1>) //TODO: only hidden song details
     return (
         <div className="app-playerS">
-            {console.log('songs', songs)}
-            {console.log('station', station)}
+
             < ReactPlayer className="player-video"
                 height="1px"
-                url={songs}
+                url={song}
                 pip={playerState.pip}
                 playing={playerState.playing}
                 controls={playerState.controls}
@@ -67,7 +72,7 @@ export function AppPlayer() {
                             <i className="action-btn fa-solid fa-shuffle"></i>
                         </button>
                         <i className="action-btn fa-solid fa-backward-step"></i>
-                        <button className="player-btn-play-pause" >
+                        <button className="player-btn-play-pause" onClick={getActionPlayPausePlayer} >
                             <i className={classPlayPause}></i>
                         </button>
                         <i className="action-btn fa-solid fa-backward-step btn-next"></i>
