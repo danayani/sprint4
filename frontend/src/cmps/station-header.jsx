@@ -1,69 +1,70 @@
 import { useState } from "react"
-import { uploadService } from "../services/upload.service.js"
-import { utilService } from "../services/util.service.js" 
+// import { uploadService } from "../services/upload.service.js"
+// import { utilService } from "../services/util.service.js" 
 
 export function StationHeader({ station, handleChange, deleteStation, updateStation, saveChanges }) {
 
-    const [stationName, setStationName] = useState(null)
-    const [stationDescription, setStationDescription] = useState(null)
-    const [imgUrl, setImgUrl] = useState(null)
-    const [isEdit, setIsEdit] = useState(false)
+    // const [stationName, setStationName] = useState(null)
+    // const [stationDescription, setStationDescription] = useState(null)
+    // const [imgUrl, setImgUrl] = useState(null)
+    // const [isEdit, setIsEdit] = useState(false)
     const [colorByImg, setImgAvgColor] = useState(null)
 
 
-    function onPlayPause(ev) {
+    function onPlay(ev) {
         ev.stopPropagation()
-
+        console.log('this ', station)
         // TODO: Send action to player.action
         // loadCurrPlayingStation()
     }
 
-    function onChangeDescription({ target }) {
-        const { value, name: field } = target
-        setStationDescription(value)
-        handleChange(field, value)
-    }
+    // function onChangeDescription({ target }) {
+    //     const { value, name: field } = target
+    //     setStationDescription(value)
+    //     handleChange(field, value)
+    // }
 
-    function onChangeName({ target }) {
-        const { value, name: field } = target
-        setStationName(value)
-        handleChange(field, value)
-    }
+    // function onChangeName({ target }) {
+    //     const { value, name: field } = target
+    //     setStationName(value)
+    //     handleChange(field, value)
+    // }
 
-    function onOpenEditor(ev) {
-        ev.stopPropagation()
-        setIsEdit(true)
-    }
+    // function onOpenEditor(ev) {
+    //     ev.stopPropagation()
+    //     setIsEdit(true)
+    // }
 
-    function onCloseEditor(ev) {
-        ev.stopPropagation()
-        setIsEdit(false)
-        saveChanges()
-    }
+    // function onCloseEditor(ev) {
+    //     ev.stopPropagation()
+    //     setIsEdit(false)
+    //     saveChanges()
+    // }
 
     async function toggleLike() {
         console.log('toggled the like button')
         // Update user liked stations
     }
 
-    async function onUploadImg(ev) {
-        const imgUrl = await onSelectImg(ev)
-        handleChange("imgUrl", imgUrl)
-        setImgUrl(imgUrl)
-    }
+    // async function onUploadImg(ev) {
+    //     const imgUrl = await onSelectImg(ev)
+    //     handleChange(imgUrl)
+    //     // handleChange("imgUrl", imgUrl)
+    //     setImgUrl(imgUrl)
+    // }
 
-    async function onSelectImg(ev) {
-        try {
-            const imgUrl = await uploadService.uploadImg(ev)
-            station.imgUrl = imgUrl
-            const color = await utilService.getAvgImgColor(imgUrl)
-            setImgAvgColor(color)
-            console.log('cloooooorrrrrr', color)
-            return imgUrl
-        } catch (err) {
-            console.log('Cant set image', err)
-        }
-    }
+    // async function onSelectImg(ev) {
+    //     try {
+    //         const imgUrl = await uploadService.uploadImg(ev)
+    //         station.imgUrl = imgUrl
+    //         const color = await utilService.getAvgImgColor(imgUrl)
+    //         setImgAvgColor(color)
+    //         console.log('cloooooorrrrrr', color)
+    //         return imgUrl
+    //     } catch (err) {
+    //         console.log('Cant set image', err)
+    //     }
+    // }
 
     function onDeleteStation(ev) {
         ev.stopPropagation()
@@ -75,7 +76,7 @@ export function StationHeader({ station, handleChange, deleteStation, updateStat
     return (
         <section className="station-header">
             <div className="top-container">
-                {station.songs.length > 0 || station.imgUrl ?
+                {/* {station.songs.length > 0 || station.imgUrl ?
                     <div className="img-container" onClick={onOpenEditor}>
                         <img src={station.imgUrl} alt="station image" />
                     </div> :
@@ -84,7 +85,7 @@ export function StationHeader({ station, handleChange, deleteStation, updateStat
                         <img src="../assets/img/add-station.jpg" alt="station image" />
                         <span>Upload Image</span>
                     </div>
-                }
+                } */}
                 <div className="info-container">
                     <h2 className="title">PLAYLIST</h2>
                     <h1>{station.name}</h1>
@@ -96,7 +97,7 @@ export function StationHeader({ station, handleChange, deleteStation, updateStat
                 </div>
             </div>
             <div className="details-controls">
-                <button className="btn-play" onClick={(ev) => onPlayPause(ev)}>
+                <button className="btn-play" onClick={(ev) => onPlay(ev)}>
                     <svg role="img" height="28" width="28" aria-hidden="true" viewBox="0 0 24 24" data-encore-id="icon" className="Svg-sc-ytk21e-0 uPxdw"><path d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z"></path>
                         <path d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z"></path></svg>
                 </button>
@@ -110,7 +111,7 @@ export function StationHeader({ station, handleChange, deleteStation, updateStat
                 </button>
                 <button onClick={onDeleteStation}>Delete station</button>
             </div>
-            {isEdit && <div className="station-editor-modal">
+            {/* {isEdit && <div className="station-editor-modal">
                 <h2>Edit details</h2>
                 <div className="station-edit-container">
                     <div className="input-img-container">
@@ -138,7 +139,7 @@ export function StationHeader({ station, handleChange, deleteStation, updateStat
                     </div>
                 </div>
             </div>
-            }
+            } */}
 
         </section>
 
