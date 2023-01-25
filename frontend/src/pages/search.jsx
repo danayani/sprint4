@@ -7,7 +7,7 @@ import { youtubeService } from "../services/youtube.service.js";
 
 
 export function Search() {
-    const params = useParams()
+    // const params = useParams()
     const location = useLocation()
     console.log('location',location)
     console.log('locationkey',location.key)
@@ -20,7 +20,11 @@ export function Search() {
 
     youtubeService.getServerSideSearch(songKey)
     .then(res=>{
-        console.log('res from search',res)
+        let songs = res.items
+        console.log('songs from search',songs)
+    })
+    .catch((err)=>{
+        console.log('cannot find that particular song')
     })
 
 
