@@ -2,8 +2,10 @@ import { useEffect, useState, useParams } from "react";
 import { stationService } from "../services/station.service.js"
 // import { SearchYoutube } from "./search-youtube.js";
 import { LOAD_STATION_FOR_PLAYER } from "../store/player/player.reducer.js";
-// export function SongList(station, onDeleteSong, handleChange, onAddSong) {
 
+// Function to transport into song list - station, onDeleteSong, handleChange, onAddSong
+
+export function SongList() {
     const { stationId } = useParams()
     const [stationSongs, setStationSongs] = useState([])
     useEffect(() => {
@@ -24,43 +26,44 @@ import { LOAD_STATION_FOR_PLAYER } from "../store/player/player.reducer.js";
         LOAD_STATION_FOR_PLAYER(stationId, songId)
     }
 
-    if (!stationSongs || !stationSongs.length) return <h1> loading...</h1>
-    return (<div className="song-list-container" >
-        <header className="header-song-list grid">
-            <span>#</span>
-            <span>TITLE</span>
-            <span>DATE ADDED</span>
-            <span><i className="song-list-tbodyTime fa-regular fa-clock"></i></span>
-        </header>
-        <ul>
-            {stationSongs.map((song,idx) => {
-                return <article role="button">
-                    <li className="song-list-li grid">
-                        <div className="btn-song-list-play">
-                            {idx+1}
-                        </div>
-                        <section>
-                            <div >
-                                <img className="song-list-img" src={song.imgUrl} />
+    // if (!stationSongs || !stationSongs.length) {return (<h1> loading...</h1>)}
+    return (
+        <div className="song-list-container" >
+            <header className="header-song-list grid">
+                <span>#</span>
+                <span>TITLE</span>
+                <span>DATE ADDED</span>
+                <span><i className="song-list-tbodyTime fa-regular fa-clock"></i></span>
+            </header>
+            <ul>
+                {stationSongs.map((song, idx) => {
+                    return <article role="button">
+                        <li className="song-list-li grid">
+                            <div className="btn-song-list-play">
+                                {idx + 1}
                             </div>
                             <section>
-                                <p>{song.title}</p>
+                                <div >
+                                    <img className="song-list-img" src={song.imgUrl} />
+                                </div>
+                                <section>
+                                    <p>{song.title}</p>
+                                </section>
                             </section>
-                        </section>
-                        <div className="song-list-artist">
-                            {song.createdBy}
-                        </div>
-                        <div className="song-list-add-date">
-                            {song.addedAt}
-                        </div>
-                        <div className="song-list-duration">
-                            00:00
-                        </div>
-                    </li>
-                </article>
-            })
-            }
-        </ul>
-    </div>
+                            <div className="song-list-artist">
+                                {song.createdBy}
+                            </div>
+                            <div className="song-list-add-date">
+                                {song.addedAt}
+                            </div>
+                            <div className="song-list-duration">
+                                00:00
+                            </div>
+                        </li>
+                    </article>
+                })
+                }
+            </ul>
+        </div>
     )
 }
