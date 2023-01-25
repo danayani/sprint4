@@ -23,20 +23,14 @@ export function AppPlayer() {
         if(!station) return
         const songUrl = station.songs.map(song => song.url)[songIdx || 0]  
         setSong(songUrl)
-
-        // setSongs(['https://www.youtube.com/watch?v=QtXby3twMmI',
-        //     'https://www.youtube.com/watch?v=oUFJJNQGwhk'])
-
     }
 
     function handleVolumeChange(ev) {
         console.log('volume changed', ev.target.value)
-        // setState({ volume: +ev.target.value })
     }
 
     function onShuffleSongs() {
         console.log('shuffleSongs')
-        // setSongs(utilService.shuffle(songs))
     }
 
     function onReady(x) {
@@ -46,8 +40,8 @@ export function AppPlayer() {
     const classPlayPause = (!playerState.playing) ? 'play-pause-btn fa-solid fa-circle-play' : 'play-pause-btn fa-solid  fa-circle-pause'
     if (!song  || !playerState || !station) return (<h1> loading</h1>) //TODO: only hidden song details
     return (
-        <div className="app-playerS">
-
+        <section className="app-playerS">
+            {console.log('my station', station.songs[songIdx].title)}
             < ReactPlayer className="player-video"
                 height="1px"
                 url={song}
@@ -63,7 +57,7 @@ export function AppPlayer() {
             <div className="app-playerS flex">
                 <div className="song-details flex">
                     <img className="song-img" src='../assets/img/rh.jpg' />
-                    {/* <p className="song-title">{songs[0].title}</p> */}
+                    <p className="song-title">{station?.songs[songIdx].title}</p>
                 </div>
 
                 <div className="player-actions-container grid justify-center">
@@ -98,6 +92,6 @@ export function AppPlayer() {
                     />
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
