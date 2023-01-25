@@ -21,7 +21,6 @@ export function playerReducer(state = initialState, action) {
             console.log('NEXT_SONG')
             return
         case LOAD_STATION_FOR_PLAYER:
-            console.log('LOAD_STATION_FOR_PLAYER')
             return { ...state, currPlayingStation : action.station }
         default:
             return state

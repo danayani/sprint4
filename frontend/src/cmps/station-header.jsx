@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom"
 import { CreateStation } from "../pages/create-station.jsx";
 import { stationService } from "../services/station.service.js"
+import { loadCurrPlayingStation } from "../store/player/player.action.js";
 // import { loadStationById } from "../store/station/station.actions.js"
 
 // TODO: make the station-details-cmp usable for both here and create-station
@@ -13,12 +14,16 @@ export function StationHeader() {
     useEffect(() => {
         if(!stationId) {
             stationService.getEmptyStation()
-            // דרך האקשן
         }
         stationService.getById(stationId).then(station => {
         setStation(station)
         })
     }, [stationId])
+
+    function onPlayStation(){
+        loadCurrPlayingStation(stationId)
+    }
+
 
     if (!station) return <h1> loading...</h1>
     return (
@@ -37,7 +42,7 @@ export function StationHeader() {
                 </div>
             </div>
             <div className="details-controls">
-                <button className="btn-play">
+                <button className="btn-play" onClick={onPlayStation}>
                             <svg role="img" height="28" width="28" aria-hidden="true" viewBox="0 0 24 24" data-encore-id="icon" className="Svg-sc-ytk21e-0 uPxdw"><path d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z"></path>
                             <path d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z"></path></svg>
                 </button>

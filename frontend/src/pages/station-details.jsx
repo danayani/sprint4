@@ -8,8 +8,6 @@ import { stationService } from '../services/station.service'
 import { updateStation, removeStation } from "../store/station/station.actions"
 import loader from "../assets/icons/loader.svg"
 
-// all logic happends here
-
 export function StationDetails({ saveStation }) {
 
     const [station, setStation] = useState(null)
@@ -17,8 +15,6 @@ export function StationDetails({ saveStation }) {
     const navigate = useNavigate()
 
     useEffect(() => {
-        // if (!stationId) setStation(stationService.getEmptyStation())
-        //פניה אל ה-statiםn action והוא מעדכן את הרידוסר ואת הסטור
         loadStation()
     }, [stationId])
 
