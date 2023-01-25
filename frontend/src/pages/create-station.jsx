@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom"
 import { saveStation } from "../store/station/station.actions"
 import { stationService } from "../services/station.service"
 import { StationDetails } from "../pages/station-details.jsx"
-import { SearchYoutube } from "../cmps/search-youtube.jsx"
+// import { SearchYoutube } from "../cmps/search-youtube.jsx"
 
 
 export function CreateStation() {
@@ -46,7 +46,7 @@ export function CreateStation() {
     return (
         <main className="create-station-container">
             <StationDetails onAddSong={onAddSong} />
-            <SearchYoutube onAddSong={onAddSong} isSearchingSongs={true}/>
+            {/* <SearchYoutube onAddSong={onAddSong} isSearchingSongs={true}/> */}
         </main>
     )
 }

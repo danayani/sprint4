@@ -7,20 +7,20 @@ import { loadCurrPlayingStation } from "../store/player/player.action.js";
 
 export function StationHeader({ station, handleChange, deleteStation, updateStation, saveChanges }) {
     
-    // const [stationName, setStationName] = useState(null)
-    // const [stationDescription, setStationDescription] = useState(null)
+    const [stationName, setStationName] = useState(null)
+    const [stationDescription, setStationDescription] = useState(null)
 
     useEffect(() => {
-        if(!stationId) {
+        if(!station._id) {
             stationService.getEmptyStation()
         }
-        stationService.getById(stationId).then(station => {
+        stationService.getById(station._id).then(station => {
         setStation(station)
         })
-    }, [stationId])
+    }, [station._id])
 
     function onPlayStation(){
-        loadCurrPlayingStation(stationId)
+        loadCurrPlayingStation(station._id)
     }
 
 

@@ -61,7 +61,7 @@ export function SearchYoutube({ onAddSong, isSearchingSongs }) {
             </div>
                 :
                 !isSearchingSongs &&
-                <div></div>
+                <div>hi</div>
             }
         </main>
     )

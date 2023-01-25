@@ -4,13 +4,10 @@ import { useNavigate, useParams } from "react-router-dom"
 import { SongList } from '../cmps/song-list'
 import { StationHeader } from '../cmps/station-header'
 import { stationService } from '../services/station.service'
-import { updateStation, removeStation } from "../store/station/station.actions"
 import loader from "../assets/icons/loader.svg"
-
-export function StationDetails({ saveStation }) {
 import { saveStation, removeStation, loadCurrStation } from "../store/station/station.actions"
 
-export function StationDetails(onAddSong) {
+export function StationDetails({ saveStation, onAddSong }) {
 
     const [station, setStation] = useState(null)
     const { stationId } = useParams()

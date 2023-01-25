@@ -30,7 +30,7 @@
         ],
         "songs": [
             {
-                "id": "XNqbPGSWpDE",
+                "id": "v=YykjpeuMNEk",
                 "title": "My Universe",
                 "createdBy": "Coldplay",
                 "url": "https://www.youtube.com/watch?v=YykjpeuMNEk&list=RDEMuf6htoZivPnz-ZIwGU0dDA&index=1",
@@ -46,7 +46,7 @@
                 }
             },
             {
-                "id": "mUkfiLjooxs",
+                "id": "v=1G4isv_Fylg",
                 "title": "Paradise",
                 "createdBy": "Coldplay",
                 "url": "https://www.youtube.com/watch?v=1G4isv_Fylg&list=RDEMuf6htoZivPnz-ZIwGU0dDA&index=2",
@@ -62,7 +62,7 @@
                 }
             },
             {
-                "id": "mUzeiLjo76s",
+                "id": "v=VPRjCeoBqrI",
                 "title": "A Sky Full Of Stars",
                 "createdBy": "Coldplay",
                 "url": "https://www.youtube.com/watch?v=VPRjCeoBqrI&list=RDEMuf6htoZivPnz-ZIwGU0dDA&index=3",
@@ -78,11 +78,11 @@
                 }
             },
             {
-                "id": "",
-                "title": "",
+                "id": "xgC5DYLUNAI",
+                "title": "Yellow",
                 "createdBy": "Coldplay",
-                "url": "",
-                "imgUrl": "",
+                "url": "https://www.youtube.com/watch?v=xgC5DYLUNAI",
+                "imgUrl": "https://i.scdn.co/image/ab67616d000048513d92b2ad5af9fbc8637425f0",
                 "addedBy": {
                     "_id": "",
                     "userfullname": ""
@@ -90,7 +90,87 @@
                 "addedAt": 162521755262,
                 "duration": {
                     "min": 4,
-                    "sec": 27
+                    "sec": 28
+                }
+            },
+            {
+                "id": "oaahwTCogXo",
+                "title": "The Scientist",
+                "createdBy": "Coldplay",
+                "url": "https://www.youtube.com/watch?v=oaahwTCogXo",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851de09e02aa7febf30b7c02d82",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521755262,
+                "duration": {
+                    "min": 5,
+                    "sec": 10
+                }
+            },
+            {
+                "id": "51CFIm4wAOQ",
+                "title": "Biutyful",
+                "createdBy": "Coldplay",
+                "url": "https://www.youtube.com/watch?v=51CFIm4wAOQ",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851289ac619a0993bbe19484727",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521755262,
+                "duration": {
+                    "min": 3,
+                    "sec": 12
+                }
+            },
+            {
+                "id": "YA7U00i6WGQ",
+                "title": "Clocks",
+                "createdBy": "Coldplay",
+                "url": "https://www.youtube.com/watch?v=YA7U00i6WGQ",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851de09e02aa7febf30b7c02d82",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521755262,
+                "duration": {
+                    "min": 5,
+                    "sec": 9
+                }
+            },
+            {
+                "id": "ySNG1IFaD-g",
+                "title": "Hymn for the weekend",
+                "createdBy": "Coldplay",
+                "url": "https://www.youtube.com/watch?v=ySNG1IFaD-g",
+                "imgUrl": "https://i.scdn.co/image/ab67616d000048518ff7c3580d429c8212b9a3b6",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521755262,
+                "duration": {
+                    "min": 3,
+                    "sec": 44
+                }
+            },
+            {
+                "id": "CrWd-S5e99c",
+                "title": "Magic",
+                "createdBy": "Coldplay",
+                "url": "https://www.youtube.com/watch?v=CrWd-S5e99c",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851f864bcdcc245f06831d17ae0",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521755262,
+                "duration": {
+                    "min": 4,
+                    "sec": 41
                 }
             }
         ],
