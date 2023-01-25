@@ -13,6 +13,7 @@ import { AppPlayer } from './cmps/app-player.jsx'
 import { LoginSignup } from './cmps/login-singup.jsx'
 import { Search } from './pages/search.jsx'
 import { CreateStation } from './pages/create-station.jsx'
+import { LikedSongs } from './pages/liked-songs.jsx'
 
 export function RootCmp() {
     return (
@@ -29,7 +30,8 @@ export function RootCmp() {
                             <Route path="/library" element={<Library />} />
                             <Route path="/search" element={<Search />} />
                             <Route path="/create-station" element={<CreateStation />} />
-                            <Route path='/login-signug/:login' element={<LoginSignup />} />
+                            <Route path="/login-signug/:login" element={<LoginSignup />} />
+                            <Route path="/liked-songs" element={<LikedSongs />} />
                         </Routes>
                         <hr />
                     </main>
