@@ -101,12 +101,11 @@ export function CreateStation() {
                 songsFromSearch &&
                 <div className="search-results">
                     {songsFromSearch.map((song, idx) => {
-                        return (
+                        // return (
                             <article role="button" key={song.id}>
-                                <li key={song.id} className="song-list-li grid">
-
+                                <li className="song-list-li grid">
                                     <section>
-                                        <div >
+                                        <div>
                                             <img className="song-img" src={song.snippet.thumbnails.default.url} alt="Magnifing glass" />
                                         </div>
                                         <section>
@@ -122,7 +121,7 @@ export function CreateStation() {
                                     <button className="add-song-btn" onClick={() => onAddSong(song)}>Add</button>
                                 </li>
                             </article>
-                        )
+                        // )
                     }
                         // <div className="search-result" key={song.id}>
                         //     {<button className="add-song-btn" onClick={() => onAddSong(song)}>+</button>}
