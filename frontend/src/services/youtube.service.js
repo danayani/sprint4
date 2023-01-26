@@ -13,7 +13,7 @@ export const youtubeService = {
     getServerSideProps,
     getListItemYouTube,
     getServerSideSearch,
-    getPlaylistInfo
+    getSongDuration
 }
 
 function getListItemYouTube() {
@@ -53,8 +53,8 @@ async function getServerSideSearch(searchKey) {
     const res = await fetch(`${YOUTUBE_LIST_SEARCH_API}?part=snippet&order=viewCount&maxResults=6&type=video&q=${searchKey}}&key=${YOUTUBE_API_KEY}`)
     const data = await res.json()
     console.log(data)
-    const songs = data.items.map(song =>({
-        
+    const songs = data.items.map(song => ({
+
         "id": song.id.videoId,
         "title": song.snippet.title,
         "createdBy": song.snippet.channelTitle,
@@ -69,23 +69,21 @@ async function getServerSideSearch(searchKey) {
             "min": 4,
             "sec": 21
         }
-    
+
     }))
     return songs
+
 }
 
 
-async function getPlaylistInfo() {
-    //https://stackoverflow.com/questions/15596753/how-do-i-get-video-durations-with-youtube-api-version-3
-    //https://developers.google.com/youtube/v3/docs/videos/list
-    //You'll want to set part=contentDetails, because the duration is there.
+async function getSongDuration(songId) {
     console.log('getPlaylistInfo ')
-    const res = await fetch(`https://www.googleapis.com/youtube/v3/videos?id=9bZkp7q19f0&part=contentDetails&key=${YOUTUBE_API_KEY}`)
- 
+    const res = await fetch(`https://www.googleapis.com/youtube/v3/videos?id=${songId}&part=contentDetails&key=${YOUTUBE_API_KEY}`)
+
     const data = await res.json()
-    console.log('data info', data)
-    
-    return data
+    const duration = data.items[0].contentDetails.duration
+
+    return duration
 }
 
 
