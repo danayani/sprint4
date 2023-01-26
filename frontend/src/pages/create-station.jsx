@@ -57,7 +57,7 @@ export function CreateStation() {
         handleChange('songs', [...stationSongs, song])
     }
 
-    // console.log('CRAETED STATION', station)
+    console.log('CRAETED STATION', station)
 
 
 
@@ -78,10 +78,11 @@ export function CreateStation() {
 
     console.log('songsFromSearch', songsFromSearch)
     if (songsFromSearch) console.log('imgUrl', songsFromSearch[0].snippet.thumbnails.default.url)
-    
+    if (songsFromSearch) console.log('imgUrl', songsFromSearch[0].etag)
+
     if (!station) <Loader />
     return (
-        <section className="create-station-container" >
+        <section className="create-station-container">
             {/* <StationDetails onAddSong={onAddSong} /> */}
             <h1> Station details</h1 >
 
@@ -127,10 +128,7 @@ export function CreateStation() {
                     })}
                 </div>
             }
-            <div className="songs-from-search">
-
-            </div>
-        </section >
+        </section>
     )
 }
 // <div className="search-result" key={song.id}>

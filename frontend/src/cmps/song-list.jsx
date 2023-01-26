@@ -27,32 +27,39 @@ export function SongList({ station, onRemoveSong, addToLikedSong, onPlaySong }) 
                 <span>#</span>
                 <span>TITLE</span>
                 <span>DATE ADDED</span>
+                <span></span>
                 <span><i className="song-list-tbodyTime fa-regular fa-clock"></i></span>
             </header>
             <ul>
                 {songs.map((song, idx) => {
-                    return <article role="button" onClick={()=>onPlaySong(idx)} key={song.id}>
+                    return <article  key={song.id}>
                         <li key={song.id} className="song-list-li grid">
                             <div className="btn-song-list-play">
                                 {idx + 1}
                             </div>
-                            <section>
+                            <section role="button" onClick={() => onPlaySong(idx)} className="song-details">
                                 <div >
                                     <img className="song-list-img" src={song.imgUrl} />
                                 </div>
                                 <section>
                                     <p>{song.title}</p>
                                 </section>
+                                <div className="song-list-artist">
+                                    {song.createdBy}
+                                </div>
                             </section>
-                            <div className="song-list-artist">
-                                {song.createdBy}
-                            </div>
                             <div className="song-list-add-date">
                                 {song.addedAt}
                             </div>
+                            <button className="add-song-station song-action">
+                                ♥
+                            </button>
                             <div className="song-list-duration">
                                 00:00
                             </div>
+                            <button className="remove-song-from-station song-action">
+                                X
+                            </button>
                         </li>
                     </article>
                 })
