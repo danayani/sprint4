@@ -62,7 +62,7 @@ export function AppPlayer() {
 
                 <div className="player-actions-container grid justify-center">
                     <div className="player-actions flex">
-                        <button className='btn-shuffle-songs' onClick={onShuffleSongs} >
+                        <button className='btn-action-player btn-shuffle-songs' onClick={onShuffleSongs} >
                             <i className="action-btn fa-solid fa-shuffle"></i>
                         </button>
                         <i className="action-btn fa-solid fa-backward-step"></i>

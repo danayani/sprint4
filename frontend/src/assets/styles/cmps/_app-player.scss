@@ -50,11 +50,16 @@
 
 .action-btn {
     font-size: 1rem;
+    background-color: rgb(18 18 18);
 }
 
 .player-range-action {
     width: rem(505px);
     margin-bottom: rem(15px);
+}
+
+.btn-action-player {
+    background-color: transparent;
 }
 
 .volume-controller {
@@ -77,15 +82,18 @@
 //player helpers
 
 .range {
-    -webkit-appearance: none;/* Override default look */
+    -webkit-appearance: none;
+    /* Override default look */
     background: hsla(0, 0%, 100%, .3);
     height: rem(5px);
     cursor: pointer;
     border-radius: rem(1.7px);
 }
+
 .range ::-webkit-slider-runnable-track {
-    -webkit-appearance: none;/* Override default look */
-    background: black;   
+    -webkit-appearance: none;
+    /* Override default look */
+    background: black;
 }
 
 .player-video {
