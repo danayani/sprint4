@@ -53,7 +53,7 @@ async function getServerSideSearch(searchKey) {
     console.log(data)
     const songs = data.items.map(song =>({
         
-        "id": utilService.makeId(),
+        "id": song.id.videoId,
         "title": song.snippet.channelTitle,
         "createdBy": "",
         "url": `https://www.youtube.com/watch?v=${song.id.videoId}`,

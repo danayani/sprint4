@@ -67,12 +67,12 @@ function getEmptyFilterBy() {
 
 function getEmptyStation() {
     return {
-        "_id": "",
+        "_id": utilService.makeId(),
         "name": "My Playlist",
         "imgUrl": "https://www.clipartmax.com/png/middle/69-697655_music-music-note-music-notes-musical-note-notes-music-icon-grey-png.png",
         "tags": [],
         "createdBy": {
-          _id: utilService.makeId(),
+          _id: "",
           username: "guest",
           imgUrl: "https://robohash.org/set=set3",
           fullname: "Guest"
