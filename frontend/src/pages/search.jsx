@@ -1,6 +1,6 @@
 // import { youtubeService } from "../services/youtube.service";
 import { NavLink } from "react-bootstrap"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { useParams, useLocation, useNavigate } from "react-router-dom"
 
 import { stationService } from "../services/station.service.js"
@@ -17,13 +17,23 @@ export function Search() {
     console.log('location',location)
     console.log('locationkey',location.key)
 
-    const song = location.search
+    // const song = location.search
+    const song = "a"
     console.log('song',song)
     
     let songKey = song.slice(11)
     console.log('songKey',songKey)
 
-    if (location.key) {
+    useEffect(() => {
+        getSongsFromSearch()
+        // setSongsFromSearch(newSongsFromSearch)
+    }, [])
+
+    async function getSongsFromSearch(){
+        console.log('song', song)
+        console.log('songsFromSearch :>> ', songsFromSearch)
+        if ((song) && (!songsFromSearch)) {
+        console.log('Getting songs from youtube')
         youtubeService.getServerSideSearch(songKey)
         .then(res=>{
             let songs = res.items
@@ -31,10 +41,10 @@ export function Search() {
             console.log('songs from search',songs)
         })
         .catch((err)=>{
-            console.error('cannot find that particular song', err)
+            console.log('cannot find that particular song', err)
             throw err
         })
-    }
+    }}
 
     console.log('songsFromSearch :>> ', songsFromSearch)
 
