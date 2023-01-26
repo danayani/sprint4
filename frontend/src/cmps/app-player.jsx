@@ -14,6 +14,7 @@ export function AppPlayer() {
     const songIdx = useSelector(storeState => storeState.playerModule.currSongIdx)
 
     const [song, setSong] = useState(null)
+    const [songDuration, setSongDuration] = useState(null)
 
     useEffect(() => {
         loadSong()
@@ -35,6 +36,9 @@ export function AppPlayer() {
 
     function onReady(x) {
         console.log('onReady', x)
+        console.log('getDuration()', x.getDuration())
+        // console.log('seekTo()', x.seekTo(230)) //go to were you want, in sec
+
     }
 
     const classPlayPause = (!playerState.playing) ? 'play-pause-btn fa-solid fa-circle-play' : 'play-pause-btn fa-solid  fa-circle-pause'
