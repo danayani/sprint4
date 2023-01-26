@@ -1,73 +1,16 @@
-import { useState } from "react"
-// import { uploadService } from "../services/upload.service.js"
-// import { utilService } from "../services/util.service.js" 
-
 export function StationHeader({ station, playStation, handleChange, deleteStation, updateStation, saveChanges }) {
-
-    // const [stationName, setStationName] = useState(null)
-    // const [stationDescription, setStationDescription] = useState(null)
-    // const [imgUrl, setImgUrl] = useState(null)
-    // const [isEdit, setIsEdit] = useState(false)
-    const [colorByImg, setImgAvgColor] = useState(null)
-
 
     function onPlay(ev) {
         ev.stopPropagation()
         playStation()
     }
 
-    // function onChangeDescription({ target }) {
-    //     const { value, name: field } = target
-    //     setStationDescription(value)
-    //     handleChange(field, value)
-    // }
-
-    // function onChangeName({ target }) {
-    //     const { value, name: field } = target
-    //     setStationName(value)
-    //     handleChange(field, value)
-    // }
-
-    // function onOpenEditor(ev) {
-    //     ev.stopPropagation()
-    //     setIsEdit(true)
-    // }
-
-    // function onCloseEditor(ev) {
-    //     ev.stopPropagation()
-    //     setIsEdit(false)
-    //     saveChanges()
-    // }
-
     async function toggleLike() {
         console.log('toggled the like button')
-        // Update user liked stations
     }
-
-    // async function onUploadImg(ev) {
-    //     const imgUrl = await onSelectImg(ev)
-    //     handleChange(imgUrl)
-    //     // handleChange("imgUrl", imgUrl)
-    //     setImgUrl(imgUrl)
-    // }
-
-    // async function onSelectImg(ev) {
-    //     try {
-    //         const imgUrl = await uploadService.uploadImg(ev)
-    //         station.imgUrl = imgUrl
-    //         const color = await utilService.getAvgImgColor(imgUrl)
-    //         setImgAvgColor(color)
-    //         console.log('cloooooorrrrrr', color)
-    //         return imgUrl
-    //     } catch (err) {
-    //         console.log('Cant set image', err)
-    //     }
-    // }
 
     function onDeleteStation(ev) {
         ev.stopPropagation()
-        // setIsMenuOpen(false)
-        // TODO: user needs to confirm delete
         deleteStation(station._id)
     }
 
@@ -75,20 +18,13 @@ export function StationHeader({ station, playStation, handleChange, deleteStatio
         <section className="station-header">
             <div className="top-container">
                 {station.songs.length > 0 || station.imgUrl ?
-                    // <div className="img-container" onClick={onOpenEditor}>
-                    //     <img src={station.imgUrl} alt="station image" />
-                    // </div> 
                     <div className="img-container">
                         <img src={station.imgUrl} alt="station image" />
-                    </div> 
+                    </div>
                     :
                     <div className="img-container" >
                         <img src="../assets/img/add-station.jpg" alt="station image" />
                     </div>
-                    // <div onClick={onOpenEditor} className="img-container">
-                    //     <img src="../assets/img/add-station.jpg" alt="station image" />
-                    //     <span>Upload Image</span>
-                    // </div>
                 }
                 <div className="info-container">
                     <h2 className="title">PLAYLIST</h2>
@@ -115,35 +51,6 @@ export function StationHeader({ station, playStation, handleChange, deleteStatio
                 </button>
                 <button className="btn-delete-station" onClick={onDeleteStation}>X</button>
             </div>
-            {/* {isEdit && <div className="station-editor-modal">
-                <h2>Edit details</h2>
-                <div className="station-edit-container">
-                    <div className="input-img-container">
-                        <img src="" alt="" />
-                        <span>Upload Image</span>
-                        <input type="file" onChange={onUploadImg} />
-                    </div>
-                    <div className="title-description">
-                        <input
-                            type="text"
-                            name="name"
-                            className="input-title"
-                            placeholder="Playlist name"
-                            value={station.name ? station.name : stationName}
-                            onChange={onChangeName}
-                        />
-                        <textarea
-                            name="description"
-                            className="input-description"
-                            placeholder="Add an optinal description"
-                            value={station.description ? station.description : stationDescription}
-                            onChange={onChangeDescription}
-                        />
-                        <button className="station-edit-modal-done-btn" onClick={onCloseEditor}>Done</button>
-                    </div>
-                </div>
-            </div>
-            } */}
         </section>
     )
 }

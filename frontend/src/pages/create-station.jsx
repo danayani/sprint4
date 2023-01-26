@@ -1,11 +1,9 @@
 import { useEffect, useState, useRef } from "react"
-// import { useNavigate } from "react-router-dom"
-import { loadFromStorage,saveToStorage } from "../services/storage.service.js"
 import { utilService } from "../services/util.service.js"
-// import { addStation } from "../store/station/station.actions.js"
 import { stationService } from "../services/station.service.js"
 import { youtubeService } from "../services/youtube.service.js"
-// import {StationHeader} from "../cmps/station-header.jsx"
+import { StationHeader } from "../cmps/station-header.jsx"
+import { SongList } from "../cmps/song-list.jsx"
 // import { StationDetails } from "../pages/station-details.jsx"
 import { Loader } from "../cmps/loader.jsx"
 
@@ -18,20 +16,13 @@ export function CreateStation() {
     const [songsFromSearch, setSongsFromSearch] = useState(null)
 
     const [station, setStation] = useState(null)
-    const [stationSongs, setStationSongs] = useState(null)
+    // const [stationSongs, setStationSongs] = useState(null)
 
     useEffect(() => {
-        // saveNewStation()
         const newStation = stationService.getEmptyStation()
         console.log('newStation', newStation)
         setStation(newStation)
     }, [])
-
-    // async function saveNewStation() {
-    //     const newStation = stationService.getEmptyStation()
-    //     // newStation.utilService.makeId()
-    //     setStation(newStation)
-    // }
 
     function handleChange({ target }) {
         let { value, field } = target
@@ -39,17 +30,7 @@ export function CreateStation() {
         setTxtSearchKey(value)
     }
 
-    // async function getSearchReasults(val) {
-    //     if (val.length === 0) {
-    //         setSongsFromSearch(null)
-    //         return
-    //     }
-    //     const results = await youtubeService.getServerSideSearch(val)
-    //     setSongsFromSearch(results)
-    // }
-
     function onAddSong(song) {
-        // let station = []
         station.songs.push(song)
         console.log('station', station)
         console.log('station id: ', station._id)
@@ -59,27 +40,26 @@ export function CreateStation() {
     async function onSearch(ev) {
         ev.preventDefault()
         let searchData = utilService.loadFromStorage(txtSearchKey)
-        if(!searchData || !searchData.length){
+        if (!searchData || !searchData.length) {
             youtubeService.getServerSideSearch(txtSearchKey).then(songs => {
                 console.log('songs come from api', songs)
                 searchData = songs
-                utilService.saveToStorage(txtSearchKey,searchData)
+                utilService.saveToStorage(txtSearchKey, searchData)
                 setSongsFromSearch(searchData)
             })
         }
         setSongsFromSearch(searchData)
     }
 
-    // function onSaveStation() {
-    //     onSaveStation(station)
-    // }
+    function onSaveStation() {
+        onSaveStation(station)
+    }
 
     if (!station) <Loader />
     return (
         <section className="create-station-container">
-            {/* <StationHeader station={station} /> */}
-            {/* <StationDetails onSaveStation={onSaveStation} /> */}
-            {/* <StationDetails /> */}
+            {station && <StationHeader station={station} />}
+            {/* {station.songs.length > 0 && <SongList />} */}
             <h1> Station details</h1 >
 
             <div className='create-station-search-input'>
