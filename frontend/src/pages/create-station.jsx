@@ -48,17 +48,16 @@ export function CreateStation() {
     }
 
     function onAddSong(song) {
-        setStationSongs(prevSongs => [...prevSongs, song])
-        // handleChange('songs', [...stationSongs, song])
+        let station = []
+        station.push(song)
+        console.log('station',station)
+        console.log('station id: ',station.id)
+        // setStationSongs(prevSongs => [...prevSongs, song])
     }
 
     console.log('CRAETED STATION', station)
 
-
-
-    // Add debouncer (here?)
     async function onSearch() {
-        // ev.preventDefault()
         youtubeService.getServerSideSearch(txtSearchKey).then(songs=> {
             console.log('songs',songs)
             setSongsFromSearch(songs)
@@ -109,7 +108,7 @@ export function CreateStation() {
                                     <div className="song-list-add-date">
                                         {utilService.randomPastTime()}
                                     </div>
-                                    <button className="add-song-btn" onClick={onAddSong}>Add</button>
+                                    <button className="add-song-btn" onClick={() => onAddSong(song)}>Add</button>
                                 </li>
                             </article>
                         )
