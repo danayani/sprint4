@@ -15,7 +15,7 @@ export const utilService = {
 }
 
 function shuffle(array = [2, 11, 37, 42]) {
-
+    console.log('1', array)
     let currentIndex = array.length
     let randomIndex = 0
 
@@ -30,6 +30,7 @@ function shuffle(array = [2, 11, 37, 42]) {
         [array[currentIndex], array[randomIndex]] = [
         array[randomIndex], array[currentIndex]]
     }
+    console.log('2',array)
     return array
 }
 

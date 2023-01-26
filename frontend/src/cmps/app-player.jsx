@@ -1,10 +1,12 @@
 import { useState, useEffect, useRef } from 'react'
 import { useSelector } from 'react-redux'
+import { useDispatch } from "react-redux"
 import ReactPlayer from 'react-player/youtube'
 import ProgressBar from 'react-bootstrap/ProgressBar'
 import { playerService } from '../services/player.service'
 import { utilService } from '../services/util.service'
-import { getActionPlayPausePlayer } from '../store/player/player.action'
+import { getActionPlayPausePlayer, loadCurrPlayingStation } from '../store/player/player.action'
+import { SET_SONG_IDX, SET_REPEAT_SONG } from '../store/player/player.reducer'
 import { func } from 'prop-types'
 
 
@@ -15,7 +17,9 @@ export function AppPlayer() {
     const songIdx = useSelector(storeState => storeState.playerModule.currSongIdx)
 
     const [song, setSong] = useState(null)
+    const [songShuffle, setSongShuffle] = useState(null)
     const [songDuration, setSongDuration] = useState({ duration: 0, curr: 0, untilDone: 0 })
+    const dispatch = useDispatch()
 
     useEffect(() => {
         loadSong()
@@ -29,18 +33,16 @@ export function AppPlayer() {
 
     function handleVolumeChange(ev) {
         console.log('volume changed', ev.target.value)
+        
     }
 
     function onShuffleSongs() {
-        console.log('shuffleSongs')
+        //אני צריכה להעביר את כל השירים מאוביקט למערך
+        console.log('Shuffle isnt perfect yet')
     }
 
     function onReady(songProp) {
-        console.log('onReady', songProp)
         loadSongDuration(songProp)
-        // const text = x.getDuration()
-        // console.log('getDuration()',songProp )
-        console.log(songDuration)
         // console.log('seekTo()', x.seekTo(230)) //go to were you want, in sec
 
     }
@@ -54,20 +56,33 @@ export function AppPlayer() {
         console.log('songDuration', songDuration)
     }
 
-    function onPreviosSong(){
-        if(!station) return
-        
-        if(songIdx === 0){
+    function onPreviosSong() {
+        if (!station) return
+        if (songIdx === 0) {
             songIdx = 0 //need to start play from 1sec
         }
         else {
-            console.log('station.songs', station.songs)
+            dispatch({ type: SET_SONG_IDX, songIdx: songIdx - 1 })
         }
+    }
 
+    function onNextSong() {
+        if (!station) return
+        if (songIdx === station.length - 1) {
+            songIdx = station.length - 1 //need to start play from 1sec
+        }
+        else {
+            dispatch({ type: SET_SONG_IDX, songIdx: songIdx + 1 })
+        }
+    }
+
+    function onRepeat() {
+        dispatch({ type: SET_REPEAT_SONG })
     }
 
     const classPlayPause = (!playerState.playing) ? 'play-pause-btn fa-solid fa-circle-play' : 'play-pause-btn fa-solid  fa-circle-pause'
-    if (!playerState) return  //TODO: only hidden song details
+    const classPlayRepeat = (!playerState.loop) ? 'action-btn fa-solid fa-repeat' : 'action-btn fa-solid fa-repeat btn-action-active'
+    if (!playerState) return 
     return (
         <section className="app-playerS">
             {/* {console.log('my station', station.songs[songIdx].title)} */}
@@ -87,8 +102,9 @@ export function AppPlayer() {
             }
             <div className="app-playerS flex">
                 <div className="song-details flex">
-                    <img className="song-img" src={station?.songs[songIdx].imgUrl} />
-                    <p className="song-title">{station?.songs[songIdx].title}</p>
+                    {console.log('playerState', playerState)}
+                    <img className="song-img" src={station?.songs[songIdx]?.imgUrl} />
+                    <p className="song-title">{station?.songs[songIdx]?.title}</p>
                 </div>
                 <div className="player-actions-container grid justify-center">
                     <div className="player-actions flex">
@@ -101,11 +117,11 @@ export function AppPlayer() {
                         <button className="player-btn-play-pause" onClick={getActionPlayPausePlayer} >
                             <i className={classPlayPause}></i>
                         </button>
-                        <button className='btn-action-player' >
+                        <button className='btn-action-player' onClick={onNextSong} >
                             <i className="action-btn fa-solid fa-backward-step btn-next"></i>
                         </button>
-                        <button className='btn-action-player' >
-                            <i className="action-btn fa-solid fa-repeat"></i>
+                        <button className='btn-action-player' onClick={onRepeat}>
+                            <i className={classPlayRepeat}></i>
                         </button>
                     </div>
                     <div className="player-range-container flex">
