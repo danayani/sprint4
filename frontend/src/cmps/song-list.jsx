@@ -31,7 +31,9 @@ export function SongList({ station, onRemoveSong, addToLikedSong, onPlaySong }) 
                 <span><i className="song-list-tbodyTime fa-regular fa-clock"></i></span>
             </header>
             <ul>
+                {console.log("songs",songs)}
                 {songs.map((song, idx) => {
+                    
                     return <article  key={song.id}>
                         <li key={song.id} className="song-list-li grid">
                             <div className="btn-song-list-play">
