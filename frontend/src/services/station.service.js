@@ -68,7 +68,7 @@ function getEmptyStation() {
         "imgUrl": "https://www.clipartmax.com/png/middle/69-697655_music-music-note-music-notes-musical-note-notes-music-icon-grey-png.png",
         "tags": [],
         "createdBy": {
-          _id: utilService.makeId(25),
+          _id: utilService.makeId(),
           username: "guest",
           imgUrl: "https://robohash.org/set=set3",
           fullname: "Guest"
