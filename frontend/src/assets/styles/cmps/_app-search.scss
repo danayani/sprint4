@@ -9,9 +9,17 @@
         overflow-wrap: break-word;
         word-break: break-word;
         color: #fff;
+        margin-top: rem(8px);
+        font-weight: 700;
+        grid-area: 1 / 1 / 2 / 2;
+        padding: rem(16px);
+    }
+    
+    .search-results-songs-list{
+        
     }
 
-    .filter-cards-container {
+    .filter-cards-preview {
         // height: 100vh;
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(157px, 1fr));
@@ -32,13 +40,6 @@
             padding-top: 100%;
             display: block;
             grid-area: 1 / 1 / 2 / 2;
-        }
-
-        h2 {
-            margin-top: rem(8px);
-            font-weight: 700;
-            grid-area: 1 / 1 / 2 / 2;
-            padding: rem(16px);
         }
 
         .filter-img {

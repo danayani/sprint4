@@ -30,7 +30,7 @@ function shuffle(array = [2, 11, 37, 42]) {
         [array[currentIndex], array[randomIndex]] = [
         array[randomIndex], array[currentIndex]]
     }
-    return array
+    return array;
 }
 
 async function getAvgImgColor(url) {
@@ -47,7 +47,7 @@ async function getAvgImgColor(url) {
 
 
 
-function makeId(length = 24) {
+function makeId(length = 25) {
     var txt = ''
     var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
 
