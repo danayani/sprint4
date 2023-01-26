@@ -12,67 +12,61 @@ export function Search() {
     // const params = useParams()
     const [songsFromSearch, setSongsFromSearch] = useState(null)
     const geners = stationService.getMusicGeners()
-    
-    const location = useLocation()
-    console.log('location',location)
-    console.log('locationkey',location.key)
 
-    // const song = location.search
-    const song = "a"
-    console.log('song',song)
-    
-    let songKey = song.slice(11)
-    console.log('songKey',songKey)
+    const location = useLocation()
+    console.log('location', location)
+    console.log('location search', location.search)
+
+    const songKey = location.search.slice(11)
+
+    console.log('songKey', songKey)
 
     useEffect(() => {
         getSongsFromSearch()
-        // setSongsFromSearch(newSongsFromSearch)
+
     }, [])
 
-    async function getSongsFromSearch(){
-        console.log('song', song)
+    async function getSongsFromSearch() {
+        console.log('song', songKey)
         console.log('songsFromSearch :>> ', songsFromSearch)
-        if ((song) && (!songsFromSearch)) {
-        console.log('Getting songs from youtube')
-        youtubeService.getServerSideSearch(songKey)
-        .then(res=>{
-            let songs = res.items
-            setSongsFromSearch(songs)
-            console.log('songs from search',songs)
-        })
-        .catch((err)=>{
-            console.log('cannot find that particular song', err)
-            throw err
-        })
-    }}
+        if ((songKey) && (!songsFromSearch)) {
+            console.log('Getting songs from youtube')
+            youtubeService.getServerSideSearch(songKey)
+                .then(songs => {
+                    setSongsFromSearch(songs)
+                })
+                .catch((err) => {
+                    console.log('cannot find that particular song', err)
+                    throw err
+                })
+        }
+    }
 
     console.log('songsFromSearch :>> ', songsFromSearch)
 
-    
-    function onFilterCardClicked(filterByGener) {}
+
+    function onFilterCardClicked(filterByGener) { }
 
     return (
         <main className="main-search-container">
-           
-           {songsFromSearch && 
-            <div className="search-results-songs-list">
+
+            {songsFromSearch &&
+                <div className="search-results-songs-list">
                     {songsFromSearch.map((song) => {
                         return (
-                            <article role="button" key={song.eatg}>
-                                <li key={song.id.videoId} className="song-list-li grid">
-                                    <img className="song-list-img" src={song.snippet.thumbnails.default.url} alt="Magnifing glass" />
+                            <article role="button" key={song.id}>
+                                <li key={song.id} className="song-list-li grid">
+                                    <img className="song-list-img" src={song.imgUrl} alt="Magnifing glass" />
                                     <p className="song-list-title">{song.title}</p>
-                                    <p className="song-list-artist">{song.snippet.channelTitle}</p>
-                                    <p className="song-list-description"> {song.snippet.title}</p>
-                                    <button className="add-song-btn" onClick={() => console.log( song, 'song :>> was clicked',)}>Add</button>
+                                    <p className="song-list-artist">{song.createdBy}</p>
                                 </li>
                             </article>
                         )
                     }
                     )}
-            </div>}
-           
-           <h2>Browse all</h2>
+                </div>}
+
+            <h2>Browse all</h2>
 
             <section className="filter-cards-container">
                 {geners.map((gener, idx) =>
@@ -86,7 +80,7 @@ export function Search() {
 
                 )}
             </section>
-            
+
 
         </main>
     )
