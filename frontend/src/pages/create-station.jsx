@@ -22,7 +22,6 @@ export function CreateStation() {
     useEffect(() => {
         const newStation = (stationService.getEmptyStation())
         console.log('newStation',newStation)
-
         setStation(newStation)
     }, [])
 
@@ -52,10 +51,9 @@ export function CreateStation() {
         station.push(song)
         console.log('station',station)
         console.log('station id: ',station.id)
+        setStation(station)
         // setStationSongs(prevSongs => [...prevSongs, song])
     }
-
-    console.log('CRAETED STATION', station)
 
     async function onSearch() {
         youtubeService.getServerSideSearch(txtSearchKey).then(songs=> {
