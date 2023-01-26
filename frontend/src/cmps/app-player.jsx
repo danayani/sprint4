@@ -38,7 +38,7 @@ export function AppPlayer() {
     }
 
     const classPlayPause = (!playerState.playing) ? 'play-pause-btn fa-solid fa-circle-play' : 'play-pause-btn fa-solid  fa-circle-pause'
-    if (!song  || !playerState || !station) return (<h1> loading</h1>) //TODO: only hidden song details
+    if (!song  || !playerState || !station) return  //TODO: only hidden song details
     return (
         <section className="app-playerS">
             {console.log('my station', station.songs[songIdx].title)}
