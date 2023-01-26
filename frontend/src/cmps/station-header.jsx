@@ -113,7 +113,7 @@ export function StationHeader({ station, playStation, handleChange, deleteStatio
                     <svg role="img" height="32" width="32" aria-hidden="true" viewBox="0 0 24 24" data-encore-id="icon" className="Svg-sc-ytk21e-0 uPxdw"><path d="M4.5 13.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm15 0a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm-7.5 0a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
                         <path d="M4.5 13.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm15 0a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm-7.5 0a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path></svg>
                 </button>
-                <button onClick={onDeleteStation}>Delete station</button>
+                <button className="btn-delete-station" onClick={onDeleteStation}>X</button>
             </div>
             {/* {isEdit && <div className="station-editor-modal">
                 <h2>Edit details</h2>

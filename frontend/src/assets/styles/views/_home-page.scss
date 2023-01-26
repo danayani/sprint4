@@ -6,7 +6,7 @@
     background-color: $bgcmain;
     color: $txtfill;
     overflow-y: auto;
-    padding-top: 50px;
+    padding-top: rem(50px);
 }
 
 .main-home-container {
@@ -16,7 +16,7 @@
         color: $txtselected;
         font-size: 2.15em;
         font-family: $txtf;
-        padding-left: 15px;
-        margin-top: 21px;
+        padding-left: rem(15px);
+        margin-top: rem(21px);
     }
 }

@@ -40,11 +40,12 @@ export function AppHeader() {
 
     function onSearch() {
         console.log('onSearch', txtSearchKey)
-        youtubeService.getServerSideSearch(txtSearchKey).then(res => {
-            let songs = res
-            console.log('youtubeService', songs)
-            // setSearchSongs(songs)
-        })
+        navigate(`/search/?searchKey=${txtSearchKey}`)
+        // youtubeService.getServerSideSearch(txtSearchKey)
+        //     .then(res => {
+        //         let songs = res
+        //         // setSearchSongs(songs)
+        //     })
     }
 
     return (

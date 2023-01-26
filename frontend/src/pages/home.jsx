@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { useSelector } from "react-redux"
 
 import { FirstStationList } from '../cmps/first-stations-list'
+import { Loader } from '../cmps/loader.jsx'
 import { SecondStationList } from '../cmps/second-stations-list'
 import { loadStations } from '../store/station/station.actions.js'
 
@@ -20,7 +21,7 @@ export function Home() {
         else if (currHour > 22 || currHour < 6) return 'Good night'
     }
 
-    if (!stations) return <div><img src='../assets/icons/loader.svg' /></div>
+    if (!stations) return <Loader />
     return (
         <main className='main-home-container'>
             <div className="home-stations-container">

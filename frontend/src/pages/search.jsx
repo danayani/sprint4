@@ -1,11 +1,35 @@
 // import { youtubeService } from "../services/youtube.service";
 import { NavLink } from "react-bootstrap";
+import { useParams,useLocation, useNavigate } from "react-router-dom";
 import { stationService } from "../services/station.service.js";
+import { youtubeService } from "../services/youtube.service.js";
 // import { utilService } from "../services/util.service";
 
 
 export function Search() {
+    // const params = useParams()
+    const location = useLocation()
+    console.log('location',location)
+    console.log('locationkey',location.key)
+
+    const song = location.search
+    console.log('song',song)
+
+    let songKey = song.slice(11)
+    console.log('songKey',songKey)
+
+    youtubeService.getServerSideSearch(songKey)
+    .then(res=>{
+        let songs = res.items
+        console.log('songs from search',songs)
+    })
+    .catch((err)=>{
+        console.log('cannot find that particular song')
+    })
+
+
     const geners = stationService.getMusicGeners()
+
 
 
     function onFilterCardClicked(filterByGener) {}
@@ -26,6 +50,7 @@ export function Search() {
 
                 )}
             </section>
+            
 
         </main>
     )
