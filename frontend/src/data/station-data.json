@@ -33,7 +33,7 @@
         ],
         "songs": [
             {
-                "id": "v=YykjpeuMNEk",
+                "id": "YykjpeuMNEk",
                 "title": "My Universe",
                 "createdBy": "Coldplay",
                 "url": "https://www.youtube.com/watch?v=YykjpeuMNEk&list=RDEMuf6htoZivPnz-ZIwGU0dDA&index=1",
@@ -43,13 +43,10 @@
                     "userfullname": ""
                 },
                 "addedAt": 162521765262,
-                "duration": {
-                    "min": 4,
-                    "sec": 21
-                }
+                "duration": 55
             },
             {
-                "id": "v=1G4isv_Fylg",
+                "id": "1G4isv_Fylg",
                 "title": "Paradise",
                 "createdBy": "Coldplay",
                 "url": "https://www.youtube.com/watch?v=1G4isv_Fylg&list=RDEMuf6htoZivPnz-ZIwGU0dDA&index=2",
