@@ -17,6 +17,7 @@ export async function loadPlayer(player) {
 export async function loadCurrPlayingStation(stationId, songIndex = 0) {
     try {
         store.dispatch({ type: LOAD_STATION_FOR_PLAYER, station: await stationService.getById(stationId) })
+        getActionPlayPausePlayer()
         return
     } catch (err) {
         console.error(err)

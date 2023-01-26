@@ -38,7 +38,7 @@ export function AppPlayer() {
     }
 
     const classPlayPause = (!playerState.playing) ? 'play-pause-btn fa-solid fa-circle-play' : 'play-pause-btn fa-solid  fa-circle-pause'
-    if ( !playerState) return  //TODO: only hidden song details
+    if (!playerState) return  //TODO: only hidden song details
     return (
         <section className="app-playerS">
             {/* {console.log('my station', station.songs[songIdx].title)} */}
@@ -58,10 +58,9 @@ export function AppPlayer() {
             }
             <div className="app-playerS flex">
                 <div className="song-details flex">
-                    <img className="song-img" src='../assets/img/rh.jpg' />
+                    <img className="song-img" src={station?.songs[songIdx].imgUrl} />
                     <p className="song-title">{station?.songs[songIdx].title}</p>
                 </div>
-
                 <div className="player-actions-container grid justify-center">
                     <div className="player-actions flex">
                         <button className='btn-action-player btn-shuffle-songs' onClick={onShuffleSongs} >
