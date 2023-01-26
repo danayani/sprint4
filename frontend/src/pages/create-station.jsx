@@ -28,7 +28,7 @@ export function CreateStation() {
     function handleChange(ev) {
         ev.preventDefault()
         // console.log('ev :>> ', ev)
-        const { target }  = ev
+        const { target } = ev
         // console.log('target', target)
         const { value } = target
         // console.log('value :>> ', value)
@@ -59,8 +59,8 @@ export function CreateStation() {
 
     // console.log('CRAETED STATION', station)
 
-    
-    
+
+
     // Add debouncer (here?)
     async function onSearch(ev) {
         // console.log('on serch ev', ev)
@@ -75,14 +75,14 @@ export function CreateStation() {
         })
     }
 
-console.log('songsFromSearch', songsFromSearch)
-if (songsFromSearch) console.log('imgUrl', songsFromSearch[0].snippet.thumbnails.default.url)
+    console.log('songsFromSearch', songsFromSearch)
+    if (songsFromSearch) console.log('imgUrl', songsFromSearch[0].snippet.thumbnails.default.url)
 
-if (!station) <Loader />
-return (
-        <section className="create-station-container">
+    if (!station) <Loader />
+    return (
+        <section className="create-station-container" >
             {/* <StationDetails onAddSong={onAddSong} /> */}
-            <h1>Station details</h1>
+            <h1> Station details</h1 >
 
             <div className='create-station-search-input'>
                 <button className="search-key-btn">
@@ -92,50 +92,52 @@ return (
                 <form onSubmit={onSearch}>
                     <input className='search-key-input' type="text"
                         name="searchKey"
-                        value={txtSearchKey} 
+                        value={txtSearchKey}
                         placeholder={txtSearchPlaceHolder}
                         onChange={handleChange} />
                 </form>
             </div>
-            {songsFromSearch &&
+            {
+                songsFromSearch &&
                 <div className="search-results">
                     {songsFromSearch.map((song, idx) => {
-                       return (
+                        return (
                             <article role="button" key={song.id}>
-                            <li key={song.id} className="song-list-li grid">
-                                
-                                <section>
-                                    <div >
-                                        <img className="song-img" src={song.snippet.thumbnails.default.url} alt="Magnifing glass" />
-                                    </div>
+                                <li key={song.id} className="song-list-li grid">
+
                                     <section>
-                                        <p>{song.title}</p>
+                                        <div >
+                                            <img className="song-img" src={song.snippet.thumbnails.default.url} alt="Magnifing glass" />
+                                        </div>
+                                        <section>
+                                            <p>{song.title}</p>
+                                        </section>
                                     </section>
-                                </section>
-                                <div className="song-list-artist">
-                                    {song.snippet.channelTitle}
-                                </div>
-                                <div className="song-list-add-date">
-                                    {utilService.randomPastTime()}
-                                </div>
-                                <button className="add-song-btn" onClick={() => onAddSong(song)}>Add</button>
-                            </li>
-                        </article>
-                        )}
-                    // <div className="search-result" key={song.id}>
-                    //     {<button className="add-song-btn" onClick={() => onAddSong(song)}>+</button>}
-                    //     <img src={song.imgUrl} onClick={() => console.log('set song to play')} />
-                    //     <div className="song-details">
-                    //         <h4>{song.title} </h4>
-                    //         <p>{song.channelTitle}</p>
-                    //     </div>
-                    // </div>
+                                    <div className="song-list-artist">
+                                        {song.snippet.channelTitle}
+                                    </div>
+                                    <div className="song-list-add-date">
+                                        {utilService.randomPastTime()}
+                                    </div>
+                                    <button className="add-song-btn" onClick={() => onAddSong(song)}>Add</button>
+                                </li>
+                            </article>
+                        )
+                    }
+                        // <div className="search-result" key={song.id}>
+                        //     {<button className="add-song-btn" onClick={() => onAddSong(song)}>+</button>}
+                        //     <img src={song.imgUrl} onClick={() => console.log('set song to play')} />
+                        //     <div className="song-details">
+                        //         <h4>{song.title} </h4>
+                        //         <p>{song.channelTitle}</p>
+                        //     </div>
+                        // </div>
                     )}
                 </div>
             }
             <div className="songs-from-search">
 
             </div>
-        </section>
+        </section >
     )
 }
