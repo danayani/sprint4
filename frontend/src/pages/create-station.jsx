@@ -83,7 +83,7 @@ export function CreateStation() {
     return (
         <section className="create-station-container">
             {/* <StationDetails onAddSong={onAddSong} /> */}
-            <h1>Station details</h1>
+            <h1> Station details</h1 >
 
             <div className='create-station-search-input'>
                 <button className="search-key-btn">

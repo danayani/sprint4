@@ -20,7 +20,7 @@ export function SongList({ station, onRemoveSong, addToLikedSong, onPlaySong }) 
     }
 
 
-    if (!songs || !songs.length) <h1></h1>
+    // if (!songs || !songs.length) <h1></h1>
     return (
         <div className="song-list-container" >
             <header className="header-song-list grid">
