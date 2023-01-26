@@ -15,7 +15,7 @@ export function AppPlayer() {
     const songIdx = useSelector(storeState => storeState.playerModule.currSongIdx)
 
     const [song, setSong] = useState(null)
-    const [songDuration, setSongDuration] = useState({duration: 0, curr : 0, untilDone : 0})
+    const [songDuration, setSongDuration] = useState({ duration: 0, curr: 0, untilDone: 0 })
 
     useEffect(() => {
         loadSong()
@@ -35,16 +35,34 @@ export function AppPlayer() {
         console.log('shuffleSongs')
     }
 
-    function onReady(x) {
-        console.log('onReady', x)
-        const text = x.getDuration()
-        console.log('getDuration()',text )
+    function onReady(songProp) {
+        console.log('onReady', songProp)
+        loadSongDuration(songProp)
+        // const text = x.getDuration()
+        // console.log('getDuration()',songProp )
         console.log(songDuration)
         // console.log('seekTo()', x.seekTo(230)) //go to were you want, in sec
 
     }
 
-    function loadSongDuration(){
+    function loadSongDuration(songProp) {
+        let durSong = songProp.getDuration()
+        console.log('loadSongDuration', durSong)
+        setSongDuration({
+            duration: durSong, curr: 0, untilDone: 0
+        })
+        console.log('songDuration', songDuration)
+    }
+
+    function onPreviosSong(){
+        if(!station) return
+        
+        if(songIdx === 0){
+            songIdx = 0 //need to start play from 1sec
+        }
+        else {
+            console.log('station.songs', station.songs)
+        }
 
     }
 
@@ -77,7 +95,7 @@ export function AppPlayer() {
                         <button className='btn-action-player btn-shuffle-songs' onClick={onShuffleSongs} >
                             <i className="action-btn fa-solid fa-shuffle"></i>
                         </button>
-                        <button className='btn-action-player' >
+                        <button className='btn-action-player' onClick={onPreviosSong}>
                             <i className="action-btn fa-solid fa-backward-step"></i>
                         </button>
                         <button className="player-btn-play-pause" onClick={getActionPlayPausePlayer} >
