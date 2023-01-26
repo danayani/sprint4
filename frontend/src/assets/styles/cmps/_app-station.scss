@@ -1,22 +1,22 @@
 .home-stations-container {
 
     .first-station-cards {
-        padding: 11px 14px;
+        padding: rem(11px) rem(14px);
         width: 100%;
         display: grid;
         grid-template-columns: repeat(3, minmax(240px, 1fr));
-        grid-gap: 16px 86px;
+        grid-gap: rem(16px) rem(86px);
     }
 
 
     .first-station-card {
-        height: 80px;
-        width: 340px;
+        height: rem(80px);
+        width: rem(340px);
         cursor: pointer;
         display: flex;
         align-items: center;
         text-align: center;
-        border-radius: 4px;
+        border-radius: rem(4px);
         border: 0;
         background-color: $bgcplaylistup;
         // overflow: hidden;
@@ -28,45 +28,45 @@
     }
     
     .song-img {
-        margin-right: 15px;
-        width: 80px;
-        height: 80px;
+        margin-right: rem(15px);
+        width: rem(80px);
+        height: rem(80px);
         border-radius: 5% 0% 5% 0%;
         object-fit: cover;
         aspect-ratio: 1/1;
     }
 
     h3 {
-        margin-top: 10px;
+        margin-top: rem(10px);
         display: inline-block;
-        line-height: 10px;
+        line-height: rem(10px);
     }
 
     .second-station-container {
-        margin-top: 32px;
-        margin-left: 15px;
+        margin-top: rem(32px);
+        margin-left: rem(15px);
     }
 
     h2 {
         display: inline-block;
         color: $txtselected;
-        font-size: 24px;
-        margin-bottom: 26px;
+        font-size: rem(24px);
+        margin-bottom: rem(26px);
     }
 
     .second-station-cards {
         display: flex;
         flex-wrap: wrap;
-        gap: 23px;
+        gap: rem(23px);
         flex-direction: row;
     }
 
     .second-station-card {
-        margin-bottom: 35px;
+        margin-bottom: rem(35px);
         background-color: $bgcplaylistdown;
-        border-radius: 5px;
-        height: 284px;
-        width: 195px;
+        border-radius: rem(5px);
+        height: rem(284px);
+        width: rem(195px);
 
 
          &:hover{
@@ -76,14 +76,15 @@
 
         .song-card-img {
             padding: 15px;
-            height: 192px;
-            width: 192px;
+            height: rem(192px);
+            width: rem(192px);
             object-fit: cover;
             aspect-ratio: 1/1;
+            border-radius: 21px;
         }
 
         h3{
-            padding-left:17px;
+            padding-left:1.21em;
             margin-top: 0;
         }
 

@@ -1,5 +1,5 @@
 .top-bar-container {
-    height: 64px;
+    height: rem(64px);
     background-color: $bgcmain;
     grid-area: app-header;
     grid-column: 2 / -1;
@@ -9,25 +9,25 @@
     opacity: 90%;
     display: flex;
     // position: fixed;
-    height: 64px;
+    height: rem(64px);
     width: 100%;
 }
 
 .go-btn {
-    height: 30px;
-    width: 30px;
+    box-sizing: unset;
+    height: rem(30px);
+    width: rem(30px);
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
     background-color: $bgcmain;
-    margin-top: 12px;
-    box-sizing: unset;
+    margin-top: rem(12px);
 }
 
 button svg {
-    height: 17px;
-    width: 17px;
+    height: 1.21em;
+    width: 1.21em;
     fill: white;
 }
 
@@ -37,14 +37,14 @@ svg.search-key {
 }
 
 .searchInput-container {
-    width: 364px;
-    height: 40px;
+    width: rem(364px);
+    height: rem(40px);
     background-color: white;
     display: flex;
     justify-content: flex-start;
     flex-direction: row;
-    border-radius: 20px;
-    margin-top: 9px;
+    border-radius: rem(20px);
+    margin-top: rem(9px);
 }
 
 .search-key-icon {
@@ -54,13 +54,13 @@ svg.search-key {
 .search-key-btn {
     background-color: transparent;
     color: black;
-    font-size: 20px;
+    font-size: rem(20px);
     // transform: scale(-1, 1);
 }
 
 .search-key-input {
-    font-size: 14px;
-    width: 250px;
+    font-size: rem(14px);
+    width: rem(250px);
     background-color: transparent;
     border: 0px solid;
     // font-family: ; need new one

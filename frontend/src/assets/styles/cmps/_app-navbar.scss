@@ -1,7 +1,7 @@
 .side-navbar {
     height: 100%;
     background-color: $bgcnav;
-    width: 235px;
+    width: rem(235px);
     grid-area: navbar;
     grid-row: 1 / -1;
     font-weight: bold;
@@ -20,7 +20,7 @@ ul {
     }
 
     &.nav-bar {
-        padding-left: 25px;
+        padding-left: rem(25px);
         padding-top: 0.75em;
     }
 }
@@ -31,7 +31,7 @@ svg {
 
 .fa-solid {
     color: $txtselected;
-    font-size: 27px;
+    font-size: rem(27px);
     cursor: pointer;
 }
 
@@ -62,23 +62,23 @@ svg {
     align-items: center;
 
     &-logo {
-        font-size: 25px;
+        font-size: rem(25px);
 
         .logo-img {
             // vertical-align: middle;
-            height: 38px;
-            width: 38px;
+            height: rem(38px);
+            width: rem(38px);
             border-radius: 50%;
             object-fit: cover;
             aspect-ratio: 1/1;
-            margin-right: 5px;
+            margin-right: rem(5px);
         }
     }
 }
 
 span {
     color: $txtfill;
-    margin-left: 10px;
+    margin-left: rem(10px);
 
     &:hover {
         transition: 0.7s;
@@ -87,6 +87,5 @@ span {
 }
 
 .icon {
-    margin-right: 15px;
-    
+    margin-right: rem(15px);
 }
