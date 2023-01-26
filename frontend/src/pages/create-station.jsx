@@ -71,6 +71,7 @@ export function CreateStation() {
         youtubeService.getServerSideSearch(txtSearchKey).then(res => {
             let songs = res.items
             // console.log('youtubeService', songs)
+
             setSongsFromSearch(songs)
         })
     }
@@ -98,24 +99,42 @@ export function CreateStation() {
                         onChange={handleChange} />
                 </form>
             </div>
-            {songsFromSearch &&
-                <div className="search-results-songs-list">
-                    {songsFromSearch.map((song) => {
+            {
+                songsFromSearch &&
+                <div className="search-results">
+                    {songsFromSearch.map((song, idx) => {
                         return (
-                            <article role="button" key={song.eatg}>
-                                <li key={song.id.videoId} className="song-list-li grid">
-                                    <img className="song-list-img" src={song.snippet.thumbnails.default.url} alt="Magnifing glass" />
-                                    <p className="song-list-title">{song.title}</p>
-                                    <p className="song-list-artist">{song.snippet.channelTitle}</p>
-                                    <p className="song-list-description"> {song.snippet.title}</p>
+                            <article key={song.id.videoId} role="button">
+                                <li className="song-list-li grid">
+                                    <section>
+                                        <div>
+                                            <img className="song-img" src={song.snippet.thumbnails.default.url} alt="Magnifing glass" />
+                                        </div>
+                                        <section>
+                                            <p>{song.title}</p>
+                                        </section>
+                                    </section>
+                                    <div className="song-list-artist">
+                                        {song.snippet.channelTitle}
+                                    </div>
+                                    <div className="song-list-add-date">
+                                        {utilService.randomPastTime()}
+                                    </div>
                                     <button className="add-song-btn" onClick={() => onAddSong(song)}>Add</button>
                                 </li>
                             </article>
                         )
-                    }
-                    )}
+                    })}
                 </div>
             }
         </section>
     )
 }
+// <div className="search-result" key={song.id}>
+//     {<button className="add-song-btn" onClick={() => onAddSong(song)}>+</button>}
+//     <img src={song.imgUrl} onClick={() => console.log('set song to play')} />
+//     <div className="song-details">
+//         <h4>{song.title} </h4>
+//         <p>{song.channelTitle}</p>
+//     </div>
+// </div>

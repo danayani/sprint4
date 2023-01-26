@@ -2,26 +2,45 @@
     background-color: black;
 
     &.header-song-list {
-        grid-template-columns: 3fr 20fr 5fr 5fr 7.5fr;
-
+        // grid-template-columns: 3fr 20fr 5fr 5fr 7.5fr;
+        grid-template-columns:3fr 20fr 5fr 5fr 1fr 5.5fr 1fr;
     }
 
     & ul {
         padding: 0px;
     }
+
+    & .song-details {
+        &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+
+    & .song-action {
+        background-color: transparent;
+        color: white;
+        font-size: 20px;
+        color:white; 
+        width: 50px;
+        height: 50px;
+        align-items: center;
+        &:hover {
+            font-weight: bold;
+            font-size: 25px;
+        }
+    }
 }
 
 .header-song-list {
-    grid-template-columns: 3fr 20fr 5fr 5fr 7.5fr;
+    grid-template-columns:3fr 20fr 5fr 5fr 1fr 5.5fr 1fr;
 }
 
 .song-list-li {
-    grid-template-columns: 3fr 20fr 5fr 5fr 7.5fr;
-    cursor: pointer;
+    grid-template-columns:3fr 20fr 5fr 5fr 1fr 5.5fr 1fr;
+    
 
-    &:hover {
-        text-decoration: underline;
-    }
+    // &:hover {}
 }
 
 .song-list-img {
