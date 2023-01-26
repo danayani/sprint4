@@ -17,10 +17,14 @@
 
 .song-list-li {
     grid-template-columns: 3fr 20fr 5fr 5fr 7.5fr;
+    cursor: pointer;
 
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
-.song-list-img{
+.song-list-img {
     width: rem(40px);
     height: rem(40px);
 }

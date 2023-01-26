@@ -20,8 +20,8 @@ export function AppPlayer() {
     }, [station, songIdx])
 
     function loadSong() {
-        if(!station) return
-        const songUrl = station.songs.map(song => song.url)[songIdx || 0]  
+        if (!station) return
+        const songUrl = station.songs.map(song => song.url)[songIdx || 0]
         setSong(songUrl)
     }
 
@@ -38,7 +38,7 @@ export function AppPlayer() {
     }
 
     const classPlayPause = (!playerState.playing) ? 'play-pause-btn fa-solid fa-circle-play' : 'play-pause-btn fa-solid  fa-circle-pause'
-    if (!song  || !playerState || !station) return  //TODO: only hidden song details
+    if (!song || !playerState || !station) return  //TODO: only hidden song details
     return (
         <section className="app-playerS">
             {console.log('my station', station.songs[songIdx].title)}
@@ -65,20 +65,28 @@ export function AppPlayer() {
                         <button className='btn-action-player btn-shuffle-songs' onClick={onShuffleSongs} >
                             <i className="action-btn fa-solid fa-shuffle"></i>
                         </button>
-                        <i className="action-btn fa-solid fa-backward-step"></i>
+                        <button className='btn-action-player' >
+                            <i className="action-btn fa-solid fa-backward-step"></i>
+                        </button>
                         <button className="player-btn-play-pause" onClick={getActionPlayPausePlayer} >
                             <i className={classPlayPause}></i>
                         </button>
-                        <i className="action-btn fa-solid fa-backward-step btn-next"></i>
-                        <i className="action-btn fa-solid fa-repeat"></i>
+                        <button className='btn-action-player' >
+                            <i className="action-btn fa-solid fa-backward-step btn-next"></i>
+                        </button>
+                        <button className='btn-action-player' >
+                            <i className="action-btn fa-solid fa-repeat"></i>
+                        </button>
                     </div>
-                    <div className="player-range-container">
+                    <div className="player-range-container flex">
+                        <span>00:00</span>
                         <div className="player-range flex">
                             <input className="player-range-action range" type="range" />
                             {/* <div class="progress-bar" role="progressbar" aria-valuenow="70"
                                 aria-valuemin="0" aria-valuemax="100" style="width:70%">
                             </div> */}
                         </div>
+                        <span>00:00</span>
                     </div>
 
                 </div>
