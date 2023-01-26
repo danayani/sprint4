@@ -19,10 +19,11 @@ export function AppPlayer() {
 
     const [song, setSong] = useState(null)
     const [songShuffle, setSongShuffle] = useState(null)
-    const [songDuration, setSongDuration] = useState({ duration: 0, curr: 0, untilDone: 0 })
-    const[timelineSongTimeoutId, setTimelineSongTimeoutId] = useState()
+    const [timelineSongTimeoutId, setTimelineSongTimeoutId] = useState()
 
-    
+    const [songDuration, setSongDuration] = useState({ duration: 0, curr: '00:00', untilDone: '00:00' })
+
+
 
     useEffect(() => {
         loadSong()
@@ -46,15 +47,19 @@ export function AppPlayer() {
     }
 
     function onReady(songProp) {
-        console.log(songProp)
+        console.log('new song ******', songProp)
         startTimelinsSong(songProp)
-        // loadSongDuration
         // console.log('seekTo()', x.seekTo(230)) //go to were you want, in sec
 
     }
 
     function startTimelinsSong(songProp) {
-        console.log('songDuration', songDuration)
+        console.log('songProp 123456', songProp.getDuration())
+
+        let dur = songProp.getDuration()
+        setSongDuration(prev => ({ ...prev, duration: dur, untilDone: dur }))
+
+
 
         // let durSong = songProp.getDuration()
         // setTimelineSongTimeoutId(setTimeout(updateSongTimeline, 100))
@@ -140,14 +145,14 @@ export function AppPlayer() {
                         </button>
                     </div>
                     <div className="player-range-container flex">
-                        <span>00:00</span>
+                        <span>{songDuration.curr}</span>
                         <div className="player-range flex">
                             <input className="player-range-action range" type="range" />
                             {/* <div class="progress-bar" role="progressbar" aria-valuenow="70"
                                 aria-valuemin="0" aria-valuemax="100" style="width:70%">
                             </div> */}
                         </div>
-                        <span>00:00</span>
+                        <span>{ utilService.getTimeFromSeconds(songDuration.untilDone)}</span>
                     </div>
 
                 </div>

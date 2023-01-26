@@ -30,35 +30,6 @@
         ],
         "songs": [
             {
-                "id": "YykjpeuMNEk",
-                "title": "My Universe",
-                "createdBy": "Coldplay",
-                "url": "https://www.youtube.com/watch?v=YykjpeuMNEk&list=RDEMuf6htoZivPnz-ZIwGU0dDA&index=1",
-                "imgUrl": "https://i.scdn.co/image/ab67616d00004851f60a9b7e2abafc38da31f575",
-                "addedBy": {
-                    "_id": "",
-                    "userfullname": ""
-                },
-                "addedAt": 162521765262,
-                "duration": 55
-            },
-            {
-                "id": "1G4isv_Fylg",
-                "title": "Paradise",
-                "createdBy": "Coldplay",
-                "url": "https://www.youtube.com/watch?v=1G4isv_Fylg&list=RDEMuf6htoZivPnz-ZIwGU0dDA&index=2",
-                "imgUrl": "https://i.scdn.co/image/ab67616d00004851de0cd11d7b31c3bd1fd5983d",
-                "addedBy": {
-                    "_id": "",
-                    "userfullname": ""
-                },
-                "addedAt": 162521755262,
-                "duration": {
-                    "min": 4,
-                    "sec": 21
-                }
-            },
-            {
                 "id": "VPRjCeoBqrI",
                 "title": "A Sky Full Of Stars",
                 "createdBy": "Coldplay",
