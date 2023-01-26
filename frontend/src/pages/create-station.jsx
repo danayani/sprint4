@@ -71,13 +71,14 @@ export function CreateStation() {
         youtubeService.getServerSideSearch(txtSearchKey).then(res => {
             let songs = res.items
             // console.log('youtubeService', songs)
+            
             setSongsFromSearch(songs)
         })
     }
 
     console.log('songsFromSearch', songsFromSearch)
     if (songsFromSearch) console.log('imgUrl', songsFromSearch[0].snippet.thumbnails.default.url)
-
+    
     if (!station) <Loader />
     return (
         <section className="create-station-container" >
@@ -102,36 +103,28 @@ export function CreateStation() {
                 <div className="search-results">
                     {songsFromSearch.map((song, idx) => {
                         // return (
-                            <article role="button" key={song.id}>
-                                <li className="song-list-li grid">
+                        <article key={song.id} role="button">
+                            {console.log('song.id',song.id.videoId)}
+                            <li className="song-list-li grid">
+                                <section>
+                                    <div>
+                                        <img className="song-img" src={song.snippet.thumbnails.default.url} alt="Magnifing glass" />
+                                    </div>
                                     <section>
-                                        <div>
-                                            <img className="song-img" src={song.snippet.thumbnails.default.url} alt="Magnifing glass" />
-                                        </div>
-                                        <section>
-                                            <p>{song.title}</p>
-                                        </section>
+                                        <p>{song.title}</p>
                                     </section>
-                                    <div className="song-list-artist">
-                                        {song.snippet.channelTitle}
-                                    </div>
-                                    <div className="song-list-add-date">
-                                        {utilService.randomPastTime()}
-                                    </div>
-                                    <button className="add-song-btn" onClick={() => onAddSong(song)}>Add</button>
-                                </li>
-                            </article>
+                                </section>
+                                <div className="song-list-artist">
+                                    {song.snippet.channelTitle}
+                                </div>
+                                <div className="song-list-add-date">
+                                    {utilService.randomPastTime()}
+                                </div>
+                                <button className="add-song-btn" onClick={() => onAddSong(song)}>Add</button>
+                            </li>
+                        </article>
                         // )
-                    }
-                        // <div className="search-result" key={song.id}>
-                        //     {<button className="add-song-btn" onClick={() => onAddSong(song)}>+</button>}
-                        //     <img src={song.imgUrl} onClick={() => console.log('set song to play')} />
-                        //     <div className="song-details">
-                        //         <h4>{song.title} </h4>
-                        //         <p>{song.channelTitle}</p>
-                        //     </div>
-                        // </div>
-                    )}
+                    })}
                 </div>
             }
             <div className="songs-from-search">
@@ -140,3 +133,11 @@ export function CreateStation() {
         </section >
     )
 }
+// <div className="search-result" key={song.id}>
+//     {<button className="add-song-btn" onClick={() => onAddSong(song)}>+</button>}
+//     <img src={song.imgUrl} onClick={() => console.log('set song to play')} />
+//     <div className="song-details">
+//         <h4>{song.title} </h4>
+//         <p>{song.channelTitle}</p>
+//     </div>
+// </div>
