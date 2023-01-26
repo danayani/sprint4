@@ -4,7 +4,7 @@ import { utilService } from './util.service.js'
 const STORAGE_KEY = 'youTubeDB'
 const YOUTUBE_PLAYLIST_ITEMS_API = 'https://www.googleapis.com/youtube/v3/playlistItems'
 const YOUTUBE_LIST_SEARCH_API = 'https://www.googleapis.com/youtube/v3/search'
-const YOUTUBE_API_KEY = 'AIzaSyChgR_8uhRdBdWcZnrNpR0_xqYk_nwZu60'
+const YOUTUBE_API_KEY = 'AIzaSyDMkZ45uPWfL86Lq_GO89Ayl63v-H6Q7qU'
 var gYouTube = utilService.loadFromStorage(STORAGE_KEY)
 
 export const youtubeService = {
@@ -49,9 +49,27 @@ async function getServerSideProps() {
 async function getServerSideSearch(searchKey) {
     console.log('youtube.service is searching for: ', searchKey)
     const res = await fetch(`${YOUTUBE_LIST_SEARCH_API}?part=snippet&order=viewCount&maxResults=6&type=video&q=${searchKey}}&key=${YOUTUBE_API_KEY}`)
-    console.log('res', res)
     const data = await res.json()
-    return data
+    console.log(data)
+    const songs = data.items.map(song =>({
+        
+        "id": utilService.makeId(),
+        "title": song.snippet.channelTitle,
+        "createdBy": "",
+        "url": `https://www.youtube.com/watch?v=${song.id.videoId}`,
+        "imgUrl": song.snippet.thumbnails.default.url,
+        "addedBy": {
+            "_id": "",
+            "userfullname": ""
+        },
+        "addedAt": Date.now(),
+        "duration": {
+            "min": 4,
+            "sec": 21
+        }
+    
+    }))
+    return songs
 }
 
 

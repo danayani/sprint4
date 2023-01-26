@@ -54,6 +54,10 @@ async function save(station) {
 //     return savedMsg
 // }
 
+function getNewStation(){
+    _id: utilService.makeId()
+    
+}
 
 function getEmptyFilterBy() {
     return {
