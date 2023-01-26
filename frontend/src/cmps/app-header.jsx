@@ -38,7 +38,8 @@ export function AppHeader() {
         setTxtSearchKey(value)
     }
 
-    function onSearch() {
+    function onSearch(ev) {
+        ev.preventDefault()
         console.log('onSearch', txtSearchKey)
         navigate(`/search/?searchKey=${txtSearchKey}`)
         // youtubeService.getServerSideSearch(txtSearchKey)

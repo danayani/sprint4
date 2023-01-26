@@ -1,10 +1,11 @@
 import { useEffect, useState, useRef } from "react"
 // import { useNavigate } from "react-router-dom"
-
+import { loadFromStorage,saveToStorage } from "../services/storage.service.js"
 import { utilService } from "../services/util.service.js"
-import { addStation } from "../store/station/station.actions.js"
+// import { addStation } from "../store/station/station.actions.js"
 import { stationService } from "../services/station.service.js"
 import { youtubeService } from "../services/youtube.service.js"
+// import {StationHeader} from "../cmps/station-header.jsx"
 // import { StationDetails } from "../pages/station-details.jsx"
 import { Loader } from "../cmps/loader.jsx"
 
@@ -20,56 +21,65 @@ export function CreateStation() {
     const [stationSongs, setStationSongs] = useState(null)
 
     useEffect(() => {
-        const newStation = (stationService.getEmptyStation())
-        console.log('newStation',newStation)
+        // saveNewStation()
+        const newStation = stationService.getEmptyStation()
+        console.log('newStation', newStation)
         setStation(newStation)
     }, [])
 
-    function handleChange({target}) {
-        // ev.preventDefault()
-        let { value } = target
-        // setTxtSearchPlaceHolder(value)
+    // async function saveNewStation() {
+    //     const newStation = stationService.getEmptyStation()
+    //     // newStation.utilService.makeId()
+    //     setStation(newStation)
+    // }
+
+    function handleChange({ target }) {
+        let { value, field } = target
+        setStation(prevStation => ({ ...prevStation, [field]: value }))
         setTxtSearchKey(value)
     }
 
-    // async function saveNewStation(station) {
-    //     station = await addStation(station)
-    //     setStation(station)
+    // async function getSearchReasults(val) {
+    //     if (val.length === 0) {
+    //         setSongsFromSearch(null)
+    //         return
+    //     }
+    //     const results = await youtubeService.getServerSideSearch(val)
+    //     setSongsFromSearch(results)
     // }
 
-    async function getSearchReasults(val) {
-        if (val.length === 0) {
-            setSongsFromSearch(null)
-            return
-        }
-        const results = await youtubeService.getServerSideSearch(val)
-        setSongsFromSearch(results)
-    }
-
     function onAddSong(song) {
-        let station = []
-        station.push(song)
-        console.log('station',station)
-        console.log('station id: ',station.id)
+        // let station = []
+        station.songs.push(song)
+        console.log('station', station)
+        console.log('station id: ', station._id)
         setStation(station)
-        // setStationSongs(prevSongs => [...prevSongs, song])
     }
 
-    async function onSearch() {
-        youtubeService.getServerSideSearch(txtSearchKey).then(songs=> {
-            console.log('songs',songs)
-            setSongsFromSearch(songs)
-        })
+    async function onSearch(ev) {
+        ev.preventDefault()
+        let searchData = utilService.loadFromStorage(txtSearchKey)
+        if(!searchData || !searchData.length){
+            youtubeService.getServerSideSearch(txtSearchKey).then(songs => {
+                console.log('songs come from api', songs)
+                searchData = songs
+                utilService.saveToStorage(txtSearchKey,searchData)
+                setSongsFromSearch(searchData)
+            })
+        }
+        setSongsFromSearch(searchData)
     }
-   
-    // console.log('songsFromSearch', songsFromSearch)
-    // if (songsFromSearch) console.log('imgUrl', songsFromSearch[0].snippet.thumbnails.default.url)
-    // if (songsFromSearch) console.log('imgUrl', songsFromSearch[0].etag)
+
+    // function onSaveStation() {
+    //     onSaveStation(station)
+    // }
 
     if (!station) <Loader />
     return (
         <section className="create-station-container">
-            {/* <StationDetails onAddSong={onAddSong} /> */}
+            {/* <StationHeader station={station} /> */}
+            {/* <StationDetails onSaveStation={onSaveStation} /> */}
+            {/* <StationDetails /> */}
             <h1> Station details</h1 >
 
             <div className='create-station-search-input'>

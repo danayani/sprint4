@@ -7,7 +7,10 @@
             "min": "00",
             "sec": "00"
         },
-        "gener": ["Rock"],
+        "gener": [
+            "Rock",
+            "Alternative"
+        ],
         "tags": [
             "Rock",
             "Happy",
@@ -189,18 +192,21 @@
     {
         "_id": "5cksxjas29xjsa8xjsa8jxs09",
         "name": "Funk&Soul Classics",
-        "imgUrl":"https://i.scdn.co/image/ab67706f00000003e0113d1b6e16f0813877a9f9", 
+        "imgUrl": "https://i.scdn.co/image/ab67706f00000003e0113d1b6e16f0813877a9f9",
         "duration": {
             "min": "",
             "sec": ""
         },
-        "gener": ["Funk","Soul"],
+        "gener": [
+            "Funk",
+            "Soul"
+        ],
         "tags": [
             "Funk",
             "Happy",
             "Back in the day",
             "Party Starter"
-                ],
+        ],
         "createdBy": {
             "_id": "NoOneKnowThisId",
             "fullname": "By Melody",
@@ -228,7 +234,7 @@
                     "userfullname": ""
                 },
                 "addedAt": 162521765262,
-                "duration":  {
+                "duration": {
                     "min": 3,
                     "sec": 15
                 }
@@ -331,7 +337,12 @@
             "min": "",
             "sec": ""
         },
-        "gener": ["Funk","House"],
+        "gener": [
+            "Workout",
+            "Workout Music",
+            "Active",
+            "Sport"
+        ],
         "tags": [
             "funk",
             "happy",
@@ -345,8 +356,14 @@
             "imgUrl": "../assets/icons.logo.jpg"
         },
         "likedByUsers": [
-            {"_id": "", "username": ""},
-            {"_id": "", "username": ""}    
+            {
+                "_id": "",
+                "username": ""
+            },
+            {
+                "_id": "",
+                "username": ""
+            }
         ],
         "songs": [
             {
@@ -406,6 +423,7 @@
             }
         ]
     },
+
     {
         "_id": "5cksxjas89xksa8xjsa8jxs09",
         "name": "All New Rock",
@@ -414,7 +432,10 @@
             "min": "",
             "sec": ""
         },
-        "gener": ["Rock"],
+        "gener": [
+            "Rock",
+            "New"
+        ],
         "tags": [
             "Rock",
             "Roll"
@@ -425,8 +446,14 @@
             "imgUrl": "../assets/icons.logo.jpg"
         },
         "likedByUsers": [
-            {"_id": "", "username": ""},
-            {"_id": "", "username": ""}    
+            {
+                "_id": "",
+                "username": ""
+            },
+            {
+                "_id": "",
+                "username": ""
+            }
         ],
         "songs": [
             {
@@ -469,11 +496,10 @@
         ]
     },
 
-
     {
         "_id": "5cksxjas89xdtfnxjsa8jxs09",
         "name": "Rock and Roll Classics",
-        "imgUrl": "https://mosaic.scdn.co/300/ab67616d0000b27320ee3e8",
+        "imgUrl": "https://i.scdn.co/image/ab67616d00001e022bf64c48814eae089cb3778f",
         "duration": {
             "min": "",
             "sec": ""
@@ -494,9 +520,31 @@
                 "createdBy": "Led Zeppelin",
                 "url": "https://www.youtube.com/watch?v=qnpZCB9BUIw&ab_channel=GootieMusic",
                 "imgUrl": "https://i.ytimg.com/vi/4_iC0MyIykM/mqdefault.jpg",
-                "addedBy": "{minimal-user}",
-                "addedAt": 162521765262,
-                "duration": ""
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521543763,
+                "duration": {
+                    "min": 8,
+                    "sec": 3
+                }
+            },
+            {
+                "id": "9qTdxotGHtY",
+                "title": "johnny B.Goode",
+                "createdBy": "Chuck Berry",
+                "url": "https://www.youtube.com/watch?v=9qTdxotGHtY",
+                "imgUrl": "https://i.scdn.co/image/ab67616d0000485120eda594a1aae93a737845b9",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521543763,
+                "duration": {
+                    "min": 2,
+                    "sec": 41
+                }
             },
             {
                 "id": "J0D1ty9Qbl4",
@@ -504,19 +552,79 @@
                 "createdBy": "The Rolling Stones",
                 "url": "https://www.youtube.com/watch?v=J0D1ty9Qbl4&ab_channel=SexyEmotion",
                 "imgUrl": "https://i.ytimg.com/vi/mUkfiLjooxs/mqdefault.jpg",
-                "addedBy": "{minimal-user}",
-                "addedAt": 162521755712,
-                "duration": ""
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521543763,
+                "duration": {
+                    "min": 3,
+                    "sec": 23
+                }
             },
             {
                 "id": "ssQPYVGaJ04",
                 "title": "Highway to Hell",
                 "createdBy": "AC/DC",
                 "url": "https://www.youtube.com/watch?v=ssQPYVGaJ04&ab_channel=Spanhok",
-                "imgUrl": "rh.png",
-                "addedBy": "{minimal-user}",
-                "addedAt": 162521743262,
-                "duration": ""
+                "imgUrl": "https://i.scdn.co/image/ab67616d0000485151c02a77d09dfcd53c8676d0",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521543763,
+                "duration": {
+                    "min": 3,
+                    "sec": 28
+                }
+            },
+            {
+                "id": "dxcYtweIzrA",
+                "title": "Jailhouse Rock",
+                "createdBy": "Elvis Presley",
+                "url": "https://www.youtube.com/watch?v=dxcYtweIzrA",
+                "imgUrl": "https://i.scdn.co/image/ab67616d0000485120ee3e86e17f17239bef1f76",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521543763,
+                "duration": {
+                    "min": 2,
+                    "sec": 26
+                }
+            },
+            {
+                "id": "w0NpyIv14Gc",
+                "title": "Roll Over Beethoven",
+                "createdBy": "The Beatles",
+                "url": "https://www.youtube.com/watch?v=w0NpyIv14Gc",
+                "imgUrl": "https://i.scdn.co/image/ab67616d000048513a65f12aa49f4c598bd6915d",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521543763,
+                "duration": {
+                    "min": 2,
+                    "sec": 55
+                }
+            },
+            {
+                "id": "lg7TagiUARc",
+                "title": "Surfin' Usa",
+                "createdBy": "The Beach Boys",
+                "url": "https://www.youtube.com/watch?v=lg7TagiUARc",
+                "imgUrl": "https://i.scdn.co/image/ab67616d000048517cb33b8fab5302942e6a78fb",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521543763,
+                "duration": {
+                    "min": 2,
+                    "sec": 29
+                }
             }
         ],
         "msgs": [
@@ -527,11 +635,111 @@
             }
         ]
     },
+
+    {
+        "_id": "tfnxj5cksxjas89xdsa8jxs09",
+        "name": "Latin Party 2023",
+        "imgUrl": "https://i.scdn.co/image/ab67706c0000da84d12b27718a588ed664dc916f",
+        "duration": {
+            "min": "",
+            "sec": ""
+        },
+        "gener": [
+            "Latin",
+            "Party",
+            "Party Starter",
+            "Happy"
+        ],
+        "tags": [
+            "Happy",
+            "Party",
+            "Dance",
+            "Samba"
+        ],
+        "createdBy": {
+            "_id": "NoOneKnowThisId",
+            "fullname": "By Melody",
+            "imgUrl": ""
+        },
+        "likedByUsers": [
+            {
+                "_id": "",
+                "userfullname": ""
+            },
+            {
+                "_id": "",
+                "userfullname": ""
+            }
+        ],
+        "songs": [
+            {
+                "id": "euJUmcrXDrY",
+                "title": "Baila Baila Baila",
+                "createdBy": "Ozuna",
+                "url": "https://www.youtube.com/watch?v=euJUmcrXDrY",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851231d5e78037b8063fb7edc0a",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521543763,
+                "duration": {
+                    "min": 2,
+                    "sec": 44
+                }
+            },
+            {
+                "id": "ebb8r-MPJUo",
+                "title": "Pepas",
+                "createdBy": "Farruko",
+                "url": "https://www.youtube.com/watch?v=ebb8r-MPJUo",
+                "imgUrl": "https://i.scdn.co/image/ab67616d000048514239a6aa89738d8f798168ad",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521543763,
+                "duration": {
+                    "min": 4,
+                    "sec": 54
+                }
+            }, 
+            {
+                "id": "YfRSOIxVDvA",
+                "title": "Oye",
+                "createdBy": "San Pach",
+                "url": "https://www.youtube.com/watch?v=YfRSOIxVDvA",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851131c9323b96786b06a8d8752",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521543763,
+                "duration": {
+                    "min": 2,
+                    "sec": 45
+                }
+            }
+        ],      
+                "msgs": [
+                {
+                "id": "m101",
+                "from": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "txt": "Manish-Ma-Neshama?"
+                }
+        ]
+    },
+
     {
         "_id": "5cksxjasbmnfsa8xjsa8jxs09",
         "name": "Rockin' In The 70's",
         "duration": "",
-        "gener": ["Rock"],
+        "gener": [
+            "Rock"
+        ],
         "tags": [
             "Rock",
             "Roll"
@@ -589,7 +797,9 @@
         "_id": "5cksxjas89xksa8xjsa812345",
         "name": "70's Rock",
         "duration": "",
-        "gener": ["Rock"],
+        "gener": [
+            "Rock"
+        ],
         "tags": [
             "Rock",
             "Roll"
@@ -647,7 +857,9 @@
         "_id": "5cksxj123456sa8xjsa8jxs09",
         "name": "Rock n Roll",
         "duration": "",
-        "gener": ["Rock"],
+        "gener": [
+            "Rock"
+        ],
         "tags": [
             "Rock",
             "Roll"
@@ -705,7 +917,9 @@
         "_id": "5cksxj123789sa8xjsa8jxs09",
         "name": "Get The Rocking Started",
         "duration": "",
-        "gener": ["Rock"],
+        "gener": [
+            "Rock"
+        ],
         "tags": [
             "Rock",
             "Roll"

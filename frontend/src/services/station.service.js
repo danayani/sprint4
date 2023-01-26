@@ -8,6 +8,7 @@ const STATION_KEY = 'stationDB'
 const stationsData = data
 
 _createStations()
+let newStationNum = 1
 
 export const stationService = {
     query,
@@ -54,10 +55,6 @@ async function save(station) {
 //     return savedMsg
 // }
 
-function getNewStation(){
-    _id: utilService.makeId()
-    
-}
 
 function getEmptyFilterBy() {
     return {
@@ -65,10 +62,11 @@ function getEmptyFilterBy() {
     }
 }
 
+
 function getEmptyStation() {
     return {
         "_id": utilService.makeId(),
-        "name": "My Playlist",
+        "name": _getNewStationName(),
         "imgUrl": "https://www.clipartmax.com/png/middle/69-697655_music-music-note-music-notes-musical-note-notes-music-icon-grey-png.png",
         "tags": [],
         "createdBy": {
@@ -83,6 +81,7 @@ function getEmptyStation() {
     }
 }
 
+//private funcs
 function _createStations() {
     let stations = utilService.loadFromStorage(STATION_KEY)
     if (!stations || !stations.length) {
@@ -90,6 +89,12 @@ function _createStations() {
         utilService.saveToStorage(STATION_KEY, stations)
     }
     // return stations
+}
+
+function _getNewStationName() {
+    const newName = `My Playlist #${newStationNum}`
+    newStationNum++
+    return newName
 }
 
 function getMusicGeners(){
