@@ -4,15 +4,6 @@ import { store } from '../store.js'
 import { LOAD_STATION_FOR_PLAYER, PLAY_PAUSE_PLAYER, NEXT_SONG, PREVIOUS_SONG, REMOVE_SONG_PLAYER } from './player.reducer.js'
 // LOAD_SONGS,
 
-export async function loadPlayer(player) {
-    try {
-        console.log('player from actions:', player);
-        // store.dispatch({ type: SET_PLAYER, player })
-    } catch (err) {
-        console.error(err)
-        throw err
-    }
-}
 
 export async function loadCurrPlayingStation(stationId, songIndex = 0) {
     try {

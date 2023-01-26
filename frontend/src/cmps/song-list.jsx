@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { stationService } from "../services/station.service.js"
 import { LOAD_STATION_FOR_PLAYER } from "../store/player/player.reducer.js";
 
-
 export function SongList({ station, onRemoveSong, addToLikedSong, onPlaySong }) {
 
     const [songs, setSongs] = useState([])
@@ -14,11 +13,6 @@ export function SongList({ station, onRemoveSong, addToLikedSong, onPlaySong }) 
     function loadSongs() {
         setSongs(station.songs)
     }
-
-    function onPlay(songId) {
-        // LOAD_STATION_FOR_PLAYER(stationId, songId)
-    }
-
 
     // if (!songs || !songs.length) <h1></h1>
     return (
