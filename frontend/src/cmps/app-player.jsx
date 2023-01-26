@@ -38,22 +38,24 @@ export function AppPlayer() {
     }
 
     const classPlayPause = (!playerState.playing) ? 'play-pause-btn fa-solid fa-circle-play' : 'play-pause-btn fa-solid  fa-circle-pause'
-    if (!song || !playerState || !station) return  //TODO: only hidden song details
+    if ( !playerState) return  //TODO: only hidden song details
     return (
         <section className="app-playerS">
-            {console.log('my station', station.songs[songIdx].title)}
-            < ReactPlayer className="player-video"
-                height="1px"
-                url={song}
-                pip={playerState.pip}
-                playing={playerState.playing}
-                controls={playerState.controls}
-                volume={playerState.volume}
-                muted={playerState.muted}
-                duration={playerState.duration}
-                loop={playerState.loop}
-                onReady={onReady}
-            />
+            {/* {console.log('my station', station.songs[songIdx].title)} */}
+            {song &&
+                < ReactPlayer className="player-video"
+                    height="1px"
+                    url={song}
+                    pip={playerState.pip}
+                    playing={playerState.playing}
+                    controls={playerState.controls}
+                    volume={playerState.volume}
+                    muted={playerState.muted}
+                    duration={playerState.duration}
+                    loop={playerState.loop}
+                    onReady={onReady}
+                />
+            }
             <div className="app-playerS flex">
                 <div className="song-details flex">
                     <img className="song-img" src='../assets/img/rh.jpg' />
