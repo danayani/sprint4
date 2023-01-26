@@ -12,7 +12,7 @@ export const userService = {
     logout,
     signup,
     getLoggedinUser,
-    getUserLikedStationsLength,
+    // getUserLikedStationsLength,
     saveLocalUser,
     getUsers,
     getById,
@@ -22,13 +22,13 @@ export const userService = {
 
 window.userService = userService
 
-function getUserLikedStationsLength(userId) {
-    const user =  getById(userId).
-    then(res =>  {
-        console.log('res :>> ', res.data)
-    })
-    return user
-}
+// function getUserLikedStationsLength(userId) {
+//     const user =  getById(userId).
+//     then(res =>  {
+//         console.log('res :>> ', res.data)
+//     })
+//     return user
+// }
 
 function getUsers() {
     return storageService.query(STORAGE_KEY_USERS)

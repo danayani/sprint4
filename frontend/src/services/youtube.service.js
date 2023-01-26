@@ -4,7 +4,9 @@ import { utilService } from './util.service.js'
 const STORAGE_KEY = 'youTubeDB'
 const YOUTUBE_PLAYLIST_ITEMS_API = 'https://www.googleapis.com/youtube/v3/playlistItems'
 const YOUTUBE_LIST_SEARCH_API = 'https://www.googleapis.com/youtube/v3/search'
-const YOUTUBE_API_KEY = 'AIzaSyDMkZ45uPWfL86Lq_GO89Ayl63v-H6Q7qU'
+const YOUTUBE_API_KEY = 'AIzaSyB5v55g9cBOMEeKdzXBXnwlJJS_Nw_95xU'
+// const YOUTUBE_API_KEY = 'AIzaSyBzTuzz0vYVUZbDJ9IbfEZHuOksCnlsQO8'
+// const YOUTUBE_API_KEY = 'AIzaSyDMkZ45uPWfL86Lq_GO89Ayl63v-H6Q7qU'
 var gYouTube = utilService.loadFromStorage(STORAGE_KEY)
 
 export const youtubeService = {
