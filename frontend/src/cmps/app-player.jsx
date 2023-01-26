@@ -5,6 +5,7 @@ import ProgressBar from 'react-bootstrap/ProgressBar'
 import { playerService } from '../services/player.service'
 import { utilService } from '../services/util.service'
 import { getActionPlayPausePlayer } from '../store/player/player.action'
+import { func } from 'prop-types'
 
 
 export function AppPlayer() {
@@ -14,7 +15,7 @@ export function AppPlayer() {
     const songIdx = useSelector(storeState => storeState.playerModule.currSongIdx)
 
     const [song, setSong] = useState(null)
-    const [songDuration, setSongDuration] = useState(null)
+    const [songDuration, setSongDuration] = useState({duration: 0, curr : 0, untilDone : 0})
 
     useEffect(() => {
         loadSong()
@@ -36,8 +37,14 @@ export function AppPlayer() {
 
     function onReady(x) {
         console.log('onReady', x)
-        console.log('getDuration()', x.getDuration())
+        const text = x.getDuration()
+        console.log('getDuration()',text )
+        console.log(songDuration)
         // console.log('seekTo()', x.seekTo(230)) //go to were you want, in sec
+
+    }
+
+    function loadSongDuration(){
 
     }
 

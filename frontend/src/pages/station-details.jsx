@@ -8,7 +8,7 @@ import loader from "../assets/icons/loader.svg"
 import { addStation, updateStation, removeStation, loadCurrStation } from "../store/station/station.actions"
 import { Loader } from "../cmps/loader"
 import { loadCurrPlayingStation } from "../store/player/player.action.js"
-import { SET_SONG_IDX } from "../store/player/player.reducer.js";
+import { SET_SONG_IDX, LOAD_STATION_FOR_PLAYER  } from "../store/player/player.reducer.js";
 
 export function StationDetails() {
 
@@ -63,6 +63,7 @@ export function StationDetails() {
     }
 
     function onPlaySong(songIdx) {
+        playStation()
         dispatch({type:SET_SONG_IDX, songIdx})
     }
 
