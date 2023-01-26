@@ -18,7 +18,7 @@
     // justify-content: flex-start;
     align-items: center;
 
-    & .song-img{
+    & .song-img {
         border: 0px;
     }
 }
@@ -55,6 +55,14 @@
 .action-btn {
     font-size: 1rem;
     background-color: rgb(18 18 18);
+
+    & .btn-action-active {
+        color: $bgcplay;
+    }
+}
+
+.btn-action-active {
+    color: $bgcplay;
 }
 
 .player-range-action {

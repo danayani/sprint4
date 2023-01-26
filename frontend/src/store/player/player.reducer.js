@@ -7,12 +7,15 @@ export const LOAD_STATION_FOR_PLAYER = 'LOAD_STATION_FOR_PLAYER'
 export const VOLUME_CHANGE = 'VOLUME_CHANGE'
 export const SHUFFLE_SONGS = 'SHUFFLE_SONGS'
 export const SET_SONG_IDX = 'SET_SONG_IDX'
+export const SET_REPEAT_SONG = 'SET_REPEAT_SONG'
+export const SET_SHUFFLE_SONG = 'SET_REPEAT_SONG'
 
 const initialState = {
     currPlayingStation: null,
     playerState: playerService.getDefaultState(),
     currSongIdx: 0
 }
+
 
 export function playerReducer(state = initialState, action) {
     let playerState
@@ -30,8 +33,14 @@ export function playerReducer(state = initialState, action) {
         case VOLUME_CHANGE:
             return
         case SET_SONG_IDX:
-            return {...state, currSongIdx:action.songIdx}
-
+            console.log('reducer old', state.currSongIdx, 'new', action.songIdx)
+            return { ...state, currSongIdx: action.songIdx }
+        case SET_REPEAT_SONG:
+            playerState = { ...state.playerState, loop: !state.playerState.loop }
+            return { ...state, playerState }
+        case SET_SHUFFLE_SONG:
+            playerState = { ...state.playerState, loop: !state.playerState.loop }
+            return { ...state, playerState }
 
         default:
             return state
