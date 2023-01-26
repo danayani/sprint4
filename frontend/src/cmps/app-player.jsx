@@ -6,11 +6,12 @@ import ProgressBar from 'react-bootstrap/ProgressBar'
 import { playerService } from '../services/player.service'
 import { utilService } from '../services/util.service'
 import { getActionPlayPausePlayer, loadCurrPlayingStation } from '../store/player/player.action'
-import { SET_SONG_IDX, SET_REPEAT_SONG } from '../store/player/player.reducer'
+import { SET_SONG_IDX, SET_REPEAT_SONG, SET_VOLUME } from '../store/player/player.reducer'
 import { func } from 'prop-types'
 
 
 export function AppPlayer() {
+    const dispatch = useDispatch()
 
     const playerState = useSelector(storeState => storeState.playerModule.playerState)
     const station = useSelector(storeState => storeState.playerModule.currPlayingStation)
@@ -19,7 +20,7 @@ export function AppPlayer() {
     const [song, setSong] = useState(null)
     const [songShuffle, setSongShuffle] = useState(null)
     const [songDuration, setSongDuration] = useState({ duration: 0, curr: 0, untilDone: 0 })
-    const dispatch = useDispatch()
+    const[timelineSongTimeoutId, setTimelineSongTimeoutId] = useState()
 
     useEffect(() => {
         loadSong()
@@ -31,9 +32,10 @@ export function AppPlayer() {
         setSong(songUrl)
     }
 
-    function handleVolumeChange(ev) {
-        console.log('volume changed', ev.target.value)
-        
+    function handleVolumeChange({ target }) {
+        let volume = target.value
+        console.log('volume changed', volume)
+        dispatch({ type: SET_VOLUME, volume })
     }
 
     function onShuffleSongs() {
@@ -42,18 +44,29 @@ export function AppPlayer() {
     }
 
     function onReady(songProp) {
-        loadSongDuration(songProp)
+        console.log(songProp)
+        startTimelinsSong(songProp)
+        // loadSongDuration
         // console.log('seekTo()', x.seekTo(230)) //go to were you want, in sec
 
     }
 
-    function loadSongDuration(songProp) {
-        let durSong = songProp.getDuration()
-        console.log('loadSongDuration', durSong)
-        setSongDuration({
-            duration: durSong, curr: 0, untilDone: 0
-        })
+    function startTimelinsSong(songProp) {
         console.log('songDuration', songDuration)
+
+        // let durSong = songProp.getDuration()
+        // setTimelineSongTimeoutId(setTimeout(updateSongTimeline, 100))
+    }
+
+    function updateSongTimeline() {
+
+        // setSongDuration({
+        //     duration: durSong,
+        //     curr: curr+1,
+        //     untilDone: curr - duration
+        // })
+        console.log('songDuration curr', songDuration.curr)
+
     }
 
     function onPreviosSong() {
@@ -82,7 +95,7 @@ export function AppPlayer() {
 
     const classPlayPause = (!playerState.playing) ? 'play-pause-btn fa-solid fa-circle-play' : 'play-pause-btn fa-solid  fa-circle-pause'
     const classPlayRepeat = (!playerState.loop) ? 'action-btn fa-solid fa-repeat' : 'action-btn fa-solid fa-repeat btn-action-active'
-    if (!playerState) return 
+    if (!playerState) return
     return (
         <section className="app-playerS">
             {/* {console.log('my station', station.songs[songIdx].title)} */}

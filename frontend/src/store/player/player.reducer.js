@@ -4,11 +4,12 @@ export const PLAY_PAUSE_PLAYER = 'PLAY_PLAYER'
 // export const LOAD_SONGS = 'LOAD_SONGS'
 export const MOVE_SONG = 'MOVE_SONG'
 export const LOAD_STATION_FOR_PLAYER = 'LOAD_STATION_FOR_PLAYER'
-export const VOLUME_CHANGE = 'VOLUME_CHANGE'
+export const SET_VOLUME = 'SET_VOLUME'
 export const SHUFFLE_SONGS = 'SHUFFLE_SONGS'
 export const SET_SONG_IDX = 'SET_SONG_IDX'
 export const SET_REPEAT_SONG = 'SET_REPEAT_SONG'
 export const SET_SHUFFLE_SONG = 'SET_REPEAT_SONG'
+
 
 const initialState = {
     currPlayingStation: null,
@@ -28,12 +29,11 @@ export function playerReducer(state = initialState, action) {
             console.log('NEXT_SONG')
             return
         case LOAD_STATION_FOR_PLAYER:
-            console.log('LOAD_STATION_FOR_PLAYER')
             return { ...state, currPlayingStation: action.station }
-        case VOLUME_CHANGE:
-            return
+        case SET_VOLUME:
+            playerState = { ...state.playerState, volume: action.volume }
+            return { ...state, playerState }
         case SET_SONG_IDX:
-            console.log('reducer old', state.currSongIdx, 'new', action.songIdx)
             return { ...state, currSongIdx: action.songIdx }
         case SET_REPEAT_SONG:
             playerState = { ...state.playerState, loop: !state.playerState.loop }
