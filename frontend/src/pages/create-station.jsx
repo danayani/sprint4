@@ -15,7 +15,7 @@ export function CreateStation() {
     const [txtSearchPlaceHolder, setTxtSearchPlaceHolder] = useState('What do you want to listen to ?')
     const [txtSearchKey, setTxtSearchKey] = useState('')
 
-    const [songsFromSearch, setsongsFromSearch] = useState(null)
+    const [songsFromSearch, setSongsFromSearch] = useState(null)
 
     const [station, setStation] = useState(null)
     const [stationSongs, setStationSongs] = useState(null)
@@ -25,20 +25,31 @@ export function CreateStation() {
         saveNewStation(newStation)
     }, [])
 
+    function handleChange(ev) {
+        ev.preventDefault()
+        // console.log('ev :>> ', ev)
+        const { target }  = ev
+        // console.log('target', target)
+        const { value } = target
+        // console.log('value :>> ', value)
+        setTxtSearchPlaceHolder(value)
+        setTxtSearchKey(value)
+    }
+
     async function saveNewStation(station) {
         station = await addStation(station)
         setStation(station)
-        console.log('station added:>> ', station)
+        // console.log('station added:>> ', station)
     }
 
     async function getSearchReasults(val) {
         if (val.length === 0) {
-            setsongsFromSearch(null)
+            setSongsFromSearch(null)
             return
         }
         const results = await youtubeService.getServerSideSearch(val)
-        console.log('results from search', results)
-        setsongsFromSearch(results)
+        // console.log('results from search', results)
+        setSongsFromSearch(results)
     }
 
     function onAddSong(song) {
@@ -46,35 +57,29 @@ export function CreateStation() {
         handleChange('songs', [...stationSongs, song])
     }
 
-    console.log('CRAETED STATION', station)
+    // console.log('CRAETED STATION', station)
 
-
-    // const updateDebounceInput = utilService.debounce((text) => {
-    //     setTxtSearchKey(text)
-    // },500)
-
-    function handleChange({ target }) {
-        const { value } = target
-        setTxtSearchPlaceHolder(value)
-        setTxtSearchKey(value)
-        // updateDebounceInput(value)
-    }
     
     
-    // Added debouncer
-    async function onSearch() {
-        console.log('onSearch', txtSearchKey)
+    // Add debouncer (here?)
+    async function onSearch(ev) {
+        // console.log('on serch ev', ev)
+        // console.log('object :>> ', ev.target);
+        // console.log('object :>> ', ev.target.value);
+        ev.preventDefault()
+        // console.log('onSearch', txtSearchKey)
         youtubeService.getServerSideSearch(txtSearchKey).then(res => {
-            let songs = res
-            console.log('youtubeService', songs)
+            let songs = res.items
+            // console.log('youtubeService', songs)
+            setSongsFromSearch(songs)
         })
-        // setSearchSongs()
     }
 
 console.log('songsFromSearch', songsFromSearch)
+if (songsFromSearch) console.log('imgUrl', songsFromSearch[0].snippet.thumbnails.default.url)
 
-    if (!station) <Loader />
-    return (
+if (!station) <Loader />
+return (
         <section className="create-station-container">
             {/* <StationDetails onAddSong={onAddSong} /> */}
             <h1>Station details</h1>
@@ -98,26 +103,22 @@ console.log('songsFromSearch', songsFromSearch)
                        return (
                             <article role="button" key={song.id}>
                             <li key={song.id} className="song-list-li grid">
-                                <div className="btn-song-list-play">
-                                    {idx + 1}
-                                </div>
+                                
                                 <section>
                                     <div >
-                                        <img className="song-list-img" src={song.imgUrl} alt="Magnifing glass" />
+                                        <img className="song-img" src={song.snippet.thumbnails.default.url} alt="Magnifing glass" />
                                     </div>
                                     <section>
                                         <p>{song.title}</p>
                                     </section>
                                 </section>
                                 <div className="song-list-artist">
-                                    {song.createdBy}
+                                    {song.snippet.channelTitle}
                                 </div>
                                 <div className="song-list-add-date">
-                                    {song.addedAt}
+                                    {utilService.randomPastTime()}
                                 </div>
-                                <div className="song-list-duration">
-                                    00:00
-                                </div>
+                                <button className="add-song-btn" onClick={() => onAddSong(song)}>Add</button>
                             </li>
                         </article>
                         )}

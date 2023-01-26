@@ -47,7 +47,7 @@ async function getAvgImgColor(url) {
 
 
 
-function makeId(length = 6) {
+function makeId(length = 25) {
     var txt = ''
     var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
 
