@@ -71,7 +71,7 @@ export function CreateStation() {
         youtubeService.getServerSideSearch(txtSearchKey).then(res => {
             let songs = res.items
             // console.log('youtubeService', songs)
-            
+
             setSongsFromSearch(songs)
         })
     }
@@ -103,28 +103,27 @@ export function CreateStation() {
                 songsFromSearch &&
                 <div className="search-results">
                     {songsFromSearch.map((song, idx) => {
-                        // return (
-                        <article key={song.id} role="button">
-                            {console.log('song.id',song.id.videoId)}
-                            <li className="song-list-li grid">
-                                <section>
-                                    <div>
-                                        <img className="song-img" src={song.snippet.thumbnails.default.url} alt="Magnifing glass" />
-                                    </div>
+                        return (
+                            <article key={song.id.videoId} role="button">
+                                <li className="song-list-li grid">
                                     <section>
-                                        <p>{song.title}</p>
+                                        <div>
+                                            <img className="song-img" src={song.snippet.thumbnails.default.url} alt="Magnifing glass" />
+                                        </div>
+                                        <section>
+                                            <p>{song.title}</p>
+                                        </section>
                                     </section>
-                                </section>
-                                <div className="song-list-artist">
-                                    {song.snippet.channelTitle}
-                                </div>
-                                <div className="song-list-add-date">
-                                    {utilService.randomPastTime()}
-                                </div>
-                                <button className="add-song-btn" onClick={() => onAddSong(song)}>Add</button>
-                            </li>
-                        </article>
-                        // )
+                                    <div className="song-list-artist">
+                                        {song.snippet.channelTitle}
+                                    </div>
+                                    <div className="song-list-add-date">
+                                        {utilService.randomPastTime()}
+                                    </div>
+                                    <button className="add-song-btn" onClick={() => onAddSong(song)}>Add</button>
+                                </li>
+                            </article>
+                        )
                     })}
                 </div>
             }
