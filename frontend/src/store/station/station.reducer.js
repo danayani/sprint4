@@ -1,13 +1,13 @@
+import { stationService } from "../../services/station.service"
 
 export const SET_STATIONS = 'SET_STATIONS'
 export const ADD_STATION = 'ADD_STATION'
 export const UPDATE_STATION = 'UPDATE_STATION'
 export const REMOVE_STATION = 'REMOVE_STATION'
-export const UPDATE_CURR_STATION = 'UPDATE_CURR_STATION'
 
 const initialState = {
-    stations: null,
-    currStation: null
+    stations: [],
+    filterBy: stationService.getDefaultFilter()
 }
 
 export function stationReducer(state = initialState, action) {
@@ -24,8 +24,6 @@ export function stationReducer(state = initialState, action) {
         case UPDATE_STATION:
             stations = state.stations.map(station => (station._id === action.station._id) ? action.station : station)
             return { ...state, stations }
-        case UPDATE_CURR_STATION:
-            return { ...state, currStation: action.currStation }
         default:
             return { ...state }
     }

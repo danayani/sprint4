@@ -1,12 +1,14 @@
 
 import { stationService } from '../../services/station.service'
-import { ADD_STATION, REMOVE_STATION, SET_STATIONS, UPDATE_STATION, UPDATE_CURR_STATION } from "./station.reducer.js"
+import { ADD_STATION, REMOVE_STATION, SET_STATIONS, UPDATE_STATION } from "./station.reducer.js"
 import { store } from '../store'
+
 
 
 // Action Creators:
 export async function loadStations(filterBy) {
     try {
+        console.log('loadStations in store')
         const stations = await stationService.query(filterBy)
         store.dispatch({ type: SET_STATIONS, stations })
     } catch (err) {
@@ -58,12 +60,12 @@ export async function removeStation(stationId) {
     }
 }
 
-export async function loadCurrStation (stationId) {
-    try {
-        const currStation = await stationService.getById(stationId)
-        store.dispatch({type: UPDATE_CURR_STATION, currStation})
-    } catch (err) {
-        console.log('Cannot load currStations', err)
-        throw err
-    }
-}
+// export async function loadCurrStation (stationId) {
+//     try {
+//         const currStation = await stationService.getById(stationId)
+//         store.dispatch({type: UPDATE_CURR_STATION, currStation})
+//     } catch (err) {
+//         console.log('Cannot load currStations', err)
+//         throw err
+//     }
+// }
