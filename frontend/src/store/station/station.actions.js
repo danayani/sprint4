@@ -19,7 +19,7 @@ export async function addStation(station) {
     try {
         const newStation = await stationService.save(station)
         store.dispatch({ type: ADD_STATION, station: newStation })
-        console.log('add station in store', newStation)
+        console.log('add station in store', )
         return newStation
     } catch (err) {
         console.error('Unable to save station', err)

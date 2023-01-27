@@ -9,9 +9,11 @@ import { SongList } from "../cmps/song-list.jsx"
 import { Loader } from "../cmps/loader.jsx"
 import { func } from "prop-types"
 import { addStation } from "../store/station/station.actions.js"
-
+import { UPDATE_STATION } from "../store/station/station.reducer.js"
+import { useDispatch } from "react-redux"
 
 export function CreateStation() {
+    const dispatch = useDispatch()
 
     const [station, setStation] = useState(null)
     const stations = useSelector((storeState) => storeState.stationModule.stations)
@@ -27,10 +29,10 @@ export function CreateStation() {
     function loadNewStation() {
         const newStation = stationService.getEmptyStation()
         setStation(newStation)
-        addStation(newStation)
+        addStation(newStation) //to station store
 
         console.log('newStation ♥♥♥', newStation)
-        if(stations) console.log('all ♥♥♥', stations)
+        if (stations) console.log('all ♥♥♥', stations)
     }
 
     function handleChange({ target }) {
@@ -40,10 +42,23 @@ export function CreateStation() {
     }
 
     function onAddSong(song) {
-        station.songs.push(song)
+
+        console.log('new song added : the song :', song)
+        // let newSongs = songs.push(song)
+        // station.songs.push(song)
+
+        setStation({...station, songs: station.songs.push(song)})
+        console.log('new song added', station)
+        
+        dispatch({ type: UPDATE_STATION, station })
+        // addStation(station) // update to station store
+
+        //need to UD_DATE_STATION with the new song list
+
+        // station.songs.push(song)
         // console.log('station', station)
         // console.log('station id: ', station._id)
-        setStation(station)
+        // setStation(station)
         setCheck(true)
     }
 
@@ -70,8 +85,8 @@ export function CreateStation() {
         <section className="create-station-container">
             {console.log('check wtf ', check)}
             {station && <StationHeader station={station} />}
-            {/* {check && <SongList station={station} />} */}
-            {/* station.songs?.length > 0 && */}
+            {station?.songs && <Loader />}
+            {/* station.songs?.length > 0 && <SongList station={station} />*/}
 
             <h1> Station details</h1 >
 
