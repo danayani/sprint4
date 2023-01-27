@@ -4,7 +4,6 @@ import { useNavigate, useParams } from "react-router-dom"
 import { SongList } from '../cmps/song-list'
 import { StationHeader } from '../cmps/station-header'
 import { stationService } from '../services/station.service'
-import loader from "../assets/icons/loader.svg"
 import { addStation, updateStation, removeStation, loadCurrStation } from "../store/station/station.actions"
 import { Loader } from "../cmps/loader"
 import { loadCurrPlayingStation } from "../store/player/player.action.js"
@@ -19,7 +18,6 @@ export function StationDetails() {
 
     useEffect(() => {
         if (stationId) loadStation()
-        // else 
 
     }, [stationId])
 
@@ -55,11 +53,12 @@ export function StationDetails() {
     }
 
     async function onRemoveSong(songId) {
-        if (station.songs.length === 0) return
-        else {
-            const updatedStation = await stationService.remove(station._id, songId)
-            setStation(updatedStation)
-        }
+        console.log('onRemoveSong',songId )
+        // if (station.songs.length === 0) return
+        // else {
+        //     const updatedStation = await stationService.remove(station._id, songId)
+        //     setStation(updatedStation)
+        // }
     }
 
 
@@ -73,7 +72,6 @@ export function StationDetails() {
     }
 
     if (!station) return <Loader />
-    // if (!station) return <div><img src={loader} /></div>
     return (
         <section className="station-details">
             <StationHeader station={station} playStation={playStation} handleChange={handleChange} deleteStation={deleteStation} updateStation={updateStation} onSaveStation={onSaveStation} />

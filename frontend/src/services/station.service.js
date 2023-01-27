@@ -16,12 +16,16 @@ export const stationService = {
     save,
     remove,
     getEmptyStation,
-    getMusicGeners
+    getMusicGeners,
+    getDefaultFilter
 }
 // window.cs = stationService
 
+function getDefaultFilter() {
+    return { likedByUsers: '', gener: '' }
+}
 
-async function query(filterBy = getEmptyFilterBy) {
+async function query(filterBy = getDefaultFilter()) {
     return storageService.query(STATION_KEY)
     // return httpService.get(STORAGE_KEY, filterBy)
 }
@@ -56,16 +60,9 @@ async function save(station) {
 // }
 
 
-function getEmptyFilterBy() {
-    return {
-        searchInput: "",
-    }
-}
-
-
 function getEmptyStation() {
     return {
-        "_id": utilService.makeId(),
+        "_id": "",
         "name": _getNewStationName(),
         "imgUrl": "https://www.clipartmax.com/png/middle/69-697655_music-music-note-music-notes-musical-note-notes-music-icon-grey-png.png",
         "duration": {
@@ -73,6 +70,7 @@ function getEmptyStation() {
             "sec": "00"
         },
         "tags": [],
+        "gener" :[],
         "createdBy": {
           _id: "",
           username: "guest",
