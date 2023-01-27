@@ -1,6 +1,5 @@
 import { useEffect } from 'react'
 import { useSelector } from "react-redux"
-
 import { FirstStationList } from '../cmps/first-stations-list'
 import { Loader } from '../cmps/loader.jsx'
 import { SecondStationList } from '../cmps/second-stations-list'
