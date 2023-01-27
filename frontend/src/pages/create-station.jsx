@@ -12,21 +12,20 @@ export function CreateStation() {
 
     const [txtSearchPlaceHolder, setTxtSearchPlaceHolder] = useState('What do you want to listen to ?')
     const [txtSearchKey, setTxtSearchKey] = useState('')
-
     const [songsFromSearch, setSongsFromSearch] = useState(null)
-
     const [station, setStation] = useState(null)
-    // const [stationSongs, setStationSongs] = useState(null)
-
+    const [check, setCheck] = useState(false)
+    
     useEffect(() => {
         const newStation = stationService.getEmptyStation()
         console.log('newStation', newStation)
+        
         setStation(newStation)
     }, [])
 
     function handleChange({ target }) {
         let { value, field } = target
-        setStation(prevStation => ({ ...prevStation, [field]: value }))
+        // setStation(prevStation => ({ ...prevStation, [field]: value }))
         setTxtSearchKey(value)
     }
 
@@ -35,6 +34,7 @@ export function CreateStation() {
         console.log('station', station)
         console.log('station id: ', station._id)
         setStation(station)
+        setCheck(true)
     }
 
     async function onSearch(ev) {
@@ -55,11 +55,14 @@ export function CreateStation() {
         onSaveStation(station)
     }
 
-    if (!station) <Loader />
+    if (!station || station === null) <Loader />
     return (
         <section className="create-station-container">
+            {console.log('check wtf ', check)}
             {station && <StationHeader station={station} />}
-            {/* {station.songs.length > 0 && <SongList />} */}
+            {check && <SongList station={station} />}
+            {/* station.songs?.length > 0 && */}
+
             <h1> Station details</h1 >
 
             <div className='create-station-search-input'>
