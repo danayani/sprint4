@@ -14,6 +14,7 @@ export function Search() {
     // const recentSearches = useRef('')
 
     const [songsFromSearch, setSongsFromSearch] = useState(null)
+    
     const location = useLocation()
     const geners = stationService.getMusicGeners()
 

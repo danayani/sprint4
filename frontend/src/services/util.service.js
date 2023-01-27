@@ -57,6 +57,7 @@ async function getAvgImgColor(url) {
     const avgColor = new FastAverageColor()
     try {
         const color = await avgColor.getColorAsync(url)
+        console.log('avg color :>> ', color);
         return color.rgba
     } catch (err) {
         console.error('Unable to get avg img color', err)
