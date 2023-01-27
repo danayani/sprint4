@@ -7,8 +7,6 @@ import { playerService } from '../services/player.service'
 import { utilService } from '../services/util.service'
 import { getActionPlayPausePlayer, loadCurrPlayingStation } from '../store/player/player.action'
 import { SET_SONG_IDX, SET_REPEAT_SONG, SET_VOLUME } from '../store/player/player.reducer'
-import { func } from 'prop-types'
-
 
 export function AppPlayer() {
     const dispatch = useDispatch()
@@ -21,8 +19,7 @@ export function AppPlayer() {
     const [songShuffle, setSongShuffle] = useState(null)
     const [timelineSongTimeoutId, setTimelineSongTimeoutId] = useState()
 
-    const [songDuration, setSongDuration] = useState({ duration: 0, curr: '00:00', untilDone: '00:00' })
-
+    const [songDuration, setSongDuration] = useState({ duration: 0, curr: 0, untilDone: 0 })
 
 
     useEffect(() => {
@@ -47,33 +44,31 @@ export function AppPlayer() {
     }
 
     function onReady(songProp) {
-        console.log('new song ******', songProp)
         startTimelinsSong(songProp)
         // console.log('seekTo()', x.seekTo(230)) //go to were you want, in sec
 
     }
 
     function startTimelinsSong(songProp) {
-        console.log('songProp 123456', songProp.getDuration())
-
         let dur = songProp.getDuration()
         setSongDuration(prev => ({ ...prev, duration: dur, untilDone: dur }))
 
-
-
-        // let durSong = songProp.getDuration()
-        // setTimelineSongTimeoutId(setTimeout(updateSongTimeline, 100))
+        setTimeout(updateSongTimeline, 1000)
+        // setTimelineSongTimeoutId(setTimeout(updateSongTimeline, 1000))
     }
 
     function updateSongTimeline() {
+        let newCurr = songDuration.curr + 1
 
-        // setSongDuration({
-        //     duration: durSong,
-        //     curr: curr+1,
-        //     untilDone: curr - duration
-        // })
-        console.log('songDuration curr', songDuration.curr)
+        setSongDuration(prev => ({ ...prev, curr: newCurr }))
 
+        // newCurr < songDuration.duration ||
+        console.log('♥ ♥ ♥ ♥',songDuration.untilDone)
+        if (playerState.playing && newCurr < songDuration.duration) {
+            console.log('5555555555555555555', songDuration.duration)
+            // setTimeout(updateSongTimeline, 1000)
+
+        }
     }
 
     function onPreviosSong() {
@@ -145,14 +140,17 @@ export function AppPlayer() {
                         </button>
                     </div>
                     <div className="player-range-container flex">
-                        <span>{songDuration.curr}</span>
+                        <span>{utilService.getTimeFromSeconds(songDuration.curr)}</span>
                         <div className="player-range flex">
-                            <input className="player-range-action range" type="range" />
+                            <input className="player-range-action range" type="range"
+                                min={songDuration.curr} max={songDuration.untilDone} />
+
                             {/* <div class="progress-bar" role="progressbar" aria-valuenow="70"
                                 aria-valuemin="0" aria-valuemax="100" style="width:70%">
                             </div> */}
                         </div>
-                        <span>{ utilService.getTimeFromSeconds(songDuration.untilDone)}</span>
+                        <span>{utilService.getTimeFromSeconds(songDuration.untilDone)} </span>
+
                     </div>
 
                 </div>
