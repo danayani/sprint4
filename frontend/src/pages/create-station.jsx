@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef } from "react"
+import { useSelector } from "react-redux"
 import { utilService } from "../services/util.service.js"
 import { stationService } from "../services/station.service.js"
 import { youtubeService } from "../services/youtube.service.js"
@@ -6,22 +7,31 @@ import { StationHeader } from "../cmps/station-header.jsx"
 import { SongList } from "../cmps/song-list.jsx"
 // import { StationDetails } from "../pages/station-details.jsx"
 import { Loader } from "../cmps/loader.jsx"
+import { func } from "prop-types"
+import { addStation } from "../store/station/station.actions.js"
 
 
 export function CreateStation() {
 
+    const [station, setStation] = useState(null)
+    const stations = useSelector((storeState) => storeState.stationModule.stations)
     const [txtSearchPlaceHolder, setTxtSearchPlaceHolder] = useState('What do you want to listen to ?')
     const [txtSearchKey, setTxtSearchKey] = useState('')
     const [songsFromSearch, setSongsFromSearch] = useState(null)
-    const [station, setStation] = useState(null)
     const [check, setCheck] = useState(false)
-    
+
     useEffect(() => {
-        const newStation = stationService.getEmptyStation()
-        console.log('newStation', newStation)
-        
-        setStation(newStation)
+        loadNewStation()
     }, [])
+
+    function loadNewStation() {
+        const newStation = stationService.getEmptyStation()
+        setStation(newStation)
+        addStation(newStation)
+
+        console.log('newStation ♥♥♥', newStation)
+        if(stations) console.log('all ♥♥♥', stations)
+    }
 
     function handleChange({ target }) {
         let { value, field } = target
@@ -31,8 +41,8 @@ export function CreateStation() {
 
     function onAddSong(song) {
         station.songs.push(song)
-        console.log('station', station)
-        console.log('station id: ', station._id)
+        // console.log('station', station)
+        // console.log('station id: ', station._id)
         setStation(station)
         setCheck(true)
     }
@@ -60,7 +70,7 @@ export function CreateStation() {
         <section className="create-station-container">
             {console.log('check wtf ', check)}
             {station && <StationHeader station={station} />}
-            {check && <SongList station={station} />}
+            {/* {check && <SongList station={station} />} */}
             {/* station.songs?.length > 0 && */}
 
             <h1> Station details</h1 >

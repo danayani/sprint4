@@ -7,10 +7,12 @@ import { loadStations } from '../store/station/station.actions.js'
 
 export function Home() {
     const stations = useSelector((storeState) => storeState.stationModule.stations)
-    
+     
     useEffect(() => {
         loadStations()
     }, [])
+
+
 
     function setGreeting() {
         const currHour = new Date().getHours()
@@ -25,6 +27,7 @@ export function Home() {
         <main className='main-home-container'>
             <div className="home-stations-container">
                 <h1>{setGreeting()}</h1>
+                {console.log('stations for home', stations)}
                 <FirstStationList stations={stations.slice(0, 6)} />
                 <SecondStationList stations={stations.slice(6, 20)} />
             </div>

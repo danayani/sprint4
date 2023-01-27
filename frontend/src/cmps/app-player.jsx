@@ -51,7 +51,7 @@ export function AppPlayer() {
 
     function startTimelinsSong(songProp) {
         let dur = songProp.getDuration()
-        setSongDuration(prev => ({ ...prev, duration: dur, untilDone: dur }))
+        setSongDuration(prev => ({ ...prev, duration: dur, curr: 0, untilDone: dur }))
 
         setTimeout(updateSongTimeline, 1000)
         // setTimelineSongTimeoutId(setTimeout(updateSongTimeline, 1000))
@@ -63,7 +63,7 @@ export function AppPlayer() {
         setSongDuration(prev => ({ ...prev, curr: newCurr }))
 
         // newCurr < songDuration.duration ||
-        console.log('♥ ♥ ♥ ♥',songDuration.untilDone)
+        console.log('♥ ♥ ♥ ♥', songDuration.untilDone)
         if (playerState.playing && newCurr < songDuration.duration) {
             console.log('5555555555555555555', songDuration.duration)
             // setTimeout(updateSongTimeline, 1000)

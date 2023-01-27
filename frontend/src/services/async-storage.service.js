@@ -24,6 +24,7 @@ function post(entityType, newEntity) {
     newEntity = JSON.parse(JSON.stringify(newEntity))
     newEntity._id = _makeId()
     return query(entityType).then(entities => {
+        console.log('post newEntity', newEntity)
         entities.push(newEntity)
         _save(entityType, entities)
         return newEntity
@@ -56,7 +57,7 @@ function _save(entityType, entities) {
     localStorage.setItem(entityType, JSON.stringify(entities))
 }
 
-function _makeId(length = 5) {
+function _makeId(length = 25) {
     var text = ''
     var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
     for (var i = 0; i < length; i++) {

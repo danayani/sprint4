@@ -62,7 +62,7 @@ async function save(station) {
 
 function getEmptyStation() {
     return {
-        "_id": utilService.makeId(),
+        "_id": "",
         "name": _getNewStationName(),
         "imgUrl": "https://www.clipartmax.com/png/middle/69-697655_music-music-note-music-notes-musical-note-notes-music-icon-grey-png.png",
         "duration": {

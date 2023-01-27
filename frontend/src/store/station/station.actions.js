@@ -1,8 +1,6 @@
-
 import { stationService } from '../../services/station.service'
 import { ADD_STATION, REMOVE_STATION, SET_STATIONS, UPDATE_STATION } from "./station.reducer.js"
 import { store } from '../store'
-
 
 
 // Action Creators:
@@ -21,6 +19,7 @@ export async function addStation(station) {
     try {
         const newStation = await stationService.save(station)
         store.dispatch({ type: ADD_STATION, station: newStation })
+        console.log('add station in store', newStation)
         return newStation
     } catch (err) {
         console.error('Unable to save station', err)
