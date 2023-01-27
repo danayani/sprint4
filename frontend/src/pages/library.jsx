@@ -13,14 +13,13 @@ export function Library() {
     const [itemInfo, setItemInfo] = useState([])
 
     useEffect(() => {
-        youtubeService.getServerSideProps().then(res => {
-            const songs = res.data.items
-            setListItem(songs)
+       
+        let songId = 'YykjpeuMNEk'
+        youtubeService.getSongDuration(songId).then(res => {
+            console.log('getSongDuration', res)
         })
 
-        youtubeService.getPlaylistInfo().then(res => {
-            setItemInfo(res)
-        })
+        
 
     }, [])
 

@@ -1,9 +1,6 @@
-
-// import { useSelector } from 'react-redux'
 import { useNavigate, useLocation } from "react-router-dom"
 // import { logout } from '../store/user/user.actions.js'
 import { useState } from 'react'
-import { youtubeService } from "../services/youtube.service.js"
 
 export function AppHeader() {
     // const user = useSelector((storeState => storeState.userModule.user))

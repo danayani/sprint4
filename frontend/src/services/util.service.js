@@ -11,7 +11,25 @@ export const utilService = {
     saveToStorage,
     loadFromStorage,
     shuffle,
-    getAvgImgColor
+    getAvgImgColor,
+    getTimeFromSeconds,
+    getDateFromTimestamp,
+}
+
+function getDateFromTimestamp(timestamp){
+
+}
+
+function getTimeFromSeconds(sunSec) {
+    let time = { min: 0, sec: 0 }
+
+    time.min = parseInt(sunSec / 59)
+    time.sec = (sunSec - (time.min * 59))
+    console.log(time)
+    let steSec = (time.sec < 10) ? `0${time.sec}` : `${time.sec}`
+    
+    let strTime = `${time.min}:${steSec}`
+    return strTime
 }
 
 function shuffle(array = [2, 11, 37, 42]) {
@@ -28,9 +46,10 @@ function shuffle(array = [2, 11, 37, 42]) {
 
         // And swap it with the current element.
         [array[currentIndex], array[randomIndex]] = [
-        array[randomIndex], array[currentIndex]]
+            array[randomIndex], array[currentIndex]]
     }
-    return array;
+    console.log('2', array)
+    return array
 }
 
 async function getAvgImgColor(url) {
@@ -44,7 +63,6 @@ async function getAvgImgColor(url) {
         throw err
     }
 }
-
 
 
 function makeId(length = 25) {
