@@ -1,28 +1,30 @@
 .main-search-container {
     margin-top: rem(65px);
     padding-left: rem(32px);
-    padding-right: rem(20px);
+    padding-right: rem(16px);
     display: grid;
 
     h2 {
         margin-bottom: rem(30px);
-        overflow-wrap: break-word;
-        word-break: break-word;
         color: #fff;
         margin-top: rem(8px);
         font-weight: 700;
-        grid-area: 1 / 1 / 2 / 2;
-        padding: rem(16px);
+        grid-column: 1 / -1;
+    }
+
+    .search-results-songs-container {
+        grid-template-columns: 3fr 20fr 5fr 5fr 1fr 5.5fr 1fr;
     }
     
-    .search-results-songs-list{
+    .search-results-header{
+        // grid-template-columns: 3fr 20fr 5fr 5fr 1fr 5.5fr 1fr;
         
     }
 
     .filter-cards-preview {
         // height: 100vh;
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(157px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
         gap: rem(24px);
 
         .filter-card {
@@ -42,8 +44,17 @@
             grid-area: 1 / 1 / 2 / 2;
         }
 
+        .card-title {
+            font-size: rem(24px);
+            padding: rem(16px);
+            position: absolute;
+            color: #fff;
+            overflow-wrap: break-word;
+            word-break: break-word;
+        }
+
         .filter-img {
-            
+
             grid-area: 1 / 1 / 2 / 2;
             position: absolute;
             rotate: z 25deg;
