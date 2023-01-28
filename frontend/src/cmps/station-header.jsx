@@ -1,4 +1,4 @@
-export function StationHeader({ station, playStation, handleChange, deleteStation, updateStation, saveChanges }) {
+export function StationHeader({ station, playStation, deleteStation, updateStation, saveChanges }) {
 
     function onPlay(ev) {
         ev.stopPropagation()
@@ -17,7 +17,7 @@ export function StationHeader({ station, playStation, handleChange, deleteStatio
     return (
         <section className="station-header">
             <div className="top-container">
-                {station.songs.length > 0 || station.imgUrl ?
+                {station.songs?.length > 0 || station.imgUrl ?
                     <div className="img-container">
                         <img src={station.imgUrl} alt="station image" />
                     </div>
@@ -30,8 +30,8 @@ export function StationHeader({ station, playStation, handleChange, deleteStatio
                     <h2 className="title">PLAYLIST</h2>
                     <h1>{station.name}</h1>
                     <p className="station-description">
-                        <span>{station.createdBy.fullname} ◽ </span>
-                        {station.songs.length}
+                        <span>{station?.createdBy.fullname} ◽ </span>
+                        {station.songs?.length}
                         <span> 24 min 25 sec </span>
                     </p>
                 </div>
