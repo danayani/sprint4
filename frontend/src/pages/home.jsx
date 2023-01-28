@@ -27,7 +27,7 @@ export function Home() {
         <main className='main-home-container'>
             <div className="home-stations-container">
                 <h1>{setGreeting()}</h1>
-                {console.log('stations for home', stations)}
+                {console.log('stations from home', stations)}
                 <FirstStationList stations={stations.slice(0, 6)} />
                 <SecondStationList stations={stations.slice(6, 20)} />
             </div>
