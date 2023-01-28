@@ -73,20 +73,24 @@ export function Search() {
                             <i className="fa-regular fa-clock"></i>
                         </div>
                     </header>
-                    <div className="search-result-song-list-">
+                    <div className="search-results-song-list">
                         {songsFromSearch.map((song, idx) => {
                             return (
                                 <div key={song.id} className="song-list-line" onClick={() => console.log('play song')}>
                                     <div className="song-index">
                                         {idx + 1}
                                     </div>
-                                    <img className="searched-song-img" src={song.imgUrl} alt="Magnifing glass" />
-                                    <div className="searched-song-title">
-                                        {song.title}
+
+                                    <div className="searched-song-detials">
+                                        <img className="searched-song-img" src={song.imgUrl} alt="Magnifing glass" />
+                                        <div className="searched-song-title">
+                                            {song.title}
+                                        </div>
                                     </div>
                                     <div className="searched-song-artist">
                                         {song.createdBy}
                                     </div>
+                                    <div className="searched-song-options">
                                     <button className="add-song-station song-action">
                                         ♥
                                     </button>
@@ -96,6 +100,7 @@ export function Search() {
                                     <button className="remove-song-from-station song-action">
                                         X
                                     </button>
+                                    </div>
                                 </div>)
                         })}
                     </div>
