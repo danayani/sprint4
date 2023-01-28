@@ -58,7 +58,8 @@ export function AppNavBar() {
                     </NavLink>
                 </li>
             </ul>
-
+            <div className='nav-list-seperator'>
+            </div>
             {stations && stations?.length > 0 &&
                 <div className='user-station-list'>
                     <ul className='user-station-list-ul'>
@@ -67,7 +68,7 @@ export function AppNavBar() {
                             <NavLink key={station._id} to={`/${station._id}`}>
                                 <div className="user-station-list-link">
                                     <h3>{station.name}</h3>
-                                    
+
                                 </div>
                             </NavLink>
                         )}
