@@ -48,4 +48,30 @@
         // minmax(auto, $normal-breakpoint)
         // minmax(20px, 1fr);
     }    
+
+    // hold everything related to the search page
+    .main-search-container {
+        padding-top: rem(7px);
+        padding-left: rem(32px);
+        padding-right: rem(16px);
+        display: grid;
+        grid-area: main;
+    
+        h2 {
+            margin-bottom: rem(30px);
+            color: rgb(255, 255, 255);
+            margin-top: rem(8px);
+            font-weight: 700;
+            // grid-column: 1 / -1;
+        }
+    
+    }
+
 }
+
+// .card-grid {
+//     display: grid;
+//     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+//     grid-gap: 20px;
+// }
+
