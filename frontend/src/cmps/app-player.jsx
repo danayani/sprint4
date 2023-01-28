@@ -48,14 +48,16 @@ export function AppPlayer() {
     function onReady(songProp) {
         setPlayerCB(songProp)
         startTimelinsSong(songProp)
+        console.log('onReady')
 
-        console.log('getCurrentTime()', songProp.getCurrentTime())
+        upDateRange(songProp)
     }
 
-    function upDateRange(playerCB){
-        console.log('playerCB.getCurrentTime()',playerCB.getCurrentTime())
-        setInterval(upDateRange,1000)
-        // setTimeout(upDateRange,1000)
+    function upDateRange(songProp){
+        console.log('upDateRange(songProp)',songProp.getCurrentTime())
+        
+        // setInterval(upDateRange,1000)
+        setTimeout(upDateRange,1000)
     }
 
     function startTimelinsSong(songProp) {
