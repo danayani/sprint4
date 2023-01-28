@@ -46,7 +46,6 @@ export function LikedSongs() {
     if (!station) <Loader />
     else return (
         <section className="station-liked-songs-container">
-            <h1>hi from liked songs</h1>
             {console.log('station ♥', station)}
             <StationHeader station={station} playStation={playStation} />
             <SongList station={station} onPlaySong={onPlaySong} toggleLikedSong={toggleLikedSong} />

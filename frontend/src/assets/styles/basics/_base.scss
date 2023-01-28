@@ -9,7 +9,6 @@
 }
 
 ::-webkit-scrollbar-track {
-    // background: rgba(190, 47, 47, 0);
     background-color: transparent;
 }
 
@@ -28,7 +27,7 @@
 
 ::selection {
     background-color: $bgcnav;
-    color: $txtfill;
+    color: $txtselected;
 }
 
 html {
@@ -41,7 +40,6 @@ body {
     margin: 0;
     font-size: rem(14px);
     font-family: $txtf;
-    // margin: auto;
     background-color: $bgcmain;
 }
 
@@ -73,7 +71,3 @@ p {
 a {
     text-decoration: none;
 }
-
-// a:hover {
-//     text-decoration: underline;
-// }

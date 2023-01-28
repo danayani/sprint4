@@ -7,8 +7,8 @@
         grid-template-columns: repeat(3, minmax(240px, 1fr));
         grid-gap: rem(16px) rem(86px);
     }
-
-
+    
+    
     .first-station-card {
         height: rem(80px);
         width: rem(340px);
@@ -19,19 +19,17 @@
         border-radius: rem(4px);
         border: 0;
         background-color: $bgcplaylistup;
-        // overflow: hidden;
-
+        
         &:hover {
             background-color: ligthen($bgcplaylistup, 20%);
         }
-
     }
     
     .song-img {
         margin-right: rem(15px);
         width: rem(80px);
         height: rem(80px);
-        border-radius: 5% 0% 5% 0%;
+        border-radius: 5% 0% 0% 5%;
         object-fit: cover;
         aspect-ratio: 1/1;
     }

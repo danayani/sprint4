@@ -7,10 +7,8 @@
     "navbar app-header"
     "navbar main"
     "player player";
-    grid-template-columns: 247px minmax(300px, 1fr);
-    // grid-template-columns: 1fr 4fr;
+    grid-template-columns: 235px minmax(300px, 1fr);
     grid-template-rows: rem(64px) 1fr auto;
-    // grid-template-rows: auto 1fr auto;
     max-width: 100%;
     overflow-y: hidden; 
     
