@@ -2,6 +2,7 @@ import { stationService } from '../../services/station.service'
 import { ADD_STATION, REMOVE_STATION, SET_STATIONS, UPDATE_STATION } from "./station.reducer.js"
 import { store } from '../store'
 
+const STATION_LIKED_SONGS_ID = '111RDtaf0Y86Q4hby91hqs6NX'
 
 // Action Creators:
 export async function loadStations(filterBy) {
@@ -19,7 +20,7 @@ export async function addStation(station) {
     try {
         const newStation = await stationService.save(station)
         store.dispatch({ type: ADD_STATION, station: newStation })
-        console.log('add station in store', )
+        console.log('add station in store',)
         return newStation
     } catch (err) {
         console.error('Unable to save station', err)
@@ -37,18 +38,6 @@ export async function updateStation(station) {
     }
 }
 
-// export async function saveStation(station) {
-//     try{
-//         const type = (station._id) ? UPDATE_STATION : ADD_STATION
-//         const savedStation = await stationService.save(station)
-//         store.dispatch({ type: type, station: savedStation })
-//         return savedStation
-//     } catch(err) {
-//         console.error('Cannot save station', err)
-//         throw err
-//     }
-// }
-
 export async function removeStation(stationId) {
     try {
         await stationService.remove(stationId)
@@ -59,12 +48,18 @@ export async function removeStation(stationId) {
     }
 }
 
-// export async function loadCurrStation (stationId) {
-//     try {
-//         const currStation = await stationService.getById(stationId)
-//         store.dispatch({type: UPDATE_CURR_STATION, currStation})
-//     } catch (err) {
-//         console.log('Cannot load currStations', err)
-//         throw err
-//     }
-// }
+export async function actionToggleSongToLikedSong(song) {
+    const likedSongStation = await stationService.getById(STATION_LIKED_SONGS_ID)
+    console.log('actionToggleSongToLikedSong', likedSongStation)
+
+    if (!song.liked) likedSongStation.songs.unshift(song)
+    else likedSongStation.songs.filter(likedSong => likedSong.id !== song.id)
+    
+    console.log('actionToggleSongToLikedSong Toggle', likedSongStation)
+
+    updateStation(likedSongStation)
+
+    song.liked = !song.liked
+}
+
+
