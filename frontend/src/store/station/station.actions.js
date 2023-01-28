@@ -2,6 +2,7 @@ import { stationService } from '../../services/station.service'
 import { ADD_STATION, REMOVE_STATION, SET_STATIONS, UPDATE_STATION } from "./station.reducer.js"
 import { store } from '../store'
 
+const STATION_LIKED_SONGS_ID = '111RDtaf0Y86Q4hby91hqs6NX'
 
 // Action Creators:
 export async function loadStations(filterBy) {
@@ -19,7 +20,7 @@ export async function addStation(station) {
     try {
         const newStation = await stationService.save(station)
         store.dispatch({ type: ADD_STATION, station: newStation })
-        console.log('add station in store', )
+        console.log('add station in store',)
         return newStation
     } catch (err) {
         console.error('Unable to save station', err)
@@ -30,24 +31,12 @@ export async function addStation(station) {
 export async function updateStation(station) {
     try {
         const updatedStation = await stationService.save(station)
-        store.dispatch({ type: UPDATE_STATION, station: updatedStation })
+        return store.dispatch({ type: UPDATE_STATION, station: updatedStation })
     } catch (err) {
         console.error('Unable to save station', err)
         throw err
     }
 }
-
-// export async function saveStation(station) {
-//     try{
-//         const type = (station._id) ? UPDATE_STATION : ADD_STATION
-//         const savedStation = await stationService.save(station)
-//         store.dispatch({ type: type, station: savedStation })
-//         return savedStation
-//     } catch(err) {
-//         console.error('Cannot save station', err)
-//         throw err
-//     }
-// }
 
 export async function removeStation(stationId) {
     try {
@@ -59,12 +48,23 @@ export async function removeStation(stationId) {
     }
 }
 
-// export async function loadCurrStation (stationId) {
-//     try {
-//         const currStation = await stationService.getById(stationId)
-//         store.dispatch({type: UPDATE_CURR_STATION, currStation})
-//     } catch (err) {
-//         console.log('Cannot load currStations', err)
-//         throw err
-//     }
-// }
+export async function actionToggleSongToLikedSong(song) {
+    var likedSongStation = await stationService.getById(STATION_LIKED_SONGS_ID)
+    // console.log('actionToggleSongToLikedSong', likedSongStation)
+
+    if (!song.liked) likedSongStation.songs.unshift(song)
+    else {
+        console.log('the fucked up song', song)
+        console.log('likedSongStation befor filter', likedSongStation)
+        console.log('the list', likedSongStation.songs)
+        likedSongStation.songs = likedSongStation.songs.filter(likedSong => likedSong.id !== song.id)
+        console.log('likedSongStation after filter', likedSongStation)
+    }
+
+
+    // console.log('actionToggleSongToLikedSong Toggle', likedSongStation)
+    song.liked = !song.liked
+    updateStation(likedSongStation)
+}
+
+

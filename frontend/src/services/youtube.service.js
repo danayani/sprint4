@@ -76,6 +76,7 @@ async function getServerSideSearch(searchKey) {
 }
 
 
+
 async function getSongDuration(songId) {
     console.log('getPlaylistInfo ')
     const res = await fetch(`https://www.googleapis.com/youtube/v3/videos?id=${songId}&part=contentDetails&key=${YOUTUBE_API_KEY}`)
@@ -83,7 +84,7 @@ async function getSongDuration(songId) {
     const data = await res.json()
     const duration = data.items[0].contentDetails.duration
 
-    return duration
+    return duration //hm5s15
 }
 
 
