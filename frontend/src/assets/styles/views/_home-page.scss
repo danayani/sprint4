@@ -1,12 +1,8 @@
 .main-app-container {
-    // grid-area: main;
     grid-area: 1/2/3/-1;
-    // grid-template-rows: 1/2/3/-1;
     height: calc(100vh - 89px);
     background-color: $bgcmain;
-    color: $txtfill;
     overflow-y: auto;
-    padding-top: rem(50px);
 }
 
 .main-home-container {
@@ -16,7 +12,5 @@
         color: $txtselected;
         font-size: 2.15em;
         font-family: $txtf;
-        padding-left: rem(15px);
-        margin-top: rem(21px);
     }
 }

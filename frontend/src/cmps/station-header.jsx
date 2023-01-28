@@ -20,7 +20,7 @@ export function StationHeader({ station, playStation, deleteStation, updateStati
     return (
         <section className="station-header">
             <div className="top-container">
-                {location.pathname.includes('/liked-songs') ? <img src={liked} alt="station image" />
+                {location.pathname.includes('/liked-songs') ? (<div className="img-container"><img src={liked} alt="station image" /></div>)
                     :
                     (station.songs?.length > 0 || station.imgUrl ?
                         <div className="img-container">

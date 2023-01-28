@@ -8,6 +8,7 @@
     display: flex;
     grid-area: 1/1/3/2;
     flex-direction: column;
+    padding-top: 15px;
 }
 
 ul {
@@ -31,9 +32,9 @@ ul {
 
 .nav-list-seperator {
     margin-bottom: 1em;
-
-    width: 85%;
-    margin: auto;
+    margin-top: 0.85em;
+    margin-left: 1.7em;
+    width: 80%;
     border-bottom: 0.1px solid rgb(78, 74, 74)
 }
 
@@ -79,7 +80,6 @@ svg {
         font-size: rem(25px);
 
         .logo-img {
-            // vertical-align: middle;
             height: rem(38px);
             width: rem(38px);
             border-radius: 50%;
@@ -99,7 +99,7 @@ span {
         color: $txtselected;
     }
 
-    &active {
+    &:active {
         color: $txtselected;
     }
 }
@@ -109,10 +109,12 @@ span {
 }
 
 .user-station-list {
+    margin-top: 0.5em;
     padding-left: rem(25px);
+    font-size: 0.8em;
 
-    // &:hover {
-    //     fill: $txtselected;
-    //     transition: fill 0.7s;
-    // }
+    .user-station-list-link{
+        margin-bottom: 1.3em;
+        
+    }
 }
