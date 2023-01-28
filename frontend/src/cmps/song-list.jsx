@@ -35,7 +35,7 @@ export function SongList({ station, playStation }) {
 
     async function toggleLikedSong(song) {
         console.log('toggleLikedSong')
-        
+
         const update = await actionToggleSongToLikedSong(song)
         console.log('update', update)
         setSongs(prev => [...prev])
@@ -66,11 +66,13 @@ export function SongList({ station, playStation }) {
                                 <div >
                                     <img className="song-list-img" src={song.imgUrl} />
                                 </div>
-                                <section>
-                                    <p>{song.title}</p>
-                                </section>
-                                <div className="song-list-artist">
-                                    {song.createdBy}
+                                <div className="song-info">
+                                    <section>
+                                        <p>{song.title}</p>
+                                    </section>
+                                    <div className="song-list-artist">
+                                        {song.createdBy}
+                                    </div>
                                 </div>
                             </section>
                             <div className="song-list-add-date">
