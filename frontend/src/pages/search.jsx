@@ -81,25 +81,24 @@ export function Search() {
                                         {idx + 1}
                                     </div>
 
-                                    <div className="searched-song-detials">
-                                        <img className="searched-song-img" src={song.imgUrl} alt="Magnifing glass" />
-                                        <div className="searched-song-title">
-                                            {song.title}
-                                        </div>
+                                    <img className="searched-song-img" src={song.imgUrl} alt="Magnifing glass" />
+
+                                    <div className="searched-song-title">
+                                        {song.title}
                                     </div>
                                     <div className="searched-song-artist">
                                         {song.createdBy}
                                     </div>
                                     <div className="searched-song-options">
-                                    <button className="add-song-station song-action">
-                                        ♥
-                                    </button>
-                                    <div className="song-list-duration">
-                                        00:00
-                                    </div>
-                                    <button className="remove-song-from-station song-action">
-                                        X
-                                    </button>
+                                        <button className="add-song-station song-action">
+                                            ♥
+                                        </button>
+                                        <div className="song-list-duration">
+                                            00:00
+                                        </div>
+                                        <button className="remove-song-from-station song-action">
+                                            X
+                                        </button>
                                     </div>
                                 </div>)
                         })}
