@@ -120,6 +120,8 @@ export function AppPlayer() {
                     {console.log('playerState', playerState)}
                     <img className="song-img" src={station?.songs[songIdx]?.imgUrl} />
                     <p className="song-title">{station?.songs[songIdx]?.title}</p>
+                    <p className="song-artist">{station?.songs[songIdx]?.createdBy}</p>
+
                 </div>
                 <div className="player-actions-container grid justify-center">
                     <div className="player-actions flex">
