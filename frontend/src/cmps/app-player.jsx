@@ -7,6 +7,7 @@ import { playerService } from '../services/player.service'
 import { utilService } from '../services/util.service'
 import { getActionPlayPausePlayer, loadCurrPlayingStation } from '../store/player/player.action'
 import { SET_SONG_IDX, SET_REPEAT_SONG, SET_VOLUME } from '../store/player/player.reducer'
+import { timeout } from 'workbox-core/_private'
 
 export function AppPlayer() {
     const dispatch = useDispatch()
@@ -15,9 +16,11 @@ export function AppPlayer() {
     const station = useSelector(storeState => storeState.playerModule.currPlayingStation)
     const songIdx = useSelector(storeState => storeState.playerModule.currSongIdx)
 
+    const [playerCB, setPlayerCB] = useState(null)
     const [song, setSong] = useState(null)
     const [songShuffle, setSongShuffle] = useState(null)
     const [timelineSongTimeoutId, setTimelineSongTimeoutId] = useState()
+    const [playSongRange, setPlaySongRange] = useState(0)
 
     const [songDuration, setSongDuration] = useState({ duration: 0, curr: 0, untilDone: 0 })
 
@@ -34,7 +37,6 @@ export function AppPlayer() {
 
     function handleVolumeChange({ target }) {
         let volume = target.value
-        console.log('volume changed', volume)
         dispatch({ type: SET_VOLUME, volume })
     }
 
@@ -44,9 +46,16 @@ export function AppPlayer() {
     }
 
     function onReady(songProp) {
+        setPlayerCB(songProp)
         startTimelinsSong(songProp)
-        // console.log('seekTo()', x.seekTo(230)) //go to were you want, in sec
 
+        console.log('getCurrentTime()', songProp.getCurrentTime())
+    }
+
+    function upDateRange(playerCB){
+        console.log('playerCB.getCurrentTime()',playerCB.getCurrentTime())
+        setInterval(upDateRange,1000)
+        // setTimeout(upDateRange,1000)
     }
 
     function startTimelinsSong(songProp) {
@@ -62,12 +71,10 @@ export function AppPlayer() {
 
         setSongDuration(prev => ({ ...prev, curr: newCurr }))
 
-        // newCurr < songDuration.duration ||
+
         console.log('♥ ♥ ♥ ♥', songDuration.untilDone)
         if (playerState.playing && newCurr < songDuration.duration) {
             console.log('5555555555555555555', songDuration.duration)
-            // setTimeout(updateSongTimeline, 1000)
-
         }
     }
 
@@ -95,6 +102,19 @@ export function AppPlayer() {
         dispatch({ type: SET_REPEAT_SONG })
     }
 
+    function onHandleChangePlayRange({ target }) {
+        setPlaySongRange(target.value)
+        console.log('setPlaySongRange', playSongRange)
+    }
+    function onSeek() {
+        console.log('onSeek')
+        console.log('player prop', playerCB)
+        playerCB.seekTo(playSongRange)
+    }
+    function onToggleMute(){
+        dispatch({ type: SET_REPEAT_SONG })
+    }
+
     const classPlayPause = (!playerState.playing) ? 'play-pause-btn fa-solid fa-circle-play' : 'play-pause-btn fa-solid  fa-circle-pause'
     const classPlayRepeat = (!playerState.loop) ? 'action-btn fa-solid fa-repeat' : 'action-btn fa-solid fa-repeat btn-action-active'
     const titlePlayPause = (!playerState.playing) ? 'Play' : 'Pause'
@@ -103,7 +123,6 @@ export function AppPlayer() {
     if (!playerState) return
     return (
         <section className="app-playerS">
-            {/* {console.log('my station', station.songs[songIdx].title)} */}
             {song &&
                 < ReactPlayer className="player-video"
                     height="1px"
@@ -120,7 +139,6 @@ export function AppPlayer() {
             }
             <div className="app-playerS flex">
                 <div className="song-details flex">
-                    {console.log('playerState', playerState)}
                     <img className="song-img" src={station?.songs[songIdx]?.imgUrl} />
                     <p className="song-title">{station?.songs[songIdx]?.title}</p>
                     <p className="song-artist">{station?.songs[songIdx]?.createdBy}</p>
@@ -148,7 +166,9 @@ export function AppPlayer() {
                         <span>{utilService.getTimeFromSeconds(songDuration.curr)}</span>
                         <div className="player-range flex">
                             <input className="player-range-action range" type="range"
-                                min={songDuration.curr} max={songDuration.untilDone} />
+                                min={songDuration.curr} max={songDuration.untilDone}
+                                // value={playerState.volume}
+                                onChange={onHandleChangePlayRange} onMouseUp={onSeek} />
 
                             {/* <div class="progress-bar" role="progressbar" aria-valuenow="70"
                                 aria-valuemin="0" aria-valuemax="100" style="width:70%">
@@ -160,7 +180,9 @@ export function AppPlayer() {
 
                 </div>
                 <div className="volume-controller flex">
-                    <div className="volume-icon"> <i className="fa-solid fa-volume-high"></i></div>
+                    <button className='toggle-mute' onClick={onToggleMute}>
+                        <div className="volume-icon"> <i className="fa-solid fa-volume-high"></i></div>
+                    </button>
 
                     <input className="volume-range range"
                         type='range' min={0} max={0.999999} step='any'
