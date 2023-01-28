@@ -97,6 +97,9 @@ export function AppPlayer() {
 
     const classPlayPause = (!playerState.playing) ? 'play-pause-btn fa-solid fa-circle-play' : 'play-pause-btn fa-solid  fa-circle-pause'
     const classPlayRepeat = (!playerState.loop) ? 'action-btn fa-solid fa-repeat' : 'action-btn fa-solid fa-repeat btn-action-active'
+    const titlePlayPause = (!playerState.playing) ? 'Play' : 'Pause'
+    const titleLoop = (!playerState.loop) ? 'Enable repeat' : 'Disble repeat'
+
     if (!playerState) return
     return (
         <section className="app-playerS">
@@ -128,16 +131,16 @@ export function AppPlayer() {
                         <button className='btn-action-player btn-shuffle-songs' onClick={onShuffleSongs} >
                             <i className="action-btn fa-solid fa-shuffle"></i>
                         </button>
-                        <button className='btn-action-player' onClick={onPreviosSong}>
+                        <button className='btn-action-player' title='Previous' onClick={onPreviosSong}>
                             <i className="action-btn fa-solid fa-backward-step"></i>
                         </button>
-                        <button className="player-btn-play-pause" onClick={getActionPlayPausePlayer} >
+                        <button className="player-btn-play-pause" title={titlePlayPause} onClick={getActionPlayPausePlayer} >
                             <i className={classPlayPause}></i>
                         </button>
-                        <button className='btn-action-player' onClick={onNextSong} >
+                        <button className='btn-action-player' title="Next" onClick={onNextSong} >
                             <i className="action-btn fa-solid fa-backward-step btn-next"></i>
                         </button>
-                        <button className='btn-action-player' onClick={onRepeat}>
+                        <button className='btn-action-player' title={titleLoop} onClick={onRepeat}>
                             <i className={classPlayRepeat}></i>
                         </button>
                     </div>
