@@ -1,26 +1,51 @@
-.main-search-container {
-    margin-top: rem(65px);
-    padding-left: rem(32px);
-    padding-right: rem(16px);
+// contains the entire songs from search list
+.search-results-songs-container {
     display: grid;
-    grid-area: main;
 
-    h2 {
-        margin-bottom: rem(30px);
-        color: #fff;
-        margin-top: rem(8px);
-        font-weight: 700;
-        grid-column: 1 / -1;
+    .search-results-header {
+        background-color: #181818;
+        font-size: rem(12px);
+        height: rem(48px);
+        margin: 0 rem(-32px) rem(16px);
+        padding: 0 rem(40px);
+        grid-template-columns: rem(16px) 2fr 2fr minmax(120px, 1fr);
+        display: grid;
+        align-items: center;
+
+        .number-sign {
+            padding: 0 rem(16px);
+        }
+
+        .song-title {
+            padding-left: rem(32px);
+        }
+
+        // .song-album {}
+
+        .song-duration {
+            display: flex;
+            flex-direction: row-reverse;
+            padding-right: rem(32px);
+        }
     }
 
-    .search-results-songs-container {
-        grid-template-columns: 3fr 20fr 5fr 5fr 1fr 5.5fr 1fr;
+    .search-results-song-list {
+        display: grid;
+        grid-template-columns: rem(16px) 4fr 2fr 1.8fr;
+
+        .song-list-line {
+            height: rem(56px);
+        }
+
+        .song-index {}
+
+        .searched-song-img {
+            height: 40px;
+            width: 40px;
+            aspect-ratio: 1 / 1;
+        }
     }
-    
-    .search-results-header{
-        // grid-template-columns: 3fr 20fr 5fr 5fr 1fr 5.5fr 1fr;
-        
-    }
+
 
     .filter-cards-preview {
         // height: 100vh;

@@ -7,7 +7,7 @@ export function AppHeader() {
     const location = useLocation()
 
     const navigate = useNavigate()
-    const [txtSearchPlaceHolder, setTxtSearchPlaceHolder] = useState('What do you want to listen to ?')
+    const [txtSearchPlaceHolder, setTxtSearchPlaceHolder] = useState('What do you want to listen to?')
     const [txtSearchKey, setTxtSearchKey] = useState('')
 
     const [searchSongs, setSearchSongs] = useState([])
@@ -33,10 +33,11 @@ export function AppHeader() {
     function handleChange({ target }) {
         let { value } = target
         setTxtSearchKey(value)
+        // setTxtSearchPlaceHolder(value)
     }
 
     function onSearch(ev) {
-        ev.preventDefault()
+        // ev.preventDefault()
         console.log('onSearch', txtSearchKey)
         navigate(`/search/?searchKey=${txtSearchKey}`)
         // youtubeService.getServerSideSearch(txtSearchKey)
