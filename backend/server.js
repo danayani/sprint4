@@ -9,6 +9,7 @@ const http = require('http').createServer(app)
 // Express App Config
 app.use(cookieParser())
 app.use(express.json())
+// app.use(express.static('public'))
 
 
 if (process.env.NODE_ENV === 'production') {
@@ -22,20 +23,20 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 const authRoutes = require('./api/auth/auth.routes')
-const userRoutes = require('./api/user/user.routes')
-const reviewRoutes = require('./api/review/review.routes')
-const carRoutes = require('./api/car/car.routes')
-const {setupSocketAPI} = require('./services/socket.service')
+// const userRoutes = require('./api/user/user.routes')
+// const reviewRoutes = require('./api/review/review.routes')
+const stationRoutes = require('./api/station/station.routes')
+// const {setupSocketAPI} = require('./services/socket.service')
 
 // routes
 const setupAsyncLocalStorage = require('./middlewares/setupAls.middleware')
 app.all('*', setupAsyncLocalStorage)
 
 app.use('/api/auth', authRoutes)
-app.use('/api/user', userRoutes)
-app.use('/api/review', reviewRoutes)
-app.use('/api/car', carRoutes)
-setupSocketAPI(http)
+// app.use('/api/user', userRoutes)
+// app.use('/api/review', reviewRoutes)
+app.use('/api/station', stationRoutes)
+// setupSocketAPI(http)
 
 // Make every server-side-route to match the index.html
 // so when requesting http://localhost:3030/index.html/car/123 it will still respond with
