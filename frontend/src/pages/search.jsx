@@ -129,7 +129,7 @@ export function Search() {
                 <section className="filter-cards-preview">
                     {geners.map((gener, idx) =>
                         // <NavLink to={`/${gener.name}`} key={idx} >
-                        <div className="filter-card" onClick={onFilterCardClicked(gener)} style={{ backgroundColor: gener.bgc }}>
+                        <div key={idx} className="filter-card" onClick={onFilterCardClicked(gener)} style={{ backgroundColor: gener.bgc }}>
                             <div className="card-title">{gener.name}</div>
                             <img className="filter-img" src={gener.imgUrl} alt="filter img" />
                             {/* <button className='play'>Play</button> */}

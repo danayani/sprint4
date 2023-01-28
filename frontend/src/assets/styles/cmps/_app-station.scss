@@ -1,11 +1,11 @@
 .home-stations-container {
 
     .first-station-cards {
-        padding: rem(11px) rem(14px);
+        padding: rem(14px) rem(0px);
         width: 100%;
         display: grid;
         grid-template-columns: repeat(3, minmax(240px, 1fr));
-        grid-gap: rem(16px) rem(86px);
+        grid-gap: rem(16px) rem(57px);
     }
     
     
@@ -40,16 +40,15 @@
         line-height: rem(10px);
     }
 
-    .second-station-container {
-        margin-top: rem(32px);
-        margin-left: rem(15px);
-    }
-
     h2 {
         display: inline-block;
         color: $txtselected;
         font-size: rem(24px);
         margin-bottom: rem(26px);
+    }
+
+    .second-station-container{
+        margin-top: 27px;
     }
 
     .second-station-cards {
@@ -83,7 +82,6 @@
 
         h3{
             padding-left:1.21em;
-            margin-top: 0;
         }
 
         

@@ -46,12 +46,14 @@
     }
 }
 
+.main-search-container{
+    margin-top: 101px;
+}
 
 .filter-cards-preview {
-    // height: 100vh;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
-    gap: rem(24px);
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: rem(22px);
 
     .filter-card {
         position: relative;
