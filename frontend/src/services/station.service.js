@@ -3,6 +3,7 @@ import { storageService } from './async-storage.service.js'
 import { utilService } from './util.service.js'
 // import { userService } from './user.service.js'
 import data from '../data/station-data.json'
+import newStationPic from '../assets/img/create.jpg'
 
 const STATION_KEY = 'stationDB'
 const stationsData = data
@@ -64,7 +65,7 @@ function getEmptyStation() {
     return {
         "_id": "",
         "name": _getNewStationName(),
-        "imgUrl": "https://www.clipartmax.com/png/middle/69-697655_music-music-note-music-notes-musical-note-notes-music-icon-grey-png.png",
+        "imgUrl": newStationPic,
         "duration": {
             "min": "00",
             "sec": "00"

@@ -1,5 +1,8 @@
-export function StationHeader({ station, playStation, deleteStation, updateStation, saveChanges }) {
+import { useLocation } from 'react-router-dom'
 
+import liked from '../assets/img/liked-song-img.png'
+export function StationHeader({ station, playStation, deleteStation, updateStation, saveChanges }) {
+    const location = useLocation()
     function onPlay(ev) {
         ev.stopPropagation()
         playStation()
@@ -17,14 +20,17 @@ export function StationHeader({ station, playStation, deleteStation, updateStati
     return (
         <section className="station-header">
             <div className="top-container">
-                {station.songs?.length > 0 || station.imgUrl ?
-                    <div className="img-container">
-                        <img src={station.imgUrl} alt="station image" />
-                    </div>
+                {location.pathname.includes('/liked-songs') ? <img src={liked} alt="station image" />
                     :
-                    <div className="img-container" >
-                        <img src="../assets/img/add-station.jpg" alt="station image" />
-                    </div>
+                    (station.songs?.length > 0 || station.imgUrl ?
+                        <div className="img-container">
+                            <img src={station.imgUrl} alt="station image" />
+                        </div>
+                        :
+                        <div className="img-container" >
+                            <img src="../assets/img/create.jpg" alt="station image" />
+                        </div>
+                    )
                 }
                 <div className="info-container">
                     <h2 className="title">PLAYLIST</h2>
