@@ -14,7 +14,7 @@ export function Search() {
     // const recentSearches = useRef('')
 
     const [songsFromSearch, setSongsFromSearch] = useState(null)
-    
+
     const location = useLocation()
     const geners = stationService.getMusicGeners()
 
@@ -61,34 +61,49 @@ export function Search() {
     if (!geners) <Loader />
     return (
         <main className="main-search-container">
-
             {/* SONGS FROM SEARCH */}
             {songsFromSearch &&
                 <section className="search-results-songs-container">
                     <h2>Songs</h2>
                     <header className="search-results-header">
-                        <span>#</span>
-                        <span>TITLE</span>
-                        <span>ALBUM</span>
-                        <span></span>
-                        <span><i className="song-list-tbodyTime fa-regular fa-clock"></i></span>
+                        <div className="number-sign">#</div>
+                        <div className="song-title">TITLE</div>
+                        <div className="song-album">ALBUM</div>
+                        <div className="song-duration">
+                            <i className="fa-regular fa-clock"></i>
+                        </div>
                     </header>
-                    <ul>
+                    <div className="search-results-song-list">
                         {songsFromSearch.map((song, idx) => {
                             return (
-                                <article role="button" key={song.id} >
-                                    <li key={song.id} className="song-list-li grid">
-                                        <img className="song-list-img" src={song.imgUrl} alt="Magnifing glass" />
-                                        <p className="song-list-title">{song.title}</p>
-                                        <p className="song-list-artist">{song.createdBy}</p>
-                                        <div>like button</div>
-                                        <div>song duration</div>
-                                    </li>
-                                </article>
-                            )
-                        }
-                        )}
-                    </ul>
+                                <div key={song.id} className="song-list-line" onClick={() => console.log('play song')}>
+                                    <div className="song-index">
+                                        {idx + 1}
+                                    </div>
+
+                                    <div className="searched-song-detials">
+                                        <img className="searched-song-img" src={song.imgUrl} alt="Magnifing glass" />
+                                        <div className="searched-song-title">
+                                            {song.title}
+                                        </div>
+                                    </div>
+                                    <div className="searched-song-artist">
+                                        {song.createdBy}
+                                    </div>
+                                    <div className="searched-song-options">
+                                    <button className="add-song-station song-action">
+                                        ♥
+                                    </button>
+                                    <div className="song-list-duration">
+                                        00:00
+                                    </div>
+                                    <button className="remove-song-from-station song-action">
+                                        X
+                                    </button>
+                                    </div>
+                                </div>)
+                        })}
+                    </div>
                 </section>
             }
 

@@ -1,67 +1,91 @@
-.main-search-container {
-    margin-top: rem(65px);
-    padding-left: rem(32px);
-    padding-right: rem(16px);
+// contains the entire songs from search list
+
+.search-results-header {
+    background-color: #181818;
+    font-size: rem(12px);
+    height: rem(48px);
+    margin: 0 rem(-32px) rem(16px);
+    padding: 0 rem(32px);
+    grid-template-columns: rem(16px) 2fr 2fr minmax(120px, 1fr);
     display: grid;
-    grid-area: main;
+    align-items: center;
 
-    h2 {
-        margin-bottom: rem(30px);
-        color: #fff;
-        margin-top: rem(8px);
-        font-weight: 700;
-        grid-column: 1 / -1;
+    .number-sign {
+        padding: 0 rem(16px);
     }
 
-    .search-results-songs-container {
-        grid-template-columns: 3fr 20fr 5fr 5fr 1fr 5.5fr 1fr;
-    }
-    
-    .search-results-header{
-        // grid-template-columns: 3fr 20fr 5fr 5fr 1fr 5.5fr 1fr;
-        
+    .song-title {
+        padding-left: rem(32px);
     }
 
-    .filter-cards-preview {
-        // height: 100vh;
+    // .song-album {}
+
+    .song-duration {
+        display: flex;
+        flex-direction: row-reverse;
+        padding-right: rem(32px);
+    }
+}
+
+// song list definitions
+
+.song-list-line {
+    display: grid;
+    grid-template-columns: rem(16px) 4fr 2fr 1.8fr;
+    height: rem(56px);
+    align-items: center;
+
+    .song-index {
+        padding-left: rem(16px);
+    }
+
+    .searched-song-img {
+        height: 40px;
+        width: 40px;
+        aspect-ratio: 1 / 1;
+    }
+}
+
+
+.filter-cards-preview {
+    // height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
+    gap: rem(24px);
+
+    .filter-card {
+        position: relative;
+        aspect-ratio: 1 / 1;
+        background-color: rgb(66, 62, 62);
+        border-radius: rem(8px);
+        border: none;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
-        gap: rem(24px);
+        overflow: hidden;
+    }
 
-        .filter-card {
-            position: relative;
-            aspect-ratio: 1 / 1;
-            background-color: rgb(66, 62, 62);
-            border-radius: rem(8px);
-            border: none;
-            display: grid;
-            overflow: hidden;
-        }
+    .filter-card::before {
+        content: "";
+        padding-top: 100%;
+        display: block;
+        grid-area: 1 / 1 / 2 / 2;
+    }
 
-        .filter-card::before {
-            content: "";
-            padding-top: 100%;
-            display: block;
-            grid-area: 1 / 1 / 2 / 2;
-        }
+    .card-title {
+        font-size: rem(24px);
+        padding: rem(16px);
+        position: absolute;
+        color: #fff;
+        overflow-wrap: break-word;
+        word-break: break-word;
+    }
 
-        .card-title {
-            font-size: rem(24px);
-            padding: rem(16px);
-            position: absolute;
-            color: #fff;
-            overflow-wrap: break-word;
-            word-break: break-word;
-        }
+    .filter-img {
 
-        .filter-img {
-
-            grid-area: 1 / 1 / 2 / 2;
-            position: absolute;
-            rotate: z 25deg;
-            width: rem(100px);
-            left: 47%;
-            bottom: -3%;
-        }
+        grid-area: 1 / 1 / 2 / 2;
+        position: absolute;
+        rotate: z 25deg;
+        width: rem(100px);
+        left: 47%;
+        bottom: -3%;
     }
 }
