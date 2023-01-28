@@ -1,7 +1,16 @@
 import { NavLink } from 'react-router-dom'
 import logo from '../assets/icons/logo.jpg'
+import { loadStations } from '../store/station/station.actions.js'
+import { useSelector } from "react-redux"
+import { useEffect } from 'react'
 
 export function AppNavBar() {
+
+    const stations = useSelector((storeState) => storeState.stationModule.stations)
+
+    useEffect(() => {
+        loadStations()
+    }, [])
 
     return (
         <aside className='side-navbar'>
@@ -49,6 +58,24 @@ export function AppNavBar() {
                     </NavLink>
                 </li>
             </ul>
+            <div className='nav-list-seperator'>
+            </div>
+            {stations && stations?.length > 0 &&
+                <div className='user-station-list'>
+                    <ul className='user-station-list-ul'>
+                        {console.log('stations fron nav-bar', stations)}
+                        {stations.map(station =>
+                            <NavLink key={station._id} to={`/${station._id}`}>
+                                <div className="user-station-list-link">
+                                    <h3>{station.name}</h3>
+
+                                </div>
+                            </NavLink>
+                        )}
+                    </ul>
+                </div>
+            }
+
         </aside>
     )
 }

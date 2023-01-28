@@ -34,10 +34,7 @@ export function StationDetails() {
         console.log('from station to player')
         loadCurrPlayingStation(stationId)
     }
-    function handleChange(field, val) {
-        // setStation(prevStation => ({ ...prevStation, [field]: val }))
-    }
-
+    
     async function deleteStation(stationId) {
         //TODO : only if user = creator
         await removeStation(stationId)
@@ -45,6 +42,7 @@ export function StationDetails() {
     }
 
     async function updateStation() {
+        //not  good
         await updateStation(station)
     }
 
@@ -52,30 +50,23 @@ export function StationDetails() {
         addStation(station)
     }
 
-    async function onRemoveSong(songId) {
-        console.log('onRemoveSong',songId )
-        // if (station.songs.length === 0) return
-        // else {
-        //     const updatedStation = await stationService.remove(station._id, songId)
-        //     setStation(updatedStation)
-        // }
-    }
+    
 
 
-    function onPlaySong(songIdx) {
-        playStation()
-        dispatch({type:SET_SONG_IDX, songIdx})
-    }
+    // function onPlaySong(songIdx) {
+    //     playStation()
+    //     dispatch({type:SET_SONG_IDX, songIdx})
+    // }
 
-    function addToLikedSong(songId) {
-        console.log('addToLikedSong')
-    }
+    // function toggleLikedSong(songId) {
+    //     console.log('toggleLikedSong')
+    // }
 
     if (!station) return <Loader />
     return (
         <section className="station-details">
-            <StationHeader station={station} playStation={playStation} handleChange={handleChange} deleteStation={deleteStation} updateStation={updateStation} onSaveStation={onSaveStation} />
-            <SongList station={station} onPlaySong={onPlaySong} onRemoveSong={onRemoveSong} addToLikedSong={addToLikedSong} />
+            <StationHeader station={station} playStation={playStation} deleteStation={deleteStation} updateStation={updateStation} onSaveStation={onSaveStation} />
+            <SongList station={station} playStation={playStation} />
         </section>
     )
 }

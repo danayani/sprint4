@@ -1,5 +1,138 @@
 [
     {
+        "_id": "111RDtaf0Y86Q4hby91hqs6NX",
+        "name": "Liked Songs",
+        "imgUrl": "https://t.scdn.co/images/3099b3803ad9496896c43f22fe9be8c4.png",
+        "duration": 555,
+        "gener": [],
+        "tags": [],
+        "createdBy": {
+            "_id": "melody",
+            "fullname": "melody",
+            "imgUrl": "../assets/icons.logo.jpg"
+        },
+        "likedByUsers": [
+            {
+                "_id": "",
+                "userfullname": ""
+            },
+            {
+                "_id": "",
+                "userfullname": ""
+            }
+        ],
+        "songs": [
+            {
+                "id": "VPRjCeoBqrI",
+                "title": "A Sky Full Of Stars",
+                "createdBy": "Coldplay",
+                "url": "https://www.youtube.com/watch?v=VPRjCeoBqrI&list=RDEMuf6htoZivPnz-ZIwGU0dDA&index=3",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00001e02f864bcdcc245f06831d17ae0",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "liked" : true,
+                "addedAt": 162521755262,
+                "duration": 285
+            },
+            {
+                "id": "xgC5DYLUNAI",
+                "title": "Yellow",
+                "createdBy": "Coldplay",
+                "url": "https://www.youtube.com/watch?v=xgC5DYLUNAI",
+                "imgUrl": "https://i.scdn.co/image/ab67616d000048513d92b2ad5af9fbc8637425f0",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "liked" : true,
+                "addedAt": 162521755262,
+                "duration": 285
+            },
+            {
+                "id": "oaahwTCogXo",
+                "title": "The Scientist",
+                "createdBy": "Coldplay",
+                "url": "https://www.youtube.com/watch?v=oaahwTCogXo",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851de09e02aa7febf30b7c02d82",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "liked" : true,
+                "addedAt": 162521755262,
+                "duration": 285
+            },
+            {
+                "id": "51CFIm4wAOQ",
+                "title": "Biutyful",
+                "createdBy": "Coldplay",
+                "url": "https://www.youtube.com/watch?v=51CFIm4wAOQ",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851289ac619a0993bbe19484727",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "liked" : true,
+                "addedAt": 162521755262,
+                "duration": 285
+            },
+            {
+                "id": "YA7U00i6WGQ",
+                "title": "Clocks",
+                "createdBy": "Coldplay",
+                "url": "https://www.youtube.com/watch?v=YA7U00i6WGQ",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851de09e02aa7febf30b7c02d82",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "liked" : true,
+                "addedAt": 162521755262,
+                "duration": 285
+            },
+            {
+                "id": "ySNG1IFaD-g",
+                "title": "Hymn for the weekend",
+                "createdBy": "Coldplay",
+                "url": "https://www.youtube.com/watch?v=ySNG1IFaD-g",
+                "imgUrl": "https://i.scdn.co/image/ab67616d000048518ff7c3580d429c8212b9a3b6",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "liked" : true,
+                "addedAt": 162521755262,
+                "duration": 285
+            },
+            {
+                "id": "CrWd-S5e99c",
+                "title": "Magic",
+                "createdBy": "Coldplay",
+                "url": "https://www.youtube.com/watch?v=CrWd-S5e99c",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851f864bcdcc245f06831d17ae0",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "liked" : true,
+                "addedAt": 162521755262,
+                "duration": 285
+            }
+        ],
+        "msgs": [
+            {
+                "id": "m101",
+                "from": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "txt": "Manish?"
+            }
+        ]
+    },
+    {
         "_id": "2bKRDtaf0Y86Q4hby91hqs6NX",
         "name": "Coldplay",
         "imgUrl": "https://i.scdn.co/image/ab67706f00000002a231f671c289555cfd09f716",
@@ -39,9 +172,11 @@
                     "_id": "",
                     "userfullname": ""
                 },
+                "liked" : false,
                 "addedAt": 162521755262,
                 "duration": 285
             },
+            
             {
                 "id": "xgC5DYLUNAI",
                 "title": "Yellow",
@@ -52,6 +187,7 @@
                     "_id": "",
                     "userfullname": ""
                 },
+                "liked" : false,
                 "addedAt": 162521755262,
                 "duration": 285
             },
@@ -65,6 +201,7 @@
                     "_id": "",
                     "userfullname": ""
                 },
+                "liked" : false,
                 "addedAt": 162521755262,
                 "duration": 285
             },
@@ -78,6 +215,7 @@
                     "_id": "",
                     "userfullname": ""
                 },
+                "liked" : false,
                 "addedAt": 162521755262,
                 "duration": 285
             },
@@ -91,6 +229,7 @@
                     "_id": "",
                     "userfullname": ""
                 },
+                "liked" : false,
                 "addedAt": 162521755262,
                 "duration": 285
             },
@@ -104,6 +243,7 @@
                     "_id": "",
                     "userfullname": ""
                 },
+                "liked" : false,
                 "addedAt": 162521755262,
                 "duration": 285
             },
@@ -117,6 +257,7 @@
                     "_id": "",
                     "userfullname": ""
                 },
+                "liked" : false,
                 "addedAt": 162521755262,
                 "duration": 285
             }
@@ -135,7 +276,7 @@
     {
         "_id": "2bKRDtaf0Y86Q4hby85hqs6NX",
         "name": "Soft Rock",
-        "imgUrl": "https://i.scdn.co/image/ab67706f00000002a231f671c289555cfd09f716",
+        "imgUrl": "https://i.scdn.co/image/ab67706f000000023060af49d84dea191630fa16",
         "duration": 555,
         "gener": [
             "Rock",
@@ -267,8 +408,8 @@
     },
     {
         "_id": "8gKRDtaf0Y86Q4hby85hqs6NX",
-        "name": "The Best Of 2000",
-        "imgUrl": "https://i.scdn.co/image/ab67706f00000002a231f671c289555cfd09f716",
+        "name": "The Best Of 2000s",
+        "imgUrl": "https://i.scdn.co/image/ab67706c0000da849579b580da9f30830f77440b",
         "duration": 555,
         "gener": [
             "Rock",
@@ -400,8 +541,8 @@
     },
     {
         "_id": "8gKRDtaf8h86Q4hby85hqs6NX",
-        "name": "Old But Gold",
-        "imgUrl": "https://i.scdn.co/image/ab67706f00000002a231f671c289555cfd09f716",
+        "name": "Songs to sing in the shower",
+        "imgUrl": "https://i.scdn.co/image/ab67706f0000000224893f0507c0fe2855565438",
         "duration": 555,
         "gener": [
             "Rock",
@@ -533,8 +674,8 @@
     },
     {
         "_id": "8gKRDtaf8h96Q4hby85hqs6NX",
-        "name": "Moody Mix",
-        "imgUrl": "https://i.scdn.co/image/ab67706f00000002a231f671c289555cfd09f716",
+        "name": "Happy Hits!",
+        "imgUrl": "https://i.scdn.co/image/ab67706f00000002b970d80800de215ac7939eb2",
         "duration": 555,
         "gener": [
             "Rock",
@@ -666,8 +807,8 @@
     },
     {
         "_id": "8gKRDikf8h86Q4hby85hqs6NX",
-        "name": "Sad Songs",
-        "imgUrl": "https://i.scdn.co/image/ab67706f00000002a231f671c289555cfd09f716",
+        "name": "Mood Booster",
+        "imgUrl": "https://i.scdn.co/image/ab67706f00000002bd0e19e810bb4b55ab164a95",
         "duration": 555,
         "gener": [
             "Rock",
@@ -799,8 +940,8 @@
     },
     {
         "_id": "8gKRDtaf8h73Q4hby85hqs6NX",
-        "name": "Your Favorite CoffeeHouse",
-        "imgUrl": "https://i.scdn.co/image/ab67706f00000002a231f671c289555cfd09f716",
+        "name": "Broken Heart",
+        "imgUrl": "https://i.scdn.co/image/ab67706f0000000250f34f0e7a0b73effe02fa6f",
         "duration": 555,
         "gener": [
             "Rock",
@@ -932,8 +1073,141 @@
     },
     {
         "_id": "8gKRDtaf8h73Q485285hqs6NX",
-        "name": "2023s Chart",
-        "imgUrl": "https://i.scdn.co/image/ab67706f00000002a231f671c289555cfd09f716",
+        "name": "Top Songs - Global",
+        "imgUrl": "https://charts-images.scdn.co/assets/locale_en/regional/weekly/region_global_default.jpg",
+        "duration": 555,
+        "gener": [
+            "Rock",
+            "Alternative"
+        ],
+        "tags": [
+            "Rock",
+            "Happy",
+            "Road Trip"
+        ],
+        "createdBy": {
+            "_id": "NoOneKnowThisId",
+            "fullname": "By Melody",
+            "imgUrl": "../assets/icons.logo.jpg"
+        },
+        "likedByUsers": [
+            {
+                "_id": "",
+                "userfullname": ""
+            },
+            {
+                "_id": "",
+                "userfullname": ""
+            }
+        ],
+        "songs": [
+            {
+                "id": "VPRjCeoBqrI",
+                "title": "A Sky Full Of Stars",
+                "createdBy": "Coldplay",
+                "url": "https://www.youtube.com/watch?v=VPRjCeoBqrI&list=RDEMuf6htoZivPnz-ZIwGU0dDA&index=3",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00001e02f864bcdcc245f06831d17ae0",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521755262,
+                "duration": 285
+            },
+            {
+                "id": "xgC5DYLUNAI",
+                "title": "Yellow",
+                "createdBy": "Coldplay",
+                "url": "https://www.youtube.com/watch?v=xgC5DYLUNAI",
+                "imgUrl": "https://i.scdn.co/image/ab67616d000048513d92b2ad5af9fbc8637425f0",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521755262,
+                "duration": 285
+            },
+            {
+                "id": "oaahwTCogXo",
+                "title": "The Scientist",
+                "createdBy": "Coldplay",
+                "url": "https://www.youtube.com/watch?v=oaahwTCogXo",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851de09e02aa7febf30b7c02d82",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521755262,
+                "duration": 285
+            },
+            {
+                "id": "51CFIm4wAOQ",
+                "title": "Biutyful",
+                "createdBy": "Coldplay",
+                "url": "https://www.youtube.com/watch?v=51CFIm4wAOQ",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851289ac619a0993bbe19484727",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521755262,
+                "duration": 285
+            },
+            {
+                "id": "YA7U00i6WGQ",
+                "title": "Clocks",
+                "createdBy": "Coldplay",
+                "url": "https://www.youtube.com/watch?v=YA7U00i6WGQ",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851de09e02aa7febf30b7c02d82",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521755262,
+                "duration": 285
+            },
+            {
+                "id": "ySNG1IFaD-g",
+                "title": "Hymn for the weekend",
+                "createdBy": "Coldplay",
+                "url": "https://www.youtube.com/watch?v=ySNG1IFaD-g",
+                "imgUrl": "https://i.scdn.co/image/ab67616d000048518ff7c3580d429c8212b9a3b6",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521755262,
+                "duration": 285
+            },
+            {
+                "id": "CrWd-S5e99c",
+                "title": "Magic",
+                "createdBy": "Coldplay",
+                "url": "https://www.youtube.com/watch?v=CrWd-S5e99c",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851f864bcdcc245f06831d17ae0",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521755262,
+                "duration": 285
+            }
+        ],
+        "msgs": [
+            {
+                "id": "m101",
+                "from": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "txt": "Manish?"
+            }
+        ]
+    },
+    {
+        "_id": "8gKRDtaf9k73Q485285hqs6NX",
+        "name": "Top Songs - Israel",
+        "imgUrl": "https://charts-images.scdn.co/assets/locale_en/regional/weekly/region_il_default.jpg",
         "duration": 555,
         "gener": [
             "Rock",

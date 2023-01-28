@@ -7,6 +7,7 @@ module.exports = {
     getCollection
 }
 
+const dbName = 'stations'        //? need the collection name from mongo in string
 var dbConn = null
 
 async function getCollection(collectionName) {
