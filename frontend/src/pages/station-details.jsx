@@ -50,25 +50,23 @@ export function StationDetails() {
         addStation(station)
     }
 
-    async function onRemoveSong(songId) {
-        console.log('onRemoveSong',songId )
-    }
+    
 
 
-    function onPlaySong(songIdx) {
-        playStation()
-        dispatch({type:SET_SONG_IDX, songIdx})
-    }
+    // function onPlaySong(songIdx) {
+    //     playStation()
+    //     dispatch({type:SET_SONG_IDX, songIdx})
+    // }
 
-    function toggleLikedSong(songId) {
-        console.log('toggleLikedSong')
-    }
+    // function toggleLikedSong(songId) {
+    //     console.log('toggleLikedSong')
+    // }
 
     if (!station) return <Loader />
     return (
         <section className="station-details">
             <StationHeader station={station} playStation={playStation} deleteStation={deleteStation} updateStation={updateStation} onSaveStation={onSaveStation} />
-            <SongList station={station} toggleLikedSong={toggleLikedSong} onRemoveSong={onRemoveSong}  />
+            <SongList station={station} playStation={playStation} />
         </section>
     )
 }

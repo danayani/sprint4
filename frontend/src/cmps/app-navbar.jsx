@@ -9,7 +9,7 @@ export function AppNavBar() {
     const stations = useSelector((storeState) => storeState.stationModule.stations)
 
     useEffect(() => {
-        // loadStations()
+        loadStations()
     }, [])
 
     return (

@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react";
 import { stationService } from "../services/station.service.js"
-import { LOAD_STATION_FOR_PLAYER } from "../store/player/player.reducer.js";
+import { useDispatch } from "react-redux"
+import { SET_SONG_IDX, LOAD_STATION_FOR_PLAYER  } from "../store/player/player.reducer.js";
+import { updateStation } from "../store/station/station.actions.js";
 
-export function SongList({ station, onRemoveSong, toggleLikedSong, onPlaySong }) {
+export function SongList({ station, playStation }) {
 
     const [songs, setSongs] = useState([])
+    const dispatch = useDispatch()
 
     useEffect(() => {
         loadSongs()
@@ -12,6 +15,24 @@ export function SongList({ station, onRemoveSong, toggleLikedSong, onPlaySong })
 
     function loadSongs() {
         setSongs(station.songs)
+    }
+
+    function onPlaySong(songIdx) {
+        playStation()
+        dispatch({type:SET_SONG_IDX, songIdx})
+    }
+
+    async function onRemoveSongFronStation(songIdx) {
+        console.log('onRemoveSongFronStation' )
+        console.log(songs[songIdx])
+        songs.splice(songIdx,1)
+        console.log('afterRemove ', songs)
+
+        updateStation(station)
+    }
+
+    function toggleLikedSong() {
+        console.log('toggleLikedSong' )
     }
 
     // if (!songs || !songs.length) <h1></h1>
@@ -25,7 +46,6 @@ export function SongList({ station, onRemoveSong, toggleLikedSong, onPlaySong })
                 <span><i className="song-list-tbodyTime fa-regular fa-clock"></i></span>
             </header>
             <ul>
-                {console.log("songs",songs)}
                 {songs.map((song, idx) => {
                     return <article  key={song.id}>
                         <li key={song.id} className="song-list-li grid">
@@ -46,13 +66,13 @@ export function SongList({ station, onRemoveSong, toggleLikedSong, onPlaySong })
                             <div className="song-list-add-date">
                                 {song.addedAt}
                             </div>
-                            <button className="add-song-station song-action">
+                            <button className="add-song-station song-action" onClick={toggleLikedSong}>
                                 ♥
                             </button>
                             <div className="song-list-duration">
                                 00:00
                             </div>
-                            <button className="remove-song-from-station song-action">
+                            <button className="remove-song-from-station song-action" onClick={() =>onRemoveSongFronStation(idx)}>
                                 X
                             </button>
                         </li>
