@@ -2,7 +2,7 @@ import { stationService } from '../../services/station.service'
 import { ADD_STATION, REMOVE_STATION, SET_STATIONS, UPDATE_STATION } from "./station.reducer.js"
 import { store } from '../store'
 
-const STATION_LIKED_SONGS_ID = '111RDtaf0Y86Q4hby91hqs6NX'
+const STATION_LIKED_SONGS_ID = '63d66ec8aa8cb368ea1a9c67'
 
 // Action Creators:
 export async function loadStations(filterBy) {
