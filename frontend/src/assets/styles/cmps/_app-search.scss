@@ -6,16 +6,16 @@
     height: rem(48px);
     margin: 0 rem(-32px) rem(16px);
     padding: 0 rem(32px);
-    grid-template-columns: rem(16px) 2fr 2fr 1fr ;
+    grid-template-columns: rem(16px) 2fr 1.5fr 1.5fr ;
     display: grid;
     align-items: center;
 
     .number-sign {
-        padding: 0 rem(16px);
+        padding: 0 rem(32px);
     }
 
     .song-title {
-        padding-left: rem(32px);
+        padding-left: rem(48px);
     }
 
     .song-album {
@@ -25,20 +25,21 @@
     }
 
     .song-duration {
-        display: flex;
-        flex-direction: row-reverse;
-        padding-right: rem(40px);
+        
+        padding-left: 145px;
     }
 }
 
 // song list definitions
 .search-results-song-list {
+    width: 90%;
+    padding-left: 16px;
     display: grid;
     grid-template-rows: repeat(auto-fill, rem(56px));
 
     .song-list-line {
         display: grid;
-        grid-template-columns: rem(16px) 1fr 4fr 2fr 1fr;
+        grid-template-columns: rem(16px) 1fr 4fr 1fr;
         height: rem(56px);
         align-items: center;
 
@@ -57,14 +58,15 @@
             overflow-wrap: break-word;
             word-break: break-word;
         }
-
-
-        .searched-song-artist {}
-
+       
         .searched-song-options {
             display: flex;
             flex-direction: row-reverse;
             justify-content: space-around;
+            padding-right: rem(18px);
+        }
+        .add-like-to-song{
+            background: transparent;
         }
 
 
