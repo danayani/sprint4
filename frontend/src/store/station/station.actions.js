@@ -52,6 +52,8 @@ export async function actionToggleSongToLikedSong(song) {
     var likedSongStation = await stationService.getById(STATION_LIKED_SONGS_ID)
     // console.log('actionToggleSongToLikedSong', likedSongStation)
 
+    console.log('actionToggleSongToLikedSong', likedSongStation)
+
     if (!song.liked) likedSongStation.songs.unshift(song)
     else {
         console.log('the fucked up song', song)

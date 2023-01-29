@@ -44,7 +44,6 @@ export function SongList({ station, playStation }) {
 
     }
 
-
     const classSongListContainer = (location.pathname.includes('/create-station')) ? "song-list-container create" : "song-list-container"
     return (
         <div className={classSongListContainer} >
@@ -57,6 +56,7 @@ export function SongList({ station, playStation }) {
             </header>
             <ul>
                 {songs.map((song, idx) => {
+                    // if(song === )
                     console.log('timestemp :', utilService.timeConverter(song.addedAt))
                     console.log('is liked ♥ ', song.liked)
                     const classSvgLiked = (song.liked) ? 'song-liked-svg' : 'song-dis-liked-svg'
