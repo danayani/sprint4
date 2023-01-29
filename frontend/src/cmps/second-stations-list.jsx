@@ -6,7 +6,7 @@ export function SecondStationList({ stations }) {
             <h2>Made For You</h2>
             <section className="second-station-cards">
                 {stations.map(station =>
-                    <Link key={station._id} to={`/station/${station._id}`}>
+                    <Link key={station._id} to={`/${station._id}`}>
                         <div className="second-station-card">
                             <img className="song-card-img" src={station.imgUrl} alt="song img" />
                             <h3>{station.name}</h3>
@@ -15,7 +15,7 @@ export function SecondStationList({ stations }) {
                     </Link>
                 )}
             </section>
-            <h2 className="station-extra">Recommended songs</h2>
+            {/* <h2 className="station-extra">Recommended songs</h2> */}
         </section>
     )
 

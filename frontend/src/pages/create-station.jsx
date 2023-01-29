@@ -40,10 +40,13 @@ export function CreateStation() {
     }
 
     async function onAddSong(song) {
+
+        // let durationAPI = await youtubeService.getSongDuration(song.id)
+        // console.log('durationAPI', durationAPI)
         station.songs.push(song)
         console.log('newStation', station)
-        
-        updateStation(station)     
+
+        updateStation(station)
     }
 
     async function onSearch(ev) {
@@ -89,29 +92,26 @@ export function CreateStation() {
             {
                 songsFromSearch &&
                 <div className="search-results">
-                    {songsFromSearch.map((song, idx) => {
-                        return (
-                            <article key={song.id} role="button">
-                                <li className="song-list-li grid">
-                                    <section>
+                    <ul>
+                        {songsFromSearch.map((song, idx) => {
+                            console.log('song', song)
+                            return (
+                                <article key={song.id} role="button">
+                                    <li className="song-search-li grid">
                                         <div>
-                                            <img className="song-img" src={song.imgUrl} alt="Magnifing glass" />
+                                            <img className="search-song-img" src={song.imgUrl} alt="Magnifing glass" />
                                         </div>
-                                        <section>
+                                        <div>
                                             <p>{song.title}</p>
-                                        </section>
-                                    </section>
-                                    <div className="song-list-artist">
-                                        {song.title}
-                                    </div>
-                                    <div className="song-list-add-date">
-                                        {utilService.randomPastTime()}
-                                    </div>
-                                    <button className="add-song-btn" onClick={() => onAddSong(song)}>Add</button>
-                                </li>
-                            </article>
-                        )
-                    })}
+                                        </div>
+                                        <div>
+                                            <button className="add-song-btn" onClick={() => onAddSong(song)}>Add</button>
+                                        </div>
+                                    </li>
+                                </article>
+                            )
+                        })}
+                    </ul>
                 </div>
             }
         </section>
