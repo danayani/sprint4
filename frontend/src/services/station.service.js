@@ -44,7 +44,7 @@ function save(station) {
     if (station._id){
         return httpService.put(BASE_URL + station._id, station)
     } else {
-        return httpService.post('station', station)
+        return httpService.post(BASE_URL, station)
     }
 }
 
@@ -68,7 +68,6 @@ function save(station) {
 
 function getEmptyStation() {
     return {
-        "_id": "",
         "name": _getNewStationName(),
         "imgUrl": newStationPic,
         "duration": {
