@@ -40,6 +40,9 @@ export function CreateStation() {
     }
 
     async function onAddSong(song) {
+
+        // let durationAPI = await youtubeService.getSongDuration(song.id)
+        // console.log('durationAPI', durationAPI)
         station.songs.push(song)
         console.log('newStation', station)
 
@@ -91,6 +94,7 @@ export function CreateStation() {
                 <div className="search-results">
                     <ul>
                         {songsFromSearch.map((song, idx) => {
+                            console.log('song', song)
                             return (
                                 <article key={song.id} role="button">
                                     <li className="song-search-li grid">
