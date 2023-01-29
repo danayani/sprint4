@@ -12,20 +12,6 @@ export function AppHeader() {
 
     const [searchSongs, setSearchSongs] = useState([])
 
-    // const search = useRef(utilService.debounce(getSongsFromSearch,500))
-
-    // async function getSongsFromSearch(value) {
-    //     if(!value.length) {
-    //         setTxtSearchPlaceHolder([])
-    //         return
-    //     }
-    // }
-
-    // function onLogoutUser() {
-    //     navigate('/')
-    //     logout()
-    // }
-
     function onGo(diff) {
         navigate(diff)
     }
@@ -33,18 +19,11 @@ export function AppHeader() {
     function handleChange({ target }) {
         let { value } = target
         setTxtSearchKey(value)
-        // setTxtSearchPlaceHolder(value)
     }
 
     function onSearch(ev) {
-        // ev.preventDefault()
         console.log('onSearch', txtSearchKey)
         navigate(`/search/?searchKey=${txtSearchKey}`)
-        // youtubeService.getServerSideSearch(txtSearchKey)
-        //     .then(res => {
-        //         let songs = res
-        //         // setSearchSongs(songs)
-        //     })
     }
 
     return (
