@@ -3,10 +3,11 @@
         "_id": "2bKRDtaf0Y86Q4hby91hqs6NX",
         "name": "Coldplay",
         "imgUrl": "https://i.scdn.co/image/ab67706f00000002a231f671c289555cfd09f716",
-        "duration": 555,
+        "duration": 2336,
         "gener": [
             "Rock",
-            "Alternative"
+            "Alternative",
+            "Popular"
         ],
         "tags": [
             "Rock",
@@ -39,8 +40,9 @@
                     "_id": "",
                     "userfullname": ""
                 },
+                "liked": false,
                 "addedAt": 162521765262,
-                "duration": 55
+                "duration": 224
             },
             {
                 "id": "1G4isv_Fylg",
@@ -52,11 +54,9 @@
                     "_id": "",
                     "userfullname": ""
                 },
+                "liked": false,
                 "addedAt": 162521755262,
-                "duration": {
-                    "min": 4,
-                    "sec": 21
-                }
+                "duration": 261
             },
             {
                 "id": "VPRjCeoBqrI",
@@ -68,11 +68,9 @@
                     "_id": "",
                     "userfullname": ""
                 },
+                "liked": false,
                 "addedAt": 162521755262,
-                "duration": {
-                    "min": 4,
-                    "sec": 27
-                }
+                "duration": 267
             },
             {
                 "id": "xgC5DYLUNAI",
@@ -84,11 +82,9 @@
                     "_id": "",
                     "userfullname": ""
                 },
+                "liked": false,
                 "addedAt": 162521755262,
-                "duration": {
-                    "min": 4,
-                    "sec": 28
-                }
+                "duration": 268
             },
             {
                 "id": "oaahwTCogXo",
@@ -100,11 +96,9 @@
                     "_id": "",
                     "userfullname": ""
                 },
+                "liked": false,
                 "addedAt": 162521755262,
-                "duration": {
-                    "min": 5,
-                    "sec": 10
-                }
+                "duration": 310
             },
             {
                 "id": "51CFIm4wAOQ",
@@ -116,11 +110,9 @@
                     "_id": "",
                     "userfullname": ""
                 },
+                "liked": false,
                 "addedAt": 162521755262,
-                "duration": {
-                    "min": 3,
-                    "sec": 12
-                }
+                "duration": 192
             },
             {
                 "id": "YA7U00i6WGQ",
@@ -132,11 +124,9 @@
                     "_id": "",
                     "userfullname": ""
                 },
+                "liked": false,
                 "addedAt": 162521755262,
-                "duration": {
-                    "min": 5,
-                    "sec": 9
-                }
+                "duration": 309
             },
             {
                 "id": "ySNG1IFaD-g",
@@ -148,11 +138,9 @@
                     "_id": "",
                     "userfullname": ""
                 },
+                "liked": false,
                 "addedAt": 162521755262,
-                "duration": {
-                    "min": 3,
-                    "sec": 44
-                }
+                "duration": 224
             },
             {
                 "id": "CrWd-S5e99c",
@@ -164,11 +152,9 @@
                     "_id": "",
                     "userfullname": ""
                 },
+                "liked": false,
                 "addedAt": 162521755262,
-                "duration": {
-                    "min": 4,
-                    "sec": 41
-                }
+                "duration": 281
             }
         ],
         "msgs": [
@@ -182,18 +168,16 @@
             }
         ]
     },
-
     {
         "_id": "5cksxjas29xjsa8xjsa8jxs09",
         "name": "Funk&Soul Classics",
         "imgUrl": "https://i.scdn.co/image/ab67706f00000003e0113d1b6e16f0813877a9f9",
-        "duration": {
-            "min": "",
-            "sec": ""
-        },
+        "duration": 1399,
         "gener": [
             "Funk",
-            "Soul"
+            "Soul",
+            "R&B",
+            "Blues"
         ],
         "tags": [
             "Funk",
@@ -227,11 +211,9 @@
                     "_id": "",
                     "userfullname": ""
                 },
+                "liked": false,
                 "addedAt": 162521765262,
-                "duration": {
-                    "min": 3,
-                    "sec": 15
-                }
+                "duration": 195
             },
             {
                 "id": "nrtVEGMURmo",
@@ -243,11 +225,9 @@
                     "_id": "",
                     "userfullname": ""
                 },
+                "liked": false,
                 "addedAt": 162521755262,
-                "duration": {
-                    "min": 2,
-                    "sec": 38
-                }
+                "duration": 158
             },
             {
                 "id": "ln4nOK_F7-U",
@@ -259,11 +239,9 @@
                     "_id": "",
                     "userfullname": ""
                 },
+                "liked": false,
                 "addedAt": 162521755262,
-                "duration": {
-                    "min": 5,
-                    "sec": 9
-                }
+                "duration": 309
             },
             {
                 "id": "6-1jGWN6c8M",
@@ -275,11 +253,9 @@
                     "_id": "",
                     "userfullname": ""
                 },
+                "liked": false,
                 "addedAt": 162521755262,
-                "duration": {
-                    "min": 4,
-                    "sec": 4
-                }
+                "duration": 244
             },
             {
                 "id": "AX-Litazrgk",
@@ -291,11 +267,9 @@
                     "_id": "",
                     "userfullname": ""
                 },
+                "liked": false,
                 "addedAt": 162521755262,
-                "duration": {
-                    "min": 4,
-                    "sec": 9
-                }
+                "duration": 249
             },
             {
                 "id": "Js6uDz_FagQ",
@@ -307,11 +281,9 @@
                     "_id": "",
                     "userfullname": ""
                 },
+                "liked": false,
                 "addedAt": 162521755262,
-                "duration": {
-                    "min": 4,
-                    "sec": 4
-                }
+                "duration": 244
             }
         ],
         "msgs": [
@@ -322,26 +294,23 @@
             }
         ]
     },
-
     {
         "_id": "rQP8Jnlxyk4RjyHXvrmruwTQa",
         "name": "Beast Mode",
         "imgUrl": "https://www.listenspotify.com/uploaded_files/Thf_1613433971.jpg",
-        "duration": {
-            "min": "",
-            "sec": ""
-        },
+        "duration": 649,
         "gener": [
             "Workout",
             "Workout Music",
             "Active",
-            "Sport"
+            "Sport",
+            "Happy"
         ],
         "tags": [
             "funk",
             "happy",
             "house",
-            "wlectronic",
+            "Electronic",
             "workout"
         ],
         "createdBy": {
@@ -370,11 +339,9 @@
                     "_id": "",
                     "userfullname": ""
                 },
+                "liked": false,
                 "addedAt": 162521543763,
-                "duration": {
-                    "min": 4,
-                    "sec": 7
-                }
+                "duration": 247
             },
             {
                 "id": "AoySz9cx_3c",
@@ -386,11 +353,9 @@
                     "_id": "",
                     "userfullname": ""
                 },
+                "liked": false,
                 "addedAt": 162521543763,
-                "duration": {
-                    "min": 4,
-                    "sec": 7
-                }
+                "duration": 247
             },
             {
                 "id": "hldMjKHGpag",
@@ -402,11 +367,9 @@
                     "_id": "",
                     "userfullname": ""
                 },
+                "liked": false,
                 "addedAt": 162521543763,
-                "duration": {
-                    "min": 4,
-                    "sec": 7
-                }
+                "duration": 203
             }
         ],
         "msgs": [
@@ -417,18 +380,15 @@
             }
         ]
     },
-
     {
         "_id": "5cksxjas89xksa8xjsa8jxs09",
         "name": "All New Rock",
         "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYriafbKCBPpQPcTiXDj6V3m-l5nE0q3QZPw&usqp=CAU",
-        "duration": {
-            "min": "",
-            "sec": ""
-        },
+        "duration": 1456,
         "gener": [
             "Rock",
-            "New"
+            "New",
+            "Classics"
         ],
         "tags": [
             "Rock",
@@ -456,9 +416,13 @@
                 "createdBy": "Fall Out Boy",
                 "url": "https://www.youtube.com/watch?v=O9mO-i5uNXk",
                 "imgUrl": "https://i.scdn.co/image/ab67616d0000485185bf30b5eb76326bd28806ee",
-                "addedBy": "{minimal-user}",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "liked": false,
                 "addedAt": 162521765262,
-                "duration": ""
+                "duration": 243
             },
             {
                 "id": "mUkfiLjooxs",
@@ -466,9 +430,13 @@
                 "createdBy": "The Rolling Stones",
                 "url": "https://www.youtube.com/watch?v=J0D1ty9Qbl4&ab_channel=SexyEmotion",
                 "imgUrl": "https://i.ytimg.com/vi/mUkfiLjooxs/mqdefault.jpg",
-                "addedBy": "{minimal-user}",
-                "addedAt": 162521755712,
-                "duration": ""
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "liked": false,
+                "addedAt": 162521765262,
+                "duration": 243
             },
             {
                 "id": "mUzeiLjo76s",
@@ -476,9 +444,13 @@
                 "createdBy": "AC/DC",
                 "url": "https://www.youtube.com/watch?v=ssQPYVGaJ04&ab_channel=Spanhok",
                 "imgUrl": "rh.png",
-                "addedBy": "{minimal-user}",
-                "addedAt": 162521743262,
-                "duration": ""
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "liked": false,
+                "addedAt": 162521765262,
+                "duration": 243
             }
         ],
         "msgs": [
@@ -489,18 +461,20 @@
             }
         ]
     },
-
     {
         "_id": "5cksxjas89xdtfnxjsa8jxs09",
         "name": "Rock and Roll Classics",
         "imgUrl": "https://i.scdn.co/image/ab67616d00001e022bf64c48814eae089cb3778f",
-        "duration": {
-            "min": "",
-            "sec": ""
-        },
+        "duration": 1325,
+        "gener": [
+            "Rock",
+            "New",
+            "Classics"
+        ],
         "tags": [
             "Rock",
-            "Roll"
+            "Roll",
+            "Classics"
         ],
         "createdBy": {
             "_id": "u102",
@@ -518,11 +492,9 @@
                     "_id": "",
                     "userfullname": ""
                 },
-                "addedAt": 162521543763,
-                "duration": {
-                    "min": 8,
-                    "sec": 3
-                }
+                "liked": false,
+                "addedAt": 162521765262,
+                "duration": 483
             },
             {
                 "id": "9qTdxotGHtY",
@@ -534,11 +506,9 @@
                     "_id": "",
                     "userfullname": ""
                 },
+                "liked": false,
                 "addedAt": 162521543763,
-                "duration": {
-                    "min": 2,
-                    "sec": 41
-                }
+                "duration": 161
             },
             {
                 "id": "J0D1ty9Qbl4",
@@ -550,11 +520,9 @@
                     "_id": "",
                     "userfullname": ""
                 },
+                "liked": false,
                 "addedAt": 162521543763,
-                "duration": {
-                    "min": 3,
-                    "sec": 23
-                }
+                "duration": 203
             },
             {
                 "id": "ssQPYVGaJ04",
@@ -566,11 +534,9 @@
                     "_id": "",
                     "userfullname": ""
                 },
+                "liked": false,
                 "addedAt": 162521543763,
-                "duration": {
-                    "min": 3,
-                    "sec": 28
-                }
+                "duration": 208
             },
             {
                 "id": "dxcYtweIzrA",
@@ -582,11 +548,9 @@
                     "_id": "",
                     "userfullname": ""
                 },
+                "liked": false,
                 "addedAt": 162521543763,
-                "duration": {
-                    "min": 2,
-                    "sec": 26
-                }
+                "duration": 146
             },
             {
                 "id": "w0NpyIv14Gc",
@@ -598,11 +562,9 @@
                     "_id": "",
                     "userfullname": ""
                 },
+                "liked": false,
                 "addedAt": 162521543763,
-                "duration": {
-                    "min": 2,
-                    "sec": 55
-                }
+                "duration": 175
             },
             {
                 "id": "lg7TagiUARc",
@@ -614,11 +576,9 @@
                     "_id": "",
                     "userfullname": ""
                 },
+                "liked": false,
                 "addedAt": 162521543763,
-                "duration": {
-                    "min": 2,
-                    "sec": 29
-                }
+                "duration": 149
             }
         ],
         "msgs": [
@@ -629,15 +589,11 @@
             }
         ]
     },
-
     {
         "_id": "tfnxj5cksxjas89xdsa8jxs09",
         "name": "Latin Party 2023",
         "imgUrl": "https://i.scdn.co/image/ab67706c0000da84d12b27718a588ed664dc916f",
-        "duration": {
-            "min": "",
-            "sec": ""
-        },
+        "duration": 593,
         "gener": [
             "Latin",
             "Party",
@@ -676,11 +632,9 @@
                     "_id": "",
                     "userfullname": ""
                 },
+                "liked": false,
                 "addedAt": 162521543763,
-                "duration": {
-                    "min": 2,
-                    "sec": 44
-                }
+                "duration": 164
             },
             {
                 "id": "ebb8r-MPJUo",
@@ -692,12 +646,10 @@
                     "_id": "",
                     "userfullname": ""
                 },
+                "liked": false,
                 "addedAt": 162521543763,
-                "duration": {
-                    "min": 4,
-                    "sec": 54
-                }
-            }, 
+                "duration": 294
+            },
             {
                 "id": "YfRSOIxVDvA",
                 "title": "Oye",
@@ -708,44 +660,48 @@
                     "_id": "",
                     "userfullname": ""
                 },
+                "liked": false,
                 "addedAt": 162521543763,
-                "duration": {
-                    "min": 2,
-                    "sec": 45
-                }
+                "duration": 165
             }
-        ],      
-                "msgs": [
-                {
+        ],
+        "msgs": [
+            {
                 "id": "m101",
                 "from": {
                     "_id": "",
                     "userfullname": ""
                 },
                 "txt": "Manish-Ma-Neshama?"
-                }
+            }
         ]
     },
-
     {
         "_id": "5cksxjasbmnfsa8xjsa8jxs09",
         "name": "Rockin' In The 70's",
-        "duration": "",
+        "duration": 576,
         "gener": [
             "Rock"
+            
         ],
         "tags": [
             "Rock",
             "Roll"
         ],
         "createdBy": {
-            "_id": "u102",
-            "fullname": "John Smith",
-            "imgUrl": "http://some-photo/"
+            "_id": "NoOneKnowThisId",
+            "fullname": "By Melody",
+            "imgUrl": ""
         },
         "likedByUsers": [
-            "{minimal-user}",
-            "{minimal-user}"
+            {
+                "_id": "",
+                "userfullname": ""
+            },
+            {
+                "_id": "",
+                "userfullname": ""
+            }
         ],
         "songs": [
             {
@@ -754,9 +710,13 @@
                 "createdBy": "Led Zeppelin",
                 "url": "https://www.youtube.com/watch?v=qnpZCB9BUIw&ab_channel=GootieMusic",
                 "imgUrl": "https://i.ytimg.com/vi/4_iC0MyIykM/mqdefault.jpg",
-                "addedBy": "{minimal-user}",
-                "addedAt": 162521765262,
-                "duration": ""
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "liked": false,
+                "addedAt": 162521543763,
+                "duration": 165
             },
             {
                 "id": "mUkfiLjooxs",
@@ -764,9 +724,13 @@
                 "createdBy": "The Rolling Stones",
                 "url": "https://www.youtube.com/watch?v=J0D1ty9Qbl4&ab_channel=SexyEmotion",
                 "imgUrl": "https://i.ytimg.com/vi/mUkfiLjooxs/mqdefault.jpg",
-                "addedBy": "{minimal-user}",
-                "addedAt": 162521755712,
-                "duration": ""
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "liked": false,
+                "addedAt": 162521543763,
+                "duration": 203
             },
             {
                 "id": "mUzeiLjo76s",
@@ -774,303 +738,13 @@
                 "createdBy": "AC/DC",
                 "url": "https://www.youtube.com/watch?v=ssQPYVGaJ04&ab_channel=Spanhok",
                 "imgUrl": "rh.png",
-                "addedBy": "{minimal-user}",
-                "addedAt": 162521743262,
-                "duration": ""
-            }
-        ],
-        "msgs": [
-            {
-                "id": "m102",
-                "from": "{mini-user}",
-                "txt": "This playlist rocks!"
-            }
-        ]
-    },
-    {
-        "_id": "5cksxjas89xksa8xjsa812345",
-        "name": "70's Rock",
-        "duration": "",
-        "gener": [
-            "Rock"
-        ],
-        "tags": [
-            "Rock",
-            "Roll"
-        ],
-        "createdBy": {
-            "_id": "u102",
-            "fullname": "John Smith",
-            "imgUrl": "http://some-photo/"
-        },
-        "likedByUsers": [
-            "{minimal-user}",
-            "{minimal-user}"
-        ],
-        "songs": [
-            {
-                "id": "s1002",
-                "title": "Stairway to Heaven",
-                "createdBy": "Led Zeppelin",
-                "url": "https://www.youtube.com/watch?v=qnpZCB9BUIw&ab_channel=GootieMusic",
-                "imgUrl": "https://i.ytimg.com/vi/4_iC0MyIykM/mqdefault.jpg",
-                "addedBy": "{minimal-user}",
-                "addedAt": 162521765262,
-                "duration": ""
-            },
-            {
-                "id": "mUkfiLjooxs",
-                "title": "The Rolling Stones - Paint It Black",
-                "createdBy": "The Rolling Stones",
-                "url": "https://www.youtube.com/watch?v=J0D1ty9Qbl4&ab_channel=SexyEmotion",
-                "imgUrl": "https://i.ytimg.com/vi/mUkfiLjooxs/mqdefault.jpg",
-                "addedBy": "{minimal-user}",
-                "addedAt": 162521755712,
-                "duration": ""
-            },
-            {
-                "id": "mUzeiLjo76s",
-                "title": "Highway to Hell",
-                "createdBy": "AC/DC",
-                "url": "https://www.youtube.com/watch?v=ssQPYVGaJ04&ab_channel=Spanhok",
-                "imgUrl": "rh.png",
-                "addedBy": "{minimal-user}",
-                "addedAt": 162521743262,
-                "duration": ""
-            }
-        ],
-        "msgs": [
-            {
-                "id": "m102",
-                "from": "{mini-user}",
-                "txt": "This playlist rocks!"
-            }
-        ]
-    },
-    {
-        "_id": "5cksxj123456sa8xjsa8jxs09",
-        "name": "Rock n Roll",
-        "duration": "",
-        "gener": [
-            "Rock"
-        ],
-        "tags": [
-            "Rock",
-            "Roll"
-        ],
-        "createdBy": {
-            "_id": "u102",
-            "fullname": "John Smith",
-            "imgUrl": "http://some-photo/"
-        },
-        "likedByUsers": [
-            "{minimal-user}",
-            "{minimal-user}"
-        ],
-        "songs": [
-            {
-                "id": "s1002",
-                "title": "Stairway to Heaven",
-                "createdBy": "Led Zeppelin",
-                "url": "https://www.youtube.com/watch?v=qnpZCB9BUIw&ab_channel=GootieMusic",
-                "imgUrl": "https://i.ytimg.com/vi/4_iC0MyIykM/mqdefault.jpg",
-                "addedBy": "{minimal-user}",
-                "addedAt": 162521765262,
-                "duration": ""
-            },
-            {
-                "id": "mUkfiLjooxs",
-                "title": "The Rolling Stones - Paint It Black",
-                "createdBy": "The Rolling Stones",
-                "url": "https://www.youtube.com/watch?v=J0D1ty9Qbl4&ab_channel=SexyEmotion",
-                "imgUrl": "https://i.ytimg.com/vi/mUkfiLjooxs/mqdefault.jpg",
-                "addedBy": "{minimal-user}",
-                "addedAt": 162521755712,
-                "duration": ""
-            },
-            {
-                "id": "mUzeiLjo76s",
-                "title": "Highway to Hell",
-                "createdBy": "AC/DC",
-                "url": "https://www.youtube.com/watch?v=ssQPYVGaJ04&ab_channel=Spanhok",
-                "imgUrl": "rh.png",
-                "addedBy": "{minimal-user}",
-                "addedAt": 162521743262,
-                "duration": ""
-            }
-        ],
-        "msgs": [
-            {
-                "id": "m102",
-                "from": "{mini-user}",
-                "txt": "This playlist rocks!"
-            }
-        ]
-    },
-    {
-        "_id": "5cksxj123789sa8xjsa8jxs09",
-        "name": "Get The Rocking Started",
-        "duration": "",
-        "gener": [
-            "Rock"
-        ],
-        "tags": [
-            "Rock",
-            "Roll"
-        ],
-        "createdBy": {
-            "_id": "u102",
-            "fullname": "John Smith",
-            "imgUrl": "http://some-photo/"
-        },
-        "likedByUsers": [
-            "{minimal-user}",
-            "{minimal-user}"
-        ],
-        "songs": [
-            {
-                "id": "s1002",
-                "title": "Stairway to Heaven",
-                "createdBy": "Led Zeppelin",
-                "url": "https://www.youtube.com/watch?v=qnpZCB9BUIw&ab_channel=GootieMusic",
-                "imgUrl": "https://i.ytimg.com/vi/4_iC0MyIykM/mqdefault.jpg",
-                "addedBy": "{minimal-user}",
-                "addedAt": 162521765262,
-                "duration": ""
-            },
-            {
-                "id": "mUkfiLjooxs",
-                "title": "The Rolling Stones - Paint It Black",
-                "createdBy": "The Rolling Stones",
-                "url": "https://www.youtube.com/watch?v=J0D1ty9Qbl4&ab_channel=SexyEmotion",
-                "imgUrl": "https://i.ytimg.com/vi/mUkfiLjooxs/mqdefault.jpg",
-                "addedBy": "{minimal-user}",
-                "addedAt": 162521755712,
-                "duration": ""
-            },
-            {
-                "id": "mUzeiLjo76s",
-                "title": "Highway to Hell",
-                "createdBy": "AC/DC",
-                "url": "https://www.youtube.com/watch?v=ssQPYVGaJ04&ab_channel=Spanhok",
-                "imgUrl": "rh.png",
-                "addedBy": "{minimal-user}",
-                "addedAt": 162521743262,
-                "duration": ""
-            }
-        ],
-        "msgs": [
-            {
-                "id": "m102",
-                "from": "{mini-user}",
-                "txt": "This playlist rocks!"
-            }
-        ]
-    },
-    {
-        "_id": "5cksxj123456sa8xjsadrxs09",
-        "name": "Let's Rock",
-        "duration": "",
-        "tags": [
-            "Rock",
-            "Roll"
-        ],
-        "createdBy": {
-            "_id": "u102",
-            "fullname": "John Smith",
-            "imgUrl": "http://some-photo/"
-        },
-        "likedByUsers": [
-            "{minimal-user}",
-            "{minimal-user}"
-        ],
-        "songs": [
-            {
-                "id": "s1002",
-                "title": "Stairway to Heaven",
-                "createdBy": "Led Zeppelin",
-                "url": "https://www.youtube.com/watch?v=qnpZCB9BUIw&ab_channel=GootieMusic",
-                "imgUrl": "https://i.ytimg.com/vi/4_iC0MyIykM/mqdefault.jpg",
-                "addedBy": "{minimal-user}",
-                "addedAt": 162521765262,
-                "duration": ""
-            },
-            {
-                "id": "mUkfiLjooxs",
-                "title": "The Rolling Stones - Paint It Black",
-                "createdBy": "The Rolling Stones",
-                "url": "https://www.youtube.com/watch?v=J0D1ty9Qbl4&ab_channel=SexyEmotion",
-                "imgUrl": "https://i.ytimg.com/vi/mUkfiLjooxs/mqdefault.jpg",
-                "addedBy": "{minimal-user}",
-                "addedAt": 162521755712,
-                "duration": ""
-            },
-            {
-                "id": "mUzeiLjo76s",
-                "title": "Highway to Hell",
-                "createdBy": "AC/DC",
-                "url": "https://www.youtube.com/watch?v=ssQPYVGaJ04&ab_channel=Spanhok",
-                "imgUrl": "rh.png",
-                "addedBy": "{minimal-user}",
-                "addedAt": 162521743262,
-                "duration": ""
-            }
-        ],
-        "msgs": [
-            {
-                "id": "m102",
-                "from": "{mini-user}",
-                "txt": "This playlist rocks!"
-            }
-        ]
-    },
-    {
-        "_id": "6cksxj123456sa8xjsadrxs09",
-        "name": "Rock In The House",
-        "duration": "",
-        "tags": [
-            "Rock",
-            "Roll"
-        ],
-        "createdBy": {
-            "_id": "u102",
-            "fullname": "John Smith",
-            "imgUrl": "http://some-photo/"
-        },
-        "likedByUsers": [
-            "{minimal-user}",
-            "{minimal-user}"
-        ],
-        "songs": [
-            {
-                "id": "s1002",
-                "title": "Stairway to Heaven",
-                "createdBy": "Led Zeppelin",
-                "url": "https://www.youtube.com/watch?v=qnpZCB9BUIw&ab_channel=GootieMusic",
-                "imgUrl": "https://i.ytimg.com/vi/4_iC0MyIykM/mqdefault.jpg",
-                "addedBy": "{minimal-user}",
-                "addedAt": 162521765262,
-                "duration": ""
-            },
-            {
-                "id": "mUkfiLjooxs",
-                "title": "The Rolling Stones - Paint It Black",
-                "createdBy": "The Rolling Stones",
-                "url": "https://www.youtube.com/watch?v=J0D1ty9Qbl4&ab_channel=SexyEmotion",
-                "imgUrl": "https://i.ytimg.com/vi/mUkfiLjooxs/mqdefault.jpg",
-                "addedBy": "{minimal-user}",
-                "addedAt": 162521755712,
-                "duration": ""
-            },
-            {
-                "id": "mUzeiLjo76s",
-                "title": "Highway to Hell",
-                "createdBy": "AC/DC",
-                "url": "https://www.youtube.com/watch?v=ssQPYVGaJ04&ab_channel=Spanhok",
-                "imgUrl": "rh.png",
-                "addedBy": "{minimal-user}",
-                "addedAt": 162521743262,
-                "duration": ""
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "liked": false,
+                "addedAt": 162521543763,
+                "duration": 208
             }
         ],
         "msgs": [
@@ -1081,4 +755,415 @@
             }
         ]
     }
+
+   
+
+
+
+    
+    ,{
+        "_id": "af0Dt4hby91hY86Q2bK1fs6NX",
+        "name": "This Is Ariana Grande",
+        "imgUrl": "https://i.scdn.co/image/ab67706f000000024a54a41a2760b74e1d68d100",
+        "duration": 2236,
+        "gener": [
+            "Pop",
+            "Hip-Hop",
+        
+        ],
+        "tags": [
+            "Pop",
+            "Happy",
+            "Road Trip",
+            "Good Vibes",
+            "Dance Party"
+        ],
+        "createdBy": {
+            "_id": "NoOneKnowThisId",
+            "fullname": "By Melody",
+            "imgUrl": "../assets/icons.logo.jpg"
+        },
+        "likedByUsers": [
+            {
+                "_id": "",
+                "userfullname": ""
+            },
+            {
+                "_id": "",
+                "userfullname": ""
+            }
+        ],
+        "songs": [
+            {
+                "id": "8t-PNFXEU9U",
+                "title": "Into You",
+                "createdBy": "Ariana Grande",
+                "url": "https://www.youtube.com/watch?v=8t-PNFXEU9U",
+                "imgUrl": "https://i.scdn.co/image/ab67616d0000485133342c57a9b2c4e04c97b3f5",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "liked": false,
+                "addedAt": 162521765262,
+                "duration": 244
+            },
+            {
+                "id": "3d0P9op-PI4",
+                "title": "Dangerous Woman",
+                "createdBy": "Ariana Grande",
+                "url": "https://www.youtube.com/watch?v=3d0P9op-PI4",
+                "imgUrl": "https://i.scdn.co/image/ab67616d0000485133342c57a9b2c4e04c97b3f5",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "liked": false,
+                "addedAt": 162521755262,
+                "duration": 235
+            },
+            {
+                "id": "gFVjjpqzfps",
+                "title": "7 Rings",
+                "createdBy": "Ariana Grande",
+                "url": "https://www.youtube.com/watch?v=gFVjjpqzfps",
+                "imgUrl": "https://i.scdn.co/image/ab67616d0000485156ac7b86e090f307e218e9c8",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "liked": false,
+                "addedAt": 162521755262,
+                "duration": 178
+            },
+            {
+                "id": "-MeUIr7JJnk",
+                "title": "Side To Side",
+                "createdBy": "Ariana Grande Feat Nicki Minaj",
+                "url": "https://www.youtube.com/watch?v=-MeUIr7JJnk",
+                "imgUrl": "https://i.scdn.co/image/ab67616d0000485133342c57a9b2c4e04c97b3f5",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "liked": false,
+                "addedAt": 162521755262,
+                "duration": 226
+            },
+            {
+                "id": "VlfpPCMHYqA",
+                "title": "God is a woman",
+                "createdBy": "Ariana Grande",
+                "url": "https://www.youtube.com/watch?v=VlfpPCMHYqA",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851c3af0c2355c24ed7023cd394",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "liked": false,
+                "addedAt": 162521755262,
+                "duration": 197
+            },
+            {
+                "id": "uS85qCSdth0",
+                "title": "Positions",
+                "createdBy": "Ariana Grande",
+                "url": "https://www.youtube.com/watch?v=uS85qCSdth0",
+                "imgUrl": "https://i.scdn.co/image/ab67616d000048515ef878a782c987d38d82b605",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "liked": false,
+                "addedAt": 162521755262,
+                "duration": 171
+            },
+            {
+                "id": "2rzSIHlfQKA",
+                "title": "POV",
+                "createdBy": "Ariana Grande",
+                "url": "https://www.youtube.com/watch?v=2rzSIHlfQKA",
+                "imgUrl": "https://i.scdn.co/image/ab67616d000048515ef878a782c987d38d82b605",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "liked": false,
+                "addedAt": 162521755262,
+                "duration": 172
+            },
+            {
+                "id": "WQGB95tn2wc",
+                "title": "no tears left to cry",
+                "createdBy": "Ariana Grande",
+                "url": "https://www.youtube.com/watch?v=WQGB95tn2wc",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851c3af0c2355c24ed7023cd394",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "liked": false,
+                "addedAt": 162521755262,
+                "duration": 205
+            },
+            {
+                "id": "Tdog5524hvE",
+                "title": "One Last Time",
+                "createdBy": "Ariana Grande",
+                "url": "https://www.youtube.com/watch?v=Tdog5524hvE",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851836d6d793faac7b2237cff61",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "liked": false,
+                "addedAt": 162521755262,
+                "duration": 197
+            },
+            {
+                "id": "KRwwQpkToQ0",
+                "title": "thank u, next",
+                "createdBy": "Ariana Grande",
+                "url": "https://www.youtube.com/watch?v=KRwwQpkToQ0",
+                "imgUrl": "https://i.scdn.co/image/ab67616d0000485156ac7b86e090f307e218e9c8",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "liked": false,
+                "addedAt": 162521755262,
+                "duration": 207
+            },
+            {
+                "id": "JFPSv0j5UMw",
+                "title": "34+35",
+                "createdBy": "Ariana Grande",
+                "url": "https://www.youtube.com/watch?v=JFPSv0j5UMw",
+                "imgUrl": "https://i.scdn.co/image/ab67616d000048515ef878a782c987d38d82b605",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "liked": false,
+                "addedAt": 162521755262,
+                "duration": 173
+            }
+        ],
+        "msgs": [
+            {
+                "id": "m101",
+                "from": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "txt": "She is my QUEEN!"
+            }
+        ]
+    }
+
+    ,{
+        "_id": "2bKRDtaf0Y86Q4hby91hqs6NX",
+        "name": "This Is Pop Smoke",
+        "imgUrl": "https://seeded-session-images.scdn.co/v1/img/artist/0eDvMgVFoNV3TpwtrVCoTj/en",
+        "duration": 1681,
+        "gener": [
+            "Pop",
+            "Hip-Hop"
+        ],
+        "tags": [
+            "Pop",
+            "Happy",
+            "Road Trip",
+            "Good Vibes"
+        ],
+        "createdBy": {
+            "_id": "NoOneKnowThisId",
+            "fullname": "By Melody",
+            "imgUrl": "../assets/icons.logo.jpg"
+        },
+        "likedByUsers": [
+            {
+                "_id": "",
+                "userfullname": ""
+            },
+            {
+                "_id": "",
+                "userfullname": ""
+            }
+        ],
+        "songs": [
+            {
+                "id": "-wC6CRi5T3s",
+                "title": "Dior",
+                "createdBy": "Pop Smoke",
+                "url": "https://www.youtube.com/watch?v=-wC6CRi5T3s",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851f60a9b7e2abafc38da31f575",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "liked": false,
+                "addedAt": 162521765262,
+                "duration": 218
+            },
+            {
+                "id": "mhgwKxtLPow",
+                "title": "BILLIE EILISH",
+                "createdBy": "Armany White",
+                "url": "https://www.youtube.com/watch?v=mhgwKxtLPow",
+                "imgUrl": "https://i.scdn.co/image/ab67616d000048514f8799f23432ad98d522f0ec",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "liked": false,
+                "addedAt": 162521755262,
+                "duration": 99
+            },
+            {
+                "id": "D2YT1EkgBaw",
+                "title": "Doja",
+                "createdBy": "Central Cee",
+                "url": "https://www.youtube.com/watch?v=D2YT1EkgBaw",
+                "imgUrl": "https://i.scdn.co/image/ab67616d000048513c7d945b6baf935e8a0ebdaa",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "liked": false,
+                "addedAt": 162521755262,
+                "duration": 97
+            },
+            {
+                "id": "8SwlN7I2oLc",
+                "title": "Hot Shit",
+                "createdBy": "Cardi B, Kenya West",
+                "url": "https://www.youtube.com/watch?v=8SwlN7I2oLc",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851b629e669238964a725937c1b",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "liked": false,
+                "addedAt": 162521755262,
+                "duration": 211
+            },
+            {
+                "id": "m1SCItYRY2Y",
+                "title": "Foot Fungus",
+                "createdBy": "Ski Mask The Slump God",
+                "url": "https://www.youtube.com/watch?v=m1SCItYRY2Y",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851e62c8561e3b1bd9ad952ce01",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "liked": false,
+                "addedAt": 162521755262,
+                "duration": 129
+            },
+            {
+                "id": "X86fzU7o74E",
+                "title": "Element X",
+                "createdBy": "Lunarrr",
+                "url": "https://www.youtube.com/watch?v=X86fzU7o74E",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851a17bdf17b4b7cb714804260d",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "liked": false,
+                "addedAt": 162521755262,
+                "duration": 109
+            },
+            {
+                "id": "TImLHFEhC_Y",
+                "title": "Don't Rush",
+                "createdBy": "Young T & BugseyD",
+                "url": "https://www.youtube.com/watch?v=TImLHFEhC_Y",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851844c78f23e38f2cf04df4ae1",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "liked": false,
+                "addedAt": 162521755262,
+                "duration": 201
+            },
+            {
+                "id": "qMNWOp9bMp0",
+                "title": "Meet The Woo",
+                "createdBy": "Pop-Smoke",
+                "url": "https://www.youtube.com/watch?v=qMNWOp9bMp0",
+                "imgUrl": "https://i.scdn.co/image/ab67616d000048518fe5d04b06aff90f9fe796f5",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "liked": false,
+                "addedAt": 162521755262,
+                "duration": 181
+            },
+            {
+                "id": "qxv8QuDZdLo",
+                "title": "Loading",
+                "createdBy": "Central Cee",
+                "url": "https://www.youtube.com/watch?v=qxv8QuDZdLo",
+                "imgUrl": "https://i.scdn.co/image/ab67616d000048511675d50a0ba7919b5e5797fe",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "liked": false,
+                "addedAt": 162521755262,
+                "duration": 173
+            },
+            {
+                "id": "WNcXZrPgVWM",
+                "title": "Panini - DaBaby Remix",
+                "createdBy": "Lil Nas X,DaBaby",
+                "url": "https://www.youtube.com/watch?v=WNcXZrPgVWM",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851de048a43d03fb53a466c1c9f",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "liked": false,
+                "addedAt": 162521755262,
+                "duration": 151
+            },
+            {
+                "id": "4gap8wMtcTY",
+                "title": "Born With It",
+                "createdBy": "Jay Critch, Harry Fraud",
+                "url": "https://www.youtube.com/watch?v=4gap8wMtcTY",
+                "imgUrl": "https://i.scdn.co/image/ab67616d000048510dfbf0ca9d53153ced2448e5",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "liked": false,
+                "addedAt": 162521755262,
+                "duration": 112
+            }
+        ],
+        "msgs": [
+            {
+                "id": "m101",
+                "from": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "txt": "Manish?"
+            }
+        ]
+    }
+
 ]
+
+ 
+
+
+   
+   
+   
