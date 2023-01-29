@@ -24,9 +24,10 @@
 
     margin-left: 32px !important;
     border-radius: 6px !important;
-
     background-color: $bgcplaylistup;
-
     margin-bottom: 50px;
-    // margin-top: 12px;
+    
+    .search-key-input{
+        outline: transparent;
+    }
 }

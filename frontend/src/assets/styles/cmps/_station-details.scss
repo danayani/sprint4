@@ -1,7 +1,7 @@
 .station-details {
-    // display: grid;
+    display: grid;
     grid-template-columns: 2/-1;
-    grid-template-rows: 1/2/3/-1;
+    grid-template-rows: 1/-1;
     height: 100%;
     width: 100%;
     border: 0;
@@ -10,8 +10,9 @@
     background-image: linear-gradient(rgb(26, 26, 172), black);
 }
 
-.top-container{
+.top-container {
     display: flex;
+
     .img-container {
         width: rem(230px);
         height: rem(230px);
@@ -21,6 +22,7 @@
         object-fit: cover;
         aspect-ratio: 1 / 1;
     }
+
     .info-container {
         display: flex;
         flex-flow: column;
@@ -29,7 +31,7 @@
         color: $txtselected;
         margin-left: 24px;
         margin-top: 100px;
-       
+
         h2 {
             font-size: rem(12px);
         }
@@ -43,12 +45,13 @@
             margin-top: 20px;
             font-size: rem(12px);
         }
-    } 
+    }
 }
 
-.details-controls{
+.details-controls {
     display: flex;
-    .btn-play{
+
+    .btn-play {
         display: flex;
         height: rem(55px);
         width: rem(55px);
@@ -59,29 +62,29 @@
         border-radius: 50%;
         margin-top: 38px;
         margin-left: 32px;
-      
-        svg{
+
+        svg {
             fill: black;
             font-size: 25px;
         }
     }
 
-    .btn-like{
+    .btn-like {
         background-color: transparent;
         margin-left: 34px;
         margin-top: 45px;
         font-size: 25px;
-        
+
     }
-    
-    .btn-options{
+
+    .btn-options {
         background-color: transparent;
         margin-top: 45px;
         margin-left: 25px;
         font-size: 25px;
     }
 
-    .btn-delete-station{
+    .btn-delete-station {
         font-size: 25px;
         margin-left: 25px;
         margin-top: 45px;
