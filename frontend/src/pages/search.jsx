@@ -25,7 +25,7 @@ export function Search({ playStation }) {
 
     async function getSongsFromSearch() {
         if ((songKey) && (!songsFromSearch)) {
-            let searchData = utilService.loadFromStorage(songKey)
+            let searchData =  utilService.loadFromStorage(songKey)
             if (!searchData || !searchData.length) {
                 youtubeService.getServerSideSearch(songKey)
                 .then(songs => {
