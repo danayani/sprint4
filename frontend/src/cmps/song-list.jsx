@@ -3,10 +3,9 @@ import { stationService } from "../services/station.service.js"
 import { useDispatch } from "react-redux"
 import { SET_SONG_IDX, LOAD_STATION_FOR_PLAYER } from "../store/player/player.reducer.js";
 import { updateStation, actionToggleSongToLikedSong } from "../store/station/station.actions.js";
+import { utilService } from "../services/util.service.js";
 
 export function SongList({ station, playStation }) {
-
-
 
     const [songs, setSongs] = useState([])
     const dispatch = useDispatch()
@@ -54,6 +53,7 @@ export function SongList({ station, playStation }) {
             </header>
             <ul>
                 {songs.map((song, idx) => {
+                    console.log('timestemp :', utilService.timeConverter(song.addedAt))
                     console.log('is liked ♥ ', song.liked)
                     const classSvgLiked = (song.liked) ? 'song-liked-svg' : 'song-dis-liked-svg'
                     const titleSvgLiked = (!song.liked) ? 'add to Liked Songs' : 'remove from Liked Songs'
@@ -76,7 +76,7 @@ export function SongList({ station, playStation }) {
                                 </div>
                             </section>
                             <div className="song-list-add-date">
-                                {song.addedAt}
+                                {utilService.timeConverter(song.addedAt)}
                             </div>
                             <button className="add-song-station song-action " title={titleSvgLiked} onClick={() => toggleLikedSong(song)}>
                                 <svg id="song-liked-svg" className={classSvgLiked} role="img" height="24" width="24" aria-hidden="true" >

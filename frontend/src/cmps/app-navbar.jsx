@@ -10,6 +10,7 @@ export function AppNavBar() {
 
     useEffect(() => {
         loadStations()
+        
     }, [])
 
     return (
