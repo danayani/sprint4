@@ -22,104 +22,7 @@
             }
         ],
         "songs": [
-            {
-                "id": "VPRjCeoBqrI",
-                "title": "A Sky Full Of Stars",
-                "createdBy": "Coldplay",
-                "url": "https://www.youtube.com/watch?v=VPRjCeoBqrI&list=RDEMuf6htoZivPnz-ZIwGU0dDA&index=3",
-                "imgUrl": "https://i.scdn.co/image/ab67616d00001e02f864bcdcc245f06831d17ae0",
-                "addedBy": {
-                    "_id": "",
-                    "userfullname": ""
-                },
-                "liked" : true,
-                "addedAt": 162521755262,
-                "duration": 285
-            },
-            {
-                "id": "xgC5DYLUNAI",
-                "title": "Yellow",
-                "createdBy": "Coldplay",
-                "url": "https://www.youtube.com/watch?v=xgC5DYLUNAI",
-                "imgUrl": "https://i.scdn.co/image/ab67616d000048513d92b2ad5af9fbc8637425f0",
-                "addedBy": {
-                    "_id": "",
-                    "userfullname": ""
-                },
-                "liked" : true,
-                "addedAt": 162521755262,
-                "duration": 285
-            },
-            {
-                "id": "oaahwTCogXo",
-                "title": "The Scientist",
-                "createdBy": "Coldplay",
-                "url": "https://www.youtube.com/watch?v=oaahwTCogXo",
-                "imgUrl": "https://i.scdn.co/image/ab67616d00004851de09e02aa7febf30b7c02d82",
-                "addedBy": {
-                    "_id": "",
-                    "userfullname": ""
-                },
-                "liked" : true,
-                "addedAt": 162521755262,
-                "duration": 285
-            },
-            {
-                "id": "51CFIm4wAOQ",
-                "title": "Biutyful",
-                "createdBy": "Coldplay",
-                "url": "https://www.youtube.com/watch?v=51CFIm4wAOQ",
-                "imgUrl": "https://i.scdn.co/image/ab67616d00004851289ac619a0993bbe19484727",
-                "addedBy": {
-                    "_id": "",
-                    "userfullname": ""
-                },
-                "liked" : true,
-                "addedAt": 162521755262,
-                "duration": 285
-            },
-            {
-                "id": "YA7U00i6WGQ",
-                "title": "Clocks",
-                "createdBy": "Coldplay",
-                "url": "https://www.youtube.com/watch?v=YA7U00i6WGQ",
-                "imgUrl": "https://i.scdn.co/image/ab67616d00004851de09e02aa7febf30b7c02d82",
-                "addedBy": {
-                    "_id": "",
-                    "userfullname": ""
-                },
-                "liked" : true,
-                "addedAt": 162521755262,
-                "duration": 285
-            },
-            {
-                "id": "ySNG1IFaD-g",
-                "title": "Hymn for the weekend",
-                "createdBy": "Coldplay",
-                "url": "https://www.youtube.com/watch?v=ySNG1IFaD-g",
-                "imgUrl": "https://i.scdn.co/image/ab67616d000048518ff7c3580d429c8212b9a3b6",
-                "addedBy": {
-                    "_id": "",
-                    "userfullname": ""
-                },
-                "liked" : true,
-                "addedAt": 162521755262,
-                "duration": 285
-            },
-            {
-                "id": "CrWd-S5e99c",
-                "title": "Magic",
-                "createdBy": "Coldplay",
-                "url": "https://www.youtube.com/watch?v=CrWd-S5e99c",
-                "imgUrl": "https://i.scdn.co/image/ab67616d00004851f864bcdcc245f06831d17ae0",
-                "addedBy": {
-                    "_id": "",
-                    "userfullname": ""
-                },
-                "liked" : true,
-                "addedAt": 162521755262,
-                "duration": 285
-            }
+           
         ],
         "msgs": [
             {
@@ -942,7 +845,7 @@
         "_id": "8gKRDtaf8h73Q4hby85hqs6NX",
         "name": "Broken Heart",
         "imgUrl": "https://i.scdn.co/image/ab67706f0000000250f34f0e7a0b73effe02fa6f",
-        "duration": 555,
+        "duration": 1585,
         "gener": [
             "Rock",
             "Alternative"
@@ -954,7 +857,7 @@
         ],
         "createdBy": {
             "_id": "NoOneKnowThisId",
-            "fullname": "By Melody",
+            "fullname": "Shelly Paxton Eligahu",
             "imgUrl": "../assets/icons.logo.jpg"
         },
         "likedByUsers": [
@@ -969,42 +872,45 @@
         ],
         "songs": [
             {
-                "id": "VPRjCeoBqrI",
-                "title": "A Sky Full Of Stars",
-                "createdBy": "Coldplay",
-                "url": "https://www.youtube.com/watch?v=VPRjCeoBqrI&list=RDEMuf6htoZivPnz-ZIwGU0dDA&index=3",
-                "imgUrl": "https://i.scdn.co/image/ab67616d00001e02f864bcdcc245f06831d17ae0",
+                "id": "2Yjge7980Sk",
+                "title": "Because of you",
+                "createdBy": "Kelly Clarkson",
+                "url": "https://www.youtube.com/watch?v=2Yjge7980Sk",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851158c72ad0003cb37ca0c9eff",
                 "addedBy": {
                     "_id": "",
                     "userfullname": ""
                 },
-                "addedAt": 162521755262,
-                "duration": 285
+                "liked" : false,
+                "addedAt": 1674739885538,
+                "duration": 219
             },
             {
-                "id": "xgC5DYLUNAI",
-                "title": "Yellow",
-                "createdBy": "Coldplay",
-                "url": "https://www.youtube.com/watch?v=xgC5DYLUNAI",
-                "imgUrl": "https://i.scdn.co/image/ab67616d000048513d92b2ad5af9fbc8637425f0",
+                "id": "YMqwLN8IpVs",
+                "title": "Complicated",
+                "createdBy": "Avril levigne",
+                "url": "https://www.youtube.com/watch?v=YMqwLN8IpVs",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851f7ec724fbf97a30869d06240",
                 "addedBy": {
                     "_id": "",
                     "userfullname": ""
                 },
-                "addedAt": 162521755262,
-                "duration": 285
+                "liked" : false,
+                "addedAt": 1674834609207,
+                "duration": 244
             },
             {
-                "id": "oaahwTCogXo",
-                "title": "The Scientist",
-                "createdBy": "Coldplay",
-                "url": "https://www.youtube.com/watch?v=oaahwTCogXo",
-                "imgUrl": "https://i.scdn.co/image/ab67616d00004851de09e02aa7febf30b7c02d82",
+                "id": "WnWeTj-yjss",
+                "title": "Someone Like You",
+                "createdBy": "Adele",
+                "url": "https://www.youtube.com/watch?v=WnWeTj-yjss",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851164feb363334f93b6458d2a9",
                 "addedBy": {
                     "_id": "",
                     "userfullname": ""
                 },
-                "addedAt": 162521755262,
+                "liked" : false,
+                "addedAt": 1674606051458,
                 "duration": 285
             },
             {
@@ -1017,47 +923,50 @@
                     "_id": "",
                     "userfullname": ""
                 },
-                "addedAt": 162521755262,
-                "duration": 285
+                "liked" : false,
+                "addedAt": 1674671100206,
+                "duration": 192
             },
             {
-                "id": "YA7U00i6WGQ",
-                "title": "Clocks",
-                "createdBy": "Coldplay",
-                "url": "https://www.youtube.com/watch?v=YA7U00i6WGQ",
-                "imgUrl": "https://i.scdn.co/image/ab67616d00004851de09e02aa7febf30b7c02d82",
+                "id": "eCfMMGKvDcw",
+                "title": "The One That Got Away",
+                "createdBy": "Katy Perry",
+                "url": "https://www.youtube.com/watch?v=eCfMMGKvDcw",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851f619042d5f6b2149a4f5e0ca",
                 "addedBy": {
                     "_id": "",
                     "userfullname": ""
                 },
-                "addedAt": 162521755262,
-                "duration": 285
+                "liked" : false,
+                "addedAt": 1674579681059,
+                "duration": 227
             },
             {
-                "id": "ySNG1IFaD-g",
-                "title": "Hymn for the weekend",
-                "createdBy": "Coldplay",
-                "url": "https://www.youtube.com/watch?v=ySNG1IFaD-g",
-                "imgUrl": "https://i.scdn.co/image/ab67616d000048518ff7c3580d429c8212b9a3b6",
+                "id": "gv7kjhaMTt0",
+                "title": "Chasing A Feeling",
+                "createdBy": "LEON",
+                "url": "https://www.youtube.com/watch?v=gv7kjhaMTt0",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851386a4f768de2daf11014ace9",
                 "addedBy": {
                     "_id": "",
                     "userfullname": ""
                 },
-                "addedAt": 162521755262,
-                "duration": 285
+                "liked" : false,
+                "addedAt": 1674649508145,
+                "duration": 231
             },
             {
                 "id": "CrWd-S5e99c",
-                "title": "Magic",
-                "createdBy": "Coldplay",
-                "url": "https://www.youtube.com/watch?v=CrWd-S5e99c",
-                "imgUrl": "https://i.scdn.co/image/ab67616d00004851f864bcdcc245f06831d17ae0",
+                "title": "Hurt Again",
+                "createdBy": "Julia Michaels",
+                "url": "https://www.youtube.com/watch?v=rNHWs5QrGsA",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851392fe1e2e2719b901c07b827",
                 "addedBy": {
                     "_id": "",
                     "userfullname": ""
                 },
-                "addedAt": 162521755262,
-                "duration": 285
+                "addedAt": 1674396596445,
+                "duration": 193
             }
         ],
         "msgs": [
@@ -1336,5 +1245,405 @@
                 "txt": "Manish?"
             }
         ]
+    },
+
+
+    
+    {
+        "_id": "af0Dt4hby91hY86Q2bK1fs6NX",
+        "name": "This Is Ariana Grande",
+        "imgUrl": "https://i.scdn.co/image/ab67706f000000024a54a41a2760b74e1d68d100",
+        "duration": 2236,
+        "gener": [
+            "Pop",
+            "Hip-Hop"
+        ],
+        "tags": [
+            "Pop",
+            "Happy",
+            "Road Trip",
+            "Good Vibes",
+            "Dance Party"
+        ],
+        "createdBy": {
+            "_id": "NoOneKnowThisId",
+            "fullname": "By Melody",
+            "imgUrl": "../assets/icons.logo.jpg"
+        },
+        "likedByUsers": [
+            {
+                "_id": "",
+                "userfullname": ""
+            },
+            {
+                "_id": "",
+                "userfullname": ""
+            }
+        ],
+        "songs": [
+            {
+                "id": "8t-PNFXEU9U",
+                "title": "Into You",
+                "createdBy": "Ariana Grande",
+                "url": "https://www.youtube.com/watch?v=8t-PNFXEU9U",
+                "imgUrl": "https://i.scdn.co/image/ab67616d0000485133342c57a9b2c4e04c97b3f5",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "liked": false,
+                "addedAt": 162521765262,
+                "duration": 244
+            },
+            {
+                "id": "3d0P9op-PI4",
+                "title": "Dangerous Woman",
+                "createdBy": "Ariana Grande",
+                "url": "https://www.youtube.com/watch?v=3d0P9op-PI4",
+                "imgUrl": "https://i.scdn.co/image/ab67616d0000485133342c57a9b2c4e04c97b3f5",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "liked": false,
+                "addedAt": 162521755262,
+                "duration": 235
+            },
+            {
+                "id": "gFVjjpqzfps",
+                "title": "7 Rings",
+                "createdBy": "Ariana Grande",
+                "url": "https://www.youtube.com/watch?v=gFVjjpqzfps",
+                "imgUrl": "https://i.scdn.co/image/ab67616d0000485156ac7b86e090f307e218e9c8",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "liked": false,
+                "addedAt": 162521755262,
+                "duration": 178
+            },
+            {
+                "id": "-MeUIr7JJnk",
+                "title": "Side To Side",
+                "createdBy": "Ariana Grande Feat Nicki Minaj",
+                "url": "https://www.youtube.com/watch?v=-MeUIr7JJnk",
+                "imgUrl": "https://i.scdn.co/image/ab67616d0000485133342c57a9b2c4e04c97b3f5",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "liked": false,
+                "addedAt": 162521755262,
+                "duration": 226
+            },
+            {
+                "id": "VlfpPCMHYqA",
+                "title": "God is a woman",
+                "createdBy": "Ariana Grande",
+                "url": "https://www.youtube.com/watch?v=VlfpPCMHYqA",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851c3af0c2355c24ed7023cd394",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "liked": false,
+                "addedAt": 162521755262,
+                "duration": 197
+            },
+            {
+                "id": "uS85qCSdth0",
+                "title": "Positions",
+                "createdBy": "Ariana Grande",
+                "url": "https://www.youtube.com/watch?v=uS85qCSdth0",
+                "imgUrl": "https://i.scdn.co/image/ab67616d000048515ef878a782c987d38d82b605",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "liked": false,
+                "addedAt": 162521755262,
+                "duration": 171
+            },
+            {
+                "id": "2rzSIHlfQKA",
+                "title": "POV",
+                "createdBy": "Ariana Grande",
+                "url": "https://www.youtube.com/watch?v=2rzSIHlfQKA",
+                "imgUrl": "https://i.scdn.co/image/ab67616d000048515ef878a782c987d38d82b605",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "liked": false,
+                "addedAt": 162521755262,
+                "duration": 172
+            },
+            {
+                "id": "WQGB95tn2wc",
+                "title": "no tears left to cry",
+                "createdBy": "Ariana Grande",
+                "url": "https://www.youtube.com/watch?v=WQGB95tn2wc",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851c3af0c2355c24ed7023cd394",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "liked": false,
+                "addedAt": 162521755262,
+                "duration": 205
+            },
+            {
+                "id": "Tdog5524hvE",
+                "title": "One Last Time",
+                "createdBy": "Ariana Grande",
+                "url": "https://www.youtube.com/watch?v=Tdog5524hvE",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851836d6d793faac7b2237cff61",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "liked": false,
+                "addedAt": 162521755262,
+                "duration": 197
+            },
+            {
+                "id": "KRwwQpkToQ0",
+                "title": "thank u, next",
+                "createdBy": "Ariana Grande",
+                "url": "https://www.youtube.com/watch?v=KRwwQpkToQ0",
+                "imgUrl": "https://i.scdn.co/image/ab67616d0000485156ac7b86e090f307e218e9c8",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "liked": false,
+                "addedAt": 162521755262,
+                "duration": 207
+            },
+            {
+                "id": "JFPSv0j5UMw",
+                "title": "34+35",
+                "createdBy": "Ariana Grande",
+                "url": "https://www.youtube.com/watch?v=JFPSv0j5UMw",
+                "imgUrl": "https://i.scdn.co/image/ab67616d000048515ef878a782c987d38d82b605",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "liked": false,
+                "addedAt": 162521755262,
+                "duration": 173
+            }
+        ],
+        "msgs": [
+            {
+                "id": "m101",
+                "from": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "txt": "She is my QUEEN!"
+            }
+        ]
+    },
+    {
+        "_id": "2bKRDtaf0Y86Q4hby91hqs6NX",
+        "name": "This Is Pop Smoke",
+        "imgUrl": "https://seeded-session-images.scdn.co/v1/img/artist/0eDvMgVFoNV3TpwtrVCoTj/en",
+        "duration": 1681,
+        "gener": [
+            "Pop",
+            "Hip-Hop"
+        ],
+        "tags": [
+            "Pop",
+            "Happy",
+            "Road Trip",
+            "Good Vibes"
+        ],
+        "createdBy": {
+            "_id": "NoOneKnowThisId",
+            "fullname": "By Melody",
+            "imgUrl": "../assets/icons.logo.jpg"
+        },
+        "likedByUsers": [
+            {
+                "_id": "",
+                "userfullname": ""
+            },
+            {
+                "_id": "",
+                "userfullname": ""
+            }
+        ],
+        "songs": [
+            {
+                "id": "-wC6CRi5T3s",
+                "title": "Dior",
+                "createdBy": "Pop Smoke",
+                "url": "https://www.youtube.com/watch?v=-wC6CRi5T3s",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851f60a9b7e2abafc38da31f575",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "liked": false,
+                "addedAt": 162521765262,
+                "duration": 218
+            },
+            {
+                "id": "mhgwKxtLPow",
+                "title": "BILLIE EILISH",
+                "createdBy": "Armany White",
+                "url": "https://www.youtube.com/watch?v=mhgwKxtLPow",
+                "imgUrl": "https://i.scdn.co/image/ab67616d000048514f8799f23432ad98d522f0ec",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "liked": false,
+                "addedAt": 162521755262,
+                "duration": 99
+            },
+            {
+                "id": "D2YT1EkgBaw",
+                "title": "Doja",
+                "createdBy": "Central Cee",
+                "url": "https://www.youtube.com/watch?v=D2YT1EkgBaw",
+                "imgUrl": "https://i.scdn.co/image/ab67616d000048513c7d945b6baf935e8a0ebdaa",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "liked": false,
+                "addedAt": 162521755262,
+                "duration": 97
+            },
+            {
+                "id": "8SwlN7I2oLc",
+                "title": "Hot Shit",
+                "createdBy": "Cardi B, Kenya West",
+                "url": "https://www.youtube.com/watch?v=8SwlN7I2oLc",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851b629e669238964a725937c1b",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "liked": false,
+                "addedAt": 162521755262,
+                "duration": 211
+            },
+            {
+                "id": "m1SCItYRY2Y",
+                "title": "Foot Fungus",
+                "createdBy": "Ski Mask The Slump God",
+                "url": "https://www.youtube.com/watch?v=m1SCItYRY2Y",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851e62c8561e3b1bd9ad952ce01",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "liked": false,
+                "addedAt": 162521755262,
+                "duration": 129
+            },
+            {
+                "id": "X86fzU7o74E",
+                "title": "Element X",
+                "createdBy": "Lunarrr",
+                "url": "https://www.youtube.com/watch?v=X86fzU7o74E",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851a17bdf17b4b7cb714804260d",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "liked": false,
+                "addedAt": 162521755262,
+                "duration": 109
+            },
+            {
+                "id": "TImLHFEhC_Y",
+                "title": "Don't Rush",
+                "createdBy": "Young T & BugseyD",
+                "url": "https://www.youtube.com/watch?v=TImLHFEhC_Y",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851844c78f23e38f2cf04df4ae1",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "liked": false,
+                "addedAt": 162521755262,
+                "duration": 201
+            },
+            {
+                "id": "qMNWOp9bMp0",
+                "title": "Meet The Woo",
+                "createdBy": "Pop-Smoke",
+                "url": "https://www.youtube.com/watch?v=qMNWOp9bMp0",
+                "imgUrl": "https://i.scdn.co/image/ab67616d000048518fe5d04b06aff90f9fe796f5",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "liked": false,
+                "addedAt": 162521755262,
+                "duration": 181
+            },
+            {
+                "id": "qxv8QuDZdLo",
+                "title": "Loading",
+                "createdBy": "Central Cee",
+                "url": "https://www.youtube.com/watch?v=qxv8QuDZdLo",
+                "imgUrl": "https://i.scdn.co/image/ab67616d000048511675d50a0ba7919b5e5797fe",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "liked": false,
+                "addedAt": 162521755262,
+                "duration": 173
+            },
+            {
+                "id": "WNcXZrPgVWM",
+                "title": "Panini - DaBaby Remix",
+                "createdBy": "Lil Nas X,DaBaby",
+                "url": "https://www.youtube.com/watch?v=WNcXZrPgVWM",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851de048a43d03fb53a466c1c9f",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "liked": false,
+                "addedAt": 162521755262,
+                "duration": 151
+            },
+            {
+                "id": "4gap8wMtcTY",
+                "title": "Born With It",
+                "createdBy": "Jay Critch, Harry Fraud",
+                "url": "https://www.youtube.com/watch?v=4gap8wMtcTY",
+                "imgUrl": "https://i.scdn.co/image/ab67616d000048510dfbf0ca9d53153ced2448e5",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "liked": false,
+                "addedAt": 162521755262,
+                "duration": 112
+            }
+        ],
+        "msgs": [
+            {
+                "id": "m101",
+                "from": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "txt": "Manish?"
+            }
+        ]
     }
+
+   
 ]

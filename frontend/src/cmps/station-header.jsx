@@ -37,8 +37,8 @@ export function StationHeader({ station, playStation, deleteStation, updateStati
                     <h1>{station.name}</h1>
                     <p className="station-description">
                         <span>{station?.createdBy.fullname} ◽ </span>
-                        {station.songs?.length}
-                        <span> 24 min 25 sec </span>
+                        {station.songs?.length} songs
+                        <span> 26 min 20 sec </span>
                     </p>
                 </div>
             </div>
