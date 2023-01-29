@@ -54,7 +54,7 @@ export function AppPlayer() {
     }
 
     function upDateRange(songProp){
-        console.log('upDateRange(songProp)',songProp.getCurrentTime())
+        // console.log('upDateRange(songProp)',songProp.getCurrentTime())
         
         // setInterval(upDateRange,1000)
         setTimeout(upDateRange,1000)
