@@ -17,10 +17,18 @@
     align-items: center;
     display: flex;
     width:250px;
-    overflow: hidden;
+    overflow-x: hidden;
 
     & .song-img {
         border: 0px;
+    }
+}
+
+div.song-details{
+    overflow: hidden;
+
+    p.song-artist{
+        
     }
 }
 
