@@ -1,6 +1,7 @@
 .station-details {
     // display: grid;
-    // grid-template-columns: 2;
+    grid-template-columns: 2/-1;
+    grid-template-rows: 1/2/3/-1;
     height: 100%;
     width: 100%;
     border: 0;

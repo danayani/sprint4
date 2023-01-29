@@ -79,6 +79,10 @@ svg {
     &-logo {
         font-size: rem(25px);
 
+        a{
+            color: $txtselected;
+        }
+        
         .logo-img {
             height: rem(38px);
             width: rem(38px);
