@@ -6,15 +6,19 @@ import { Loader } from "../cmps/loader.jsx"
 import { stationService } from "../services/station.service.js"
 import { youtubeService } from "../services/youtube.service.js"
 import { utilService } from "../services/util.service.js"
+import { useDispatch } from "react-redux"
+import { SET_SONG_IDX, LOAD_STATION_FOR_PLAYER } from "../store/player/player.reducer.js";
+import { actionToggleSongToLikedSong } from "../store/station/station.actions.js"
 
 
 
-export function Search() {
+export function Search({ playStation }) {
+
     // for later use    
     // const recentSearches = useRef('')
 
     const [songsFromSearch, setSongsFromSearch] = useState(null)
-
+    const dispatch = useDispatch()
     const location = useLocation()
     const geners = stationService.getMusicGeners()
 
@@ -51,13 +55,24 @@ export function Search() {
         }
     }
 
-    // console.log('songsFromSearch :>> ', songsFromSearch)
-    // console.log('recentSearchs', recentSearches)
+    function onPlaySong(songIdx) {
+        playStation()
+        dispatch({ type: SET_SONG_IDX, songIdx })
+    }
+
+    async function toggleLikedSong(song) {
+        console.log('toggleLikedSong')
+
+        const update = await actionToggleSongToLikedSong(song)
+        console.log('update', update)
+        setSongsFromSearch(prev => [...prev])
+
+    }
 
     function onFilterCardClicked(filterByGener) {
         // console.log('A filter was clicked', filterByGener)
     }
-
+console.log('songsFromSearch', songsFromSearch)
     if (!geners) <Loader />
     return (
         <main className="main-search-container">
@@ -68,36 +83,33 @@ export function Search() {
                     <header className="search-results-header">
                         <div className="number-sign">#</div>
                         <div className="song-title">TITLE</div>
-                        <div className="song-album">ALBUM</div>
+                        <div className="song-album"></div>
                         <div className="song-duration">
                             <i className="fa-regular fa-clock"></i>
                         </div>
                     </header>
                     <div className="search-results-song-list">
                         {songsFromSearch.map((song, idx) => {
+                            const classSvgLiked = (song.liked) ? 'song-liked-svg' : 'song-dis-liked-svg'
+                            const titleSvgLiked = (!song.liked) ? 'Add to Liked Songs' : 'Remove from Liked Songs'
                             return (
-                                <div key={song.id} className="song-list-line" onClick={() => console.log('play song')}>
+                                <div key={song.id} className="song-list-line" onClick={() => onPlaySong(idx)} >
                                     <div className="song-index">
                                         {idx + 1}
                                     </div>
-
-                                    <img className="searched-song-img" src={song.imgUrl} alt="Magnifing glass" />
-
-                                    <div className="searched-song-title">
-                                        {song.title}
-                                    </div>
-                                    <div className="searched-song-artist">
-                                        {song.createdBy}
-                                    </div>
-                                    <div className="searched-song-options">
-                                        <button className="add-song-station song-action">
-                                            ♥
-                                        </button>
-                                        <div className="song-list-duration">
-                                            00:00
+                                        <img className="searched-song-img" src={song.imgUrl} alt="Magnifing glass" />
+                                        <div className="searched-song-title">
+                                            {song.createdBy}
                                         </div>
-                                        <button className="remove-song-from-station song-action">
-                                            X
+                                        
+                                    <div className="searched-song-options">
+                                        <div className="song-list-duration">
+                                           0{song.duration.min} : {song.duration.sec}
+                                        </div>
+                                        <button className="add-like-to-song song-action " title={titleSvgLiked} onClick={() => toggleLikedSong(song)} >
+                                            <svg id="song-liked-svg" className={classSvgLiked} role="img" height="24" width="24" aria-hidden="true" >
+                                                <path d="M15.724 4.22A4.313 4.313 0 0012.192.814a4.269 4.269 0 00-3.622 1.13.837.837 0 01-1.14 0 4.272 4.272 0 00-6.21 5.855l5.916 7.05a1.128 1.128 0 001.727 0l5.916-7.05a4.228 4.228 0 00.945-3.577z"></path>
+                                            </svg>
                                         </button>
                                     </div>
                                 </div>)

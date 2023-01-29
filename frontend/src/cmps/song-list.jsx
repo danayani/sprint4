@@ -1,3 +1,4 @@
+import { useLocation } from "react-router-dom"
 import { useEffect, useState } from "react";
 import { stationService } from "../services/station.service.js"
 import { useDispatch } from "react-redux"
@@ -7,7 +8,9 @@ import { utilService } from "../services/util.service.js";
 
 export function SongList({ station, playStation }) {
 
+    const location = useLocation()
     const [songs, setSongs] = useState([])
+
     const dispatch = useDispatch()
 
     useEffect(() => {
@@ -42,8 +45,9 @@ export function SongList({ station, playStation }) {
     }
 
 
+    const classSongListContainer = (location.pathname.includes('/create-station')) ? "song-list-container create" : "song-list-container"
     return (
-        <div className="song-list-container" >
+        <div className={classSongListContainer} >
             <header className="header-song-list grid">
                 <span>#</span>
                 <span>TITLE</span>

@@ -4,6 +4,10 @@
     margin-top: 32px;
     padding-left: 43px;
 
+    & .create{
+        background-color: transparent !important ; 
+    }
+
     &.header-song-list {
         // grid-template-columns: 3fr 20fr 5fr 5fr 7.5fr;
         grid-template-columns: 1fr 20fr 5fr 5fr 1fr 5.5fr 1fr;
