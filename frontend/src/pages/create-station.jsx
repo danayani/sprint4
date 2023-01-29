@@ -95,7 +95,7 @@ export function CreateStation() {
                                 <article key={song.id} role="button">
                                     <li className="song-search-li grid">
                                         <div>
-                                            <img className="song-img" src={song.imgUrl} alt="Magnifing glass" />
+                                            <img className="search-song-img" src={song.imgUrl} alt="Magnifing glass" />
                                         </div>
                                         <div>
                                             <p>{song.title}</p>
