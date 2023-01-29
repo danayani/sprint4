@@ -7,11 +7,12 @@ async function query(filterBy = { txt: '' }) {
     try {
         // const criteria = _buildCriteria(filterBy)
         const collection = await dbService.getCollection('stations')
-        var stations = await collection.find().toArray()
+        var stations = await collection.find({}).toArray()
         // stations = stations.map(station =>{
         //     station.createdAt = ObjectId(station._id).getTimestamp()
         //     return station
         // })
+        console.log('stations',stations)
         return stations
     } catch (err) {
         logger.error('cannot find stations', err)
@@ -43,6 +44,7 @@ async function remove(stationId) {
 
 async function add(station) {
     try {
+        console.log('station',station)
         const collection = await dbService.getCollection('stations')
         await collection.insertOne(station)
         return station
@@ -62,14 +64,16 @@ async function update(station) {
             likedSongs: station.likedSongs //may be in diffrent key name, need to check the data
             // description: station.description     need to check the data
         }
+        console.log('stationToSave',stationToSave)
         // const stationToSave = {
         //     vendor: station.vendor,
         //     price: station.price
         // }
         const collection = await dbService.getCollection('stations')
+        console.log('collections',collection)
         await collection.updateOne({ _id: stationToSave._id }, { $set: stationToSave })
         // await collection.updateOne({ _id: ObjectId(station._id) }, { $set: stationToSave })
-        return station
+        return stationToSave
     } catch (err) {
         logger.error(`cannot update station ${station._id}`, err)
         throw err

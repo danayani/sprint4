@@ -1,12 +1,14 @@
 
 import { storageService } from './async-storage.service.js'
 import { utilService } from './util.service.js'
+import { httpService} from './http.service.js'
 // import { userService } from './user.service.js'
 import data from '../data/station-data.json'
 import newStationPic from '../assets/img/create.jpg'
 
 const STATION_KEY = 'stationDB'
 const stationsData = data
+const BASE_URL ='station/'
 
 _createStations()
 let newStationNum = 1
@@ -26,39 +28,42 @@ function getDefaultFilter() {
     return { likedByUsers: '', gener: '' }
 }
 
-async function query(filterBy = getDefaultFilter()) {
-    return storageService.query(STATION_KEY)
-    // return httpService.get(STORAGE_KEY, filterBy)
+function query(filterBy = getDefaultFilter()) {
+    return httpService.get(BASE_URL)
 }
 
 function getById(stationId) {
-    
-    return storageService.get(STATION_KEY, stationId)
-    // return httpService.get(`station/${stationId}`)
+    return httpService.get(BASE_URL + stationId)
 }
 
-async function remove(stationId) {
-    await storageService.remove(STATION_KEY, stationId)
-    // return httpService.delete(`station/${stationId}`)
+function remove(stationId) {
+    return httpService.delete(BASE_URL + stationId)
 }
-async function save(station) {
-    var savedStation
-    if (station.songs.length > 0) {
-        savedStation = await storageService.put(STATION_KEY, station)
-        // savedStation = await httpService.put(`station/${station._id}`, station)
+
+function save(station) {
+    if (station._id){
+        return httpService.put(BASE_URL + station._id, station)
     } else {
-        // Later, owner is set by the backend
-        // station.owner = userService.getLoggedinUser()
-        savedStation = await storageService.post(STATION_KEY, station)
-        // savedStation = await httpService.post('station', station)
+        return httpService.post('station', station)
     }
-    return savedStation
 }
 
-// async function addStationMsg(stationId, txt) {
-//     const savedMsg = await httpService.post(`station/${stationId}/msg`, {txt})
-//     return savedMsg
+
+// async function save(station) {
+//     var savedStation
+//     if (station.songs.length > 0) {
+//         // savedStation = await storageService.put(STATION_KEY, station)
+//         savedStation = await httpService.put(BASE_URL + station._id, station)
+//     } else {
+//         // Later, owner is set by the backend
+//         // station.owner = userService.getLoggedinUser()
+//         savedStation = await storageService.post(BASE_URL, station)
+//         // savedStation = await httpService.post('station', station)
+//     }
+//     return savedStation
 // }
+
+
 
 
 function getEmptyStation() {
@@ -91,7 +96,6 @@ function _createStations() {
         stations = stationsData
         utilService.saveToStorage(STATION_KEY, stations)
     }
-    // return stations
 }
 
 function _getNewStationName() {
