@@ -1,4 +1,4 @@
 module.exports = {
-  dbURL: 'mongodb://127.0.0.1:27017', 
+  dbURL: 'mongodb+srv://shelly:shelly1234@cluster0.aafnm73.mongodb.net/?retryWrites=true&w=majority', 
   dbName : 'melody_db'
 }
