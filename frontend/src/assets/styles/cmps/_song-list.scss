@@ -1,10 +1,12 @@
 .song-list-container {
-    background-color: black;
-    margin-top: 10px;
+    background-image: linear-gradient(rgb(11, 2, 36),black);
+    // background-color: black;
+    margin-top: 32px;
+    padding-left: 43px;
 
     &.header-song-list {
         // grid-template-columns: 3fr 20fr 5fr 5fr 7.5fr;
-        grid-template-columns:3fr 20fr 5fr 5fr 1fr 5.5fr 1fr;
+        grid-template-columns: 1fr 20fr 5fr 5fr 1fr 5.5fr 1fr;
     }
 
     & ul {
@@ -22,42 +24,66 @@
         background-color: transparent;
         color: white;
         font-size: 20px;
-        color:white; 
+        color: white;
         width: 50px;
         height: 50px;
         align-items: center;
+
         &:hover {
             font-weight: bold;
             font-size: 25px;
         }
+
+
     }
 }
 
+.song-liked-svg {
+    fill: $bgcplay;
+}
+
 .header-song-list {
-    grid-template-columns:3fr 20fr 5fr 5fr 1fr 5.5fr 1fr;
+    grid-template-columns: 1fr 20fr 5fr 5fr 1fr 5.5fr 1fr;
 }
 
 .song-list-li {
-    grid-template-columns:3fr 20fr 5fr 5fr 1fr 5.5fr 1fr;
-    
+    margin-top: 27px;
+    grid-template-columns: 1.4fr 20fr 5fr 5fr 1fr 5.5fr 1fr;
+
 
     // &:hover {}
 }
 
-.song-list-img {
-    width: rem(40px);
-    height: rem(40px);
-}
+.song-details{
+    display: flex;
+    align-items: center;
+    gap: 0px 15px;
 
+    .song-list-img {
+        width: rem(40px);
+        height: rem(40px);
+        margin-top: 5px;
 
-
-
-
-.btn-song-title-play {
-    all: unset;
-
-    &:hover {
-        text-decoration: underline;
-        cursor: pointer;
     }
+
+    .song-info{
+        display: flex;
+        flex-direction: column;
+
+    }
+    
+    .btn-song-title-play {
+        all: unset;
+
+        &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+
+    .song-list-artist{
+        margin-top: -10px;
+    }
+
+
 }

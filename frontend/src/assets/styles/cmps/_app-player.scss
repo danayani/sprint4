@@ -54,7 +54,7 @@
 
 .action-btn {
     font-size: 1rem;
-    background-color: rgb(18 18 18);
+    background-color:transparent;
 
     & .btn-action-active {
         color: $bgcplay;
@@ -83,15 +83,20 @@
     gap: rem(5px);
 }
 
+.toggle-mute{
+    background-color: transparent;
+}
+
 .volume-icon {
     font-size: rem(13.333px);
+    background-color: transparent;
 }
 
 .volume-range {
     width: rem(93px);
 }
 
-//player helpers
+//player range !
 
 .range {
     -webkit-appearance: none;
@@ -100,12 +105,28 @@
     height: rem(5px);
     cursor: pointer;
     border-radius: rem(1.7px);
+
+    color: #b3b3b3;
+    text-transform: none;
+}
+
+.progress-bar-range{
+    height: rem(5px);
+    border-radius: rem(1.7px);
 }
 
 .range ::-webkit-slider-runnable-track {
     -webkit-appearance: none;
     /* Override default look */
     background: black;
+}
+
+.range::-webkit-slider-track {
+    -webkit-appearance: none;
+}
+
+.range ::-webkit-slider-thumb{
+    -webkit-appearance: none;
 }
 
 .player-video {
