@@ -41,15 +41,10 @@
 
 }
 
-song-list-li:hover {
-    opacity: 1; //not working
-
-    &.song-action {
-        color: white;
-        fill: white;
-    }
-
+.song-list-li:hover .song-action{
+    display: block; 
 }
+
 
 .add-song-station {
     margin-left: calc(25px);
@@ -62,6 +57,7 @@ song-list-li:hover {
 
 .remove-song-from-station {
 
+    display: none;
     margin-left: calc(15px) ;
 
     .song-remove-icon {
