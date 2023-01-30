@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom"
 import { useEffect, useState } from "react";
-import { useDispatch, useSelector} from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 import { stationService } from "../services/station.service.js"
 import { SET_SONG_IDX, LOAD_STATION_FOR_PLAYER } from "../store/player/player.reducer.js";
 import { updateStation, actionToggleSongToLikedSong } from "../store/station/station.actions.js";
@@ -12,7 +12,6 @@ export function SongList({ station, playStation }) {
     const songIdxPlayer = useSelector(storeState => storeState.playerModule.currSongIdx)
     const location = useLocation()
     const [songs, setSongs] = useState([])
-    const [songActionShowen, setSongActionShowen] =useState(0)
 
     const dispatch = useDispatch()
 
@@ -44,16 +43,15 @@ export function SongList({ station, playStation }) {
         const update = await actionToggleSongToLikedSong(song)
         console.log('update', update)
         setSongs(prev => [...prev])
-
     }
 
 
-    function onMouseSongLine(){
-        setSongActionShowen(1)
+    function onMouseSongLine(determ) {
+        // setSongActionShowen(determ)
     }
-    const classSongListContainer = (location.pathname.includes('/create-station')) ? "song-list-container create" : "song-list-container"
+
     return (
-        <div className={classSongListContainer} >
+        <div className={"song-list-container"} >
             <header className="header-song-list grid">
                 <span>#</span>
                 <span>TITLE</span>
@@ -63,15 +61,9 @@ export function SongList({ station, playStation }) {
             </header>
             <ul>
                 {songs.map((song, idx) => {
-                    if(station === stationPlayer && idx + 1 === songIdxPlayer){
-                        console.log('this is !!!!!!!!!!!!!!') //need to hols the song id
-                    }
-                    console.log('timestemp :', utilService.timeConverter(song.addedAt))
-                    console.log('is liked ♥ ', song.liked)
                     const classSvgLiked = (song.liked) ? 'song-liked-svg' : 'song-dis-liked-svg'
                     const titleSvgLiked = (!song.liked) ? 'add to Liked Songs' : 'remove from Liked Songs'
-                    return <article key={song.id} className="article-song-list-line" onMouseUp={onMouseSongLine}>
-                        <li key={song.id} className="song-list-li grid">
+                    return <li key={song.id} className="song-list-li grid" onMouseOver={() => onMouseSongLine(1)} onMouseOut={() => onMouseSongLine(0)}>
                             <div className="btn-song-list-play">
                                 {idx + 1}
                             </div>
@@ -91,22 +83,21 @@ export function SongList({ station, playStation }) {
                             <div className="song-list-add-date">
                                 {utilService.timeConverter(song.addedAt)}
                             </div>
-                            <button className="add-song-station song-action " title={titleSvgLiked} onClick={() => toggleLikedSong(song)} style={{opacity: songActionShowen}}>
+                            <button className="add-song-station song-action " title={titleSvgLiked} onClick={() => toggleLikedSong(song)}>
                                 <svg id="song-liked-svg" className={classSvgLiked} role="img" height="24" width="24" aria-hidden="true" >
                                     <path d="M15.724 4.22A4.313 4.313 0 0012.192.814a4.269 4.269 0 00-3.622 1.13.837.837 0 01-1.14 0 4.272 4.272 0 00-6.21 5.855l5.916 7.05a1.128 1.128 0 001.727 0l5.916-7.05a4.228 4.228 0 00.945-3.577z"></path>
                                 </svg>
                             </button>
                             <div className="song-list-duration">
-                                00:00
+                                {utilService.getTimeFromSeconds(song.duration)}
                             </div>
                             <button className="remove-song-from-station song-action" onClick={() => onRemoveSongFronStation(idx)}>
                                 X
                             </button>
-                        </li>
-                    </article>
+                    </li>
                 })
                 }
             </ul>
-        </div>
+        </div >
     )
 }

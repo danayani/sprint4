@@ -36,7 +36,6 @@ function getTimeFromSeconds(sunSec = 0) {
 
     time.min = parseInt(sunSec / 59)
     time.sec = (sunSec - (time.min * 59))
-    console.log(time)
     let steSec = (time.sec < 10) ? `0${time.sec}` : `${time.sec}`
     
     let strTime = `${time.min}:${steSec}`
