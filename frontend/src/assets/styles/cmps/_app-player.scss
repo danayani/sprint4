@@ -16,7 +16,7 @@
     margin-left: 5px;
     align-items: center;
     display: flex;
-    width:250px;
+    width: 250px;
     overflow-x: hidden;
 
     & .song-img {
@@ -24,12 +24,10 @@
     }
 }
 
-div.song-details{
+div.song-details {
     overflow: hidden;
 
-    p.song-artist{
-        
-    }
+    p.song-artist {}
 }
 
 .song-img {
@@ -63,7 +61,7 @@ div.song-details{
 
 .action-btn {
     font-size: 1rem;
-    background-color:transparent;
+    background-color: transparent;
 
     & .btn-action-active {
         color: $bgcplay;
@@ -94,7 +92,7 @@ div.song-details{
     gap: rem(5px);
 }
 
-.toggle-mute{
+.toggle-mute {
     background-color: transparent;
 }
 
@@ -121,7 +119,7 @@ div.song-details{
     text-transform: none;
 }
 
-.progress-bar-range{
+.progress-bar-range {
     height: rem(5px);
     border-radius: rem(1.7px);
 }
@@ -136,11 +134,31 @@ div.song-details{
     -webkit-appearance: none;
 }
 
-.range ::-webkit-slider-thumb{
+.range ::-webkit-slider-thumb {
     -webkit-appearance: none;
 }
 
-.fa-volume-high{
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    transition: all .1s;
+    border: none;
+    height: 3px;
+    width: 3px;
+    border-radius: 50%;
+    cursor: pointer;
+
+
+}
+
+input[type=range] ::-webkit-slider-thumb {
+    border: none;
+    height: 12px;
+    width: 12px;
+    background: $bgcplay;
+}
+
+
+.fa-volume-high {
     font-size: 17px;
 }
 

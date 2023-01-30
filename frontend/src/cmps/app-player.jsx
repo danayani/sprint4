@@ -93,6 +93,10 @@ export function AppPlayer() {
         dispatch({ type: SET_REPEAT_SONG })
     }
 
+    function getPBStyle() {
+        return player?.getCurrentTime() / player?.getDuration() * 100
+    }
+
     const classPlayPause = (!playerState.playing) ? 'play-pause-btn fa-solid fa-circle-play' : 'play-pause-btn fa-solid  fa-circle-pause'
     const classPlayRepeat = (!playerState.loop) ? 'action-btn fa-solid fa-repeat' : 'action-btn fa-solid fa-repeat btn-action-active'
     const titlePlayPause = (!playerState.playing) ? 'Play' : 'Pause'
@@ -146,13 +150,11 @@ export function AppPlayer() {
                             <input className="player-range-action range" type="range"
                                 min={0} max={duration}
                                 value={progress}
-                                onChange={onHandleChangePlayRange} onMouseUp={onSeek} />
+                                onChange={onHandleChangePlayRange} onMouseUp={onSeek}
+                                style={{ background: `linear-gradient(to right, #b3b3b3 0%, #b3b3b3 ${getPBStyle()}%, #b3b3b340 ${getPBStyle()}%, #b3b3b340 100%)` }} />
 
-                            {/* <div class="progress-bar" role="progressbar" aria-valuenow="70"
-                                aria-valuemin="0" aria-valuemax="100" style="width:70%">
-                            </div> */}
                         </div>
-                        <span>{utilService.getTimeFromSeconds(duration)} </span>
+                        <span>{utilService.getTimeFromSeconds(Math.floor(duration))} </span>
 
                     </div>
 
@@ -166,6 +168,8 @@ export function AppPlayer() {
                         type='range' min={0} max={0.999999} step='any'
                         value={playerState.volume}
                         onChange={handleVolumeChange}
+                        // style={{ background: `linear-gradient(to right, #b3b3b3 0%, #b3b3b3 ${playerState.volume}%, #b3b3b340 ${playerState.volume}%, #b3b3b340 100%)` }} 
+                        style={{ background: `linear-gradient(to right, #b3b3b3 0%, #b3b3b3 80%, #b3b3b340 80%, #b3b3b340 100%)` }}
                     />
                 </div>
             </div>
