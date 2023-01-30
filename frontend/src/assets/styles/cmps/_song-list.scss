@@ -62,14 +62,13 @@
 .song-list-li {
     margin-top: 27px;
     grid-template-columns: 1fr 15fr 9fr 5fr 1fr 5.5fr 1fr;
-    color: $txtfill
-
-   
-    
+    color: $txtfill 
 }
+
 .song-list-add-date{
     margin-left: 13px
 }
+
 .song-details{
     display: flex;
     align-items: center;

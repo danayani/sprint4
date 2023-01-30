@@ -1,13 +1,15 @@
 import { useLocation } from "react-router-dom"
 import { useEffect, useState } from "react";
+import { useDispatch, useSelector} from "react-redux"
 import { stationService } from "../services/station.service.js"
-import { useDispatch } from "react-redux"
 import { SET_SONG_IDX, LOAD_STATION_FOR_PLAYER } from "../store/player/player.reducer.js";
 import { updateStation, actionToggleSongToLikedSong } from "../store/station/station.actions.js";
 import { utilService } from "../services/util.service.js";
 
 export function SongList({ station, playStation }) {
 
+    const stationPlayer = useSelector(storeState => storeState.playerModule.currPlayingStation)
+    const songIdxPlayer = useSelector(storeState => storeState.playerModule.currSongIdx)
     const location = useLocation()
     const [songs, setSongs] = useState([])
     const [songActionShowen, setSongActionShowen] =useState(0)
@@ -61,7 +63,9 @@ export function SongList({ station, playStation }) {
             </header>
             <ul>
                 {songs.map((song, idx) => {
-                    // if(song === )
+                    if(station === stationPlayer && idx + 1 === songIdxPlayer){
+                        console.log('this is !!!!!!!!!!!!!!') //need to hols the song id
+                    }
                     console.log('timestemp :', utilService.timeConverter(song.addedAt))
                     console.log('is liked ♥ ', song.liked)
                     const classSvgLiked = (song.liked) ? 'song-liked-svg' : 'song-dis-liked-svg'
