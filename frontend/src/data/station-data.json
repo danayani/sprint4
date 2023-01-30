@@ -1,6 +1,5 @@
 [
     {
-        "_id": "111RDtaf0Y86Q4hby91hqs6NX",
         "name": "Liked Songs",
         "imgUrl": "https://t.scdn.co/images/3099b3803ad9496896c43f22fe9be8c4.png",
         "duration": 555,
@@ -36,7 +35,6 @@
         ]
     },
     {
-        "_id": "2bKRDtaf0Y86Q4hby91hqs6NX",
         "name": "Coldplay",
         "imgUrl": "https://i.scdn.co/image/ab67706f00000002a231f671c289555cfd09f716",
         "duration": 2336,
@@ -205,7 +203,6 @@
         ]
     },
     {
-        "_id": "2bKRDtaf0Y86Q4hby85hqs6NX",
         "name": "Soft Rock",
         "imgUrl": "https://i.scdn.co/image/ab67706f000000023060af49d84dea191630fa16",
         "duration": 555,
@@ -338,7 +335,6 @@
         ]
     },
     {
-        "_id": "8gKRDtaf0Y86Q4hby85hqs6NX",
         "name": "The Best Of 2000s",
         "imgUrl": "https://i.scdn.co/image/ab67706c0000da849579b580da9f30830f77440b",
         "duration": 555,
@@ -471,7 +467,6 @@
         ]
     },
     {
-        "_id": "8gKRDtaf8h86Q4hby85hqs6NX",
         "name": "Songs to sing in the shower",
         "imgUrl": "https://i.scdn.co/image/ab67706f0000000224893f0507c0fe2855565438",
         "duration": 555,
@@ -604,7 +599,6 @@
         ]
     },
     {
-        "_id": "8gKRDtaf8h96Q4hby85hqs6NX",
         "name": "Happy Hits!",
         "imgUrl": "https://i.scdn.co/image/ab67706f00000002b970d80800de215ac7939eb2",
         "duration": 555,
@@ -737,7 +731,6 @@
         ]
     },
     {
-        "_id": "8gKRDikf8h86Q4hby85hqs6NX",
         "name": "Mood Booster",
         "imgUrl": "https://i.scdn.co/image/ab67706f00000002bd0e19e810bb4b55ab164a95",
         "duration": 555,
@@ -870,7 +863,6 @@
         ]
     },
     {
-        "_id": "5cksxjas29xjsa8xjsa8jxs09",
         "name": "Funk&Soul Classics",
         "imgUrl": "https://i.scdn.co/image/ab67706f00000003e0113d1b6e16f0813877a9f9",
         "duration": 1399,
@@ -996,7 +988,6 @@
         ]
     },
     {
-        "_id": "8gKRDtaf8h73Q4hby85hqs6NX",
         "name": "Broken Heart",
         "imgUrl": "https://i.scdn.co/image/ab67706f0000000250f34f0e7a0b73effe02fa6f",
         "duration": 1585,
@@ -1135,7 +1126,6 @@
         ]
     },
     {
-        "_id": "8gKRDtaf8h73Q485285hqs6NX",
         "name": "Top Songs - Global",
         "imgUrl": "https://charts-images.scdn.co/assets/locale_en/regional/weekly/region_global_default.jpg",
         "duration": 555,
@@ -1268,7 +1258,6 @@
         ]
     },
     {
-        "_id": "8gKRDtaf9k73Q485285hqs6NX",
         "name": "Top Songs - Israel",
         "imgUrl": "https://charts-images.scdn.co/assets/locale_en/regional/weekly/region_il_default.jpg",
         "duration": 555,
@@ -1401,7 +1390,6 @@
         ]
     },
     {
-        "_id": "rQP8Jnlxyk4RjyHXvrmruwTQa",
         "name": "Beast Mode",
         "imgUrl": "https://www.listenspotify.com/uploaded_files/Thf_1613433971.jpg",
         "duration": 614,
@@ -1487,7 +1475,6 @@
         ]
     },
     {
-        "_id": "5cksxjas89xksa8xjsa8jxs09",
         "name": "All New Rock",
         "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYriafbKCBPpQPcTiXDj6V3m-l5nE0q3QZPw&usqp=CAU",
         "duration": 349,
@@ -1554,7 +1541,6 @@
         ]
     },
     {
-        "_id": "5cksxjas89xdtfnxjsa8jxs09",
         "name": "Rock and Roll Classics",
         "imgUrl": "https://i.scdn.co/image/ab67616d00001e022bf64c48814eae089cb3778f",
         "duration": 1525,
@@ -1682,7 +1668,6 @@
         ]
     },
     {
-        "_id": "tfnxj5cksxjas89aB6U82ms09",
         "name": "Latin Party 2023",
         "imgUrl": "https://i.scdn.co/image/ab67706c0000da84d12b27718a588ed664dc916f",
         "duration": 623,
@@ -1769,7 +1754,6 @@
         ]
     },
     {
-        "_id": "asbmn5cksxjfsa8xjsaAdh509",
         "name": "Rockin' In The 70's",
         "duration": 893,
         "gener": [
@@ -1848,7 +1832,6 @@
         ]
     },
     {
-        "_id": "af0Dt4hby91hY86Q2bK1fs6NX",
         "name": "This Is Ariana Grande",
         "imgUrl": "https://i.scdn.co/image/ab67706f000000024a54a41a2760b74e1d68d100",
         "duration": 2236,
@@ -2046,7 +2029,6 @@
         ]
     },
     {
-        "_id": "2bKRDtaf0Y86Q4hby91hqs6NX",
         "name": "This Is Pop Smoke",
         "imgUrl": "https://seeded-session-images.scdn.co/v1/img/artist/0eDvMgVFoNV3TpwtrVCoTj/en",
         "duration": 1681,
