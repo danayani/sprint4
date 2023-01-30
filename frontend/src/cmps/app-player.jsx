@@ -3,31 +3,38 @@ import { useSelector } from 'react-redux'
 import { useDispatch } from "react-redux"
 import ReactPlayer from 'react-player/youtube'
 import ProgressBar from 'react-bootstrap/ProgressBar'
-import { playerService } from '../services/player.service'
 import { utilService } from '../services/util.service'
-import { getActionPlayPausePlayer, loadCurrPlayingStation } from '../store/player/player.action'
+import { getActionPlayPausePlayer, loadPlayer, loadCurrPlayingStation } from '../store/player/player.action'
 import { SET_SONG_IDX, SET_REPEAT_SONG, SET_VOLUME } from '../store/player/player.reducer'
-import { timeout } from 'workbox-core/_private'
 
 export function AppPlayer() {
     const dispatch = useDispatch()
 
+    const player = useSelector(storeState => storeState.playerModule.player)
     const playerState = useSelector(storeState => storeState.playerModule.playerState)
     const station = useSelector(storeState => storeState.playerModule.currPlayingStation)
     const songIdx = useSelector(storeState => storeState.playerModule.currSongIdx)
-
-    const [playerCB, setPlayerCB] = useState(null)
     const [song, setSong] = useState(null)
     const [songShuffle, setSongShuffle] = useState(null)
-    const [timelineSongTimeoutId, setTimelineSongTimeoutId] = useState()
     const [playSongRange, setPlaySongRange] = useState(0)
-
-    const [songDuration, setSongDuration] = useState({ duration: 0, curr: 0, untilDone: 0 })
-
+    const [duration, setDuration] = useState(0)
+    const timerId = useRef(null)
+    const [progress, setProgress] = useState(0)
 
     useEffect(() => {
         loadSong()
     }, [station, songIdx])
+
+    useEffect(() => {
+        setDuration(player?.getDuration())
+        timerId.current = setInterval(() => {
+            if (playerState.playing && player) {
+                const time = Math.floor(player.getCurrentTime())
+                setProgress(time)
+            }
+        }, 1000)
+    }, [playerState.playing, player])
+
 
     function loadSong() {
         if (!station) return
@@ -46,38 +53,7 @@ export function AppPlayer() {
     }
 
     function onReady(songProp) {
-        setPlayerCB(songProp)
-        startTimelinsSong(songProp)
-        console.log('onReady')
-
-        upDateRange(songProp)
-    }
-
-    function upDateRange(songProp){
-        // console.log('upDateRange(songProp)',songProp.getCurrentTime())
-        
-        // setInterval(upDateRange,1000)
-        setTimeout(upDateRange,1000)
-    }
-
-    function startTimelinsSong(songProp) {
-        let dur = songProp.getDuration()
-        setSongDuration(prev => ({ ...prev, duration: dur, curr: 0, untilDone: dur }))
-
-        setTimeout(updateSongTimeline, 1000)
-        // setTimelineSongTimeoutId(setTimeout(updateSongTimeline, 1000))
-    }
-
-    function updateSongTimeline() {
-        let newCurr = songDuration.curr + 1
-
-        setSongDuration(prev => ({ ...prev, curr: newCurr }))
-
-
-        console.log('♥ ♥ ♥ ♥', songDuration.untilDone)
-        if (playerState.playing && newCurr < songDuration.duration) {
-            console.log('5555555555555555555', songDuration.duration)
-        }
+        loadPlayer(songProp)
     }
 
     function onPreviosSong() {
@@ -106,15 +82,19 @@ export function AppPlayer() {
 
     function onHandleChangePlayRange({ target }) {
         setPlaySongRange(target.value)
+        setProgress(target.value)
         console.log('setPlaySongRange', playSongRange)
     }
     function onSeek() {
         console.log('onSeek')
-        console.log('player prop', playerCB)
-        playerCB.seekTo(playSongRange)
+        player.seekTo(playSongRange)
     }
-    function onToggleMute(){
+    function onToggleMute() {
         dispatch({ type: SET_REPEAT_SONG })
+    }
+
+    function getPBStyle() {
+        return player?.getCurrentTime() / player?.getDuration() * 100
     }
 
     const classPlayPause = (!playerState.playing) ? 'play-pause-btn fa-solid fa-circle-play' : 'play-pause-btn fa-solid  fa-circle-pause'
@@ -165,18 +145,16 @@ export function AppPlayer() {
                         </button>
                     </div>
                     <div className="player-range-container flex">
-                        <span>{utilService.getTimeFromSeconds(songDuration.curr)}</span>
+                        <span>{utilService.getTimeFromSeconds(progress)}</span>
                         <div className="player-range flex">
                             <input className="player-range-action range" type="range"
-                                min={songDuration.curr} max={songDuration.untilDone}
-                                // value={playerState.volume}
-                                onChange={onHandleChangePlayRange} onMouseUp={onSeek} />
+                                min={0} max={duration}
+                                value={progress}
+                                onChange={onHandleChangePlayRange} onMouseUp={onSeek}
+                                style={{ background: `linear-gradient(to right, #b3b3b3 0%, #b3b3b3 ${getPBStyle()}%, #b3b3b340 ${getPBStyle()}%, #b3b3b340 100%)` }} />
 
-                            {/* <div class="progress-bar" role="progressbar" aria-valuenow="70"
-                                aria-valuemin="0" aria-valuemax="100" style="width:70%">
-                            </div> */}
                         </div>
-                        <span>{utilService.getTimeFromSeconds(songDuration.untilDone)} </span>
+                        <span>{utilService.getTimeFromSeconds(Math.floor(duration))} </span>
 
                     </div>
 
@@ -190,6 +168,8 @@ export function AppPlayer() {
                         type='range' min={0} max={0.999999} step='any'
                         value={playerState.volume}
                         onChange={handleVolumeChange}
+                        // style={{ background: `linear-gradient(to right, #b3b3b3 0%, #b3b3b3 ${playerState.volume}%, #b3b3b340 ${playerState.volume}%, #b3b3b340 100%)` }} 
+                        style={{ background: `linear-gradient(to right, #b3b3b3 0%, #b3b3b3 80%, #b3b3b340 80%, #b3b3b340 100%)` }}
                     />
                 </div>
             </div>

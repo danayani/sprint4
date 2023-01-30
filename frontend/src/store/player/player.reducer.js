@@ -9,9 +9,10 @@ export const SHUFFLE_SONGS = 'SHUFFLE_SONGS'
 export const SET_SONG_IDX = 'SET_SONG_IDX'
 export const SET_REPEAT_SONG = 'SET_REPEAT_SONG'
 export const SET_SHUFFLE_SONG = 'SET_REPEAT_SONG'
-
+export const SET_PLAYER = 'SET_PLAYER'
 
 const initialState = {
+    player: null,
     currPlayingStation: null,
     playerState: playerService.getDefaultState(),
     currSongIdx: 0
@@ -22,6 +23,8 @@ export function playerReducer(state = initialState, action) {
     let playerState
     let songs
     switch (action.type) {
+        case SET_PLAYER:
+            return { ...state, player: action.player }
         case PLAY_PAUSE_PLAYER:
             playerState = { ...state.playerState, playing: !state.playerState.playing }
             return { ...state, playerState }

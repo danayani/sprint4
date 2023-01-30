@@ -13,11 +13,13 @@
 
 ul {
     list-style-type: none;
-
+    
+    
     a {
         display: flex;
         align-items: center;
         color: $txtfill;
+
 
         &:hover {
             color: $txtselected;
@@ -76,9 +78,15 @@ svg {
     justify-content: center;
     align-items: center;
 
+    
+
     &-logo {
         font-size: rem(25px);
 
+        a{
+            color: $txtselected;
+        }
+        
         .logo-img {
             height: rem(38px);
             width: rem(38px);
@@ -114,7 +122,6 @@ span {
     font-size: 0.8em;
 
     .user-station-list-link{
-        margin-bottom: 1.3em;
-        
+        margin-bottom: 1.3em;  
     }
 }
