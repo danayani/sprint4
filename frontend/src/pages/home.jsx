@@ -29,7 +29,7 @@ export function Home() {
                 <h1>{setGreeting()}</h1>
                 {console.log('stations from home', stations)}
                 <FirstStationList stations={stations.slice(0, 6)} />
-                <SecondStationList stations={stations.slice(6, 20)} />
+                <SecondStationList stations={stations.slice(6, 30)} />
             </div>
         </main >
 
