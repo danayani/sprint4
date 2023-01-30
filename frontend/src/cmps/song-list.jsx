@@ -10,6 +10,7 @@ export function SongList({ station, playStation }) {
 
     const location = useLocation()
     const [songs, setSongs] = useState([])
+    const [songActionShowen, setSongActionShowen] =useState(0)
 
     const dispatch = useDispatch()
 
@@ -44,6 +45,10 @@ export function SongList({ station, playStation }) {
 
     }
 
+
+    function onMouseSongLine(){
+        setSongActionShowen(1)
+    }
     const classSongListContainer = (location.pathname.includes('/create-station')) ? "song-list-container create" : "song-list-container"
     return (
         <div className={classSongListContainer} >
@@ -61,7 +66,7 @@ export function SongList({ station, playStation }) {
                     console.log('is liked ♥ ', song.liked)
                     const classSvgLiked = (song.liked) ? 'song-liked-svg' : 'song-dis-liked-svg'
                     const titleSvgLiked = (!song.liked) ? 'add to Liked Songs' : 'remove from Liked Songs'
-                    return <article key={song.id}>
+                    return <article key={song.id} className="article-song-list-line" onMouseUp={onMouseSongLine}>
                         <li key={song.id} className="song-list-li grid">
                             <div className="btn-song-list-play">
                                 {idx + 1}
@@ -71,9 +76,9 @@ export function SongList({ station, playStation }) {
                                     <img className="song-list-img" src={song.imgUrl} />
                                 </div>
                                 <div className="song-info">
-                                    <section>
+                                    <div className="song-list-title">
                                         <p>{song.title}</p>
-                                    </section>
+                                    </div>
                                     <div className="song-list-artist">
                                         {song.createdBy}
                                     </div>
@@ -82,7 +87,7 @@ export function SongList({ station, playStation }) {
                             <div className="song-list-add-date">
                                 {utilService.timeConverter(song.addedAt)}
                             </div>
-                            <button className="add-song-station song-action " title={titleSvgLiked} onClick={() => toggleLikedSong(song)}>
+                            <button className="add-song-station song-action " title={titleSvgLiked} onClick={() => toggleLikedSong(song)} style={{opacity: songActionShowen}}>
                                 <svg id="song-liked-svg" className={classSvgLiked} role="img" height="24" width="24" aria-hidden="true" >
                                     <path d="M15.724 4.22A4.313 4.313 0 0012.192.814a4.269 4.269 0 00-3.622 1.13.837.837 0 01-1.14 0 4.272 4.272 0 00-6.21 5.855l5.916 7.05a1.128 1.128 0 001.727 0l5.916-7.05a4.228 4.228 0 00.945-3.577z"></path>
                                 </svg>
