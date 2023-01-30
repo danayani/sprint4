@@ -47,6 +47,7 @@ async function updateStation(req, res) {
     const station = req.body
     console.log('station',station)
     const updatedStation = await stationService.update(station)
+    // res.json(updatedStation)
     res.send(updatedStation)
   } catch (err) {
     logger.error('Failed to update station', err)

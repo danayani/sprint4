@@ -64,7 +64,6 @@ export function AppNavBar() {
             {stations && stations?.length > 0 &&
                 <div className='user-station-list'>
                     <ul className='user-station-list-ul'>
-                        {console.log('stations fron nav-bar', stations)}
                         {stations.map(station =>
                             <NavLink key={station._id} to={`/${station._id}`}>
                                 <div className="user-station-list-link">

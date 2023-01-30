@@ -2,7 +2,7 @@ import { stationService } from '../../services/station.service'
 import { ADD_STATION, REMOVE_STATION, SET_STATIONS, UPDATE_STATION } from "./station.reducer.js"
 import { store } from '../store'
 
-const STATION_LIKED_SONGS_ID = '63d66ec8aa8cb368ea1a9c67'
+const STATION_LIKED_SONGS_ID = '63d79c083a0e864065195de2'
 
 // Action Creators:
 export async function loadStations(filterBy) {
@@ -31,6 +31,7 @@ export async function addStation(station) {
 export async function updateStation(station) {
     try {
         const updatedStation = await stationService.save(station)
+        console.log('update station', updatedStation)
         return store.dispatch({ type: UPDATE_STATION, station: updatedStation })
     } catch (err) {
         console.error('Unable to save station', err)

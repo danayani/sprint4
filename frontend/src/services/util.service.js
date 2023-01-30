@@ -14,6 +14,13 @@ export const utilService = {
     getAvgImgColor,
     getTimeFromSeconds,
     timeConverter,
+    getSecFromTimePatern,
+}
+
+function getSecFromTimePatern(timeStr){
+
+    var min = timeStr.charAt(timeStr.indexOf('m') + 1) 
+
 }
 
 function timeConverter(UNIX_timestamp){

@@ -1,7 +1,10 @@
 import { Link } from 'react-router-dom';
+import { Loader } from '../cmps/loader.jsx'
+
 
 export function FirstStationList({ stations }) {
 
+    if (!stations) return <Loader />
     return (
         <section className='first-station-cards'>
             {stations.map(station =>

@@ -122,9 +122,10 @@ export function AppPlayer() {
             <div className="app-playerS flex">
                 <div className="song-details flex">
                     <img className="song-img" src={station?.songs[songIdx]?.imgUrl} />
-                    <p className="song-title">{station?.songs[songIdx]?.title}</p>
-                    <p className="song-artist">{station?.songs[songIdx]?.createdBy}</p>
-
+                    <div className="song-description">
+                        <p className="song-title">{station?.songs[songIdx]?.title}</p>
+                        <p className="song-artist">{station?.songs[songIdx]?.createdBy}</p>
+                    </div>
                 </div>
                 <div className="player-actions-container grid justify-center">
                     <div className="player-actions flex">
@@ -163,7 +164,7 @@ export function AppPlayer() {
                     <button className='toggle-mute' onClick={onToggleMute}>
                         <div className="volume-icon"> <i className="fa-solid fa-volume-high"></i></div>
                     </button>
-
+                    
                     <input className="volume-range range"
                         type='range' min={0} max={0.999999} step='any'
                         value={playerState.volume}

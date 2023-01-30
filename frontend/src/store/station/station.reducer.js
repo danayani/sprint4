@@ -14,7 +14,6 @@ export function stationReducer(state = initialState, action) {
     let stations
     switch (action.type) {
         case SET_STATIONS:
-            console.log('from reduce SET_STATIONS', state.stations)
             return { ...state, stations: action.stations }
         case REMOVE_STATION:
             stations = state.stations.filter(station => station._id !== action.stationId)
@@ -23,8 +22,6 @@ export function stationReducer(state = initialState, action) {
             stations = [...state.stations, action.station]
             return { ...state, stations }
         case UPDATE_STATION:
-            console.log('from reduce', state)
-            console.log('from reduce what i got ', action.station)
             stations = state.stations.map(station => (station._id === action.station._id) ? action.station : station)
             return { ...state, stations }
         default:

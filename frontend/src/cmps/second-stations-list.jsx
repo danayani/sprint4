@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
 export function SecondStationList({ stations }) {
+    if (!stations) return 
     return (
         <section className="second-station-container">
             <h2>Made For You</h2>

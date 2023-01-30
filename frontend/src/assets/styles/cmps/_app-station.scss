@@ -8,8 +8,8 @@
         grid-template-columns: repeat(3, minmax(240px, 1fr));
         grid-gap: rem(16px) rem(57px);
     }
-    
-    
+
+
     .first-station-card {
         height: rem(80px);
         width: rem(340px);
@@ -20,12 +20,12 @@
         border-radius: rem(4px);
         border: 0;
         background-color: $bgcplaylistup;
-        
+
         &:hover {
             background-color: ligthen($bgcplaylistup, 20%);
         }
     }
-    
+
     .song-img {
         margin-right: rem(15px);
         width: rem(80px);
@@ -48,15 +48,14 @@
         margin-bottom: rem(26px);
     }
 
-    .second-station-container{
+    .second-station-container {
         margin-top: 27px;
     }
 
     .second-station-cards {
-        display: flex;
-        flex-wrap: wrap;
-        gap: rem(23px);
-        flex-direction: row;
+        display:grid;
+        grid-template-columns: repeat(5, minmax(195px, 1fr));
+        gap: rem(26px);
     }
 
     .second-station-card {
@@ -64,13 +63,12 @@
         background-color: $bgcplaylistdown;
         border-radius: rem(5px);
         height: rem(284px);
-        width: rem(195px);
 
 
-         &:hover{
+        &:hover {
             background-color: $bgcplaylistup;
             transition: background-color 0.7s;
-         }
+        }
 
         .song-card-img {
             padding: 15px;
@@ -81,11 +79,11 @@
             border-radius: 21px;
         }
 
-        h3{
-            padding-left:1.21em;
+        h3 {
+            padding-left: 1.21em;
         }
 
-        
+
     }
 
 }
