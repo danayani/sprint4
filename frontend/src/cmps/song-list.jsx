@@ -39,9 +39,10 @@ export function SongList({ station, playStation }) {
 
     async function toggleLikedSong(song) {
         console.log('toggleLikedSong')
+        console.log('song from toggle: ',song)
+        
 
         const update = await actionToggleSongToLikedSong(song)
-        console.log('update', update)
         setSongs(prev => [...prev])
     }
 
