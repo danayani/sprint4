@@ -5,6 +5,7 @@
     bottom: 0;
     justify-content: space-between;
     width: 100%;
+    border-top: 0.5px gray solid;
 }
 
 .icon-player {
@@ -27,14 +28,13 @@
     }
 
     & .song-img {
-        border: 0px;
+        border: none;
     }
 }
 
 div.song-details {
     overflow: hidden;
 
-    p.song-artist {}
 }
 
 .song-img {
@@ -44,7 +44,6 @@ div.song-details {
 
 
 .player-actions-container {
-    // background-color: rgb(172, 37, 59);
     align-items: center;
 }
 
@@ -83,7 +82,6 @@ div.song-details {
     width: rem(505px);
     margin-top: 10px;
     margin-left: 3px;
-    // margin-bottom: rem(10px);
 }
 
 .btn-action-player {
@@ -91,9 +89,7 @@ div.song-details {
 }
 
 .volume-controller {
-    // background-color: rgb(233, 106, 127);
     min-width: 10.714em;
-    // justify-content: space-between;
     flex-direction: row;
     align-items: center;
     gap: rem(5px);
@@ -104,7 +100,6 @@ div.song-details {
 }
 
 .volume-icon {
-    // font-size: rem(5px);
     background-color: transparent;
 }
 
