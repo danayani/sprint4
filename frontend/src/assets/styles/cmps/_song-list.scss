@@ -2,18 +2,6 @@
     margin-top: 32px;
     padding-left: 43px;
     background-color: transparent;
-    // background-color: black; 
-    // z-index: 1;
-    // background-image: linear-gradient(rgb(12, 11, 11),black);
-
-
-    // &.header-song-list {
-    //     // grid-template-columns: 3fr 20fr 5fr 5fr 7.5fr;
-
-    //     font-size: calc(13px);
-    //     grid-template-columns: 1fr 15fr 9fr 5fr 1fr 5.5fr 1fr;
-    //     margin-top: 22px;
-    // }
 
     & ul {
         padding: 0px;
@@ -43,7 +31,12 @@
         margin-top: 27px;
         grid-template-columns: 1fr 15fr 9fr 5fr 1fr 5.5fr 1fr;
 
-        color: $txtfill
+        color: $txtfill;
+        color: #b3b3b3;
+    }
+
+    .btn-song-list-play {
+        margin-top: 13px;
     }
 
 }
@@ -58,14 +51,27 @@ song-list-li:hover {
 
 }
 
-.song-liked-svg {
-    fill: $bgcplay;
+.add-song-station {
+    margin-left: calc(25px);
+
+    .song-liked-svg {
+        fill: $bgcplay;
+    }
 }
 
-.song-remove-icon {
-    fill: $bgcplay;
-    font-size: 17px;
+
+.remove-song-from-station {
+
+    margin-left: calc(15px) ;
+
+    .song-remove-icon {
+        fill: $bgcplay;
+        font-size: 17px;
+    }
 }
+
+
+
 
 .header-song-list {
     grid-template-columns: 1fr 15fr 9fr 5fr 1fr 5.5fr 1fr;
