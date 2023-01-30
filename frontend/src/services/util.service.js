@@ -18,9 +18,15 @@ export const utilService = {
 }
 
 function getSecFromTimePatern(timeStr){
+    console.log(timeStr)
 
-    var min = timeStr.charAt(timeStr.indexOf('m') + 1) 
+    var min = timeStr.charAt(timeStr.indexOf('M') - 1) 
+    var sec = timeStr.charAt(timeStr.indexOf('S') - 2) 
 
+    console.log('min', min)
+    console.log('sec', sec)
+
+    return (min*59) + sec
 }
 
 function timeConverter(UNIX_timestamp){

@@ -55,7 +55,6 @@ async function getServerSideSearch(searchKey) {
     const data = await res.json()
     console.log(data)
     const songs = data.items.map(song => ({
-
         "id": song.id.videoId,
         "title": song.snippet.title,
         "createdBy": song.snippet.channelTitle,
@@ -66,8 +65,7 @@ async function getServerSideSearch(searchKey) {
             "userfullname": ""
         },
         "addedAt": Date.now(),
-        "duration": (0)
-        
+        "duration": getSongDuration(song.id.videoId)
     }))
     return songs
 
@@ -80,7 +78,9 @@ async function getSongDuration(songId) {
     const data = await res.json()
     const duration = data.items[0].contentDetails.duration
 
-    return duration //hm5s15
+    const time = utilService.getSecFromTimePatern(duration)
+
+    return time //hm5s15
 }
 
 // async function getSearchResults(searchWord) {
