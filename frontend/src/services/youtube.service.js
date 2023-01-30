@@ -66,7 +66,8 @@ async function getServerSideSearch(searchKey) {
             "userfullname": ""
         },
         "addedAt": Date.now(),
-        "duration": 0
+        "duration": (0)
+        
     }))
     return songs
 
