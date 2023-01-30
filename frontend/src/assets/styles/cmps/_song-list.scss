@@ -70,14 +70,15 @@ song-list-li:hover {
     }
 }
 
-
-
-
 .header-song-list {
     grid-template-columns: 1fr 15fr 9fr 5fr 1fr 5.5fr 1fr;
     height: 30px;
     margin-top: 19px;
     font-size: 13px;
+
+    .hash{
+        margin-left: -2px;
+    }
 }
 
 
