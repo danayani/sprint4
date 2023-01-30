@@ -1,12 +1,19 @@
 // contains the entire songs from search list
 
+.search-create-input::placeholder {
+    font-weight: bold;
+    opacity: 1;
+    color: white;
+}
+
+
 .search-results-header {
     background-color: #181818;
     font-size: rem(12px);
     height: rem(48px);
     margin: 0 rem(-32px) rem(16px);
     padding: 0 rem(32px);
-    grid-template-columns: rem(16px) 2fr 1.5fr 1.5fr ;
+    grid-template-columns: rem(16px) 2fr 1.5fr 1.5fr;
     display: grid;
     align-items: center;
 
@@ -25,7 +32,7 @@
     }
 
     .song-duration {
-        
+
         padding-left: 145px;
     }
 }
@@ -58,14 +65,15 @@
             overflow-wrap: break-word;
             word-break: break-word;
         }
-       
+
         .searched-song-options {
             display: flex;
             flex-direction: row-reverse;
             justify-content: space-around;
             padding-right: rem(18px);
         }
-        .add-like-to-song{
+
+        .add-like-to-song {
             background: transparent;
         }
 
@@ -114,4 +122,13 @@
         left: 47%;
         bottom: -3%;
     }
+}
+
+
+.btn-search-create {
+    fill: white
+}
+
+.search-create-input{
+    color:white
 }
