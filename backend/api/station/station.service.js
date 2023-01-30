@@ -63,7 +63,7 @@ async function update(station) {
             name: station.name,
             tags: station.tags,
             imgUrl: station.imgUrl,
-            likedSongs: station.likedSongs //may be in diffrent key name, need to check the data
+            songs: station.songs //may be in diffrent key name, need to check the data
             // description: station.description     need to check the data
         }
         console.log('stationToSave',stationToSave)

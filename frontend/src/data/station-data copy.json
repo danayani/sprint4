@@ -1,5 +1,39 @@
 [
     {
+        "_id": "111RDtaf0Y86Q4hby91hqs6NX",
+        "name": "Liked Songs",
+        "imgUrl": "https://t.scdn.co/images/3099b3803ad9496896c43f22fe9be8c4.png",
+        "duration": 0,
+        "gener": [],
+        "tags": [],
+        "createdBy": {
+            "_id": "melody",
+            "fullname": "melody",
+            "imgUrl": "../assets/icons.logo.jpg"
+        },
+        "likedByUsers": [
+            {
+                "_id": "",
+                "userfullname": ""
+            },
+            {
+                "_id": "",
+                "userfullname": ""
+            }
+        ],
+        "songs": [],
+        "msgs": [
+            {
+                "id": "m101",
+                "from": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "txt": "Manish?"
+            }
+        ]
+    },
+    {
         "_id": "2bKRDtaf0Y86Q4hby91hqs6NX",
         "name": "Coldplay",
         "imgUrl": "https://i.scdn.co/image/ab67706f00000002a231f671c289555cfd09f716",
@@ -168,7 +202,671 @@
             }
         ]
     },
-
+    {
+        "_id": "2bKRDtaf0Y86Q4hby85hqs6NX",
+        "name": "Soft Rock",
+        "imgUrl": "https://i.scdn.co/image/ab67706f000000023060af49d84dea191630fa16",
+        "duration": 555,
+        "gener": [
+            "Rock",
+            "Alternative"
+        ],
+        "tags": [
+            "Rock",
+            "Happy",
+            "Road Trip"
+        ],
+        "createdBy": {
+            "_id": "NoOneKnowThisId",
+            "fullname": "By Melody",
+            "imgUrl": "../assets/icons.logo.jpg"
+        },
+        "likedByUsers": [
+            {
+                "_id": "",
+                "userfullname": ""
+            },
+            {
+                "_id": "",
+                "userfullname": ""
+            }
+        ],
+        "songs": [
+            {
+                "id": "VPRjCeoBqrI",
+                "title": "A Sky Full Of Stars",
+                "createdBy": "Coldplay",
+                "url": "https://www.youtube.com/watch?v=VPRjCeoBqrI&list=RDEMuf6htoZivPnz-ZIwGU0dDA&index=3",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00001e02f864bcdcc245f06831d17ae0",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521755262,
+                "duration": 285
+            },
+            {
+                "id": "xgC5DYLUNAI",
+                "title": "Yellow",
+                "createdBy": "Coldplay",
+                "url": "https://www.youtube.com/watch?v=xgC5DYLUNAI",
+                "imgUrl": "https://i.scdn.co/image/ab67616d000048513d92b2ad5af9fbc8637425f0",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521755262,
+                "duration": 285
+            },
+            {
+                "id": "oaahwTCogXo",
+                "title": "The Scientist",
+                "createdBy": "Coldplay",
+                "url": "https://www.youtube.com/watch?v=oaahwTCogXo",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851de09e02aa7febf30b7c02d82",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521755262,
+                "duration": 285
+            },
+            {
+                "id": "51CFIm4wAOQ",
+                "title": "Biutyful",
+                "createdBy": "Coldplay",
+                "url": "https://www.youtube.com/watch?v=51CFIm4wAOQ",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851289ac619a0993bbe19484727",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521755262,
+                "duration": 285
+            },
+            {
+                "id": "YA7U00i6WGQ",
+                "title": "Clocks",
+                "createdBy": "Coldplay",
+                "url": "https://www.youtube.com/watch?v=YA7U00i6WGQ",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851de09e02aa7febf30b7c02d82",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521755262,
+                "duration": 285
+            },
+            {
+                "id": "ySNG1IFaD-g",
+                "title": "Hymn for the weekend",
+                "createdBy": "Coldplay",
+                "url": "https://www.youtube.com/watch?v=ySNG1IFaD-g",
+                "imgUrl": "https://i.scdn.co/image/ab67616d000048518ff7c3580d429c8212b9a3b6",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521755262,
+                "duration": 285
+            },
+            {
+                "id": "CrWd-S5e99c",
+                "title": "Magic",
+                "createdBy": "Coldplay",
+                "url": "https://www.youtube.com/watch?v=CrWd-S5e99c",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851f864bcdcc245f06831d17ae0",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521755262,
+                "duration": 285
+            }
+        ],
+        "msgs": [
+            {
+                "id": "m101",
+                "from": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "txt": "Manish?"
+            }
+        ]
+    },
+    {
+        "_id": "8gKRDtaf0Y86Q4hby85hqs6NX",
+        "name": "The Best Of 2000s",
+        "imgUrl": "https://i.scdn.co/image/ab67706c0000da849579b580da9f30830f77440b",
+        "duration": 555,
+        "gener": [
+            "Rock",
+            "Alternative"
+        ],
+        "tags": [
+            "Rock",
+            "Happy",
+            "Road Trip"
+        ],
+        "createdBy": {
+            "_id": "NoOneKnowThisId",
+            "fullname": "By Melody",
+            "imgUrl": "../assets/icons.logo.jpg"
+        },
+        "likedByUsers": [
+            {
+                "_id": "",
+                "userfullname": ""
+            },
+            {
+                "_id": "",
+                "userfullname": ""
+            }
+        ],
+        "songs": [
+            {
+                "id": "VPRjCeoBqrI",
+                "title": "A Sky Full Of Stars",
+                "createdBy": "Coldplay",
+                "url": "https://www.youtube.com/watch?v=VPRjCeoBqrI&list=RDEMuf6htoZivPnz-ZIwGU0dDA&index=3",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00001e02f864bcdcc245f06831d17ae0",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521755262,
+                "duration": 285
+            },
+            {
+                "id": "xgC5DYLUNAI",
+                "title": "Yellow",
+                "createdBy": "Coldplay",
+                "url": "https://www.youtube.com/watch?v=xgC5DYLUNAI",
+                "imgUrl": "https://i.scdn.co/image/ab67616d000048513d92b2ad5af9fbc8637425f0",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521755262,
+                "duration": 285
+            },
+            {
+                "id": "oaahwTCogXo",
+                "title": "The Scientist",
+                "createdBy": "Coldplay",
+                "url": "https://www.youtube.com/watch?v=oaahwTCogXo",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851de09e02aa7febf30b7c02d82",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521755262,
+                "duration": 285
+            },
+            {
+                "id": "51CFIm4wAOQ",
+                "title": "Biutyful",
+                "createdBy": "Coldplay",
+                "url": "https://www.youtube.com/watch?v=51CFIm4wAOQ",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851289ac619a0993bbe19484727",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521755262,
+                "duration": 285
+            },
+            {
+                "id": "YA7U00i6WGQ",
+                "title": "Clocks",
+                "createdBy": "Coldplay",
+                "url": "https://www.youtube.com/watch?v=YA7U00i6WGQ",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851de09e02aa7febf30b7c02d82",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521755262,
+                "duration": 285
+            },
+            {
+                "id": "ySNG1IFaD-g",
+                "title": "Hymn for the weekend",
+                "createdBy": "Coldplay",
+                "url": "https://www.youtube.com/watch?v=ySNG1IFaD-g",
+                "imgUrl": "https://i.scdn.co/image/ab67616d000048518ff7c3580d429c8212b9a3b6",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521755262,
+                "duration": 285
+            },
+            {
+                "id": "CrWd-S5e99c",
+                "title": "Magic",
+                "createdBy": "Coldplay",
+                "url": "https://www.youtube.com/watch?v=CrWd-S5e99c",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851f864bcdcc245f06831d17ae0",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521755262,
+                "duration": 285
+            }
+        ],
+        "msgs": [
+            {
+                "id": "m101",
+                "from": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "txt": "Manish?"
+            }
+        ]
+    },
+    {
+        "_id": "8gKRDtaf8h86Q4hby85hqs6NX",
+        "name": "Songs to sing in the shower",
+        "imgUrl": "https://i.scdn.co/image/ab67706f0000000224893f0507c0fe2855565438",
+        "duration": 555,
+        "gener": [
+            "Rock",
+            "Alternative"
+        ],
+        "tags": [
+            "Rock",
+            "Happy",
+            "Road Trip"
+        ],
+        "createdBy": {
+            "_id": "NoOneKnowThisId",
+            "fullname": "By Melody",
+            "imgUrl": "../assets/icons.logo.jpg"
+        },
+        "likedByUsers": [
+            {
+                "_id": "",
+                "userfullname": ""
+            },
+            {
+                "_id": "",
+                "userfullname": ""
+            }
+        ],
+        "songs": [
+            {
+                "id": "VPRjCeoBqrI",
+                "title": "A Sky Full Of Stars",
+                "createdBy": "Coldplay",
+                "url": "https://www.youtube.com/watch?v=VPRjCeoBqrI&list=RDEMuf6htoZivPnz-ZIwGU0dDA&index=3",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00001e02f864bcdcc245f06831d17ae0",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521755262,
+                "duration": 285
+            },
+            {
+                "id": "xgC5DYLUNAI",
+                "title": "Yellow",
+                "createdBy": "Coldplay",
+                "url": "https://www.youtube.com/watch?v=xgC5DYLUNAI",
+                "imgUrl": "https://i.scdn.co/image/ab67616d000048513d92b2ad5af9fbc8637425f0",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521755262,
+                "duration": 285
+            },
+            {
+                "id": "oaahwTCogXo",
+                "title": "The Scientist",
+                "createdBy": "Coldplay",
+                "url": "https://www.youtube.com/watch?v=oaahwTCogXo",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851de09e02aa7febf30b7c02d82",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521755262,
+                "duration": 285
+            },
+            {
+                "id": "51CFIm4wAOQ",
+                "title": "Biutyful",
+                "createdBy": "Coldplay",
+                "url": "https://www.youtube.com/watch?v=51CFIm4wAOQ",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851289ac619a0993bbe19484727",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521755262,
+                "duration": 285
+            },
+            {
+                "id": "YA7U00i6WGQ",
+                "title": "Clocks",
+                "createdBy": "Coldplay",
+                "url": "https://www.youtube.com/watch?v=YA7U00i6WGQ",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851de09e02aa7febf30b7c02d82",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521755262,
+                "duration": 285
+            },
+            {
+                "id": "ySNG1IFaD-g",
+                "title": "Hymn for the weekend",
+                "createdBy": "Coldplay",
+                "url": "https://www.youtube.com/watch?v=ySNG1IFaD-g",
+                "imgUrl": "https://i.scdn.co/image/ab67616d000048518ff7c3580d429c8212b9a3b6",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521755262,
+                "duration": 285
+            },
+            {
+                "id": "CrWd-S5e99c",
+                "title": "Magic",
+                "createdBy": "Coldplay",
+                "url": "https://www.youtube.com/watch?v=CrWd-S5e99c",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851f864bcdcc245f06831d17ae0",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521755262,
+                "duration": 285
+            }
+        ],
+        "msgs": [
+            {
+                "id": "m101",
+                "from": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "txt": "Manish?"
+            }
+        ]
+    },
+    {
+        "_id": "8gKRDtaf8h96Q4hby85hqs6NX",
+        "name": "Happy Hits!",
+        "imgUrl": "https://i.scdn.co/image/ab67706f00000002b970d80800de215ac7939eb2",
+        "duration": 555,
+        "gener": [
+            "Rock",
+            "Alternative"
+        ],
+        "tags": [
+            "Rock",
+            "Happy",
+            "Road Trip"
+        ],
+        "createdBy": {
+            "_id": "NoOneKnowThisId",
+            "fullname": "By Melody",
+            "imgUrl": "../assets/icons.logo.jpg"
+        },
+        "likedByUsers": [
+            {
+                "_id": "",
+                "userfullname": ""
+            },
+            {
+                "_id": "",
+                "userfullname": ""
+            }
+        ],
+        "songs": [
+            {
+                "id": "VPRjCeoBqrI",
+                "title": "A Sky Full Of Stars",
+                "createdBy": "Coldplay",
+                "url": "https://www.youtube.com/watch?v=VPRjCeoBqrI&list=RDEMuf6htoZivPnz-ZIwGU0dDA&index=3",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00001e02f864bcdcc245f06831d17ae0",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521755262,
+                "duration": 285
+            },
+            {
+                "id": "xgC5DYLUNAI",
+                "title": "Yellow",
+                "createdBy": "Coldplay",
+                "url": "https://www.youtube.com/watch?v=xgC5DYLUNAI",
+                "imgUrl": "https://i.scdn.co/image/ab67616d000048513d92b2ad5af9fbc8637425f0",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521755262,
+                "duration": 285
+            },
+            {
+                "id": "oaahwTCogXo",
+                "title": "The Scientist",
+                "createdBy": "Coldplay",
+                "url": "https://www.youtube.com/watch?v=oaahwTCogXo",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851de09e02aa7febf30b7c02d82",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521755262,
+                "duration": 285
+            },
+            {
+                "id": "51CFIm4wAOQ",
+                "title": "Biutyful",
+                "createdBy": "Coldplay",
+                "url": "https://www.youtube.com/watch?v=51CFIm4wAOQ",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851289ac619a0993bbe19484727",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521755262,
+                "duration": 285
+            },
+            {
+                "id": "YA7U00i6WGQ",
+                "title": "Clocks",
+                "createdBy": "Coldplay",
+                "url": "https://www.youtube.com/watch?v=YA7U00i6WGQ",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851de09e02aa7febf30b7c02d82",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521755262,
+                "duration": 285
+            },
+            {
+                "id": "ySNG1IFaD-g",
+                "title": "Hymn for the weekend",
+                "createdBy": "Coldplay",
+                "url": "https://www.youtube.com/watch?v=ySNG1IFaD-g",
+                "imgUrl": "https://i.scdn.co/image/ab67616d000048518ff7c3580d429c8212b9a3b6",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521755262,
+                "duration": 285
+            },
+            {
+                "id": "CrWd-S5e99c",
+                "title": "Magic",
+                "createdBy": "Coldplay",
+                "url": "https://www.youtube.com/watch?v=CrWd-S5e99c",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851f864bcdcc245f06831d17ae0",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521755262,
+                "duration": 285
+            }
+        ],
+        "msgs": [
+            {
+                "id": "m101",
+                "from": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "txt": "Manish?"
+            }
+        ]
+    },
+    {
+        "_id": "8gKRDikf8h86Q4hby85hqs6NX",
+        "name": "Mood Booster",
+        "imgUrl": "https://i.scdn.co/image/ab67706f00000002bd0e19e810bb4b55ab164a95",
+        "duration": 555,
+        "gener": [
+            "Rock",
+            "Alternative"
+        ],
+        "tags": [
+            "Rock",
+            "Happy",
+            "Road Trip"
+        ],
+        "createdBy": {
+            "_id": "NoOneKnowThisId",
+            "fullname": "By Melody",
+            "imgUrl": "../assets/icons.logo.jpg"
+        },
+        "likedByUsers": [
+            {
+                "_id": "",
+                "userfullname": ""
+            },
+            {
+                "_id": "",
+                "userfullname": ""
+            }
+        ],
+        "songs": [
+            {
+                "id": "VPRjCeoBqrI",
+                "title": "A Sky Full Of Stars",
+                "createdBy": "Coldplay",
+                "url": "https://www.youtube.com/watch?v=VPRjCeoBqrI&list=RDEMuf6htoZivPnz-ZIwGU0dDA&index=3",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00001e02f864bcdcc245f06831d17ae0",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521755262,
+                "duration": 285
+            },
+            {
+                "id": "xgC5DYLUNAI",
+                "title": "Yellow",
+                "createdBy": "Coldplay",
+                "url": "https://www.youtube.com/watch?v=xgC5DYLUNAI",
+                "imgUrl": "https://i.scdn.co/image/ab67616d000048513d92b2ad5af9fbc8637425f0",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521755262,
+                "duration": 285
+            },
+            {
+                "id": "oaahwTCogXo",
+                "title": "The Scientist",
+                "createdBy": "Coldplay",
+                "url": "https://www.youtube.com/watch?v=oaahwTCogXo",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851de09e02aa7febf30b7c02d82",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521755262,
+                "duration": 285
+            },
+            {
+                "id": "51CFIm4wAOQ",
+                "title": "Biutyful",
+                "createdBy": "Coldplay",
+                "url": "https://www.youtube.com/watch?v=51CFIm4wAOQ",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851289ac619a0993bbe19484727",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521755262,
+                "duration": 285
+            },
+            {
+                "id": "YA7U00i6WGQ",
+                "title": "Clocks",
+                "createdBy": "Coldplay",
+                "url": "https://www.youtube.com/watch?v=YA7U00i6WGQ",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851de09e02aa7febf30b7c02d82",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521755262,
+                "duration": 285
+            },
+            {
+                "id": "ySNG1IFaD-g",
+                "title": "Hymn for the weekend",
+                "createdBy": "Coldplay",
+                "url": "https://www.youtube.com/watch?v=ySNG1IFaD-g",
+                "imgUrl": "https://i.scdn.co/image/ab67616d000048518ff7c3580d429c8212b9a3b6",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521755262,
+                "duration": 285
+            },
+            {
+                "id": "CrWd-S5e99c",
+                "title": "Magic",
+                "createdBy": "Coldplay",
+                "url": "https://www.youtube.com/watch?v=CrWd-S5e99c",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851f864bcdcc245f06831d17ae0",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521755262,
+                "duration": 285
+            }
+        ],
+        "msgs": [
+            {
+                "id": "m101",
+                "from": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "txt": "Manish?"
+            }
+        ]
+    },
     {
         "_id": "5cksxjas29xjsa8xjsa8jxs09",
         "name": "Funk&Soul Classics",
@@ -291,6 +989,411 @@
             {
                 "id": "m101",
                 "from": "{mini-user}",
+                "txt": "Manish?"
+            }
+        ]
+    },
+    {
+        "_id": "8gKRDtaf8h73Q4hby85hqs6NX",
+        "name": "Broken Heart",
+        "imgUrl": "https://i.scdn.co/image/ab67706f0000000250f34f0e7a0b73effe02fa6f",
+        "duration": 1585,
+        "gener": [
+            "Rock",
+            "Alternative"
+        ],
+        "tags": [
+            "Rock",
+            "Happy",
+            "Road Trip"
+        ],
+        "createdBy": {
+            "_id": "NoOneKnowThisId",
+            "fullname": "Shelly Paxton Eligahu",
+            "imgUrl": "../assets/icons.logo.jpg"
+        },
+        "likedByUsers": [
+            {
+                "_id": "",
+                "userfullname": ""
+            },
+            {
+                "_id": "",
+                "userfullname": ""
+            }
+        ],
+        "songs": [
+            {
+                "id": "2Yjge7980Sk",
+                "title": "Because of you",
+                "createdBy": "Kelly Clarkson",
+                "url": "https://www.youtube.com/watch?v=2Yjge7980Sk",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851158c72ad0003cb37ca0c9eff",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "liked": false,
+                "addedAt": 1674739885538,
+                "duration": 219
+            },
+            {
+                "id": "YMqwLN8IpVs",
+                "title": "Complicated",
+                "createdBy": "Avril levigne",
+                "url": "https://www.youtube.com/watch?v=YMqwLN8IpVs",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851f7ec724fbf97a30869d06240",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "liked": false,
+                "addedAt": 1674834609207,
+                "duration": 244
+            },
+            {
+                "id": "WnWeTj-yjss",
+                "title": "Someone Like You",
+                "createdBy": "Adele",
+                "url": "https://www.youtube.com/watch?v=WnWeTj-yjss",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851164feb363334f93b6458d2a9",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "liked": false,
+                "addedAt": 1674606051458,
+                "duration": 285
+            },
+            {
+                "id": "51CFIm4wAOQ",
+                "title": "Biutyful",
+                "createdBy": "Coldplay",
+                "url": "https://www.youtube.com/watch?v=51CFIm4wAOQ",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851289ac619a0993bbe19484727",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "liked": false,
+                "addedAt": 1674671100206,
+                "duration": 192
+            },
+            {
+                "id": "eCfMMGKvDcw",
+                "title": "The One That Got Away",
+                "createdBy": "Katy Perry",
+                "url": "https://www.youtube.com/watch?v=eCfMMGKvDcw",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851f619042d5f6b2149a4f5e0ca",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "liked": false,
+                "addedAt": 1674579681059,
+                "duration": 227
+            },
+            {
+                "id": "gv7kjhaMTt0",
+                "title": "Chasing A Feeling",
+                "createdBy": "LEON",
+                "url": "https://www.youtube.com/watch?v=gv7kjhaMTt0",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851386a4f768de2daf11014ace9",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "liked": false,
+                "addedAt": 1674649508145,
+                "duration": 231
+            },
+            {
+                "id": "CrWd-S5e99c",
+                "title": "Hurt Again",
+                "createdBy": "Julia Michaels",
+                "url": "https://www.youtube.com/watch?v=rNHWs5QrGsA",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851392fe1e2e2719b901c07b827",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 1674396596445,
+                "duration": 193
+            }
+        ],
+        "msgs": [
+            {
+                "id": "m101",
+                "from": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "txt": "Manish?"
+            }
+        ]
+    },
+    {
+        "_id": "8gKRDtaf8h73Q485285hqs6NX",
+        "name": "Top Songs - Global",
+        "imgUrl": "https://charts-images.scdn.co/assets/locale_en/regional/weekly/region_global_default.jpg",
+        "duration": 555,
+        "gener": [
+            "Rock",
+            "Alternative"
+        ],
+        "tags": [
+            "Rock",
+            "Happy",
+            "Road Trip"
+        ],
+        "createdBy": {
+            "_id": "NoOneKnowThisId",
+            "fullname": "By Melody",
+            "imgUrl": "../assets/icons.logo.jpg"
+        },
+        "likedByUsers": [
+            {
+                "_id": "",
+                "userfullname": ""
+            },
+            {
+                "_id": "",
+                "userfullname": ""
+            }
+        ],
+        "songs": [
+            {
+                "id": "VPRjCeoBqrI",
+                "title": "A Sky Full Of Stars",
+                "createdBy": "Coldplay",
+                "url": "https://www.youtube.com/watch?v=VPRjCeoBqrI&list=RDEMuf6htoZivPnz-ZIwGU0dDA&index=3",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00001e02f864bcdcc245f06831d17ae0",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521755262,
+                "duration": 285
+            },
+            {
+                "id": "xgC5DYLUNAI",
+                "title": "Yellow",
+                "createdBy": "Coldplay",
+                "url": "https://www.youtube.com/watch?v=xgC5DYLUNAI",
+                "imgUrl": "https://i.scdn.co/image/ab67616d000048513d92b2ad5af9fbc8637425f0",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521755262,
+                "duration": 285
+            },
+            {
+                "id": "oaahwTCogXo",
+                "title": "The Scientist",
+                "createdBy": "Coldplay",
+                "url": "https://www.youtube.com/watch?v=oaahwTCogXo",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851de09e02aa7febf30b7c02d82",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521755262,
+                "duration": 285
+            },
+            {
+                "id": "51CFIm4wAOQ",
+                "title": "Biutyful",
+                "createdBy": "Coldplay",
+                "url": "https://www.youtube.com/watch?v=51CFIm4wAOQ",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851289ac619a0993bbe19484727",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521755262,
+                "duration": 285
+            },
+            {
+                "id": "YA7U00i6WGQ",
+                "title": "Clocks",
+                "createdBy": "Coldplay",
+                "url": "https://www.youtube.com/watch?v=YA7U00i6WGQ",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851de09e02aa7febf30b7c02d82",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521755262,
+                "duration": 285
+            },
+            {
+                "id": "ySNG1IFaD-g",
+                "title": "Hymn for the weekend",
+                "createdBy": "Coldplay",
+                "url": "https://www.youtube.com/watch?v=ySNG1IFaD-g",
+                "imgUrl": "https://i.scdn.co/image/ab67616d000048518ff7c3580d429c8212b9a3b6",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521755262,
+                "duration": 285
+            },
+            {
+                "id": "CrWd-S5e99c",
+                "title": "Magic",
+                "createdBy": "Coldplay",
+                "url": "https://www.youtube.com/watch?v=CrWd-S5e99c",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851f864bcdcc245f06831d17ae0",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521755262,
+                "duration": 285
+            }
+        ],
+        "msgs": [
+            {
+                "id": "m101",
+                "from": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "txt": "Manish?"
+            }
+        ]
+    },
+    {
+        "_id": "8gKRDtaf9k73Q485285hqs6NX",
+        "name": "Top Songs - Israel",
+        "imgUrl": "https://charts-images.scdn.co/assets/locale_en/regional/weekly/region_il_default.jpg",
+        "duration": 555,
+        "gener": [
+            "Rock",
+            "Alternative"
+        ],
+        "tags": [
+            "Rock",
+            "Happy",
+            "Road Trip"
+        ],
+        "createdBy": {
+            "_id": "NoOneKnowThisId",
+            "fullname": "By Melody",
+            "imgUrl": "../assets/icons.logo.jpg"
+        },
+        "likedByUsers": [
+            {
+                "_id": "",
+                "userfullname": ""
+            },
+            {
+                "_id": "",
+                "userfullname": ""
+            }
+        ],
+        "songs": [
+            {
+                "id": "VPRjCeoBqrI",
+                "title": "A Sky Full Of Stars",
+                "createdBy": "Coldplay",
+                "url": "https://www.youtube.com/watch?v=VPRjCeoBqrI&list=RDEMuf6htoZivPnz-ZIwGU0dDA&index=3",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00001e02f864bcdcc245f06831d17ae0",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521755262,
+                "duration": 285
+            },
+            {
+                "id": "xgC5DYLUNAI",
+                "title": "Yellow",
+                "createdBy": "Coldplay",
+                "url": "https://www.youtube.com/watch?v=xgC5DYLUNAI",
+                "imgUrl": "https://i.scdn.co/image/ab67616d000048513d92b2ad5af9fbc8637425f0",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521755262,
+                "duration": 285
+            },
+            {
+                "id": "oaahwTCogXo",
+                "title": "The Scientist",
+                "createdBy": "Coldplay",
+                "url": "https://www.youtube.com/watch?v=oaahwTCogXo",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851de09e02aa7febf30b7c02d82",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521755262,
+                "duration": 285
+            },
+            {
+                "id": "51CFIm4wAOQ",
+                "title": "Biutyful",
+                "createdBy": "Coldplay",
+                "url": "https://www.youtube.com/watch?v=51CFIm4wAOQ",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851289ac619a0993bbe19484727",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521755262,
+                "duration": 285
+            },
+            {
+                "id": "YA7U00i6WGQ",
+                "title": "Clocks",
+                "createdBy": "Coldplay",
+                "url": "https://www.youtube.com/watch?v=YA7U00i6WGQ",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851de09e02aa7febf30b7c02d82",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521755262,
+                "duration": 285
+            },
+            {
+                "id": "ySNG1IFaD-g",
+                "title": "Hymn for the weekend",
+                "createdBy": "Coldplay",
+                "url": "https://www.youtube.com/watch?v=ySNG1IFaD-g",
+                "imgUrl": "https://i.scdn.co/image/ab67616d000048518ff7c3580d429c8212b9a3b6",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521755262,
+                "duration": 285
+            },
+            {
+                "id": "CrWd-S5e99c",
+                "title": "Magic",
+                "createdBy": "Coldplay",
+                "url": "https://www.youtube.com/watch?v=CrWd-S5e99c",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851f864bcdcc245f06831d17ae0",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 162521755262,
+                "duration": 285
+            }
+        ],
+        "msgs": [
+            {
+                "id": "m101",
+                "from": {
+                    "_id": "",
+                    "userfullname": ""
+                },
                 "txt": "Manish?"
             }
         ]
@@ -438,7 +1541,6 @@
                 "addedAt": 1674887923092,
                 "duration": 106
             }
-        
         ],
         "msgs": [
             {
@@ -669,7 +1771,6 @@
         "duration": 893,
         "gener": [
             "Rock"
-            
         ],
         "tags": [
             "Rock",
@@ -742,12 +1843,6 @@
             }
         ]
     },
-
-   
-
-
-
-
     {
         "_id": "af0Dt4hby91hY86Q2bK1fs6NX",
         "name": "This Is Ariana Grande",
@@ -755,7 +1850,7 @@
         "duration": 2236,
         "gener": [
             "Pop",
-            "Hip-Hop"        
+            "Hip-Hop"
         ],
         "tags": [
             "Pop",
@@ -946,7 +2041,6 @@
             }
         ]
     },
-
     {
         "_id": "2bKRDtaf0Y86Q4hby91hqs6NX",
         "name": "This Is Pop Smoke",
@@ -1143,13 +2237,1035 @@
                 "txt": "Manish?"
             }
         ]
+    },
+
+
+
+    {
+        "name": "פופ ישראלי חדש",
+        "imgUrl": "https://i.scdn.co/image/ab67706f0000000329fc772d1b5fccb56e51d164",
+        "duration": 1143,
+        "gener": [
+            "Pop",
+            "Party",
+            "Popular"
+        ],
+        "tags": [
+            "Pop",
+            "Party",
+            "Popular",
+            "Happy",
+            "Road Trip"
+        ],
+        "createdBy": {
+            "_id": "NoOneKnowThisId",
+            "fullname": "By Melody",
+            "imgUrl": "../assets/icons.logo.jpg"
+        },
+        "likedByUsers": [
+            {
+                "_id": "",
+                "userfullname": ""
+            },
+            {
+                "_id": "",
+                "userfullname": ""
+            }
+        ],
+        "songs": [
+            {
+                "id": "UhNVfJrcdWs",
+                "title": "רגעים",
+                "createdBy": "Marina Maxinilian",
+                "url": "https://www.youtube.com/watch?v=UhNVfJrcdWs",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851cea2270283e38802538fa816",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 1674991298563,
+                "duration": 187
+            },
+            {
+                "id": "79QHNWWintk",
+                "title": "כל מה שרציתי להיות",
+                "createdBy": "Alin Golan",
+                "url": "https://www.youtube.com/watch?v=79QHNWWintk",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851cea2270283e38802538fa816",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 1674674000629,
+                "duration": 221
+            },
+            {
+                "id": "SoAinJh0_SE",
+                "title": "בובה",
+                "createdBy": "Noam Bettan",
+                "url": "https://www.youtube.com/watch?v=SoAinJh0_SE",
+                "imgUrl": "https://i.scdn.co/image/ab67616d0000485190a2949ef47b56e8ab26d9c8",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 1674674000629,
+                "duration": 188
+            },
+            {
+                "id": "_qCtDKOAIvY",
+                "title": "אין לך דאגות",
+                "createdBy": "Idan-Raichel",
+                "url": "https://www.youtube.com/watch?v=_qCtDKOAIvY",
+                "imgUrl": "https://i.scdn.co/image/ab67616d000048510de90d1a450467e073259bfb",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 1674480526050,
+                "duration": 190
+            },
+            {
+                "id": "ohYP-AeMm58",
+                "title": "תמיד בלאגן",
+                "createdBy": "מיה סולימן",
+                "url": "https://www.youtube.com/watch?v=ohYP-AeMm58",
+                "imgUrl": "https://i.scdn.co/image/ab67616d0000485123210a51209d5097111834e7",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 1674877571600,
+                "duration": 179
+            },
+            {
+                "id": "SIqtlSkDox4",
+                "title": "Gone",
+                "createdBy": "Noa Kiral",
+                "url": "https://www.youtube.com/watch?v=SIqtlSkDox4",
+                "imgUrl": "https://i.scdn.co/image/ab67616d000048519a5fe957d0d9c3d1d8714bf9",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 1674708559871,
+                "duration": 188
+            }
+        ],
+        "msgs": [
+            {
+                "id": "m101",
+                "from": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "txt": "Manish?"
+            }
+        ]
+    },
+    {
+        "name": "פופ ישראלי: הלהיטים",
+        "imgUrl": "https://i.scdn.co/image/ab67706f0000000347e69bc02948bf6bccc94f91",
+        "duration": 1216,
+        "gener": [
+            "Pop",
+            "Party",
+            "Popular",
+            "Hot"
+        ],
+        "tags": [
+            "Pop",
+            "Party",
+            "Popular",
+            "Happy",
+            "Road Trip"
+        ],
+        "createdBy": {
+            "_id": "NoOneKnowThisId",
+            "fullname": "By Melody",
+            "imgUrl": "../assets/icons.logo.jpg"
+        },
+        "likedByUsers": [
+            {
+                "_id": "",
+                "userfullname": ""
+            },
+            {
+                "_id": "",
+                "userfullname": ""
+            }
+        ],
+        "songs": [
+            {
+                "id": "7B9_974TcWo",
+                "title": "אחותי כבר לא סובלת אותך",
+                "createdBy": "Shira Margalit",
+                "url": "https://www.youtube.com/watch?v=7B9_974TcWo",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851f95c0917997684029498548e",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 1674739157424,
+                "duration": 184
+            },
+            {
+                "id": "ZOf7aMbzQAM",
+                "title": "פנתרה",
+                "createdBy": "Noa Kiral",
+                "url": "https://www.youtube.com/watch?v=ZOf7aMbzQAM",
+                "imgUrl": "https://i.scdn.co/image/ab67616d0000485183c4d7d5ae01da1278eb6774",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 1674674000629,
+                "duration": 184
+            },
+            {
+                "id": "ifpiFzu4c54",
+                "title": "אני",
+                "createdBy": "Omer Adam",
+                "url": "https://www.youtube.com/watch?v=ifpiFzu4c54",
+                "imgUrl": "https://i.scdn.co/image/ab67616d000048513a531af1a662b7dc992fd9e7",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 1674475197030,
+                "duration": 175
+            },
+            {
+                "id": "-hl1oakOcgw",
+                "title": "ראשון בבוקר",
+                "createdBy": "Anna Zak, Eden Ben Zaken, Nunu",
+                "url": "https://www.youtube.com/watch?v=-hl1oakOcgw",
+                "imgUrl": "https://i.scdn.co/image/ab67616d000048515e786c33541a744f3bfa0117",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 1674480526050,
+                "duration": 169
+            },
+            {
+                "id": "w-e7qVfxk2o",
+                "title": "מאמי",
+                "createdBy": "Odeya, Noa Kiral",
+                "url": "https://www.youtube.com/watch?v=w-e7qVfxk2o",
+                "imgUrl": "https://i.scdn.co/image/ab67616d000048519851240f9191dfd709625039",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 1674877571600,
+                "duration": 120
+            },
+            {
+                "id": "SIqtlSkDox4",
+                "title": "Gone",
+                "createdBy": "Noa Kiral",
+                "url": "https://www.youtube.com/watch?v=SIqtlSkDox4",
+                "imgUrl": "https://i.scdn.co/image/ab67616d000048519a5fe957d0d9c3d1d8714bf9",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 1674850864450,
+                "duration": 188
+            },
+            {
+                "id": "SIqtlSkDox4",
+                "title": "מתמטיקה",
+                "createdBy": "Stephan Legar, Netta",
+                "url": "https://www.youtube.com/watch?v=SIqtlSkDox4",
+                "imgUrl": "https://i.scdn.co/image/ab67616d0000485195401e85df3d6a9061cd39cf",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 1674850864450,
+                "duration": 196
+            }
+        ],
+        "msgs": [
+            {
+                "id": "m101",
+                "from": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "txt": "Manish?"
+            }
+        ]
+    },
+    {
+        "name": "סוף-שבוע ישראלי",
+        "imgUrl": "https://i.scdn.co/image/ab67706f000000035f58c0f513e98fc99f9c52da",
+        "duration": 1339,
+        "gener": [
+            "Popular",
+            "Nostalgic"
+        ],
+        "tags": [
+            "Popular",
+            "Family"
+        ],
+        "createdBy": {
+            "_id": "NoOneKnowThisId",
+            "fullname": "By Melody",
+            "imgUrl": "../assets/icons.logo.jpg"
+        },
+        "likedByUsers": [
+            {
+                "_id": "",
+                "userfullname": ""
+            },
+            {
+                "_id": "",
+                "userfullname": ""
+            }
+        ],
+        "songs": [
+            {
+                "id": "ZUBF4xqMaWE",
+                "title": "דבש ותפוח",
+                "createdBy": "Tomer Yosef",
+                "url": "https://www.youtube.com/watch?v=ZUBF4xqMaWE",
+                "imgUrl": "https://i.scdn.co/image/ab67616d0000485164e5bde9bebf7adba9343463",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 1674881416443,
+                "duration": 221
+            },
+            {
+                "id": "ctHXPuEMASs",
+                "title": "תל אביב זה אני ואת",
+                "createdBy": "Amir Ve Ben, Jane Bordeaux",
+                "url": "https://www.youtube.com/watch?v=ctHXPuEMASs",
+                "imgUrl": "https://i.scdn.co/image/ab67616d0000485105808ef83ff4864d6597fa78",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 1674674000629,
+                "duration": 221
+            },
+            {
+                "id": "DW8dArOQGF8",
+                "title": "חיים מאושרים",
+                "createdBy": "Nathan Goshen, Eden Ben Zaken",
+                "url": "https://www.youtube.com/watch?v=DW8dArOQGF8",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851fea80ce247849ea2f28bf924",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 1674475197030,
+                "duration": 203
+            },
+            {
+                "id": "7Buz7tJ_XYc",
+                "title": "Wishing Gril",
+                "createdBy": "Lola Marsh",
+                "url": "https://www.youtube.com/watch?v=7Buz7tJ_XYc",
+                "imgUrl": "https://i.scdn.co/image/ab67616d000048511054da8cfc73a6c9919b55a6",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 1674480526050,
+                "duration": 192
+            },
+            {
+                "id": "Z2Ue7gtSK4o",
+                "title": "שלח לי מלאך",
+                "createdBy": "Evitar Banai",
+                "url": "https://www.youtube.com/watch?v=Z2Ue7gtSK4o",
+                "imgUrl": "https://i.scdn.co/image/ab67616d000048516d217ce51be3b3e0a9a4a34e",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 1674877571600,
+                "duration": 237
+            },
+            {
+                "id": "FRMhnz10AD0",
+                "title": "כשזה עמוק",
+                "createdBy": "Lorin Allal",
+                "url": "https://www.youtube.com/watch?v=FRMhnz10AD0",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851b424123255474bf70046cb44",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 1674850864450,
+                "duration": 315
+            }  
+        ],
+        "msgs": [
+            {
+                "id": "m101",
+                "from": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "txt": "Manish?"
+            }
+        ]
+    },
+    {
+        "name": "Techno House Hits",
+        "imgUrl": "https://i.scdn.co/image/ab67706c0000bebbaac6d4162e6c5c153c6ad7c0",
+        "duration": 1286,
+        "gener": [
+            "Popular",
+            "Techno",
+            "House",
+            "Dance",
+            "club"
+        ],
+        "tags": [
+            "Popular",
+            "Techno",
+            "Hits",
+            "House"
+        ],
+        "createdBy": {
+            "_id": "NoOneKnowThisId",
+            "fullname": "By Melody",
+            "imgUrl": "../assets/icons.logo.jpg"
+        },
+        "likedByUsers": [
+            {
+                "_id": "",
+                "userfullname": ""
+            },
+            {
+                "_id": "",
+                "userfullname": ""
+            }
+        ],
+        "songs": [
+            {
+                "id": "u31thuMehjM",
+                "title": "Losing It",
+                "createdBy": "FISHER",
+                "url": "https://www.youtube.com/watch?v=u31thuMehjM",
+                "imgUrl": "https://i.scdn.co/image/ab67616d000048519367c1ee2eec0bf3a04b4868",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 1674881416443,
+                "duration": 248
+            },
+            {
+                "id": "TAKR_6vNJR8",
+                "title": "On My Mind",
+                "createdBy": "Diplo, SIDEPIECE",
+                "url": "https://www.youtube.com/watch?v=TAKR_6vNJR8",
+                "imgUrl": "https://i.scdn.co/image/ab67616d0000485168c351ff95beef153ddec5ad",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 1674674000629,
+                "duration": 189
+            },
+            {
+                "id": "FU6CUyjSFtg",
+                "title": "Do It Do It",
+                "createdBy": "ACRAZE, Cherish",
+                "url": "https://www.youtube.com/watch?v=FU6CUyjSFtg",
+                "imgUrl": "https://i.scdn.co/image/ab67616d0000485184d413b195aac8a69cc6e5c6",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 1674475197030,
+                "duration": 157
+            },
+            {
+                "id": "neIJC_SPO_0",
+                "title": "No Eyes - Radio Edit",
+                "createdBy": "Claptone, JAW",
+                "url": "https://www.youtube.com/watch?v=neIJC_SPO_0",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851ff2cf9f6af25ec0ef30169b7",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 1674480526050,
+                "duration": 204
+            },
+            {
+                "id": "tevQhIEsFhk",
+                "title": "Belly Dancer",
+                "createdBy": "Imanbek, BYOR",
+                "url": "https://www.youtube.com/watch?v=tevQhIEsFhk",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851d7bdea3b1f6d05877fb48f38",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 1674877571600,
+                "duration": 151
+            },
+            {
+                "id": "4cCi6-16HR4",
+                "title": "Ferrari",
+                "createdBy": "Janes Hype, Miggy Dela Rosa",
+                "url": "https://www.youtube.com/watch?v=4cCi6-16HR4",
+                "imgUrl": "https://i.scdn.co/image/ab67616d000048516cc861b5c9c7cdef61b010b4",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 1674850864450,
+                "duration": 186
+            }, 
+            {
+                "id": "s8klEBrs_9I",
+                "title": "A Milli - SIDEPEICE Remix",
+                "createdBy": "Lil Wayne, SIDEPIECE",
+                "url": "https://www.youtube.com/watch?v=s8klEBrs_9I",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851c47ded45f279367429149b66",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 1674850864450,
+                "duration": 153
+            }  
+        ],
+        "msgs": [
+            {
+                "id": "m101",
+                "from": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "txt": "Manish?"
+            }
+        ]
+    },
+
+    {
+        "name": "להיטי קיץ 2022",
+        "imgUrl": "https://i.scdn.co/image/ab67706f00000003d57aa31eb911fcff82d56803",
+        "duration": 1143,
+        "gener": [
+            "Pop",
+            "Party",
+            "Popular"
+        ],
+        "tags": [
+            "Pop",
+            "Party",
+            "Popular",
+            "Happy",
+            "Road Trip"
+        ],
+        "createdBy": {
+            "_id": "NoOneKnowThisId",
+            "fullname": "By Melody",
+            "imgUrl": "../assets/icons.logo.jpg"
+        },
+        "likedByUsers": [
+            {
+                "_id": "",
+                "userfullname": ""
+            },
+            {
+                "_id": "",
+                "userfullname": ""
+            }
+        ],
+        "songs": [
+            {
+                "id": "UhNVfJrcdWs",
+                "title": "רגעים",
+                "createdBy": "Marina Maxinilian",
+                "url": "https://www.youtube.com/watch?v=UhNVfJrcdWs",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851cea2270283e38802538fa816",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 1674991298563,
+                "duration": 187
+            },
+            {
+                "id": "79QHNWWintk",
+                "title": "כל מה שרציתי להיות",
+                "createdBy": "Alin Golan",
+                "url": "https://www.youtube.com/watch?v=79QHNWWintk",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851cea2270283e38802538fa816",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 1674674000629,
+                "duration": 221
+            },
+            {
+                "id": "SoAinJh0_SE",
+                "title": "בובה",
+                "createdBy": "Noam Bettan",
+                "url": "https://www.youtube.com/watch?v=SoAinJh0_SE",
+                "imgUrl": "https://i.scdn.co/image/ab67616d0000485190a2949ef47b56e8ab26d9c8",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 1674674000629,
+                "duration": 188
+            },
+            {
+                "id": "_qCtDKOAIvY",
+                "title": "אין לך דאגות",
+                "createdBy": "Idan-Raichel",
+                "url": "https://www.youtube.com/watch?v=_qCtDKOAIvY",
+                "imgUrl": "https://i.scdn.co/image/ab67616d000048510de90d1a450467e073259bfb",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 1674480526050,
+                "duration": 190
+            },
+            {
+                "id": "ohYP-AeMm58",
+                "title": "תמיד בלאגן",
+                "createdBy": "מיה סולימן",
+                "url": "https://www.youtube.com/watch?v=ohYP-AeMm58",
+                "imgUrl": "https://i.scdn.co/image/ab67616d0000485123210a51209d5097111834e7",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 1674877571600,
+                "duration": 179
+            },
+            {
+                "id": "SIqtlSkDox4",
+                "title": "Gone",
+                "createdBy": "Noa Kiral",
+                "url": "https://www.youtube.com/watch?v=SIqtlSkDox4",
+                "imgUrl": "https://i.scdn.co/image/ab67616d000048519a5fe957d0d9c3d1d8714bf9",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 1674708559871,
+                "duration": 188
+            }
+        ],
+        "msgs": [
+            {
+                "id": "m101",
+                "from": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "txt": "Manish?"
+            }
+        ]
+    },
+    {
+        "name": "90s Party",
+        "imgUrl": "https://i.scdn.co/image/ab67706f00000003a9a7853641d94519d81f1a3c",
+        "duration": 1216,
+        "gener": [
+            "Pop",
+            "Party",
+            "Popular",
+            "Hot"
+        ],
+        "tags": [
+            "Pop",
+            "Party",
+            "Popular",
+            "Happy",
+            "Road Trip"
+        ],
+        "createdBy": {
+            "_id": "NoOneKnowThisId",
+            "fullname": "By Melody",
+            "imgUrl": "../assets/icons.logo.jpg"
+        },
+        "likedByUsers": [
+            {
+                "_id": "",
+                "userfullname": ""
+            },
+            {
+                "_id": "",
+                "userfullname": ""
+            }
+        ],
+        "songs": [
+            {
+                "id": "7B9_974TcWo",
+                "title": "אחותי כבר לא סובלת אותך",
+                "createdBy": "Shira Margalit",
+                "url": "https://www.youtube.com/watch?v=7B9_974TcWo",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851f95c0917997684029498548e",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 1674739157424,
+                "duration": 184
+            },
+            {
+                "id": "ZOf7aMbzQAM",
+                "title": "פנתרה",
+                "createdBy": "Noa Kiral",
+                "url": "https://www.youtube.com/watch?v=ZOf7aMbzQAM",
+                "imgUrl": "https://i.scdn.co/image/ab67616d0000485183c4d7d5ae01da1278eb6774",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 1674674000629,
+                "duration": 184
+            },
+            {
+                "id": "ifpiFzu4c54",
+                "title": "אני",
+                "createdBy": "Omer Adam",
+                "url": "https://www.youtube.com/watch?v=ifpiFzu4c54",
+                "imgUrl": "https://i.scdn.co/image/ab67616d000048513a531af1a662b7dc992fd9e7",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 1674475197030,
+                "duration": 175
+            },
+            {
+                "id": "-hl1oakOcgw",
+                "title": "ראשון בבוקר",
+                "createdBy": "Anna Zak, Eden Ben Zaken, Nunu",
+                "url": "https://www.youtube.com/watch?v=-hl1oakOcgw",
+                "imgUrl": "https://i.scdn.co/image/ab67616d000048515e786c33541a744f3bfa0117",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 1674480526050,
+                "duration": 169
+            },
+            {
+                "id": "w-e7qVfxk2o",
+                "title": "מאמי",
+                "createdBy": "Odeya, Noa Kiral",
+                "url": "https://www.youtube.com/watch?v=w-e7qVfxk2o",
+                "imgUrl": "https://i.scdn.co/image/ab67616d000048519851240f9191dfd709625039",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 1674877571600,
+                "duration": 120
+            },
+            {
+                "id": "SIqtlSkDox4",
+                "title": "Gone",
+                "createdBy": "Noa Kiral",
+                "url": "https://www.youtube.com/watch?v=SIqtlSkDox4",
+                "imgUrl": "https://i.scdn.co/image/ab67616d000048519a5fe957d0d9c3d1d8714bf9",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 1674850864450,
+                "duration": 188
+            },
+            {
+                "id": "SIqtlSkDox4",
+                "title": "מתמטיקה",
+                "createdBy": "Stephan Legar, Netta",
+                "url": "https://www.youtube.com/watch?v=SIqtlSkDox4",
+                "imgUrl": "https://i.scdn.co/image/ab67616d0000485195401e85df3d6a9061cd39cf",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 1674850864450,
+                "duration": 196
+            }
+        ],
+        "msgs": [
+            {
+                "id": "m101",
+                "from": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "txt": "Manish?"
+            }
+        ]
+    },
+    {
+        "name": "Dance Hits",
+        "imgUrl": "https://i.scdn.co/image/ab67706f00000002b5f6d679ff66799a56c32c4c",
+        "duration": 1339,
+        "gener": [
+            "Popular",
+            "Nostalgic"
+        ],
+        "tags": [
+            "Popular",
+            "Family"
+        ],
+        "createdBy": {
+            "_id": "NoOneKnowThisId",
+            "fullname": "By Melody",
+            "imgUrl": "../assets/icons.logo.jpg"
+        },
+        "likedByUsers": [
+            {
+                "_id": "",
+                "userfullname": ""
+            },
+            {
+                "_id": "",
+                "userfullname": ""
+            }
+        ],
+        "songs": [
+            {
+                "id": "ZUBF4xqMaWE",
+                "title": "דבש ותפוח",
+                "createdBy": "Tomer Yosef",
+                "url": "https://www.youtube.com/watch?v=ZUBF4xqMaWE",
+                "imgUrl": "https://i.scdn.co/image/ab67616d0000485164e5bde9bebf7adba9343463",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 1674881416443,
+                "duration": 221
+            },
+            {
+                "id": "ctHXPuEMASs",
+                "title": "תל אביב זה אני ואת",
+                "createdBy": "Amir Ve Ben, Jane Bordeaux",
+                "url": "https://www.youtube.com/watch?v=ctHXPuEMASs",
+                "imgUrl": "https://i.scdn.co/image/ab67616d0000485105808ef83ff4864d6597fa78",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 1674674000629,
+                "duration": 221
+            },
+            {
+                "id": "DW8dArOQGF8",
+                "title": "חיים מאושרים",
+                "createdBy": "Nathan Goshen, Eden Ben Zaken",
+                "url": "https://www.youtube.com/watch?v=DW8dArOQGF8",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851fea80ce247849ea2f28bf924",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 1674475197030,
+                "duration": 203
+            },
+            {
+                "id": "7Buz7tJ_XYc",
+                "title": "Wishing Gril",
+                "createdBy": "Lola Marsh",
+                "url": "https://www.youtube.com/watch?v=7Buz7tJ_XYc",
+                "imgUrl": "https://i.scdn.co/image/ab67616d000048511054da8cfc73a6c9919b55a6",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 1674480526050,
+                "duration": 192
+            },
+            {
+                "id": "Z2Ue7gtSK4o",
+                "title": "שלח לי מלאך",
+                "createdBy": "Evitar Banai",
+                "url": "https://www.youtube.com/watch?v=Z2Ue7gtSK4o",
+                "imgUrl": "https://i.scdn.co/image/ab67616d000048516d217ce51be3b3e0a9a4a34e",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 1674877571600,
+                "duration": 237
+            },
+            {
+                "id": "FRMhnz10AD0",
+                "title": "כשזה עמוק",
+                "createdBy": "Lorin Allal",
+                "url": "https://www.youtube.com/watch?v=FRMhnz10AD0",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851b424123255474bf70046cb44",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 1674850864450,
+                "duration": 315
+            }  
+        ],
+        "msgs": [
+            {
+                "id": "m101",
+                "from": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "txt": "Manish?"
+            }
+        ]
+    },
+    {
+        "name": "House Party",
+        "imgUrl": "https://i.scdn.co/image/ab67706f0000000250b2c38f9b9a82777b801e40",
+        "duration": 1286,
+        "gener": [
+            "Popular",
+            "Techno",
+            "House",
+            "Dance",
+            "club"
+        ],
+        "tags": [
+            "Popular",
+            "Techno",
+            "Hits",
+            "House"
+        ],
+        "createdBy": {
+            "_id": "NoOneKnowThisId",
+            "fullname": "By Melody",
+            "imgUrl": "../assets/icons.logo.jpg"
+        },
+        "likedByUsers": [
+            {
+                "_id": "",
+                "userfullname": ""
+            },
+            {
+                "_id": "",
+                "userfullname": ""
+            }
+        ],
+        "songs": [
+            {
+                "id": "u31thuMehjM",
+                "title": "Losing It",
+                "createdBy": "FISHER",
+                "url": "https://www.youtube.com/watch?v=u31thuMehjM",
+                "imgUrl": "https://i.scdn.co/image/ab67616d000048519367c1ee2eec0bf3a04b4868",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 1674881416443,
+                "duration": 248
+            },
+            {
+                "id": "TAKR_6vNJR8",
+                "title": "On My Mind",
+                "createdBy": "Diplo, SIDEPIECE",
+                "url": "https://www.youtube.com/watch?v=TAKR_6vNJR8",
+                "imgUrl": "https://i.scdn.co/image/ab67616d0000485168c351ff95beef153ddec5ad",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 1674674000629,
+                "duration": 189
+            },
+            {
+                "id": "FU6CUyjSFtg",
+                "title": "Do It Do It",
+                "createdBy": "ACRAZE, Cherish",
+                "url": "https://www.youtube.com/watch?v=FU6CUyjSFtg",
+                "imgUrl": "https://i.scdn.co/image/ab67616d0000485184d413b195aac8a69cc6e5c6",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 1674475197030,
+                "duration": 157
+            },
+            {
+                "id": "neIJC_SPO_0",
+                "title": "No Eyes - Radio Edit",
+                "createdBy": "Claptone, JAW",
+                "url": "https://www.youtube.com/watch?v=neIJC_SPO_0",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851ff2cf9f6af25ec0ef30169b7",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 1674480526050,
+                "duration": 204
+            },
+            {
+                "id": "tevQhIEsFhk",
+                "title": "Belly Dancer",
+                "createdBy": "Imanbek, BYOR",
+                "url": "https://www.youtube.com/watch?v=tevQhIEsFhk",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851d7bdea3b1f6d05877fb48f38",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 1674877571600,
+                "duration": 151
+            },
+            {
+                "id": "4cCi6-16HR4",
+                "title": "Ferrari",
+                "createdBy": "Janes Hype, Miggy Dela Rosa",
+                "url": "https://www.youtube.com/watch?v=4cCi6-16HR4",
+                "imgUrl": "https://i.scdn.co/image/ab67616d000048516cc861b5c9c7cdef61b010b4",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 1674850864450,
+                "duration": 186
+            }, 
+            {
+                "id": "s8klEBrs_9I",
+                "title": "A Milli - SIDEPEICE Remix",
+                "createdBy": "Lil Wayne, SIDEPIECE",
+                "url": "https://www.youtube.com/watch?v=s8klEBrs_9I",
+                "imgUrl": "https://i.scdn.co/image/ab67616d00004851c47ded45f279367429149b66",
+                "addedBy": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "addedAt": 1674850864450,
+                "duration": 153
+            }  
+        ],
+        "msgs": [
+            {
+                "id": "m101",
+                "from": {
+                    "_id": "",
+                    "userfullname": ""
+                },
+                "txt": "Manish?"
+            }
+        ]
     }
+    
 
 ]
-
- 
-
-
-   
-   
-   
