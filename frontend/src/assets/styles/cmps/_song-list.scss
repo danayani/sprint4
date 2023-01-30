@@ -1,8 +1,10 @@
 .song-list-container {
     margin-top: 32px;
     padding-left: 43px;
-    background-color: inherit; 
-    // background-image: linear-gradient(rgb(5, 5, 20),black);
+    background-color: transparent;
+    // background-color: black; 
+    // z-index: 1;
+    // background-image: linear-gradient(rgb(12, 11, 11),black);
 
 
     // &.header-song-list {
