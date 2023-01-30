@@ -13,6 +13,7 @@ export function Home() {
         loadStations()
     }, [])
 
+
     function setGreeting() {
         const currHour = new Date().getHours()
         if (currHour >= 6 && currHour <= 12) return 'Good morning'
