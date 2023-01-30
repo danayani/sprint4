@@ -19,6 +19,13 @@
     width: 250px;
     overflow-x: hidden;
 
+    .song-description{
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        margin-bottom: -15px;
+    }
+
     & .song-img {
         border: 0px;
     }
