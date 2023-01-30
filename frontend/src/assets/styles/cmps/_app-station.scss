@@ -21,6 +21,10 @@
         border: 0;
         background-color: $bgcplaylistup;
 
+        h3{
+            color: $txtselected;
+        }
+
         &:hover {
             background-color: ligthen($bgcplaylistup, 20%);
         }
@@ -81,6 +85,7 @@
 
         h3 {
             padding-left: 1.21em;
+            color: $txtselected;
         }
 
 
