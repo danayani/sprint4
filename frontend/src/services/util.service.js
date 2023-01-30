@@ -17,21 +17,21 @@ export const utilService = {
     getSecFromTimePatern,
 }
 
-function getSecFromTimePatern(timeStr){
-    console.log(timeStr)
+function getSecFromTimePatern(videoDuration) {
 
-    var min = timeStr.charAt(timeStr.indexOf('M') - 1) 
-    var sec = timeStr.charAt(timeStr.indexOf('S') - 2) 
 
-    console.log('min', min)
-    console.log('sec', sec)
-
-    return (min*59) + sec
+    const min = videoDuration.slice(2, videoDuration.indexOf('M'))
+    let sec = videoDuration.slice(videoDuration.indexOf('M') + 1, videoDuration.indexOf('S'))
+    sec = sec.padStart(2, '0')
+    const duration = `${min}:${sec}`
+   
+    console.log(duration)
+    return duration
 }
 
-function timeConverter(UNIX_timestamp){
+function timeConverter(UNIX_timestamp) {
     var a = new Date(UNIX_timestamp);
-    var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     var year = a.getFullYear();
     var month = months[a.getMonth()];
     var date = a.getDate();
@@ -41,16 +41,17 @@ function timeConverter(UNIX_timestamp){
     var time = `${month}, ${date} ${year}`;
     // var time = date + ' ' + month + ' ' + year ;
     return time;
-  }
+}
 
 function getTimeFromSeconds(sunSec = 0) {
+    if ( isNaN(sunSec)) return sunSec
     if (!sunSec) sunSec = 0
     let time = { min: 0, sec: 0 }
 
     time.min = parseInt(sunSec / 59)
     time.sec = (sunSec - (time.min * 59))
     let steSec = (time.sec < 10) ? `0${time.sec}` : `${time.sec}`
-    
+
     let strTime = `${time.min}:${steSec}`
     return strTime
 }
