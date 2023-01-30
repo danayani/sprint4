@@ -41,8 +41,10 @@ export function CreateStation() {
 
     async function onAddSong(song) {
 
-        // let durationAPI = await youtubeService.getSongDuration(song.id)
-        // console.log('durationAPI', durationAPI)
+        let durationAPI = await youtubeService.getSongDuration(song.id)
+        console.log('durationAPI', durationAPI)
+
+        song.duration = durationAPI
         station.songs.push(song)
         console.log('newStation', station)
 
