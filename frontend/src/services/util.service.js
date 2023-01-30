@@ -31,6 +31,7 @@ function timeConverter(UNIX_timestamp){
   }
 
 function getTimeFromSeconds(sunSec = 0) {
+    if (!sunSec) sunSec = 0
     let time = { min: 0, sec: 0 }
 
     time.min = parseInt(sunSec / 59)
