@@ -53,7 +53,7 @@ export function SongList({ station, playStation }) {
     return (
         <div className={"song-list-container"} >
             <header className="header-song-list grid">
-                <span>#</span>
+                <span className="hash">#</span>
                 <span>TITLE</span>
                 <span>DATE ADDED</span>
                 <span></span>
