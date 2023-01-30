@@ -3,6 +3,7 @@ import { useSelector } from "react-redux"
 import { FirstStationList } from '../cmps/first-stations-list'
 import { Loader } from '../cmps/loader.jsx'
 import { SecondStationList } from '../cmps/second-stations-list'
+import { utilService } from '../services/util.service'
 import { loadStations } from '../store/station/station.actions.js'
 
 export function Home() {
@@ -11,8 +12,6 @@ export function Home() {
     useEffect(() => {
         loadStations()
     }, [])
-
-
 
     function setGreeting() {
         const currHour = new Date().getHours()
