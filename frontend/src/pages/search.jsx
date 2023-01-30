@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { useLocation } from "react-router-dom"
+import { useSearchParams} from "react-router-dom"
 import { useDispatch } from "react-redux"
 
 import { stationService } from "../services/station.service.js"
@@ -10,14 +10,17 @@ import { SET_SONG_IDX} from "../store/player/player.reducer.js"
 import { Loader } from "../cmps/loader.jsx"
 
 export function Search({ playStation }) {
-
+    const [searchParams, setSearchParams] = useSearchParams()
+    const [songKey, setSongKey] = useState()
     const dispatch = useDispatch()
-    const location = useLocation()
     const [songsFromSearch, setSongsFromSearch] = useState(null)
     const geners = stationService.getMusicGeners()
 
-    const songKey = location.search.slice(11)
-    console.log('songKey from location', songKey)
+
+    useEffect(() => {
+       const songKey = searchParams.get('searchKey')
+       setSongKey(songKey)
+    }, [])
 
     useEffect(() => {
         getSongsFromSearch()

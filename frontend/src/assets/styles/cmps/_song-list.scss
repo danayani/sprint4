@@ -28,30 +28,43 @@
 
     & .song-action {
         background-color: transparent;
-        color: white;
-        font-size: 20px;
-        color: white;
+
         width: 50px;
         height: 50px;
         align-items: center;
 
-        opacity: 0;
-
+        // opacity: 0;
         &:hover {
             font-weight: bold;
-            font-size: 25px;
         }
-
-        &.onShowen{
-            opacity: 1 !important;
-        }
-
-
     }
+
+    .song-list-li {
+        margin-top: 27px;
+        grid-template-columns: 1fr 15fr 9fr 5fr 1fr 5.5fr 1fr;
+
+        color: $txtfill
+    }
+
+}
+
+song-list-li:hover {
+    opacity: 1; //not working
+
+    &.song-action {
+        color: white;
+        fill: white;
+    }
+
 }
 
 .song-liked-svg {
     fill: $bgcplay;
+}
+
+.song-remove-icon {
+    fill: $bgcplay;
+    font-size: 17px;
 }
 
 .header-song-list {
@@ -61,17 +74,18 @@
     font-size: 13px;
 }
 
-.song-list-li {
-    margin-top: 27px;
-    grid-template-columns: 1fr 15fr 9fr 5fr 1fr 5.5fr 1fr;
-    color: $txtfill 
+
+.song-list-duration {
+    margin-top: 13px;
 }
 
-.song-list-add-date{
-    margin-left: 13px
+
+.song-list-add-date {
+    margin-left: 14px;
+    margin-top: 13px;
 }
 
-.song-details{
+.song-details {
     display: flex;
     align-items: center;
     gap: 0px 15px;
@@ -83,12 +97,12 @@
 
     }
 
-    .song-info{
+    .song-info {
         display: flex;
         flex-direction: column;
 
     }
-    
+
     .btn-song-title-play {
         all: unset;
 
@@ -98,7 +112,7 @@
         }
     }
 
-    .song-list-artist{
+    .song-list-artist {
         margin-top: -10px;
     }
 

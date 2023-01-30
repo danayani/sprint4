@@ -13,7 +13,8 @@ export const youtubeService = {
     getServerSideProps,
     getListItemYouTube,
     getServerSideSearch,
-    getSongDuration
+    getSongDuration,
+    // getSearchResults
 }
 
 function getListItemYouTube() {
@@ -71,8 +72,6 @@ async function getServerSideSearch(searchKey) {
 
 }
 
-
-
 async function getSongDuration(songId) {
     console.log('getPlaylistInfo ')
     const res = await fetch(`https://www.googleapis.com/youtube/v3/videos?id=${songId}&part=contentDetails&key=${YOUTUBE_API_KEY}`)
@@ -82,6 +81,20 @@ async function getSongDuration(songId) {
 
     return duration //hm5s15
 }
+
+// async function getSearchResults(searchWord) {
+//     let searchResults = utilService.loadFromStorage(searchWord)
+//     if (!searchResults || !searchResults.length) {
+//         try {
+//             searchResults = getServerSideSearch(searchWord)
+//             utilService.saveToStorage(songKey, searchResults)
+//         } catch (err) {
+//             console.error('cannot find that particular song', err)
+//             throw err
+//         }
+//     }
+//    return searchResults
+// }
 
 
 
