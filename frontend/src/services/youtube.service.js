@@ -65,10 +65,9 @@ async function getServerSideSearch(searchKey) {
             "userfullname": ""
         },
         "addedAt": Date.now(),
-        "duration": getSongDuration(song.id.videoId)
+        "duration": (0)
     }))
     return songs
-
 }
 
 async function getSongDuration(songId) {
@@ -77,7 +76,7 @@ async function getSongDuration(songId) {
 
     const data = await res.json()
     const duration = data.items[0].contentDetails.duration
-
+    console.log(duration)
     const time = utilService.getSecFromTimePatern(duration)
 
     return time //hm5s15
